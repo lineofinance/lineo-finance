@@ -55,7 +55,7 @@
 
   /* Breakpoints */
   --breakpoint-mobile: 576px;
-  --breakpoint-tablet: 768px;
+  --breakpoint-tablet: 852;
   --breakpoint-desktop: 1024px;
   --breakpoint-wide: 1200px;
 
@@ -79,6 +79,6 @@
 
 // SCSS Variables for build-time use
 $breakpoint-mobile: 576px;
-$breakpoint-tablet: 768px;
+$breakpoint-tablet: 852;
 $breakpoint-desktop: 1024px;
 $breakpoint-wide: 1200px;

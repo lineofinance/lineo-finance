@@ -8,19 +8,32 @@
 
 // Hero Section
 .hero {
-  background: linear-gradient(135deg,
-      #fffef5 0%,
-      #fff9e6 20%,
-      #ffecb3 50%,
-      #ffe082 80%,
-      #ffd54f 100%);
+  background-color: #f4b942; // Darker base yellow color
+  position: relative;
   color: var(--color-secondary);
   padding: calc(var(--spacing-xxxl) * 2.5) 0 calc(var(--spacing-xxxl) * 2) 0;
   padding-top: calc(var(--spacing-xxxl) * 3);
-  position: relative;
   overflow: hidden;
   min-height: 100vh;
   @include flex-center;
+
+  // Background image as overlay with blend mode
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/images/HG_Verlauf.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    mix-blend-mode: screen; // This will lighten the dark areas
+    opacity: 0.85;
+    z-index: 0;
+    pointer-events: none;
+  }
 
   // Viewport height responsive adjustments - prevent header overlap
   @media (max-height: 860px) {
@@ -44,15 +57,17 @@
         rgba(255, 255, 255, 0.1) 0%,
         transparent 70%);
     animation: pulse 15s ease-in-out infinite;
+    z-index: 1; // Above the background image
   }
 
   .container {
     position: relative;
-    z-index: 1;
+    z-index: 2; // Above both background layers
     display: flex;
     align-items: center;
     justify-content: center; // Center the content so it stays balanced
     gap: var(--spacing-xl);
+    margin-top: calc(var(--header-height) / 2); // Add extra spacing from header
     // Allow items to shrink below their ideal size
     min-width: 0;
 
@@ -101,12 +116,6 @@
     border-radius: 20px;
     padding: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-    margin-top: calc(var(--header-height) / 2); // Add extra spacing from header
-
-    // Prevent overlap with header at small viewport heights
-    @media (max-height: 860px) {
-      margin-top: calc(var(--header-height) / 2); // Add extra spacing from header
-    }
 
     @include desktop-down {
       flex: 1 1 100%;
@@ -393,7 +402,7 @@
       line-height: 1.7;
       margin-bottom: 0;
       // Fluid typography for carousel text
-      font-size: clamp(0.875rem, 0.8vw, 1rem);
+      //font-size: clamp(0.875rem, 0.8vw, 1rem);
       opacity: 0.85;
 
       @include tablet-down {

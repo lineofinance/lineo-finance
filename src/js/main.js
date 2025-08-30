@@ -516,6 +516,7 @@ function initHeroCarousel() {
 // Header Scroll Effects
 function initHeaderScroll() {
     const header = document.querySelector('.site-header');
+    const logo = document.querySelector('.logo img');
     if (!header) return;
     
     let lastScrollY = window.scrollY;
@@ -531,6 +532,10 @@ function initHeaderScroll() {
             header.classList.remove('scrolled');
         }
         
+        // Progressive logo scaling (optional - for even smoother effect)
+        // We're not using CSS transform scaling anymore since we're changing actual height
+        // The CSS transition handles the smooth animation
+        
         lastScrollY = scrollY;
         ticking = false;
     }
@@ -543,6 +548,8 @@ function initHeaderScroll() {
     }
     
     window.addEventListener('scroll', requestTick);
+    
+    // Logo hover is handled by CSS, no need for JS intervention
     
     // Initial check
     updateHeader();
