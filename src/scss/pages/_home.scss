@@ -22,6 +22,12 @@
   min-height: 100vh;
   @include flex-center;
 
+  // Viewport height responsive adjustments - prevent header overlap
+  @media (max-height: 860px) {
+    padding-top: calc(var(--header-height) + var(--spacing-xxxl)); // 80px + 64px = 144px
+    min-height: calc(100vh - var(--header-height)); // Account for fixed header space
+  }
+
   @include tablet-down {
     padding: 80px var(--spacing-md) var(--spacing-xl);
     min-height: auto;
@@ -45,7 +51,7 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; // Center the content so it stays balanced
     gap: var(--spacing-xl);
     // Allow items to shrink below their ideal size
     min-width: 0;
@@ -62,9 +68,9 @@
   }
 
   &-content {
-    // Flexible sizing with shrink capability
+    // Allow content to grow but limit to maintain balance
     flex: 1 1 auto;
-    max-width: 700px;
+    max-width: 620px; // Reduced from 700px for better balance
     min-width: 0; // Allow shrinking below content size
     text-align: left;
 
@@ -80,26 +86,26 @@
   }
 
   &-carousel {
-    // Flexible sizing with controlled shrinking
-    flex: 0 0 550px; // Don't grow, don't shrink by default, 550px
-    position: relative;
+    // Fixed width, let flexbox handle the positioning
     width: 550px;
-    height: 550px;
-    min-width: 380px; // Minimum size before stacking
-    max-width: 550px;
+    height: 550px; // Keep height constant
+
+    // Allow flexbox to shrink it when needed
+    flex: 0 1 550px; // Don't grow, can shrink, basis 550px
+    min-width: 450px; // Increased from 380px for better balance
+
+    position: relative;
     margin-left: var(--spacing-xl);
     margin-bottom: 100px;
     background: linear-gradient(135deg, #f8d47a 0%, #f0b93a 100%);
     border-radius: 20px;
     padding: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-    
-    // Only allow shrinking when space is constrained
-    @media (min-width: 1024px) and (max-width: 1350px) {
-      flex: 0 1 550px; // Allow shrinking in this range
-      width: auto; // Let flexbox control the width
-      height: min(550px, calc(100vw - 800px)); // Shrink height based on available space
-      min-height: 380px;
+    margin-top: calc(var(--header-height) / 2); // Add extra spacing from header
+
+    // Prevent overlap with header at small viewport heights
+    @media (max-height: 860px) {
+      margin-top: calc(var(--header-height) / 2); // Add extra spacing from header
     }
 
     @include desktop-down {
@@ -122,7 +128,7 @@
 
   h1 {
     font-family: "Barlow", sans-serif;
-    font-size: 52px;
+    font-size: 52px; // Keep full size above 1232px
     color: rgb(53, 53, 53);
     margin: 0 0 20px 0;
     font-weight: 400;
@@ -133,6 +139,13 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: none;
+
+    // Only scale when container starts shrinking
+    @media (max-width: 1232px) {
+      // Fluid typography: 52px at 1232px → 42px at 1024px
+      font-size: clamp(42px, calc(42px + 10 * ((100vw - 1024px) / 208)), 52px);
+      line-height: 1.23;
+    }
 
     @include tablet-down {
       font-size: 32px;
@@ -154,7 +167,7 @@
   }
 
   .lead {
-    font-size: 18px;
+    font-size: 18px; // Keep full size above 1232px
     color: #353535;
     opacity: 0.85;
     margin-bottom: var(--spacing-xl);
@@ -162,11 +175,9 @@
     font-weight: 400;
     animation: fadeInUp 0.8s ease-out 0.2s backwards;
 
-    // Scale down for smaller desktop sizes
-    @media (min-width: 1024px) and (max-width: 1200px) {
-      font-size: 16px;
-      line-height: 1.5;
-      margin-bottom: var(--spacing-lg);
+    // Only scale when container starts shrinking
+    @media (max-width: 1232px) {
+      font-size: clamp(16px, calc(16px + 2 * ((100vw - 1024px) / 208)), 18px);
     }
 
     @include tablet-down {
@@ -181,9 +192,16 @@
   }
 
   .btn-primary {
-    font-size: 16px;
+    font-size: 16px; // Keep full size above 1232px
     padding: 14px 32px;
     animation: fadeInUp 0.8s ease-out 0.4s backwards;
+
+    // Only scale when container starts shrinking
+    @media (max-width: 1232px) {
+      font-size: clamp(14px, calc(14px + 2 * ((100vw - 1024px) / 208)), 16px);
+      padding: clamp(12px, calc(12px + 2 * ((100vw - 1024px) / 208)), 14px) clamp(28px, calc(28px + 4 * ((100vw - 1024px) / 208)), 32px);
+    }
+
     background: #2c2c2c;
     color: #ffffff;
     border: none;
@@ -323,8 +341,9 @@
     }
 
     &-icon {
-      width: 214px;
-      height: 214px;
+      // Fluid scaling for carousel icons
+      width: clamp(160px, 16vw, 214px);
+      height: clamp(160px, 16vw, 214px);
       margin: 0 auto var(--spacing-xl);
       @include flex-center;
 
@@ -340,8 +359,8 @@
       }
 
       img {
-        width: 214px;
-        height: 214px;
+        width: 100%;
+        height: 100%;
         display: block;
 
         @include tablet-down {
@@ -373,7 +392,8 @@
       color: var(--color-text);
       line-height: 1.7;
       margin-bottom: 0;
-      font-size: 1rem;
+      // Fluid typography for carousel text
+      font-size: clamp(0.875rem, 0.8vw, 1rem);
       opacity: 0.85;
 
       @include tablet-down {
