@@ -1,0 +1,61 @@
+/* Barlow Font Face Declarations - Local Hosting */
+
+/* Barlow Light - 300 */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../assets/fonts/Barlow-Light.woff2') format('woff2'),
+       url('../assets/fonts/Barlow-Light.ttf') format('truetype');
+}
+
+/* Barlow Regular - 400 */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/Barlow-Regular.woff2') format('woff2'),
+       url('../assets/fonts/Barlow-Regular.ttf') format('truetype');
+}
+
+/* Also support 'normal' keyword */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('../assets/fonts/Barlow-Regular.woff2') format('woff2'),
+       url('../assets/fonts/Barlow-Regular.ttf') format('truetype');
+}
+
+/* Barlow Medium - 500 */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../assets/fonts/Barlow-Medium.woff2') format('woff2'),
+       url('../assets/fonts/Barlow-Medium.ttf') format('truetype');
+}
+
+/* Barlow SemiBold - 600 */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../assets/fonts/Barlow-SemiBold.woff2') format('woff2'),
+       url('../assets/fonts/Barlow-SemiBold.ttf') format('truetype');
+}
+
+/* Barlow Bold - 700 */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../assets/fonts/Barlow-Bold.woff2') format('woff2'),
+       url('../assets/fonts/Barlow-Bold.ttf') format('truetype');
+}

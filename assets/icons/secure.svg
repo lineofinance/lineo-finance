@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Shield/Security icon -->
+  <g fill="none" stroke="#000000" stroke-width="2">
+    <path d="M32 8 L48 16 L48 32 C48 40 40 48 32 54 C24 48 16 40 16 32 L16 16 Z" fill="#FFD700" fill-opacity="0.2"/>
+    <path d="M26 32 L30 36 L38 28" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
