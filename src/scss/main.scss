@@ -1,0 +1,25 @@
+// Main SCSS File - Imports all partials
+
+// Abstracts (must be first for other files to use)
+// Note: mixins are available globally via @use in each file that needs them
+
+// Base
+@use 'base/variables';
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/layout';
+
+// Components
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/header';
+@use 'components/footer';
+@use 'components/forms';
+
+// Pages
+@use 'pages/home';
+@use 'pages/services';
+@use 'pages/careers';
+
+// Utilities (should be last for specificity)
+@use 'utilities/utilities';

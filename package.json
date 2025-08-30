@@ -1,0 +1,21 @@
+{
+  "name": "lineo-finance",
+  "version": "1.0.0",
+  "description": "A modern, static recreation of the lineo.finance website, built with vanilla HTML, CSS, and JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
+    "watch": "npx @11ty/eleventy --watch",
+    "serve": "npx @11ty/eleventy --serve --watch",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "sass": "^1.91.0"
+  }
+}

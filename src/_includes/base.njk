@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or 'Lineo Finance - Automatisierte Wertpapierbuchhaltung' }}</title>
+    <meta name="description" content="{{ description or 'Ihre Lösung für automatisierte Wertpapierbuchhaltung. Effizient, präzise und revisionssicher.' }}">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ ogTitle or title or 'Lineo Finance' }}">
+    <meta property="og:description" content="{{ ogDescription or description or 'Automatisierte Wertpapierbuchhaltung' }}">
+    <meta property="og:image" content="{{ ogImage or '/assets/images/og-image.jpg' }}">
+    <meta property="og:url" content="{{ ogUrl or 'https://www.lineo.finance' }}{{ page.url }}">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.lineo.finance{{ page.url }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/fonts.css">
+    <!-- Compiled SCSS (includes all styles) -->
+    <link rel="stylesheet" href="/scss/main.css">
+</head>
+<body>
+    {% include "header.html" %}
+
+    <main>
+        {{ content | safe }}
+    </main>
+
+    {% include "footer.html" %}
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+    {% if pageScripts %}
+    <!-- Page Specific JavaScript -->
+    {% for script in pageScripts %}
+    <script src="{{ script }}"></script>
+    {% endfor %}
+    {% endif %}
+</body>
+</html>

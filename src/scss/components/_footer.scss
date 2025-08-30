@@ -1,0 +1,229 @@
+// Footer Component Styles
+@use '../base/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.site-footer {
+  background: var(--color-secondary);
+  color: var(--color-background);
+  padding: var(--spacing-xxl) 0 0;
+  margin-top: var(--spacing-xxxl);
+
+  // Dark mode support
+  @include dark-mode {
+    background: #0a0a0a;
+  }
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--spacing-xxl);
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  @include tablet-down {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    text-align: center;
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  @include dark-mode {
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+// Footer Brand Section
+.footer-brand {
+  @include flex-column;
+  gap: var(--spacing-md);
+
+  @include tablet-down {
+    align-items: center;
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    grid-column: 1 / -1;
+  }
+
+  img {
+    height: 60px;
+    width: auto;
+    max-width: 200px;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    object-fit: contain;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.125rem;
+    margin: 0;
+    line-height: 1.6;
+  }
+}
+
+// Footer Navigation
+.footer-nav,
+.footer-legal {
+  h4 {
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-md);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    @include tablet-down {
+      margin-top: var(--spacing-lg);
+    }
+  }
+
+  ul {
+    @include reset-list;
+  }
+
+  li {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    font-size: 0.95rem;
+    display: inline-block;
+    position: relative;
+
+    // Underline animation
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--color-primary);
+      transition: width var(--transition-base);
+    }
+
+    &:hover {
+      color: var(--color-primary);
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Footer Bottom
+.footer-bottom {
+  padding: var(--spacing-lg) 0;
+  text-align: center;
+
+  p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+    margin: 0;
+  }
+}
+
+// Social Links (optional)
+.footer-social {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+
+  @include tablet-down {
+    justify-content: center;
+  }
+}
+
+.social-link {
+  @include flex-center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  color: var(--color-background);
+  transition: all var(--transition-base);
+
+  &:hover {
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    transform: translateY(-3px);
+  }
+}
+
+// Newsletter Signup (optional enhancement)
+.footer-newsletter {
+  background: rgba(255, 255, 255, 0.05);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  margin-top: var(--spacing-lg);
+
+  h4 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1rem;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+.newsletter-form {
+  display: flex;
+  gap: var(--spacing-sm);
+
+  @include tablet-down {
+    flex-direction: column;
+  }
+
+  input[type="email"] {
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-background);
+    border-radius: var(--radius-sm);
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    &:focus {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: var(--color-primary);
+      outline: none;
+    }
+  }
+
+  button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: all var(--transition-base);
+
+    @include tablet-down {
+      width: 100%;
+    }
+
+    &:hover {
+      background: var(--color-primary-dark);
+      transform: translateY(-2px);
+    }
+  }
+}

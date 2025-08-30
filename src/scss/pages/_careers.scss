@@ -1,0 +1,490 @@
+// Careers Page Specific Styles
+@use '../abstracts/mixins' as *;
+
+// Career Hero Section
+.career-hero {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, #2d2d2d 100%);
+  color: var(--color-background);
+  padding: calc(var(--spacing-xxxl) * 1.5) 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    @include absolute-fill;
+    background: radial-gradient(circle at 30% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--color-background);
+    margin-bottom: var(--spacing-lg);
+    animation: fadeInUp 0.8s ease-out;
+
+    @include tablet-down {
+      font-size: 2rem;
+    }
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--spacing-xl);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+  }
+
+  .btn-primary {
+    animation: fadeInUp 0.8s ease-out 0.4s backwards;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Company Culture Section
+.culture {
+  padding: var(--spacing-xxxl) 0;
+  background: var(--color-gray-light);
+
+  h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-xxl);
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+
+    @include tablet-down {
+      font-size: 2rem;
+    }
+  }
+
+  .benefits-grid {
+    @include auto-grid(300px, var(--spacing-xl));
+
+    @include tablet-down {
+      grid-template-columns: 1fr;
+    }
+
+    @include desktop-down {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .benefit {
+    background: var(--color-background);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    transition: all var(--transition-base);
+    position: relative;
+
+    &:hover {
+      @include hover-lift(-8px, var(--shadow-lg));
+    }
+
+    &-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto var(--spacing-lg);
+      @include flex-center;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      border-radius: var(--radius-full);
+
+      img {
+        width: 48px;
+        height: 48px;
+        filter: brightness(0);
+      }
+    }
+
+    h3 {
+      color: var(--color-secondary);
+      margin-bottom: var(--spacing-sm);
+      font-size: 1.25rem;
+    }
+
+    p {
+      color: var(--color-text-light);
+      font-size: 0.95rem;
+    }
+  }
+}
+
+// Ideal Candidate Section
+.ideal-candidate {
+  padding: var(--spacing-xxxl) 0;
+  background: var(--color-background);
+
+  h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-xxl);
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+
+    @include tablet-down {
+      font-size: 2rem;
+    }
+  }
+}
+
+.candidate-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  ul {
+    @include reset-list;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  li {
+    padding: var(--spacing-md) 0;
+    padding-left: var(--spacing-xxl);
+    position: relative;
+    color: var(--color-text);
+    font-size: 1rem;
+    line-height: 1.6;
+
+    &::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--color-primary);
+      font-weight: var(--font-weight-bold);
+      font-size: 1.5rem;
+    }
+  }
+}
+
+// Job Listings Section
+.job-listings {
+  padding: var(--spacing-xxxl) 0;
+  background: var(--color-gray-light);
+
+  h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-xxl);
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+
+    @include tablet-down {
+      font-size: 2rem;
+    }
+  }
+}
+
+.job-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: var(--spacing-lg);
+
+  @include tablet-down {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Application Process Section
+.application-process {
+  padding: var(--spacing-xxxl) 0;
+  background: var(--color-background);
+
+  h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-xxl);
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+
+    @include tablet-down {
+      font-size: 2rem;
+    }
+  }
+
+  .process-steps {
+    @include auto-grid(200px, var(--spacing-xl));
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+
+    @include tablet-down {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .step {
+    text-align: center;
+    position: relative;
+
+    &:hover .step-number {
+      transform: rotate(360deg) scale(1.1);
+      background: var(--color-primary-dark);
+    }
+  }
+
+  .step-number {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto var(--spacing-lg);
+    @include flex-center;
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    font-size: 1.75rem;
+    font-weight: var(--font-weight-bold);
+    border-radius: var(--radius-full);
+    position: relative;
+    z-index: 2;
+    transition: all var(--transition-base);
+  }
+}
+
+// Career FAQ Section
+.career-faq {
+  padding: var(--spacing-xxxl) 0;
+  background: var(--color-gray-light);
+
+  h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-xxl);
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+
+    @include tablet-down {
+      font-size: 2rem;
+    }
+  }
+}
+
+// Career CTA Section
+.career-cta {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, #1a1a1a 100%);
+  color: var(--color-background);
+  padding: var(--spacing-xxxl) 0;
+  text-align: center;
+
+  h2 {
+    color: var(--color-background);
+    margin-bottom: var(--spacing-md);
+    font-size: 2.5rem;
+
+    @include tablet-down {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-xl);
+  }
+}
+
+// Job Detail Page Styles
+.job-detail {
+  padding: var(--spacing-xxl) 0;
+
+  &-header {
+    margin-bottom: var(--spacing-xxl);
+  }
+
+  h1 {
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-text-light);
+  text-decoration: none;
+  margin-bottom: var(--spacing-lg);
+  transition: color var(--transition-fast);
+
+  &:hover {
+    color: var(--color-primary-dark);
+  }
+}
+
+.job-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-xxl);
+  align-items: start;
+
+  @include tablet-down {
+    grid-template-columns: 1fr;
+  }
+
+  @include desktop-down {
+    grid-template-columns: 1fr;
+  }
+}
+
+.job-description {
+  h2 {
+    color: var(--color-secondary);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+  }
+
+  ul {
+    padding-left: var(--spacing-lg);
+  }
+
+  li {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.7;
+  }
+
+  ol {
+    padding-left: var(--spacing-lg);
+
+    li {
+      margin-bottom: var(--spacing-md);
+
+      strong {
+        color: var(--color-secondary);
+      }
+    }
+  }
+}
+
+// Tech Stack
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.tech-badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-medium);
+}
+
+// Job Sidebar
+.job-sidebar {
+  position: sticky;
+  top: calc(80px + var(--spacing-lg));
+
+  @include tablet-down {
+    position: static;
+    margin-top: var(--spacing-xl);
+  }
+
+  @include desktop-down {
+    position: static;
+    margin-top: var(--spacing-xl);
+  }
+}
+
+.apply-box,
+.contact-box,
+.share-box {
+  background: var(--color-gray-light);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-lg);
+
+  h3 {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-secondary);
+  }
+}
+
+.apply-box,
+.contact-box {
+  p {
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text-light);
+  }
+}
+
+.apply-note {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin-top: var(--spacing-md);
+}
+
+.btn-block {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.share-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.share-btn {
+  flex: 1;
+  padding: var(--spacing-sm);
+  background: var(--color-background);
+  border: 1px solid var(--color-gray-medium);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+
+  &:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-secondary);
+  }
+}
+
+// Other Jobs Section
+.other-jobs {
+  background: var(--color-gray-light);
+  padding: var(--spacing-xxxl) 0;
+
+  h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-xxl);
+    font-size: 2rem;
+  }
+
+  .job-list {
+    max-width: 1000px;
+    margin: 0 auto var(--spacing-xl);
+    @include auto-grid(400px, var(--spacing-lg));
+
+    @include tablet-down {
+      grid-template-columns: 1fr;
+    }
+  }
+}

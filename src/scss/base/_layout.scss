@@ -1,0 +1,13 @@
+// Layout & Section Styles
+
+section {
+  padding: var(--spacing-xxxl) 0;
+  
+  &:first-of-type {
+    padding-top: var(--spacing-xxl);
+  }
+  
+  &:last-of-type {
+    padding-bottom: var(--spacing-xxl);
+  }
+}
