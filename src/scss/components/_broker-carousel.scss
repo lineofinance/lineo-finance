@@ -31,6 +31,8 @@
   width: 100%;
   padding: 0 60px; // Space for navigation arrows
 
+  margin-bottom: var(--spacing-lg);
+
   @include mobile-down {
     padding: 0;
   }
