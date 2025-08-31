@@ -1,0 +1,76 @@
+// Shared Carousel Styles
+// Reusable styles for all carousel components
+
+@use '../abstracts/mixins' as *;
+
+// Shared carousel indicators
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+  position: relative;
+  
+  @include tablet-down {
+    margin-top: var(--spacing-sm);
+  }
+}
+
+.carousel-indicator {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: rgba(26, 26, 26, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: width 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+  padding: 0;
+  flex-shrink: 0;
+  opacity: 1;
+  
+  &:hover:not(.active) {
+    background: rgba(26, 26, 26, 0.5);
+  }
+  
+  &.active {
+    width: 30px;
+    background: var(--color-secondary);
+    opacity: 1;
+    
+    @media (max-width: 320px) {
+      width: 20px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+// Context-specific overrides for different carousel types
+.hero {
+  .carousel-indicator {
+    // Hero uses default styles
+  }
+}
+
+.broker-carousel {
+  .carousel-indicators {
+    margin-top: var(--spacing-xl);
+  }
+  
+  .carousel-indicator {
+    background: var(--color-gray-light);
+    
+    &:hover:not(.active) {
+      background: var(--color-gray);
+    }
+    
+    &.active {
+      background: var(--color-text);
+    }
+  }
+}

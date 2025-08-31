@@ -8,7 +8,7 @@
 
 // Hero Section
 .hero {
-  background-color: #f4b942; // Darker base yellow color
+  background-color: #d39a27; // Darker base yellow color
   position: relative;
   color: var(--color-secondary);
   padding: calc(var(--spacing-xxxl) * 2.5) 0 calc(var(--spacing-xxxl) * 2) 0;
@@ -112,10 +112,9 @@
     position: relative;
     margin-left: var(--spacing-xl);
     margin-bottom: 100px;
-    background: linear-gradient(135deg, #f8d47a 0%, #f0b93a 100%);
     border-radius: 20px;
-    padding: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    padding: 6px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 
     @include desktop-down {
       flex: 1 1 100%;
@@ -411,42 +410,8 @@
     }
   }
 
-  &-indicators {
-    @include flex-center;
-    gap: var(--spacing-sm);
-    margin-top: var(--spacing-lg);
-    position: relative;
-
-    @include tablet-down {
-      margin-top: var(--spacing-sm);
-    }
-  }
-
-  &-indicator {
-    width: 10px;
-    height: 10px;
-    border-radius: var(--radius-full);
-    background: rgba(26, 26, 26, 0.3);
-    border: none;
-    cursor: pointer;
-    transition: all var(--transition-base);
-    padding: 0;
-    flex-shrink: 0;
-
-    &.active {
-      width: 30px;
-      background: var(--color-secondary);
-
-      @media (max-width: 320px) {
-        width: 20px;
-      }
-    }
-
-    @media (max-width: 320px) {
-      width: 8px;
-      height: 8px;
-    }
-  }
+  // Carousel indicators are styled in _carousel-shared.scss
+  // Hero uses the default indicator styles defined there
 
   &-nav {
     &-wrapper {

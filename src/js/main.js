@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initFAQ();
     initHeroCarousel();
+    initBrokerCarousel();
     initHeaderScroll();
 });
 
@@ -429,7 +430,11 @@ function initHeroCarousel() {
     
     // Auto-play functionality
     function startAutoPlay() {
-        autoPlayInterval = setInterval(nextSlide, autoPlayDelay);
+        autoPlayInterval = setInterval(() => {
+            if (!isTransitioning) {
+                nextSlide();
+            }
+        }, autoPlayDelay);
     }
     
     function stopAutoPlay() {
@@ -452,9 +457,17 @@ function initHeroCarousel() {
         nextBtn.addEventListener('click', nextSlide);
     }
     
-    // Indicator clicks
+    // Indicator clicks with debounce protection
+    let lastClickTime = 0;
+    const clickDebounce = 300; // Minimum time between clicks in ms
+    
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('click', () => {
+            const now = Date.now();
+            if (now - lastClickTime < clickDebounce) {
+                return; // Ignore rapid clicks
+            }
+            lastClickTime = now;
             goToSlide(index);
         });
     });
@@ -500,8 +513,300 @@ function initHeroCarousel() {
     }
     
     // Initialize
-    updateCarousel();
-    startAutoPlay();
+    updateCarousel(false); // No animation on initial load
+    // Start autoplay after a delay to prevent immediate transition
+    setTimeout(() => {
+        startAutoPlay();
+    }, 1000);
+    
+    // Pause auto-play when page is not visible
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            stopAutoPlay();
+        } else {
+            startAutoPlay();
+        }
+    });
+}
+
+// Broker Carousel Functionality
+function initBrokerCarousel() {
+    const track = document.getElementById('brokerCarouselTrack');
+    if (!track) return;
+    
+    // Initialize carousel with shared carousel logic
+    initCarousel({
+        trackId: 'brokerCarouselTrack',
+        indicatorSelector: '.broker-carousel .carousel-indicator',
+        prevBtnSelector: '.broker-carousel .carousel-nav.prev',
+        nextBtnSelector: '.broker-carousel .carousel-nav.next',
+        containerSelector: '.broker-carousel .carousel-container',
+        autoPlayDelay: 4000,
+        slidesPerView: {
+            mobile: 1,
+            tablet: 3,
+            desktop: 3
+        }
+    });
+}
+
+// Generic Carousel Initialization
+function initCarousel(config) {
+    const track = document.getElementById(config.trackId);
+    if (!track) return;
+    
+    const originalSlides = Array.from(track.querySelectorAll('.carousel-slide'));
+    const indicators = document.querySelectorAll(config.indicatorSelector);
+    const prevBtn = document.querySelector(config.prevBtnSelector);
+    const nextBtn = document.querySelector(config.nextBtnSelector);
+    const container = document.querySelector(config.containerSelector);
+    
+    let currentSlide = 0;
+    let autoPlayInterval;
+    const slideCount = originalSlides.length;
+    const autoPlayDelay = config.autoPlayDelay || 4000;
+    let isTransitioning = false;
+    
+    // Determine slides per view based on screen size
+    function getSlidesPerView() {
+        if (window.innerWidth >= 1024) {
+            return config.slidesPerView?.desktop || 1;
+        } else if (window.innerWidth >= 768) {
+            return config.slidesPerView?.tablet || 1;
+        }
+        return config.slidesPerView?.mobile || 1;
+    }
+    
+    let slidesPerView = getSlidesPerView();
+    
+    // For endless carousel with multiple slides visible
+    // Clone slides before and after for seamless looping
+    if (slidesPerView > 1) {
+        // Clone slides for endless effect
+        // We need to clone enough slides to fill the viewport on both sides
+        for (let i = 0; i < slidesPerView; i++) {
+            const cloneBefore = originalSlides[slideCount - slidesPerView + i].cloneNode(true);
+            const cloneAfter = originalSlides[i].cloneNode(true);
+            cloneBefore.classList.add('clone');
+            cloneAfter.classList.add('clone');
+            track.insertBefore(cloneBefore, originalSlides[0]);
+            track.appendChild(cloneAfter);
+        }
+        
+        // Start at the first real slide (after clones)
+        currentSlide = slidesPerView;
+    }
+    
+    const allSlides = track.querySelectorAll('.carousel-slide');
+    
+    // Update carousel position
+    function updateCarousel(animate = true, updateIndicators = true) {
+        // Set transitioning flag immediately when animating
+        if (animate) {
+            isTransitioning = true;
+        }
+        
+        if (!animate) {
+            track.style.transition = 'none';
+        } else {
+            track.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        }
+        
+        // Calculate offset for single-slide movement
+        const slideWidth = 100 / slidesPerView;
+        const offset = -currentSlide * slideWidth;
+        track.style.transform = `translateX(${offset}%)`;
+        
+        // Update indicators based on actual position (skip during position reset)
+        if (updateIndicators && indicators.length > 0) {
+            const actualIndex = slidesPerView > 1 ? 
+                ((currentSlide - slidesPerView) % slideCount + slideCount) % slideCount :
+                currentSlide % slideCount;
+            
+            // Update indicators - ensure exactly one is active
+            indicators.forEach((indicator, index) => {
+                if (index === actualIndex) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+        
+        // Handle endless loop transitions
+        if (animate && slidesPerView > 1) {
+            // Use a flag to prevent multiple event listeners
+            let transitionHandled = false;
+            
+            const handleTransition = (e) => {
+                // Only handle transform transitions
+                if (e.propertyName !== 'transform' || transitionHandled) return;
+                transitionHandled = true;
+                
+                track.removeEventListener('transitionend', handleTransition);
+                
+                // Reset position if we're at a clone
+                if (currentSlide < slidesPerView) {
+                    track.style.transition = 'none';
+                    currentSlide = currentSlide + slideCount;
+                    const slideWidth = 100 / slidesPerView;
+                    const offset = -currentSlide * slideWidth;
+                    track.style.transform = `translateX(${offset}%)`;
+                    // Force reflow
+                    void track.offsetHeight;
+                    track.style.transition = '';
+                } else if (currentSlide >= slideCount + slidesPerView) {
+                    track.style.transition = 'none';
+                    currentSlide = currentSlide - slideCount;
+                    const slideWidth = 100 / slidesPerView;
+                    const offset = -currentSlide * slideWidth;
+                    track.style.transform = `translateX(${offset}%)`;
+                    // Force reflow
+                    void track.offsetHeight;
+                    track.style.transition = '';
+                }
+                
+                isTransitioning = false;
+            };
+            
+            track.addEventListener('transitionend', handleTransition);
+            
+            // Fallback in case transitionend doesn't fire
+            setTimeout(() => {
+                if (isTransitioning) {
+                    track.removeEventListener('transitionend', handleTransition);
+                    isTransitioning = false;
+                }
+            }, 600);
+        } else if (animate) {
+            // For single-slide carousels or non-animated updates
+            setTimeout(() => {
+                isTransitioning = false;
+            }, 500);
+        } else {
+            // No animation, reset flag immediately
+            isTransitioning = false;
+        }
+    }
+    
+    // Go to specific slide
+    function goToSlide(slideIndex) {
+        if (isTransitioning) return;
+        // When clicking indicators, go to the actual slide position
+        currentSlide = slidesPerView > 1 ? slideIndex + slidesPerView : slideIndex;
+        updateCarousel();
+        resetAutoPlay();
+    }
+    
+    // Next slide
+    function nextSlide() {
+        if (isTransitioning) return;
+        currentSlide++;
+        updateCarousel();
+    }
+    
+    // Previous slide
+    function prevSlide() {
+        if (isTransitioning) return;
+        currentSlide--;
+        updateCarousel();
+    }
+    
+    // Auto-play functionality
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(() => {
+            if (!isTransitioning) {
+                nextSlide();
+            }
+        }, autoPlayDelay);
+    }
+    
+    function stopAutoPlay() {
+        if (autoPlayInterval) {
+            clearInterval(autoPlayInterval);
+        }
+    }
+    
+    function resetAutoPlay() {
+        stopAutoPlay();
+        startAutoPlay();
+    }
+    
+    // Event listeners
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetAutoPlay();
+        });
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoPlay();
+        });
+    }
+    
+    // Indicator clicks with debounce protection
+    let lastClickTime = 0;
+    const clickDebounce = 300; // Minimum time between clicks in ms
+    
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            const now = Date.now();
+            if (now - lastClickTime < clickDebounce) {
+                return; // Ignore rapid clicks
+            }
+            lastClickTime = now;
+            goToSlide(index);
+        });
+    });
+    
+    // Pause on hover
+    if (container) {
+        container.addEventListener('mouseenter', stopAutoPlay);
+        container.addEventListener('mouseleave', startAutoPlay);
+    }
+    
+    // Handle resize
+    window.addEventListener('resize', () => {
+        const newSlidesPerView = getSlidesPerView();
+        if (newSlidesPerView !== slidesPerView) {
+            // For now, just reload the page on resize to rebuild the carousel
+            // A more sophisticated approach would rebuild the clones
+            location.reload();
+        }
+    });
+    
+    // Touch/Swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    track.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    track.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50) {
+            nextSlide();
+            resetAutoPlay();
+        }
+        if (touchEndX > touchStartX + 50) {
+            prevSlide();
+            resetAutoPlay();
+        }
+    }
+    
+    // Initialize
+    updateCarousel(false);
+    setTimeout(() => {
+        startAutoPlay();
+    }, 1000);
     
     // Pause auto-play when page is not visible
     document.addEventListener('visibilitychange', () => {
