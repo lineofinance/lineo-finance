@@ -17,6 +17,9 @@
 @use 'components/forms';
 @use 'components/carousel-shared';  // Shared carousel styles (must be before specific carousels)
 @use 'components/broker-carousel';
+@use 'components/app-showcase';
+@use 'components/workflow';
+@use 'components/leistungen';
 
 // Pages
 @use 'pages/home';

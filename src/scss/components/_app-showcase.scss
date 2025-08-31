@@ -1,0 +1,102 @@
+// App Showcase Section
+.app-showcase {
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+  
+  // Use the actual background image
+  background-image: url('/assets/images/app-showcase-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  // Optional: Add a subtle overlay for better text contrast if needed
+  // Uncomment if the background image makes text hard to read
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background: rgba(255, 255, 255, 0.1);
+  //   pointer-events: none;
+  // }
+  
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  &__content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 3rem;
+    
+    @media (min-width: 768px) {
+      margin-bottom: 4rem;
+    }
+  }
+  
+  &__image-wrapper {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    
+    // Add subtle shadow and hover effect
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease, filter 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.15));
+    }
+    
+    // Animate on scroll
+    animation: fadeInUp 0.8s ease-out;
+  }
+  
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    
+    // Add subtle border and box shadow
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2), 
+                0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Animation
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .app-showcase {
+    padding: 60px 0;
+    
+    h2 {
+      padding: 0 20px;
+    }
+    
+    &__image-wrapper {
+      padding: 0 20px;
+    }
+  }
+}
+

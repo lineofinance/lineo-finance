@@ -39,11 +39,11 @@
 
   // Swiper slide container
   .swiper-slide {
-    padding: 0 var(--spacing-md);
+    padding: 10px var(--spacing-md); // Add vertical padding to prevent shadow clipping
     height: auto;
 
     @include mobile-down {
-      padding: 0 var(--spacing-sm);
+      padding: 10px var(--spacing-sm);
     }
   }
 }
@@ -52,13 +52,15 @@
 .broker-card {
   background: white;
   border-radius: 16px;
-  padding: var(--spacing-xl) var(--spacing-lg);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  min-height: 140px;
+  gap: var(--spacing-md);
+  height: 100px; // Fixed height for all cards
+  min-height: 100px;
   position: relative;
   transition: all var(--transition-base);
 
@@ -66,79 +68,102 @@
     transform: translateY(-4px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   }
+}
 
-  &.verified {
-    .verification-badge {
-      position: absolute;
-      top: var(--spacing-md);
-      right: var(--spacing-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+.broker-logo {
+  max-width: 160px;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  
+  // When logo is the only visible element (no text sibling)
+  &:only-child,
+  &:first-child:last-child {
+    max-width: 200px;
+    max-height: 80px;
+  }
+}
 
-      svg {
-        width: 28px;
-        height: 28px;
-      }
+.broker-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  
+  &:only-child .broker-logo {
+    // When link is the only child, make logo larger
+    max-width: 200px;
+    max-height: 80px;
+    
+    // Special case for extra wide logos like CapTrader
+    &.broker-logo--wide {
+      max-width: 240px;
+      max-height: 80px;
+      width: 240px; // Force width for very wide logos
     }
   }
 }
 
-.broker-logo {
-  max-width: 180px;
-  max-height: 60px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  margin-bottom: var(--spacing-md);
+.broker-logo-placeholder {
+  width: 60px;
+  height: 40px;
+  background: var(--color-gray-light);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: 1rem;
+  color: var(--color-text-light);
+  flex-shrink: 0;
 }
 
 .broker-name {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: var(--font-weight-medium);
   color: var(--color-text);
   text-align: center;
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.3;
+  flex: 0 1 auto; // Don't force it to take full width
+  max-width: 100%; // Prevent overflow
+  word-wrap: break-word; // Allow long text to wrap
 }
 
 // Swiper Navigation and Pagination
 .broker-carousel {
+  padding-bottom: 60px; // Space for controls below
 
   // Custom navigation arrows
   .swiper-button-prev,
   .swiper-button-next {
     position: absolute;
-    top: 50%;
-    margin-top: -24px;
-    background: white;
-    border: 2px solid var(--color-gray-light);
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
+    top: auto;
+    bottom: 10px;
+    background: transparent;
+    border: none;
+    width: 27px;
+    height: 27px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all var(--transition-base);
+    transition: transform var(--transition-base);
 
     &::after {
       display: none; // Hide default Swiper arrow
     }
 
     &:hover {
-      background: var(--color-gray-light);
       transform: scale(1.1);
     }
 
-    &:active {
-      transform: scale(0.95);
-    }
-
     svg {
-      width: 20px;
-      height: 20px;
-      fill: var(--color-text);
+      width: 100%;
+      height: 100%;
+      fill: currentColor;
     }
 
     @include mobile-down {
@@ -147,18 +172,21 @@
   }
 
   .swiper-button-prev {
-    left: 0;
+    left: auto;
+    right: 47px; // Position to the left of next button
   }
 
   .swiper-button-next {
-    right: 0;
+    left: auto;
+    right: 10px; // Position at right edge
   }
 
   // Custom pagination
   .swiper-pagination {
-    position: relative;
-    bottom: auto;
-    margin-top: var(--spacing-xl);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     gap: 8px;

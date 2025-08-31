@@ -111,7 +111,7 @@
 
     position: relative;
     margin-left: var(--spacing-xl);
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     border-radius: 20px;
     padding: 6px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
@@ -270,36 +270,50 @@
   }
 }
 
-// Hero Carousel
-.carousel {
-  &-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 20px;
-    background: transparent;
-    padding: 20px;
+// Hero Carousel (Swiper)  
+.hero-carousel {
+  // Create the visual frame/padding effect
+  background: transparent;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  height: 100%;
 
-    @include desktop-down {
-      padding: 15px;
-    }
+  @include desktop-down {
+    padding: 15px;
+  }
 
-    @include tablet-down {
-      padding: 12px;
-      height: auto;
+  @include tablet-down {
+    padding: 12px;
+  }
+
+  &.swiper {
+    // Swiper can use its default overflow: hidden
+
+    // Inner white container
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 20px;
+      background: white;
+      border-radius: 20px;
+      z-index: 0;
+
+      @include desktop-down {
+        inset: 15px;
+      }
+
+      @include tablet-down {
+        inset: 12px;
+      }
     }
   }
 
-  &-inner {
-    width: 100%;
-    height: 100%;
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
+  .swiper-wrapper {
+    // Remove custom height and alignment - let Swiper handle it
     position: relative;
+    z-index: 1; // Above the white background
     padding: 50px 20px;
-    box-sizing: border-box;
 
     @include desktop-down {
       padding: 40px 20px;
@@ -307,35 +321,22 @@
 
     @include tablet-down {
       padding: 30px 15px;
-      height: auto;
     }
   }
 
-  &-track {
+  .swiper-slide {
+    // Simple flex centering like the example
     display: flex;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    height: 100%;
-
-    @include tablet-down {
-      height: auto !important;
-      min-height: 280px;
-    }
-  }
-
-  &-slide {
-    min-width: 100%;
-    height: 100%;
-    @include flex-center;
-
+    justify-content: center;
+    align-items: center;
 
     @include tablet-down {
       padding: var(--spacing-lg) var(--spacing-md);
-      min-height: 280px;
-      @include flex-column;
-      justify-content: center;
     }
   }
+}
 
+.carousel {
   &-card {
     background: transparent;
     padding: var(--spacing-lg) var(--spacing-xl);
@@ -410,60 +411,92 @@
     }
   }
 
-  // Carousel indicators are styled in _carousel-shared.scss
-  // Hero uses the default indicator styles defined there
+}
 
-  &-nav {
-    &-wrapper {
-      position: absolute;
-      bottom: -80px;
-      right: 0;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      z-index: 10;
+// Hero Carousel Wrapper
+.hero-carousel-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
 
-      @include tablet-down {
-        bottom: -50px;
-        right: 50%;
-        transform: translateX(50%);
-      }
+// Hero Carousel Controls - positioned below carousel
+.hero-carousel-controls {
+  position: relative;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-      @media (max-width: 320px) {
-        gap: 10px;
-      }
-    }
+  @include tablet-down {
+    margin-top: 8px;
+  }
+}
 
-    & {
-      background: transparent;
-      border: none;
-      width: 27px;
-      height: 27px;
-      @include flex-center;
-      cursor: pointer;
-      transition: transform var(--transition-base);
-      padding: 0;
-      flex-shrink: 0;
+.hero-carousel-pagination {
+  display: flex;
+  gap: 8px;
 
-      &:hover {
-        transform: scale(1.1);
-      }
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: var(--color-gray-light);
+    opacity: 1;
+    transition: all 0.3s ease;
+    margin: 0 !important;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
 
-      @media (max-width: 320px) {
-        width: 24px;
-        height: 24px;
-      }
-
-      svg {
-        width: 100%;
-        height: 100%;
-
-        &:hover {
-          fill: #2c2c2c;
-        }
-      }
+    &-active {
+      background: var(--color-text);
     }
   }
+}
+
+.hero-carousel-prev,
+.hero-carousel-next {
+  background: transparent;
+  border: none;
+  width: 27px;
+  height: 27px;
+  @include flex-center;
+  cursor: pointer;
+  transition: transform var(--transition-base);
+  padding: 0;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 320px) {
+    width: 24px;
+    height: 24px;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+
+    &:hover {
+      fill: #2c2c2c;
+    }
+  }
+}
+
+.hero-carousel-prev {
+  order: 2; // Position in middle
+  margin-right: 20px;
+}
+
+.hero-carousel-next {
+  order: 3; // Position at right
+}
+
+.hero-carousel-pagination {
+  order: 1; // Position at left
+  flex: 1; // Take remaining space
 }
 
 // Fix carousel slides on mobile
@@ -653,6 +686,33 @@
   background: linear-gradient(180deg,
       var(--color-background) 0%,
       var(--color-gray-light) 100%);
+  position: relative;
+  overflow: visible; // Allow SVG to extend beyond section
+
+  // Decorative SVG positioned to the left
+  .process-decoration {
+    position: absolute;
+    width: 260px;
+    height: 303px;
+    left: -80px; // Extends beyond the left edge
+    top: -100px; // Reaches into the section above
+    z-index: 1;
+    opacity: 0.15; // Subtle decoration
+    
+    @include tablet-down {
+      width: 200px;
+      height: 233px;
+      left: -60px;
+      top: -80px;
+    }
+    
+    @include mobile-down {
+      width: 150px;
+      height: 175px;
+      left: -40px;
+      top: -60px;
+    }
+  }
 
   h2 {
     text-align: center;
