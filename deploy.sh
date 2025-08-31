@@ -44,7 +44,6 @@ fi
 
 # Parse command line arguments
 SKIP_BUILD=false
-INVALIDATE_CACHE=false
 
 while [[ $# -gt 0 ]]; do
     case $1 in
@@ -52,16 +51,11 @@ while [[ $# -gt 0 ]]; do
             SKIP_BUILD=true
             shift
             ;;
-        --invalidate)
-            INVALIDATE_CACHE=true
-            shift
-            ;;
         --help)
             echo "Usage: ./deploy.sh [options]"
             echo ""
             echo "Options:"
             echo "  --skip-build     Skip the build step (use existing dist folder)"
-            echo "  --invalidate     Invalidate CloudFront cache after deployment"
             echo "  --help           Show this help message"
             exit 0
             ;;
@@ -113,26 +107,11 @@ else
             "ErrorDocument": {"Key": "404.html"}
         }'
     
-    # Set bucket policy for CloudFront access
-    print_status "Setting bucket policy..."
-    cat > /tmp/bucket-policy.json << EOF
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "AllowCloudFrontAccess",
-            "Effect": "Allow",
-            "Principal": {
-                "Service": "cloudfront.amazonaws.com"
-            },
-            "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::${BUCKET_NAME}/*"
-        }
-    ]
-}
-EOF
-    aws s3api put-bucket-policy --bucket "$BUCKET_NAME" --policy file:///tmp/bucket-policy.json
-    rm /tmp/bucket-policy.json
+    # Get AWS Account ID for bucket policy
+    AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output text)
+    
+    # Bucket policy will be set after CloudFront distribution is created
+    print_status "Bucket created, policy will be configured after CloudFront setup..."
 fi
 
 # Step 3: Sync files to S3
@@ -153,9 +132,29 @@ if [ -f "$DISTRIBUTION_FILE" ]; then
     CLOUDFRONT_DISTRIBUTION_ID=$(cat "$DISTRIBUTION_FILE")
     print_status "Using existing CloudFront distribution: $CLOUDFRONT_DISTRIBUTION_ID"
 else
+    print_status "Creating Origin Access Control..."
+    
+    # Check if OAC already exists
+    OAC_ID=$(aws cloudfront list-origin-access-controls --query "OriginAccessControlList.Items[?Name=='lineo-finance-oac'].Id | [0]" --output text 2>/dev/null || echo "")
+    
+    if [ -z "$OAC_ID" ] || [ "$OAC_ID" = "None" ]; then
+        # Create Origin Access Control
+        OAC_ID=$(aws cloudfront create-origin-access-control \
+            --origin-access-control-config "{
+                \"Name\": \"lineo-finance-oac\",
+                \"Description\": \"OAC for Lineo Finance S3 bucket\",
+                \"SigningProtocol\": \"sigv4\",
+                \"SigningBehavior\": \"always\",
+                \"OriginAccessControlOriginType\": \"s3\"
+            }" --query 'OriginAccessControl.Id' --output text)
+        print_status "Created Origin Access Control: $OAC_ID"
+    else
+        print_status "Using existing Origin Access Control: $OAC_ID"
+    fi
+    
     print_status "Creating CloudFront distribution..."
     
-    # Create CloudFront distribution configuration
+    # Create CloudFront distribution configuration with OAC
     cat > /tmp/cloudfront-config.json << EOF
 {
     "CallerReference": "lineo-finance-$(date +%s)",
@@ -170,7 +169,7 @@ else
                 "S3OriginConfig": {
                     "OriginAccessIdentity": ""
                 },
-                "OriginAccessControlId": ""
+                "OriginAccessControlId": "$OAC_ID"
             }
         ]
     },
@@ -228,6 +227,33 @@ EOF
     
     print_status "CloudFront distribution created: $CLOUDFRONT_DISTRIBUTION_ID"
     
+    # Now set the bucket policy with the correct CloudFront distribution ARN
+    print_status "Configuring S3 bucket policy for CloudFront access..."
+    AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output text)
+    cat > /tmp/bucket-policy.json << EOF
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowCloudFrontServicePrincipal",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "cloudfront.amazonaws.com"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::${BUCKET_NAME}/*",
+            "Condition": {
+                "StringEquals": {
+                    "AWS:SourceArn": "arn:aws:cloudfront::${AWS_ACCOUNT_ID}:distribution/${CLOUDFRONT_DISTRIBUTION_ID}"
+                }
+            }
+        }
+    ]
+}
+EOF
+    aws s3api put-bucket-policy --bucket "$BUCKET_NAME" --policy file:///tmp/bucket-policy.json
+    rm /tmp/bucket-policy.json
+    
     # Get the CloudFront domain name
     CLOUDFRONT_DOMAIN=$(aws cloudfront get-distribution --id "$CLOUDFRONT_DISTRIBUTION_ID" --query 'Distribution.DomainName' --output text)
     
@@ -243,15 +269,15 @@ EOF
     echo "https://${CLOUDFRONT_DOMAIN}" > .cloudfront-url
 fi
 
-# Step 5: Invalidate CloudFront cache if requested
-if [ "$INVALIDATE_CACHE" = true ] && [ -n "$CLOUDFRONT_DISTRIBUTION_ID" ]; then
+# Step 5: Always invalidate CloudFront cache
+if [ -n "$CLOUDFRONT_DISTRIBUTION_ID" ]; then
     print_status "Creating CloudFront invalidation..."
-    aws cloudfront create-invalidation \
+    INVALIDATION_ID=$(aws cloudfront create-invalidation \
         --distribution-id "$CLOUDFRONT_DISTRIBUTION_ID" \
         --paths "/*" \
         --query 'Invalidation.Id' \
-        --output text
-    print_status "Cache invalidation initiated"
+        --output text)
+    print_status "Cache invalidation initiated (ID: $INVALIDATION_ID)"
 fi
 
 # Display the CloudFront URL if it exists
@@ -265,10 +291,7 @@ if [ -f ".cloudfront-url" ]; then
     echo "$CLOUDFRONT_URL"
     echo "==========================================="
     echo ""
-    if [ "$INVALIDATE_CACHE" = false ]; then
-        print_warning "Note: Changes may take a few minutes to appear due to CloudFront caching."
-        print_warning "Use --invalidate flag to force cache refresh."
-    fi
+    print_status "CloudFront cache has been invalidated."
 else
     # Get the CloudFront domain for existing distribution
     if [ -n "$CLOUDFRONT_DISTRIBUTION_ID" ]; then
