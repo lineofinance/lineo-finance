@@ -694,10 +694,11 @@
     position: absolute;
     width: 260px;
     height: 303px;
-    left: -80px; // Extends beyond the left edge
-    top: -100px; // Reaches into the section above
+    left: 10px; // Position near the left edge of viewport
+    top: -50px; // Reaches into the section above
     z-index: 1;
-    opacity: 0.15; // Subtle decoration
+    opacity: 0.3; // More visible
+    pointer-events: none; // Prevent interaction
     
     @include tablet-down {
       width: 200px;
