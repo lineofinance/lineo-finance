@@ -26,19 +26,19 @@ und einen Query-Namen Ihrer Wahl vergeben, beispielsweise "Buchhaltung Lineo Fin
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/04-query-name.png)
 
-Anschließend müssen ALLE Felder (ca. 50 Felder) in der Kategorie “Abschnitte” einzeln angeklickt werden, und darin wieder alle Felder aktiviert werden (hier sind beispielhaft nur die ersten beiden markiert):
+Anschließend müssen <span class="highlight">ALLE</span> Felder (ca. 50 Felder) in der Kategorie “Abschnitte” einzeln angeklickt werden, und darin wieder alle Felder aktiviert werden (hier sind beispielhaft nur die ersten beiden markiert):
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/05-felder-abschnitte.png)
 
-Dies gilt sowohl für ALLE Felder, in denen ein Häkchen gesetzt werden muss,
+Dies gilt sowohl für <span class="highlight">ALLE</span> Felder, in denen ein Häkchen gesetzt werden muss,
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/06-inhalt-abschnitte.png)
 
-als auch für ALLE Auswahlfelder, die in manchen Abschnitten oberhalb der Häkchen erscheinen:
+als auch für <span class="highlight">ALLE</span> Auswahlfelder, die in manchen Abschnitten oberhalb der Häkchen erscheinen:
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/07-auswahlfelder-abschnitte.png)
 
-Aber Achtung: Hier gibt es drei Ausnahmen, bei denen nicht alle Felder angeklickt werden können:
+Aber <span class="highlight">Achtung</span>: Hier gibt es drei Ausnahmen, bei denen nicht alle Felder angeklickt werden können:
 
 1. In der Kapitalflussrechnung bekommt das Feld “Orderübersicht” keinen Haken:
 
