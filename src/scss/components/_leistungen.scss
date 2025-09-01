@@ -2,77 +2,110 @@
 .leistungen {
   padding: 80px 0;
   background: #fff;
-  
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    flex-direction: column;
+    display: flex;
   }
-  
-  // Section Header
-  .section-header {
-    text-align: center;
-    margin-bottom: 60px;
-    
-    .section-title {
-      font-size: 42px;
+
+  // Header section with image and content in flex row
+  .leistungen-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+
+    margin-left: calc(-50vw + 50%); // Extend to left edge
+    padding-left: 0; // No padding on left
+    width: calc(100% + 50vw - 50%); // Extend width to compensate
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 30px;
+      margin-left: -20px; // Account for container padding on mobile
+      width: calc(100% + 40px);
+    }
+  }
+
+  .header-content {
+    flex: 1;
+    text-align: left;
+
+    h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      text-align: left;
       font-weight: 600;
-      color: #353535;
-      margin-bottom: 20px;
+      color: #2c3e50;
       font-family: 'Barlow', sans-serif;
       line-height: 1.2;
-      
+      margin-bottom: 24px;
+
       @media (max-width: 768px) {
-        font-size: 32px;
+        font-size: clamp(24px, 5vw, 32px);
+        text-align: left;
       }
     }
-    
-    .section-subtitle {
-      font-size: 20px;
+
+    p {
+      font-size: 18px;
       color: #666;
       line-height: 1.6;
-      max-width: 800px;
-      margin: 0 auto;
       font-family: 'Barlow', sans-serif;
       font-weight: 400;
-      
+      text-align: left;
+
       @media (max-width: 768px) {
-        font-size: 18px;
+        font-size: 16px;
+        text-align: left;
       }
     }
   }
-  
+
+
   // Process Banner
   .process-banner {
-    margin-bottom: 60px;
-    text-align: center;
+    flex: 0 0 auto; // Don't grow or shrink
     animation: fadeIn 0.8s ease-in;
-    
+
     img {
+      width: 700px; // Increased from 500px - adjust this value as needed
       max-width: 100%;
       height: auto;
-      border-radius: 12px;
+      border-radius: 0 12px 12px 0; // No radius on left edge
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      display: block;
+
+      @media (max-width: 1024px) {
+        width: 600px; // Slightly smaller on tablets
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+        border-radius: 0; // No radius on mobile
+      }
     }
   }
-  
+
   // Services Grid
   .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     margin-top: 60px;
-    
+
     @media (max-width: 1024px) {
       grid-template-columns: 1fr;
       gap: 30px;
     }
-    
+
     @media (min-width: 768px) and (max-width: 1024px) {
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  
+
   // Service Card
   .service-card {
     background: #fff;
@@ -82,12 +115,15 @@
     transition: all 0.3s ease;
     text-align: center;
     animation: fadeInUp 0.8s ease-in;
-    
+    display: flex;
+    flex-direction: column;
+    height: 100%; // Take full height of grid cell
+
     &:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
     }
-    
+
     .service-icon {
       width: 120px;
       height: 120px;
@@ -95,7 +131,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      
+
       img {
         max-width: 100%;
         max-height: 100%;
@@ -104,7 +140,7 @@
         object-fit: contain;
       }
     }
-    
+
     .service-title {
       font-size: 24px;
       font-weight: 600;
@@ -112,38 +148,60 @@
       margin-bottom: 20px;
       font-family: 'Barlow', sans-serif;
       line-height: 1.3;
-      min-height: 62px;
+      min-height: 95px; // Increased to accommodate 3 lines
       display: flex;
-      align-items: center;
+      align-items: flex-start; // Align text to top
       justify-content: center;
-      
+      flex-shrink: 0; // Don't shrink
+
       @media (max-width: 768px) {
         font-size: 22px;
-        min-height: auto;
+        min-height: 85px; // Slightly less on mobile
       }
     }
-    
+
     .service-description {
       font-size: 16px;
       color: #666;
       line-height: 1.7;
       font-family: 'Barlow', sans-serif;
       font-weight: 400;
-      
+      margin-bottom: 20px;
+      flex: 1; // Takes remaining space, pushing link to bottom
+
       @media (max-width: 768px) {
         font-size: 15px;
       }
     }
     
+    .service-link {
+      display: inline-block;
+      color: #333;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 4px; // Adds space between text and underline
+      font-family: 'Barlow', sans-serif;
+      transition: all 0.3s ease;
+      margin-top: auto; // Pushes to bottom
+      align-self: center; // Centers the link
+      
+      &:hover {
+        color: #000;
+        transform: translateX(5px);
+        text-underline-offset: 6px; // Slightly more on hover
+      }
+    }
+
     // Animation delays for staggered effect
     &:nth-child(1) {
       animation-delay: 0.1s;
     }
-    
+
     &:nth-child(2) {
       animation-delay: 0.2s;
     }
-    
+
     &:nth-child(3) {
       animation-delay: 0.3s;
     }
@@ -155,6 +213,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -165,6 +224,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

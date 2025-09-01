@@ -147,4 +147,83 @@ document.addEventListener('DOMContentLoaded', function() {
             },
         });
     }
+
+    // Initialize smart system carousel
+    const smartSystemCarousel = document.querySelector('.smart-system-carousel.swiper');
+    if (smartSystemCarousel) {
+        new Swiper(smartSystemCarousel, {
+            // Core parameters
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true, // Enable endless loop
+            centeredSlides: false,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            
+            // Responsive breakpoints
+            breakpoints: {
+                // When window width is >= 768px (tablet)
+                768: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 1,
+                    spaceBetween: 30,
+                },
+                // When window width is >= 1024px (desktop)
+                1024: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 1,
+                    spaceBetween: 30,
+                }
+            },
+            
+            // Navigation
+            navigation: {
+                nextEl: '.smart-system-carousel .swiper-button-next',
+                prevEl: '.smart-system-carousel .swiper-button-prev',
+            },
+            
+            // Pagination
+            pagination: {
+                el: '.smart-system-carousel .swiper-pagination',
+                clickable: true,
+                dynamicBullets: false,
+            },
+            
+            // Performance optimizations
+            watchSlidesProgress: true,
+            watchSlidesVisibility: true,
+            preloadImages: false,
+            lazy: {
+                loadPrevNext: true,
+                loadPrevNextAmount: 3,
+            },
+            
+            // Smooth transitions
+            speed: 500,
+            effect: 'slide',
+            
+            // Disable touch/mouse drag
+            allowTouchMove: false,
+            simulateTouch: false,
+            
+            // Keyboard control
+            keyboard: {
+                enabled: true,
+                onlyInViewport: true,
+            },
+            
+            // Accessibility
+            a11y: {
+                enabled: true,
+                prevSlideMessage: 'Previous slide',
+                nextSlideMessage: 'Next slide',
+                firstSlideMessage: 'This is the first slide',
+                lastSlideMessage: 'This is the last slide',
+                paginationBulletMessage: 'Go to slide {{index}}',
+            },
+        });
+    }
 });

@@ -15,17 +15,12 @@
   pointer-events: none;
   //filter: invert(1) grayscale(1); // Make it white/gray for visibility on yellow background
 
-  @media (max-width: 768px) {
-    width: 400px;
-    height: 400px;
-    opacity: 0.15;
+  @media (max-width: var(--breakpoint-desktop)) {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
   }
 
-  @media (max-width: 576px) {
-    width: 300px;
-    height: 300px;
-    opacity: 0.1;
-  }
 }
 
 // Leistungen Hero Section (First Section)

@@ -20,7 +20,7 @@ module.exports = function(eleventyConfig) {
         let result = sass.compileString(inputContent, {
           loadPaths: [parsed.dir || ".", "src/scss"],
           sourceMap: false, // Set to true for development if needed
-          style: "compressed" // Use "expanded" for development
+          style: "expanded" // Use "compressed" for production
         });
         
         return result.css;

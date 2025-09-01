@@ -107,11 +107,30 @@ else
             "ErrorDocument": {"Key": "404.html"}
         }'
     
-    # Get AWS Account ID for bucket policy
-    AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output text)
+    # Disable block public access for website hosting
+    print_status "Configuring bucket for public website access..."
+    aws s3api put-public-access-block \
+        --bucket "$BUCKET_NAME" \
+        --public-access-block-configuration "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false"
     
-    # Bucket policy will be set after CloudFront distribution is created
-    print_status "Bucket created, policy will be configured after CloudFront setup..."
+    # Set public read policy for website hosting
+    cat > /tmp/bucket-policy.json << EOF
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::${BUCKET_NAME}/*"
+        }
+    ]
+}
+EOF
+    aws s3api put-bucket-policy --bucket "$BUCKET_NAME" --policy file:///tmp/bucket-policy.json
+    rm /tmp/bucket-policy.json
+    print_status "Bucket configured for public website hosting"
 fi
 
 # Step 3: Sync files to S3
@@ -132,29 +151,9 @@ if [ -f "$DISTRIBUTION_FILE" ]; then
     CLOUDFRONT_DISTRIBUTION_ID=$(cat "$DISTRIBUTION_FILE")
     print_status "Using existing CloudFront distribution: $CLOUDFRONT_DISTRIBUTION_ID"
 else
-    print_status "Creating Origin Access Control..."
+    print_status "Creating CloudFront distribution for S3 website endpoint..."
     
-    # Check if OAC already exists
-    OAC_ID=$(aws cloudfront list-origin-access-controls --query "OriginAccessControlList.Items[?Name=='lineo-finance-oac'].Id | [0]" --output text 2>/dev/null || echo "")
-    
-    if [ -z "$OAC_ID" ] || [ "$OAC_ID" = "None" ]; then
-        # Create Origin Access Control
-        OAC_ID=$(aws cloudfront create-origin-access-control \
-            --origin-access-control-config "{
-                \"Name\": \"lineo-finance-oac\",
-                \"Description\": \"OAC for Lineo Finance S3 bucket\",
-                \"SigningProtocol\": \"sigv4\",
-                \"SigningBehavior\": \"always\",
-                \"OriginAccessControlOriginType\": \"s3\"
-            }" --query 'OriginAccessControl.Id' --output text)
-        print_status "Created Origin Access Control: $OAC_ID"
-    else
-        print_status "Using existing Origin Access Control: $OAC_ID"
-    fi
-    
-    print_status "Creating CloudFront distribution..."
-    
-    # Create CloudFront distribution configuration with OAC
+    # Create CloudFront distribution configuration for S3 website endpoint
     cat > /tmp/cloudfront-config.json << EOF
 {
     "CallerReference": "lineo-finance-$(date +%s)",
@@ -164,17 +163,24 @@ else
         "Quantity": 1,
         "Items": [
             {
-                "Id": "S3-${BUCKET_NAME}",
-                "DomainName": "${BUCKET_NAME}.s3.${REGION}.amazonaws.com",
-                "S3OriginConfig": {
-                    "OriginAccessIdentity": ""
-                },
-                "OriginAccessControlId": "$OAC_ID"
+                "Id": "S3-Website-${BUCKET_NAME}",
+                "DomainName": "${BUCKET_NAME}.s3-website.${REGION}.amazonaws.com",
+                "CustomOriginConfig": {
+                    "HTTPPort": 80,
+                    "HTTPSPort": 443,
+                    "OriginProtocolPolicy": "http-only",
+                    "OriginSslProtocols": {
+                        "Quantity": 1,
+                        "Items": ["TLSv1.2"]
+                    },
+                    "OriginReadTimeout": 30,
+                    "OriginKeepaliveTimeout": 5
+                }
             }
         ]
     },
     "DefaultCacheBehavior": {
-        "TargetOriginId": "S3-${BUCKET_NAME}",
+        "TargetOriginId": "S3-Website-${BUCKET_NAME}",
         "ViewerProtocolPolicy": "redirect-to-https",
         "AllowedMethods": {
             "Quantity": 2,
@@ -226,33 +232,6 @@ EOF
     rm /tmp/cloudfront-config.json
     
     print_status "CloudFront distribution created: $CLOUDFRONT_DISTRIBUTION_ID"
-    
-    # Now set the bucket policy with the correct CloudFront distribution ARN
-    print_status "Configuring S3 bucket policy for CloudFront access..."
-    AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output text)
-    cat > /tmp/bucket-policy.json << EOF
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "AllowCloudFrontServicePrincipal",
-            "Effect": "Allow",
-            "Principal": {
-                "Service": "cloudfront.amazonaws.com"
-            },
-            "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::${BUCKET_NAME}/*",
-            "Condition": {
-                "StringEquals": {
-                    "AWS:SourceArn": "arn:aws:cloudfront::${AWS_ACCOUNT_ID}:distribution/${CLOUDFRONT_DISTRIBUTION_ID}"
-                }
-            }
-        }
-    ]
-}
-EOF
-    aws s3api put-bucket-policy --bucket "$BUCKET_NAME" --policy file:///tmp/bucket-policy.json
-    rm /tmp/bucket-policy.json
     
     # Get the CloudFront domain name
     CLOUDFRONT_DOMAIN=$(aws cloudfront get-distribution --id "$CLOUDFRONT_DISTRIBUTION_ID" --query 'Distribution.DomainName' --output text)

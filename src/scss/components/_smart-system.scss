@@ -1,0 +1,183 @@
+// Smart System Section with Carousel
+.smart-system-section {
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+
+  // Use the same background as app-showcase
+  background-image: url('/assets/images/app-showcase-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: clamp(28px, 4vw, 42px);
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+}
+
+.smart-system-carousel {
+  position: relative;
+  padding: 0 0 60px 0; // Remove side padding, add bottom padding for controls
+
+  .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  // Navigation buttons positioned at bottom
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: auto;
+    bottom: 10px;
+    background: transparent;
+    border: none;
+    width: 27px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform var(--transition-base);
+
+    &::after {
+      display: none; // Hide default Swiper arrow
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: currentColor;
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+
+      &:hover {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .swiper-button-prev {
+    left: auto;
+    right: 47px; // Position to the left of next button
+  }
+
+  .swiper-button-next {
+    left: auto;
+    right: 10px; // Position at right edge
+  }
+
+  // Pagination
+  .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      background: var(--color-gray-light);
+      opacity: 1;
+      transition: all 0.3s ease;
+      margin: 0 !important;
+
+      &-active {
+        background: var(--color-text); // Dark color, same size as other bullets
+      }
+    }
+  }
+}
+
+.smart-system-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  min-height: 120px;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .smart-system-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  p {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: 1rem;
+    line-height: 1.6;
+    flex: 1;
+
+    @media (min-width: 768px) {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .smart-system-section {
+    padding: 60px 0;
+
+    h2 {
+      padding: 0 20px;
+      font-size: 1.75rem;
+    }
+  }
+
+  .smart-system-carousel {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none; // Hide navigation on mobile
+    }
+  }
+
+  .smart-system-card {
+    padding: 1.5rem;
+    gap: 1rem;
+
+    .smart-system-icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+}

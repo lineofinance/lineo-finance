@@ -1,0 +1,249 @@
+// Knowledge Base Styles
+
+.knowledge-base-hero {
+  padding: 100px 0 40px; // Add top padding to avoid header
+  background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+  
+  @media (max-width: 768px) {
+    padding: 80px 0 30px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+  }
+}
+
+.knowledge-base-articles {
+  padding: 60px 0;
+  
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+.kb-article-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    
+    a {
+      color: var(--color-text);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+  
+  p {
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .read-more {
+    color: var(--color-primary);
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: translateX(4px);
+    }
+  }
+}
+
+// Full page background for knowledge base
+.knowledge-base-page {
+  background: #fff9e6; // Slightly darker yellow for full page
+  min-height: 100vh;
+}
+
+.knowledge-base-main {
+  background: #fff9e6; // Same yellow background
+  min-height: calc(100vh - 80px); // Full height minus header
+  padding: 0;
+}
+
+// Article content styles for markdown
+.knowledge-base-article {
+  max-width: 980px; // Increased max-width to compensate for less padding
+  margin: 0 auto;
+  padding: 120px 0 80px; // No left/right padding on article itself
+  background: transparent; // Transparent to show page background
+  
+  @media (max-width: 1024px) {
+    padding: 120px 20px 80px; // Add some padding on smaller screens
+  }
+  
+  @media (max-width: 768px) {
+    padding: 100px 20px 60px; // Less padding on mobile
+  }
+  
+  @media (max-width: 576px) {
+    padding: 90px 15px 40px; // Even less on small screens
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--color-text);
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+    color: var(--color-text);
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--color-text);
+  }
+  
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 1rem 0 0.5rem;
+    color: var(--color-text);
+  }
+  
+  p {
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    color: var(--color-text-light);
+  }
+  
+  ul, ol {
+    margin: 1rem 0 1.5rem 2rem;
+    
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+      color: var(--color-text-light);
+      
+      strong {
+        color: var(--color-text);
+      }
+    }
+  }
+  
+  blockquote {
+    border-left: 4px solid var(--color-primary);
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: var(--color-text-light);
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 3rem 0;
+  }
+  
+  em {
+    color: var(--color-text-light);
+    font-style: italic;
+  }
+  
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    
+    &:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+  }
+  
+  // Image styles
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  figure {
+    margin: 2rem 0;
+    text-align: center;
+    
+    img {
+      margin: 0;
+    }
+    
+    figcaption {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      font-style: italic;
+    }
+  }
+  
+  // Code blocks
+  pre {
+    background: #f4f4f4;
+    border-radius: 8px;
+    padding: 1.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    
+    code {
+      background: none;
+      padding: 0;
+      font-size: 0.9rem;
+    }
+  }
+  
+  code {
+    background: #f4f4f4;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+  }
+  
+  // Picture element for responsive images
+  picture {
+    display: block;
+    margin: 1.5rem 0;
+    
+    img {
+      margin: 0;
+    }
+  }
+}
