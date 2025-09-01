@@ -135,7 +135,11 @@ layout: kb-article.njk
 title: "Titel des Artikels"
 description: "Kurze Beschreibung für die Übersichtsseite"
 tags: knowledgeBase
+menuTitle: Automatisierung
 date: 2024-01-30
+showInFooter: true
+footerPriority: 1
+featured: true
 ---
 ```
 
