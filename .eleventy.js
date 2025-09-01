@@ -44,9 +44,14 @@ module.exports = function(eleventyConfig) {
     return page.url === url ? "active" : "";
   });
   
-  // Add collection for knowledge base (future use)
+  // Add collection for knowledge base
   eleventyConfig.addCollection("knowledgeBase", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/knowledge-base/**/*.md");
+    return collectionApi.getFilteredByGlob("src/content/knowledge-base/**/*.md");
+  });
+  
+  // Add collection for FAQs
+  eleventyConfig.addCollection("faqs", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/content/faqs/**/*.md");
   });
   
   // Configure markdown library (for future knowledge base)

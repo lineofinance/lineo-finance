@@ -19,6 +19,7 @@
     "sass": "^1.91.0"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "playwright": "^1.55.0"
   }
 }

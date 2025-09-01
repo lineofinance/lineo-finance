@@ -130,12 +130,21 @@
       transition: width 0.2s ease-out;
     }
 
-    &:hover,
-    &.active {
+    &:hover {
       color: var(--color-secondary);
 
       &::after {
         width: 100%;
+      }
+    }
+
+    // Current page gets permanent underline (except homepage)
+    &.current-page {
+      color: var(--color-secondary);
+
+      &::after {
+        width: 100%;
+        transition: none; // No animation for current page
       }
     }
   }

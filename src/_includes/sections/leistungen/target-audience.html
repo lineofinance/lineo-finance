@@ -1,50 +1,52 @@
 <!-- Leistungen Target Audience Section -->
 <section class="leistungen-target">
-  <div class="leistungen-target__container">
-    <div class="leistungen-target__header">
+  <div class="container">
+    <div class="leistungen-target__content">
       <h2 class="leistungen-target__title">Für wen eignet sich lineo finance?</h2>
-      <p class="leistungen-target__subtitle">
-        Unsere Lösung wurde speziell für diese Zielgruppen entwickelt
-      </p>
     </div>
-
-    <div class="leistungen-target__carousel">
-      <div class="card-box-grid card-box-grid--3cols">
-        <div class="card-box">
-          <div class="card-box__icon card-box__icon--circle">
-            <span style="font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 24px; color: white;">FO</span>
+    <div class="leistungen-target__carousel-wrapper">
+      <div class="leistungen-target__carousel swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="carousel-card">
+              <div class="carousel-card-icon">
+                <img src="/assets/images/Family_Offices.png" alt="Family Offices" width="180" height="180">
+              </div>
+              <p><strong>Family Offices</strong>, die komplexe Vermögensstrukturen mit mehreren Depots effizient und
+                transparent verwalten möchten.</p>
+            </div>
           </div>
-          <div class="card-box__content">
-            <h3 class="card-box__title">Family Offices</h3>
-            <p class="card-box__text">
-              Verwalten Sie komplexe Vermögensstrukturen mit mehreren Depots effizient und transparent. Unsere Lösung bietet Ihnen die nötige Flexibilität und Kontrolle für anspruchsvolle Portfolios.
-            </p>
+          <div class="swiper-slide">
+            <div class="carousel-card">
+              <div class="carousel-card-icon">
+                <img src="/assets/images/Steuerberater_Kanzleien.jpg" alt="Steuerberater und Kanzleien" width="180"
+                  height="180">
+              </div>
+              <p><strong>Steuerberater und Kanzleien</strong>, die ihr Leistungsspektrum um professionelle
+                Wertpapierbuchhaltung erweitern möchten.</p>
+            </div>
           </div>
-        </div>
-
-        <div class="card-box">
-          <div class="card-box__icon card-box__icon--circle">
-            <span style="font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 24px; color: white;">SK</span>
-          </div>
-          <div class="card-box__content">
-            <h3 class="card-box__title">Steuerberater und Kanzleien</h3>
-            <p class="card-box__text">
-              Erweitern Sie Ihr Leistungsspektrum um professionelle Wertpapierbuchhaltung. Mit unserer Software bedienen Sie Mandanten mit Wertpapiervermögen noch besser und effizienter.
-            </p>
-          </div>
-        </div>
-
-        <div class="card-box">
-          <div class="card-box__icon card-box__icon--circle">
-            <span style="font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 24px; color: white;">UW</span>
-          </div>
-          <div class="card-box__content">
-            <h3 class="card-box__title">Unternehmen mit Wert­papieren im Betriebsvermögen</h3>
-            <p class="card-box__text">
-              Bilanzieren Sie Ihre Wertpapiere korrekt und ohne Aufwand. Unsere automatisierte Lösung gewährleistet eine prüfungssichere Dokumentation Ihres Betriebsvermögens.
-            </p>
+          <div class="swiper-slide">
+            <div class="carousel-card">
+              <div class="carousel-card-icon">
+                <img src="/assets/images/Unternehmen_Wertpapier.png" alt="Unternehmen mit Wertpapieren" width="180"
+                  height="180">
+              </div>
+              <p><strong>Unternehmen mit Wertpapieren im Betriebsvermögen</strong>, die ihre Wertpapiere korrekt und
+                ohne Aufwand bilanzieren möchten.</p>
+            </div>
           </div>
         </div>
+      </div>
+      <!-- Controls outside swiper container -->
+      <div class="leistungen-target__carousel-controls">
+        <div class="leistungen-target__carousel-pagination"></div>
+        <button class="leistungen-target__carousel-prev">
+          {% include "icons/carousel-prev.svg" %}
+        </button>
+        <button class="leistungen-target__carousel-next">
+          {% include "icons/carousel-next.svg" %}
+        </button>
       </div>
     </div>
   </div>

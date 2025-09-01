@@ -1,138 +1,209 @@
 # Lineo Finance Website
 
-A modern, static recreation of the lineo.finance website, built with vanilla HTML, CSS, and JavaScript.
+Eine moderne, statische Website für lineo.finance, entwickelt mit 11ty (Eleventy) und SCSS.
 
-## 🚀 Quick Start
+## 🚀 Schnellstart
 
-### View the website locally:
+### Entwicklungsserver starten:
 ```bash
-# Navigate to the project directory
+# Ins Projektverzeichnis wechseln
 cd lineo-finance
 
-# Start a simple HTTP server (Python 3)
-python3 -m http.server 8080
+# Entwicklungsserver mit Live-Reload starten
+npm run serve
 
-# Or using Node.js
-npx serve .
+# Für Produktion bauen
+npm run build
+
+# Build-Ordner bereinigen
+npm run clean
 ```
 
-Then open your browser and visit: http://localhost:8080
+Die Website ist dann erreichbar unter: http://localhost:8080
 
-## 📁 Project Structure
+## 📁 Projektstruktur
 
 ```
-lineo-finance/
-├── index.html              # Homepage
-├── pages/                  # All other pages
-│   ├── leistungen.html    # Services page
-│   ├── team-partner.html  # Team & Partners
-│   ├── karriere.html      # Careers
-│   ├── kontakt.html       # Contact
-│   ├── impressum.html     # Legal notice
-│   ├── datenschutz.html   # Privacy policy
-│   └── jobs/              # Job listings
-├── css/                    # Stylesheets
-│   ├── main.css           # Base styles
-│   ├── components/        # Component styles
-│   │   ├── header.css
-│   │   ├── footer.css
-│   │   ├── cards.css
-│   │   └── forms.css
-│   └── pages/             # Page-specific styles
-│       ├── home.css
-│       ├── services.css
-│       └── careers.css
-├── js/                     # JavaScript
-│   └── main.js            # Core functionality
-├── assets/                 # Images and icons
-│   ├── images/            # Photos and logos
-│   └── icons/             # SVG icons
-└── favicon.png            # Site favicon
+src/
+├── _includes/          # Wiederverwendbare Templates
+│   ├── base.njk       # Haupt-Layout-Template
+│   ├── header.html    # Navigation Header
+│   ├── footer.html    # Website Footer
+│   └── sections/      # Seiten-Komponenten
+├── _data/             # Globale Datendateien
+├── pages/             # Website-Seiten
+│   └── jobs/          # Stellenausschreibungen
+├── scss/              # SCSS Quelldateien
+│   ├── main.scss      # Haupteinstiegspunkt
+│   ├── abstracts/     # Variablen, Mixins
+│   ├── base/          # Reset, Typografie, Layout
+│   ├── components/    # Wiederverwendbare Komponenten
+│   ├── pages/         # Seitenspezifische Styles
+│   └── utilities/     # Utility-Klassen
+├── js/                # JavaScript-Dateien
+├── assets/            # Bilder, Icons, Schriften
+└── index.html         # Startseite
 ```
 
-## ✅ Features Implemented
+## ✅ Implementierte Funktionen
 
-### Phase 1: Foundation ✅
-- [x] Project structure with organized directories
-- [x] HTML templates for all pages
-- [x] Base CSS with variables and typography
-- [x] Core JavaScript functionality
+### Phase 1: Grundgerüst ✅
+- [x] 11ty Static Site Generator Setup
+- [x] SCSS-Preprocessing mit Kompression
+- [x] Nunjucks-Templating-System
+- [x] Modulare Komponentenstruktur
 
-### Phase 2: Components ✅
-- [x] Responsive header with mobile menu
-- [x] Multi-column footer
-- [x] Card components with hover effects
-- [x] Form styling with validation
-- [x] Responsive grid system
+### Phase 2: Komponenten ✅
+- [x] Responsiver Header mit Mobile-Menü
+- [x] Mehrspalten-Footer
+- [x] Karten-Komponenten mit Hover-Effekten
+- [x] Formular-Styling mit Validierung
+- [x] Responsives Grid-System
 
-### Phase 3: Pages ✅
-- [x] Homepage with hero, features, process, FAQ sections
-- [x] Services page with benefits and automation process
-- [x] Team & Partner page with partner network
-- [x] Careers page with job listings and culture
-- [x] Contact page with form and contact info
-- [x] Legal pages (Impressum, Datenschutz)
+### Phase 3: Seiten ✅
+- [x] Startseite mit Hero, Features, Prozess, FAQ-Bereichen
+- [x] Leistungen-Seite mit Vorteilen und Automatisierungsprozess
+- [x] Team & Partner-Seite mit Partnernetzwerk
+- [x] Karriere-Seite mit Stellenausschreibungen und Kultur
+- [x] Kontakt-Seite mit Formular und Kontaktinformationen
+- [x] Rechtliche Seiten (Impressum, Datenschutz)
 
-## 🎨 Design Features
+## 🎨 Design-Features
 
-- **Modern Design**: Clean, professional layout with yellow (#FFD700) accent color
-- **Fully Responsive**: Mobile-first approach with breakpoints
-- **Smooth Animations**: Hover effects, transitions, and scroll animations
-- **Accessibility**: Semantic HTML, ARIA labels, keyboard navigation
-- **Performance**: Lazy loading, optimized CSS, vanilla JavaScript (no dependencies)
+- **Modernes Design**: Sauberes, professionelles Layout mit gelber (#FFD700) Akzentfarbe
+- **Vollständig Responsiv**: Mobile-First-Ansatz mit Breakpoints
+- **Sanfte Animationen**: Hover-Effekte, Übergänge und Scroll-Animationen
+- **Barrierefreiheit**: Semantisches HTML, ARIA-Labels, Tastaturnavigation
+- **Performance**: Lazy Loading, optimiertes CSS, Vanilla JavaScript (keine Abhängigkeiten)
 
-## 🔧 Technologies Used
+## 🔧 Verwendete Technologien
 
-- **HTML5**: Semantic markup
-- **CSS3**: Custom properties, Grid, Flexbox, animations
-- **Vanilla JavaScript**: No framework dependencies
-- **Original Assets**: Logo and images from WordPress site
+- **11ty (Eleventy)**: Static Site Generator mit Nunjucks-Templating
+- **SCSS**: Modulare Stylesheets kompiliert zu CSS
+- **Vanilla JavaScript**: Keine Framework-Abhängigkeiten
+- **Barlow Schriftart**: Selbst gehostete Schriftdateien
 
-## 📱 Browser Support
+## 📱 Browser-Unterstützung
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers
+- Chrome (neueste Version)
+- Firefox (neueste Version)
+- Safari (neueste Version)
+- Edge (neueste Version)
+- Mobile Browser
 
 ## 🚀 Deployment
 
-The site is static and can be deployed to any web server or static hosting service:
+Die Website kann auf jeden Webserver oder statischen Hosting-Service deployed werden:
 
 - Netlify
 - Vercel
 - GitHub Pages
 - AWS S3 + CloudFront
-- Traditional web hosting
+- Traditionelles Webhosting
 
-Simply upload all files and folders to your hosting service.
+Einfach den Inhalt des `dist/` Ordners nach dem Build hochladen.
 
-## 📝 Next Steps
+## 📚 Wissensdatenbank erstellen
 
-To further enhance the website:
+### Anleitung zum Erstellen von Knowledge Base Artikeln
 
-1. **Performance Optimization**
-   - Optimize images (WebP format)
-   - Minify CSS and JavaScript
-   - Implement service worker for offline capability
+Die Wissensdatenbank nutzt Markdown-Dateien im `src/knowledge-base/` Verzeichnis. Jeder Artikel wird automatisch in die Knowledge Base Collection aufgenommen und auf der Website dargestellt.
 
-2. **Content Management**
-   - Add more broker logos
-   - Update team information
-   - Add more job listings
+#### Artikelstruktur
+
+Erstellen Sie eine neue Markdown-Datei in `src/knowledge-base/`:
+
+```markdown
+---
+title: "Titel des Artikels"
+description: "Kurze Beschreibung für SEO und Übersichten"
+category: "Kategorie"
+tags: ["Tag1", "Tag2", "Tag3"]
+date: 2024-01-15
+author: "Autor Name"
+featured: false
+---
+
+## Einleitung
+
+Ihr Artikelinhalt beginnt hier...
+
+### Unterüberschrift
+
+Weitere Inhalte...
+```
+
+#### Frontmatter-Felder
+
+- **title** (erforderlich): Der Titel des Artikels
+- **description** (erforderlich): Meta-Beschreibung für SEO
+- **category** (erforderlich): Hauptkategorie (z.B. "Grundlagen", "Anleitungen", "FAQ")
+- **tags** (optional): Array von Schlagwörtern für bessere Auffindbarkeit
+- **date** (erforderlich): Veröffentlichungsdatum im Format YYYY-MM-DD
+- **author** (optional): Name des Autors
+- **featured** (optional): true/false - Hervorgehobene Artikel erscheinen oben
+
+#### Kategorien
+
+Standardkategorien für die Wissensdatenbank:
+- **Grundlagen**: Einführende Artikel über Wertpapierverbuchung
+- **Anleitungen**: Schritt-für-Schritt-Tutorials
+- **FAQ**: Häufig gestellte Fragen
+- **Integration**: Technische Integrationsanleitungen
+- **Compliance**: Rechtliche und regulatorische Themen
+
+#### Markdown-Funktionen
+
+Unterstützte Markdown-Elemente:
+- Überschriften (##, ###, ####)
+- Listen (geordnet und ungeordnet)
+- Links und Bilder
+- Code-Blöcke mit Syntax-Highlighting
+- Tabellen
+- Blockzitate
+- Fettdruck und Kursivschrift
+
+#### Bilder einbinden
+
+Bilder für Knowledge Base Artikel in `src/assets/images/knowledge-base/` ablegen:
+
+```markdown
+![Alt-Text](/assets/images/knowledge-base/bild-name.jpg)
+```
+
+#### Build-Prozess
+
+Nach dem Hinzufügen neuer Artikel:
+1. `npm run build` ausführen
+2. Artikel erscheinen automatisch in der Knowledge Base Übersicht
+3. Einzelne Artikelseiten werden generiert
+
+## 📝 Nächste Schritte
+
+Zur weiteren Verbesserung der Website:
+
+1. **Performance-Optimierung**
+   - Bilder optimieren (WebP-Format)
+   - CSS und JavaScript minimieren
+   - Service Worker für Offline-Funktionalität implementieren
+
+2. **Content-Management**
+   - Weitere Broker-Logos hinzufügen
+   - Team-Informationen aktualisieren
+   - Weitere Stellenausschreibungen hinzufügen
+   - Knowledge Base Artikel erweitern
 
 3. **Features**
-   - Newsletter signup functionality
-   - Contact form backend integration
-   - Analytics integration
-   - Cookie consent banner
+   - Newsletter-Anmeldung Funktionalität
+   - Kontaktformular Backend-Integration
+   - Analytics-Integration
+   - Cookie-Consent-Banner
 
 4. **SEO**
-   - Add XML sitemap
-   - Implement structured data
-   - Meta tags optimization
+   - XML-Sitemap hinzufügen
+   - Strukturierte Daten implementieren
+   - Meta-Tags optimieren
 
-## 📄 License
+## 📄 Lizenz
 
-© 2024 lineo finance GmbH. All rights reserved.
+© 2024 lineo finance GmbH. Alle Rechte vorbehalten.

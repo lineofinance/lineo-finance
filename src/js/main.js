@@ -3,6 +3,7 @@
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all modules
+    initCurrentPageIndicator();
     initMobileMenu();
     initFormValidation();
     initLazyLoading();
@@ -12,6 +13,39 @@ document.addEventListener('DOMContentLoaded', function() {
     initBrokerCarousel();
     initHeaderScroll();
 });
+
+// Current Page Indicator
+function initCurrentPageIndicator() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    
+    navLinks.forEach(link => {
+        // Get the href attribute
+        const linkPath = link.getAttribute('href');
+        
+        // Skip if it's the CTA button
+        if (link.classList.contains('btn-nav-cta')) {
+            return;
+        }
+        
+        // Check if current page matches the link
+        // Special handling for homepage
+        if (currentPath === '/' || currentPath === '/index.html') {
+            // Don't underline home link on homepage
+            if (linkPath === '/') {
+                link.classList.remove('current-page');
+            }
+        } else {
+            // For other pages, check if the current path includes the link path
+            // This handles both exact matches and subpages
+            if (linkPath !== '/' && currentPath.includes(linkPath.replace(/\/$/, ''))) {
+                link.classList.add('current-page');
+            } else {
+                link.classList.remove('current-page');
+            }
+        }
+    });
+}
 
 // Mobile Menu Toggle
 function initMobileMenu() {
@@ -279,30 +313,81 @@ function initSmoothScroll() {
 
 // FAQ Accordion Enhancement
 function initFAQ() {
-    const faqItems = document.querySelectorAll('.faq-item');
+    // Enhance the native details element animation
+    const faqItems = document.querySelectorAll('.faq-accordion__item');
     
     faqItems.forEach(item => {
-        const summary = item.querySelector('summary');
+        const summary = item.querySelector('.faq-accordion__header');
+        const content = item.querySelector('.faq-accordion__content');
+        const inner = item.querySelector('.faq-accordion__inner');
         
-        if (summary) {
-            // Add keyboard navigation
-            summary.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    item.open = !item.open;
-                }
-            });
+        if (summary && content && inner) {
+            // Set initial state
+            if (item.hasAttribute('open')) {
+                content.style.maxHeight = inner.scrollHeight + 'px';
+            } else {
+                content.style.maxHeight = '0';
+            }
             
-            // Add smooth animation class when toggling
-            summary.addEventListener('click', function() {
-                item.classList.toggle('opening');
+            // Override the default behavior to control animation timing
+            summary.addEventListener('click', function(e) {
+                e.preventDefault();
                 
-                setTimeout(() => {
-                    item.classList.remove('opening');
-                }, 300);
+                if (item.hasAttribute('open')) {
+                    // Closing animation
+                    // First set the max-height to current height for smooth transition
+                    content.style.maxHeight = inner.scrollHeight + 'px';
+                    // Force reflow
+                    content.offsetHeight;
+                    // Now animate to 0
+                    content.style.maxHeight = '0';
+                    
+                    // Remove open attribute after animation completes
+                    content.addEventListener('transitionend', function handler() {
+                        item.removeAttribute('open');
+                        content.removeEventListener('transitionend', handler);
+                    });
+                } else {
+                    // Close other items first (with animation)
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.hasAttribute('open')) {
+                            const otherContent = otherItem.querySelector('.faq-accordion__content');
+                            const otherInner = otherItem.querySelector('.faq-accordion__inner');
+                            if (otherContent && otherInner) {
+                                otherContent.style.maxHeight = otherInner.scrollHeight + 'px';
+                                otherContent.offsetHeight;
+                                otherContent.style.maxHeight = '0';
+                                
+                                otherContent.addEventListener('transitionend', function handler() {
+                                    otherItem.removeAttribute('open');
+                                    otherContent.removeEventListener('transitionend', handler);
+                                });
+                            }
+                        }
+                    });
+                    
+                    // Opening animation
+                    item.setAttribute('open', '');
+                    content.style.maxHeight = '0';
+                    // Force reflow
+                    content.offsetHeight;
+                    // Animate to full height
+                    content.style.maxHeight = inner.scrollHeight + 'px';
+                }
             });
         }
     });
+    
+    // Optional: Add support for prefers-reduced-motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (prefersReducedMotion.matches) {
+        faqItems.forEach(item => {
+            const content = item.querySelector('.faq-accordion__content');
+            if (content) {
+                content.style.transition = 'none';
+            }
+        });
+    }
 }
 
 // Scroll-based animations

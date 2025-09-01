@@ -1,0 +1,32 @@
+<!-- FAQ Section Component -->
+<section class="faq-section">
+  <div class="container">
+    <h2 class="faq-section__title">{{ faqData.title }}</h2>
+    
+    <div class="faq-accordion">
+      {% for item in faqData.items %}
+      <!-- FAQ Item {{ loop.index }} -->
+      <details class="faq-accordion__item"{% if loop.first %} open{% endif %}>
+        <summary class="faq-accordion__header">
+          <span class="faq-accordion__question">{{ item.question }}</span>
+          <span class="faq-accordion__icon">
+            <svg class="icon-plus" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 4V16M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <svg class="icon-minus" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </summary>
+        <div class="faq-accordion__content">
+          <div class="faq-accordion__inner">
+            <div class="faq-accordion__answer">
+              <p>{{ item.answer }}</p>
+            </div>
+          </div>
+        </div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>

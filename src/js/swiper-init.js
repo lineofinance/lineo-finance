@@ -226,4 +226,73 @@ document.addEventListener('DOMContentLoaded', function() {
             },
         });
     }
+
+    // Initialize leistungen target audience carousel
+    const leistungenTargetCarousel = document.querySelector('.leistungen-target__carousel.swiper');
+    if (leistungenTargetCarousel) {
+        new Swiper(leistungenTargetCarousel, {
+            // Core parameters
+            slidesPerView: 1,
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            
+            // Navigation
+            navigation: {
+                nextEl: '.leistungen-target__carousel-next',
+                prevEl: '.leistungen-target__carousel-prev',
+            },
+            
+            // Pagination
+            pagination: {
+                el: '.leistungen-target__carousel-pagination',
+                clickable: true,
+            },
+            
+            // Smooth transitions
+            speed: 500,
+            effect: 'slide',
+            
+            // Disable touch/mouse drag
+            allowTouchMove: false,
+            simulateTouch: false,
+            
+            // Keyboard control
+            keyboard: {
+                enabled: true,
+                onlyInViewport: true,
+            },
+            
+            // Animation on slide change
+            on: {
+                slideChangeTransitionStart: function() {
+                    // Add animation class to active slide
+                    const activeSlide = this.slides[this.activeIndex];
+                    if (activeSlide) {
+                        const card = activeSlide.querySelector('.carousel-card');
+                        if (card) {
+                            card.style.animation = 'none';
+                            setTimeout(() => {
+                                card.style.animation = 'slideIn 0.5s ease-out';
+                            }, 10);
+                        }
+                    }
+                }
+            },
+            
+            // Accessibility
+            a11y: {
+                enabled: true,
+                prevSlideMessage: 'Previous slide',
+                nextSlideMessage: 'Next slide',
+                firstSlideMessage: 'This is the first slide',
+                lastSlideMessage: 'This is the last slide',
+                paginationBulletMessage: 'Go to slide {{index}}',
+            },
+        });
+    }
 });

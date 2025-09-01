@@ -1,33 +1,56 @@
 // Leistungen Brokers Section
 .leistungen-brokers {
   position: relative;
-  padding: 80px 20px;
+  padding: 60px 20px 80px; // Reduced top padding
   background-color: rgb(246, 246, 246);
   z-index: 2; // Higher z-index to hide the fixed logo
 
   @media (min-width: 768px) {
-    padding: 100px 40px;
+    padding: 70px 40px 100px; // Reduced top padding
   }
 
   @media (min-width: 1024px) {
-    padding: 100px 60px;
+    padding: 80px 60px 100px; // Reduced top padding
+  }
+
+  &__wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__decoration {
+    position: absolute;
+    left: -100px;
+    top: -350px; // Moved even higher to extend more into section above
+    width: 400px; // Larger for more presence
+    height: auto;
+    opacity: 0.25; // Subtle watermark effect
+    z-index: 0;
+    
+    // Hide on smaller screens
+    @media (max-width: 1200px) {
+      display: none;
+    }
   }
 
   &__container {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
+    position: relative;
+    z-index: 1;
   }
 
   &__header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px; // Reduced margin
   }
 
   &__title {
     font-family: 'Barlow', sans-serif;
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 400; // Light weight for consistency
     line-height: 1.2;
     color: #1a1a1a;
     margin-bottom: 16px;
@@ -56,22 +79,28 @@
     }
   }
 
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    margin-bottom: 60px;
-    align-items: center;
-    justify-items: center;
-
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 40px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 80px;
     }
+  }
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 
     @media (min-width: 1024px) {
-      gap: 60px;
-      margin-bottom: 80px;
+      flex: 0 0 auto;
+      min-width: 250px;
+      gap: 25px;
     }
   }
 
@@ -100,8 +129,61 @@
     }
   }
 
+  &__text-list {
+    flex: 1;
+    
+    @media (min-width: 1024px) {
+      padding-left: 60px;
+      border-left: 2px solid rgba(212, 160, 23, 0.3); // Darker gold with transparency
+    }
+  }
+
+  &__description {
+    font-family: 'Barlow', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 30px;
+    
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      font-family: 'Barlow', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #666;
+      padding: 8px 0;
+      padding-left: 28px;
+      position: relative;
+      
+      &::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #D4A017; // Darker gold/yellow
+        font-weight: 600;
+        font-size: 18px;
+      }
+      
+      @media (min-width: 768px) {
+        font-size: 17px;
+      }
+    }
+  }
+
   &__cta {
     text-align: center;
+    margin-top: 60px;
   }
 
   &__cta-text {

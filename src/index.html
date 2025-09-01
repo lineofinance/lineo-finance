@@ -23,4 +23,5 @@ pageStyles:
 
 {% include "sections/home/testimonials.html" %}
 
-{% include "sections/home/faq.html" %}
+{% set faqData = siteContent.faqs.homepage %}
+{% include "components/faq.njk" %}

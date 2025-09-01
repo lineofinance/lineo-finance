@@ -9,5 +9,6 @@ description: Entdecken Sie unsere innovativen Lösungen für automatisierte Wert
 {% include "sections/leistungen/process.html" %}
 {% include "sections/leistungen/brokers.html" %}
 {% include "sections/leistungen/target-audience.html" %}
-{% include "sections/leistungen/cta.html" %}
-{% include "sections/leistungen/faq-leistungen.html" %}
+
+{% set faqData = siteContent.faqs.leistungen %}
+{% include "components/faq.njk" %}
