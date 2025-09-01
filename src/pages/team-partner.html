@@ -1,84 +1,14 @@
 ---
 layout: base.njk
 title: Team & Partner - Lineo Finance
-description: Lernen Sie unser Team und unsere Partner kennen.
+description: Das Netzwerk hinter lineo finance - Menschen mit Erfahrung und einer gemeinsamen Idee.
 ---
 
-<!-- Mission Statement -->
-<section class="mission">
-    <div class="container">
-        <h1>Gemeinsam in die digitale Zukunft</h1>
-        <p class="lead">Unser Team aus Experten und unser Netzwerk aus Partnern arbeiten Hand in Hand, um Ihnen die beste Lösung für Ihre Wertpapierbuchhaltung zu bieten.</p>
-    </div>
-</section>
+<!-- Hero and Mission Sections (shares styles with leistungen) -->
+{% include "sections/team-partner/hero.html" %}
 
-<!-- Team Overview -->
-<section class="team-overview">
-    <div class="container">
-        <div class="team-content">
-            <div class="team-text">
-                <h2>Unser Team</h2>
-                <p>Bei Lineo Finance vereinen wir tiefgreifendes Fachwissen aus den Bereichen Finanzen, Technologie und Steuerrecht. Unser interdisziplinäres Team arbeitet leidenschaftlich daran, die Wertpapierbuchhaltung zu revolutionieren.</p>
-                <p>Mit jahrzehntelanger Erfahrung in der Finanzbranche und modernster Technologie entwickeln wir Lösungen, die den höchsten Ansprüchen gerecht werden.</p>
-                <ul>
-                    <li>Experten für Wertpapierbuchhaltung</li>
-                    <li>Erfahrene Software-Entwickler</li>
-                    <li>Zertifizierte Steuerberater</li>
-                    <li>Dedizierte Kundenbetreuer</li>
-                </ul>
-            </div>
-            <div class="team-image">
-                <img src="/assets/images/team-photo.jpg" alt="Lineo Finance Team">
-            </div>
-        </div>
-    </div>
-</section>
+<!-- Team Section -->
+{% include "sections/team-partner/team.html" %}
 
-<!-- Partner Network -->
-<section class="partners">
-    <div class="container">
-        <h2>Unser Partner-Netzwerk</h2>
-        <p class="section-subtitle">Vertrauen Sie auf unser starkes Netzwerk aus Steuerberatern und Finanzexperten</p>
-        <div class="partner-grid">
-            <div class="partner-card">
-                <h4>Müller & Partner StB</h4>
-                <p class="location">München</p>
-                <span class="verified">✓ Zertifizierter Partner</span>
-            </div>
-            <div class="partner-card">
-                <h4>Schmidt Steuerberatung</h4>
-                <p class="location">Frankfurt</p>
-                <span class="verified">✓ Zertifizierter Partner</span>
-            </div>
-            <div class="partner-card">
-                <h4>Weber & Kollegen</h4>
-                <p class="location">Hamburg</p>
-                <span class="verified">✓ Zertifizierter Partner</span>
-            </div>
-            <div class="partner-card">
-                <h4>Meyer Finanzberatung</h4>
-                <p class="location">Berlin</p>
-                <span class="verified">✓ Zertifizierter Partner</span>
-            </div>
-            <div class="partner-card">
-                <h4>Bauer & Partner</h4>
-                <p class="location">Stuttgart</p>
-                <span class="verified">✓ Zertifizierter Partner</span>
-            </div>
-            <div class="partner-card">
-                <h4>Fischer Steuerberatung</h4>
-                <p class="location">Köln</p>
-                <span class="verified">✓ Zertifizierter Partner</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Join Network CTA -->
-<section class="join-network">
-    <div class="container">
-        <h2>Werden Sie Teil unseres Netzwerks</h2>
-        <p>Sie sind Steuerberater und möchten Ihren Mandanten modernste Lösungen anbieten?</p>
-        <a href="/pages/kontakt/" class="btn btn-primary">Partner werden</a>
-    </div>
-</section>
+<!-- CTA Form Section -->
+{% include "sections/team-partner/cta-form.html" %}

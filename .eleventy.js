@@ -44,9 +44,29 @@ module.exports = function(eleventyConfig) {
     return page.url === url ? "active" : "";
   });
   
+  // Add filter to truncate text
+  eleventyConfig.addFilter("truncate", function(str, length = 50) {
+    if (!str) return "";
+    if (str.length <= length) return str;
+    return str.substring(0, length) + "...";
+  });
+  
   // Add collection for knowledge base
   eleventyConfig.addCollection("knowledgeBase", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/content/knowledge-base/**/*.md");
+    return collectionApi.getFilteredByGlob("src/content/knowledge-base/**/*.md")
+      .sort((a, b) => {
+        // Sort by date (newest first) or featured status
+        if (a.data.featured && !b.data.featured) return -1;
+        if (!a.data.featured && b.data.featured) return 1;
+        return (b.date || b.data.date) - (a.date || a.data.date);
+      });
+  });
+  
+  // Add collection for featured knowledge base articles
+  eleventyConfig.addCollection("featuredKnowledgeBase", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/content/knowledge-base/**/*.md")
+      .filter(item => item.data.featured)
+      .sort((a, b) => (b.date || b.data.date) - (a.date || a.data.date));
   });
   
   // Add collection for FAQs

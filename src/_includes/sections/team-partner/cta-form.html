@@ -1,0 +1,54 @@
+<!-- CTA Section with Contact Form -->
+<section class="team-partner-cta">
+  <div class="container">
+    <div class="team-partner-cta__content">
+      <h2 class="team-partner-cta__title">
+        Sie betreuen Mandanten mit Wertpapieren im Betriebsvermögen?
+      </h2>
+      <p class="team-partner-cta__subtitle">
+        Dann passen Sie perfekt in unser Netzwerk.
+      </p>
+      
+      <form class="team-partner-form" action="/kontakt/submit" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="vorname" class="visually-hidden">Vorname</label>
+            <input type="text" id="vorname" name="vorname" placeholder="Vorname*" required>
+          </div>
+          <div class="form-group">
+            <label for="nachname" class="visually-hidden">Nachname</label>
+            <input type="text" id="nachname" name="nachname" placeholder="Nachname*" required>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email" class="visually-hidden">E-Mail</label>
+            <input type="email" id="email" name="email" placeholder="E-Mail*" required>
+          </div>
+          <div class="form-group">
+            <label for="telefon" class="visually-hidden">Telefon</label>
+            <input type="tel" id="telefon" name="telefon" placeholder="Telefon*" required>
+          </div>
+        </div>
+        
+        <div class="form-group form-group--full">
+          <label for="nachricht" class="visually-hidden">Ihre Nachricht</label>
+          <textarea id="nachricht" name="nachricht" rows="4" placeholder="Ihre Nachricht"></textarea>
+        </div>
+        
+        <div class="form-group form-group--checkbox">
+          <input type="checkbox" id="datenschutz" name="datenschutz" required>
+          <label for="datenschutz">
+            Weitere Informationen zur Datenverarbeitung können Sie unserer 
+            <a href="/pages/datenschutz/" target="_blank">Datenschutzerklärung</a> entnehmen.
+          </label>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">
+          Anfrage absenden
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

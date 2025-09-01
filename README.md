@@ -103,380 +103,431 @@ Die Website kann auf jeden Webserver oder statischen Hosting-Service deployed we
 
 Einfach den Inhalt des `dist/` Ordners nach dem Build hochladen.
 
-## 📚 Wissensdatenbank erstellen
+## 📚 Wissensdatenbank - Vollständige Anleitung für Knowledge Base Artikel
 
-### Vollständige Anleitung zum Erstellen von Knowledge Base Artikeln
+### Artikel erstellen mit VS Code und Git
 
-Die Wissensdatenbank ist ein zentraler Bestandteil der Lineo Finance Website und bietet strukturierte Informationen zur automatisierten Wertpapierverbuchung. Das System nutzt Markdown-Dateien mit 11ty Collections für automatische Generierung und Organisation.
+Diese Anleitung erklärt Schritt für Schritt, wie Sie neue Artikel für die Wissensdatenbank erstellen, formatieren, Bilder einbinden, die Website lokal testen und Änderungen veröffentlichen.
 
-#### 1. Artikelstruktur und Dateiorganisation
+---
 
-Erstellen Sie neue Artikel im `src/knowledge-base/` Verzeichnis. Die Dateinamen sollten dem Schema `kategorie-titel-des-artikels.md` folgen:
+## Teil 1: Einen neuen Artikel erstellen
 
+### 📝 Schritt 1: Neue Datei anlegen
+
+1. **Öffnen Sie VS Code**
+2. Navigieren Sie zum Ordner `src/content/knowledge-base/`
+3. Erstellen Sie eine neue Datei mit der Endung `.md` (zum Beispiel: `mein-artikel.md`)
+4. **Wichtig**: Verwenden Sie nur Kleinbuchstaben und Bindestriche im Dateinamen (keine Leerzeichen oder Umlaute)
+
+**Beispiele für Dateinamen:**
+- `grundlagen-was-ist-wertpapierverbuchung.md`
+- `anleitung-erste-schritte.md`
+- `faq-haeufige-fragen.md`
+
+### 📋 Schritt 2: Artikel-Kopfdaten (Frontmatter)
+
+Jeder Artikel muss mit diesen Kopfdaten beginnen:
+
+```yaml
+---
+layout: kb-article.njk
+title: "Titel des Artikels"
+description: "Kurze Beschreibung für die Übersichtsseite"
+tags: knowledgeBase
+date: 2024-01-30
+---
 ```
-src/knowledge-base/
-├── grundlagen-automatisierte-verbuchung.md
-├── anleitung-api-integration.md
-├── faq-haeufige-fragen.md
-└── compliance-mifid-anforderungen.md
-```
 
-#### 2. Vollständiges Artikel-Template
+**Erklärung der Felder:**
+- `layout`: Immer `kb-article.njk` verwenden (nicht ändern)
+- `title`: Der Titel, der auf der Seite angezeigt wird
+- `description`: Eine kurze Zusammenfassung (1-2 Sätze)
+- `tags`: Immer `knowledgeBase` (nicht ändern)
+- `date`: Datum im Format YYYY-MM-DD
+
+### ✍️ Schritt 3: Artikel-Inhalt schreiben
+
+Nach den Kopfdaten beginnt der eigentliche Artikel. Verwenden Sie Markdown-Formatierung:
+
+#### **Überschriften erstellen**
 
 ```markdown
----
-title: "Automatisierte Wertpapierverbuchung: Ein Leitfaden"
-description: "Umfassender Leitfaden zur automatisierten Wertpapierverbuchung mit Lineo Finance. Erfahren Sie, wie Sie Ihre Prozesse optimieren."
-category: "Grundlagen"
-tags: ["Automatisierung", "Wertpapiere", "Buchhaltung", "Effizienz"]
-date: 2024-01-15
-author: "Dr. Michael Schmidt"
-featured: true
-readingTime: "8 Min"
-difficulty: "Einsteiger"
-relatedArticles: ["api-integration", "broker-anbindung", "steuerreporting"]
----
+# Hauptüberschrift
 
-## Einleitung
+## Erste Unterüberschrift
 
-Die automatisierte Wertpapierverbuchung revolutioniert die Art und Weise, wie Steuerberater und Unternehmen mit Wertpapiertransaktionen umgehen. In diesem Artikel erfahren Sie...
+### Noch kleinere Überschrift
 
-## Inhaltsverzeichnis
-- [Grundlagen verstehen](#grundlagen)
-- [Vorteile der Automatisierung](#vorteile)
-- [Implementierung](#implementierung)
-- [Best Practices](#best-practices)
-
-## Grundlagen verstehen {#grundlagen}
-
-Die Wertpapierverbuchung umfasst...
-
-### Kernkonzepte
-
-**Transaktionstypen:**
-- Käufe und Verkäufe
-- Dividenden und Zinsen
-- Corporate Actions
-- Währungsumrechnungen
-
-### Technische Grundlagen
-
-```javascript
-// Beispiel einer Transaktionsverarbeitung
-const transaction = {
-  type: 'BUY',
-  isin: 'DE0008404005',
-  quantity: 100,
-  price: 89.50,
-  currency: 'EUR'
-};
-```
-
-## Vorteile der Automatisierung {#vorteile}
-
-1. **Zeitersparnis**: Bis zu 90% Reduktion des manuellen Aufwands
-2. **Fehlerminimierung**: Automatische Validierung und Plausibilitätsprüfungen
-3. **Compliance**: Automatische Einhaltung regulatorischer Anforderungen
-
-> **Hinweis**: Die Automatisierung ersetzt nicht die fachliche Prüfung, sondern unterstützt sie.
-
-## Implementierung {#implementierung}
-
-### Schritt 1: Vorbereitung
-
-Bevor Sie mit der Implementierung beginnen...
-
-### Schritt 2: API-Anbindung
-
-Die Integration erfolgt über unsere REST-API:
-
-```bash
-curl -X POST https://api.lineo.finance/transactions \
-  -H "Authorization: Bearer YOUR_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{"transaction": {...}}'
-```
-
-### Schritt 3: Datenvalidierung
-
-| Feld | Typ | Pflichtfeld | Beschreibung |
-|------|-----|-------------|--------------|
-| ISIN | String | Ja | Internationale Wertpapierkennnummer |
-| Datum | Date | Ja | Transaktionsdatum |
-| Menge | Number | Ja | Anzahl der Wertpapiere |
-| Kurs | Decimal | Ja | Kurs pro Einheit |
-
-## Best Practices {#best-practices}
-
-### Datenqualität sicherstellen
-
-- Regelmäßige Überprüfung der Importdaten
-- Implementierung von Validierungsregeln
-- Monitoring von Fehlerquoten
-
-### Performance-Optimierung
-
-- Batch-Verarbeitung für große Datenmengen
-- Asynchrone Verarbeitung nutzen
-- Caching von Stammdaten
-
-## Zusammenfassung
-
-Die automatisierte Wertpapierverbuchung bietet erhebliche Vorteile...
-
-## Weiterführende Ressourcen
-
-- [API-Dokumentation](/knowledge-base/api-documentation)
-- [Broker-Integration Guide](/knowledge-base/broker-integration)
-- [Video-Tutorial: Erste Schritte](https://youtube.com/...)
-
-## FAQ zum Artikel
-
-**Frage: Wie lange dauert die Implementierung?**
-Antwort: Die Basis-Implementierung dauert typischerweise 2-3 Tage...
-
-**Frage: Welche Broker werden unterstützt?**
-Antwort: Wir unterstützen über 30 Broker, darunter...
-
----
-
-*Letzte Aktualisierung: 15. Januar 2024*
-*Haben Sie Fragen? [Kontaktieren Sie unser Support-Team](/kontakt)*
-```
-
-#### 3. Erweiterte Frontmatter-Felder
-
-**Pflichtfelder:**
-- `title`: Artikel-Titel (max. 60 Zeichen für SEO)
-- `description`: Meta-Beschreibung (150-160 Zeichen)
-- `category`: Hauptkategorie des Artikels
-- `date`: Veröffentlichungsdatum (YYYY-MM-DD)
-
-**Optionale Felder:**
-- `tags`: Array von Schlagwörtern für Suche und Filterung
-- `author`: Autor des Artikels
-- `featured`: Boolean - erscheint in "Beliebte Artikel"
-- `readingTime`: Geschätzte Lesezeit
-- `difficulty`: "Einsteiger", "Fortgeschritten", "Experte"
-- `relatedArticles`: Array von Dateinamen verwandter Artikel
-- `lastUpdated`: Datum der letzten Aktualisierung
-- `version`: Versionsnummer für technische Dokumentation
-- `language`: Sprache (Standard: "de")
-
-#### 4. Kategoriesystem
-
-**Hauptkategorien:**
-
-- **Grundlagen**: Einführende Konzepte und Übersichten
-  - Dateinamen-Präfix: `grundlagen-`
-  - Zielgruppe: Neue Nutzer und Interessenten
-  
-- **Anleitungen**: Schritt-für-Schritt Tutorials
-  - Dateinamen-Präfix: `anleitung-`
-  - Zielgruppe: Nutzer in der Implementierung
-  
-- **FAQ**: Häufig gestellte Fragen
-  - Dateinamen-Präfix: `faq-`
-  - Zielgruppe: Alle Nutzer
-  
-- **Integration**: Technische Dokumentation
-  - Dateinamen-Präfix: `integration-`
-  - Zielgruppe: Entwickler und IT-Administratoren
-  
-- **Compliance**: Rechtliche und regulatorische Themen
-  - Dateinamen-Präfix: `compliance-`
-  - Zielgruppe: Compliance-Beauftragte und Steuerberater
-
-- **Use Cases**: Praktische Anwendungsfälle
-  - Dateinamen-Präfix: `usecase-`
-  - Zielgruppe: Entscheidungsträger
-
-#### 5. Markdown-Funktionen und Styling
-
-**Überschriften-Hierarchie:**
-```markdown
-# Wird nicht verwendet (Titel kommt aus Frontmatter)
-## Hauptüberschrift
-### Unterüberschrift
 #### Detail-Überschrift
 ```
 
-**Spezielle Blöcke:**
+#### **Normaler Text**
 
 ```markdown
-> **Hinweis**: Wichtige Information in Info-Box
+Das ist der erste Absatz. Er kann so lang sein wie Sie möchten.
 
-> **Warnung**: Kritischer Hinweis in Warnungs-Box
-
-> **Tipp**: Hilfreicher Tipp in Tipp-Box
+Das ist der zweite Absatz. Durch die Leerzeile wird er getrennt.
 ```
 
-**Code-Blöcke mit Syntax-Highlighting:**
+#### **Text hervorheben**
+
 ```markdown
-```javascript
-// JavaScript Code
-const example = "code";
+**Dieser Text wird fett**
+
+*Dieser Text wird kursiv*
+
+**Wichtig:** Kombinieren Sie fett für wichtige Hinweise
 ```
 
-```python
-# Python Code
-example = "code"
-```
+#### **Listen erstellen**
 
-```sql
--- SQL Query
-SELECT * FROM transactions;
-```
-```
-
-**Tabellen:**
+**Aufzählungsliste:**
 ```markdown
-| Spalte 1 | Spalte 2 | Spalte 3 |
-|----------|----------|----------|
-| Daten 1  | Daten 2  | Daten 3  |
+- Erster Punkt
+- Zweiter Punkt
+- Dritter Punkt
 ```
 
-**Interne Verlinkungen:**
+**Nummerierte Liste:**
 ```markdown
-[Link zu anderem Artikel](/knowledge-base/artikel-name)
-[Link zu Seite](/leistungen)
+1. Erster Schritt
+2. Zweiter Schritt
+3. Dritter Schritt
 ```
 
-**Anker-Links:**
+#### **Links einfügen**
+
 ```markdown
-[Zum Abschnitt](#abschnitt-id)
+[Klicken Sie hier](/kontakt) um zur Kontaktseite zu gelangen
 
-## Abschnitt Titel {#abschnitt-id}
+[Mehr erfahren](https://www.lineo.finance) auf unserer Website
 ```
 
-#### 6. Bilder und Medien
+#### **Wichtige Hinweise hervorheben**
 
-**Bilder organisieren:**
-```
-src/assets/images/knowledge-base/
-├── grundlagen/
-│   ├── prozess-diagramm.png
-│   └── dashboard-screenshot.jpg
-├── anleitungen/
-│   ├── schritt-1.png
-│   └── schritt-2.png
-└── shared/
-    └── logo-partner.svg
-```
-
-**Bilder einbinden:**
 ```markdown
-![Alt-Text für Barrierefreiheit](/assets/images/knowledge-base/grundlagen/prozess-diagramm.png)
+> **Hinweis:** Dieser Text erscheint in einer hervorgehobenen Box
 
-<!-- Mit Bildunterschrift -->
-![Dashboard Ansicht](/assets/images/knowledge-base/dashboard.jpg)
-*Abbildung 1: Das Lineo Finance Dashboard*
+> **Tipp:** Nutzen Sie diese Funktion für hilfreiche Tipps
 
-<!-- Responsive Bilder -->
+> **Wichtig:** Für besonders wichtige Informationen
+```
+
+---
+
+## Teil 2: Bilder einbinden
+
+### 🖼️ Vorbereitung der Bilder
+
+1. **Speicherort**: Alle Bilder kommen in den Ordner `src/assets/images/`
+2. **Dateinamen**: Verwenden Sie aussagekräftige Namen (z.B. `workflow-diagram.png` statt `bild1.png`)
+3. **Formate**: 
+   - JPG für Fotos
+   - PNG für Screenshots und Grafiken
+   - SVG für Logos und Icons
+
+### Bildgrößen vorbereiten
+
+Für optimale Darstellung auf allen Geräten:
+
+**Desktop (große Bildschirme):**
+- Breite: 1200px für volle Breite
+- Breite: 800px für Artikel-Bilder
+
+**Tablet:**
+- Breite: 768px
+
+**Mobil:**
+- Breite: 375px
+
+**Tipp**: Nutzen Sie Online-Tools wie TinyPNG.com zum Komprimieren der Bilder.
+
+### Einfaches Bild einfügen
+
+```markdown
+![Beschreibung des Bildes](/assets/images/ihr-bild.png)
+```
+
+**Beispiel:**
+```markdown
+![Workflow Diagramm](/assets/images/workflow-process.png)
+```
+
+### Bild mit Bildunterschrift
+
+```html
+<figure>
+  <img src="/assets/images/ihr-bild.png" alt="Bildbeschreibung">
+  <figcaption>Abbildung 1: Ihre Bildunterschrift</figcaption>
+</figure>
+```
+
+### Responsive Bilder (verschiedene Größen für verschiedene Bildschirme)
+
+```html
 <picture>
-  <source media="(max-width: 768px)" srcset="/assets/images/kb/mobile.jpg">
-  <img src="/assets/images/kb/desktop.jpg" alt="Beschreibung">
+  <source media="(max-width: 768px)" srcset="/assets/images/bild-mobil.png">
+  <source media="(max-width: 1024px)" srcset="/assets/images/bild-tablet.png">
+  <img src="/assets/images/bild-desktop.png" alt="Beschreibung">
 </picture>
 ```
 
-**Videos einbetten:**
-```markdown
-<!-- YouTube Video -->
-<iframe width="560" height="315" 
-  src="https://www.youtube.com/embed/VIDEO_ID" 
-  frameborder="0" allowfullscreen>
-</iframe>
+---
 
-<!-- Lokales Video -->
-<video controls width="100%">
-  <source src="/assets/videos/tutorial.mp4" type="video/mp4">
-  Ihr Browser unterstützt keine Videos.
-</video>
-```
+## Teil 3: Website lokal testen
 
-#### 7. SEO-Optimierung
+### 🚀 Entwicklungsserver starten
 
-**Best Practices:**
-- Titel: 50-60 Zeichen, Hauptkeyword am Anfang
-- Description: 150-160 Zeichen, Call-to-Action einbauen
-- URL-Slug: Kurz und beschreibend (automatisch aus Dateiname)
-- Überschriften: Keywords natürlich einbauen
-- Interne Verlinkung: 2-3 Links zu verwandten Artikeln
-- Alt-Texte: Beschreibende Texte für alle Bilder
+1. **Terminal in VS Code öffnen:**
+   - Menü: Terminal → Neues Terminal
+   - Oder Tastenkombination: `Strg + Shift + ö` (Windows) bzw. `Cmd + Shift + ö` (Mac)
 
-**Strukturierte Daten (automatisch generiert):**
-- Article Schema
-- Breadcrumb Schema
-- FAQ Schema (bei FAQ-Artikeln)
+2. **Zum Projektordner navigieren:**
+   ```bash
+   cd lineo-finance
+   ```
 
-#### 8. Build-Prozess und Veröffentlichung
+3. **Entwicklungsserver starten:**
+   ```bash
+   npm run serve
+   ```
 
-**Artikel hinzufügen:**
-1. Markdown-Datei in `src/knowledge-base/` erstellen
-2. Frontmatter vollständig ausfüllen
-3. Inhalt strukturiert verfassen
-4. Bilder in korrektes Verzeichnis ablegen
+4. **Website öffnen:**
+   - Der Server startet automatisch
+   - Die Website öffnet sich im Browser unter `http://localhost:8080`
+   - Änderungen werden automatisch aktualisiert (Live-Reload)
 
-**Build und Test:**
+### Server stoppen
+
+Um den Server zu beenden:
+- Im Terminal: `Strg + C` (Windows) oder `Cmd + C` (Mac) drücken
+
+---
+
+## Teil 4: Git - Änderungen speichern und veröffentlichen
+
+### 💾 Was ist Git?
+
+Git ist ein Versionskontrollsystem, das alle Änderungen an Ihren Dateien speichert. So können Sie jederzeit zu einer früheren Version zurückkehren und Ihre Kollegen sehen, was geändert wurde.
+
+### Option A: Git mit VS Code (Einfacher)
+
+#### 1. Änderungen anzeigen
+- Links in VS Code auf das **Quellcodeverwaltung-Symbol** klicken (3. Icon, sieht aus wie Verzweigungen)
+- Sie sehen alle geänderten Dateien mit einem "M" (Modified) oder "U" (Untracked)
+
+#### 2. Änderungen speichern (Commit)
+1. **Nachricht eingeben**: Oben im Feld eine kurze Beschreibung eingeben, was Sie geändert haben
+   - Beispiel: "Neuen Artikel über Steueroptimierung hinzugefügt"
+   - Beispiel: "Bilder für Workflow-Artikel aktualisiert"
+2. **Häkchen klicken**: Auf das Häkchen-Symbol (✓) oben klicken
+3. Alle Änderungen sind jetzt lokal gespeichert
+
+#### 3. Änderungen hochladen (Push)
+- Auf die **drei Punkte** (...) klicken → **Push** auswählen
+- Oder: Unten links auf die Sync-Pfeile klicken
+- Ihre Änderungen werden zum Server hochgeladen
+
+### Option B: Git mit Terminal
+
+#### 1. Status prüfen
 ```bash
-# Entwicklungsserver starten
-npm run serve
-
-# Preview unter http://localhost:8080/knowledge-base/
-
-# Für Produktion bauen
-npm run build
-
-# Output prüfen in dist/knowledge-base/
+git status
 ```
 
-**Automatische Features:**
-- Inhaltsverzeichnis-Generierung
-- Lesezeit-Berechnung
-- Verwandte Artikel
-- Kategorie-Seiten
-- Tag-Cloud
-- RSS-Feed
-- Sitemap-Integration
+#### 2. Dateien hinzufügen
+```bash
+# Alle Änderungen hinzufügen
+git add .
 
-#### 9. Qualitätssicherung
-
-**Checkliste vor Veröffentlichung:**
-- [ ] Rechtschreibung und Grammatik geprüft
-- [ ] Alle Links funktionieren
-- [ ] Bilder optimiert (< 200KB pro Bild)
-- [ ] Mobile Ansicht getestet
-- [ ] SEO-Felder ausgefüllt
-- [ ] Fachliche Richtigkeit validiert
-- [ ] Compliance-Anforderungen geprüft
-
-**Review-Prozess:**
-1. Autor erstellt Entwurf
-2. Fachliche Prüfung durch Experten
-3. Redaktionelle Überarbeitung
-4. Compliance-Check
-5. Finale Freigabe
-6. Veröffentlichung
-
-#### 10. Wartung und Aktualisierung
-
-**Regelmäßige Überprüfung:**
-- Quartalweise Review aller Artikel
-- Aktualisierung bei Gesetzesänderungen
-- Broken Link Check monatlich
-- Performance-Monitoring
-
-**Versionierung:**
-```yaml
----
-version: "2.1"
-lastUpdated: 2024-02-15
-changeLog:
-  - "2.1: API-Endpunkte aktualisiert"
-  - "2.0: Komplette Überarbeitung"
-  - "1.0: Erstveröffentlichung"
----
+# Oder einzelne Datei
+git add src/content/knowledge-base/mein-artikel.md
 ```
+
+#### 3. Commit erstellen
+```bash
+git commit -m "Beschreibung der Änderungen"
+```
+
+**Beispiele für gute Commit-Nachrichten:**
+- `git commit -m "feat: Neuen Knowledge Base Artikel über Automatisierung hinzugefügt"`
+- `git commit -m "fix: Tippfehler in Steueroptimierung-Artikel korrigiert"`
+- `git commit -m "docs: Anleitung für Bildgrößen erweitert"`
+
+#### 4. Änderungen hochladen
+```bash
+git push
+```
+
+---
+
+## Teil 5: Versionierung und Deployment
+
+### 🏷️ Semantic Versioning
+
+Das Projekt verwendet semantische Versionsnummern (z.B. v1.2.3):
+- **Major (1.x.x)**: Große Änderungen
+- **Minor (x.2.x)**: Neue Features
+- **Patch (x.x.3)**: Kleine Fixes
+
+### Tag erstellen für Deployment
+
+**Wichtig**: Tags lösen automatisch das Deployment aus!
+
+```bash
+# Patch-Version (kleine Änderung) - z.B. von v1.0.0 zu v1.0.1
+git tag v1.0.1
+git push --tags
+
+# Minor-Version (neues Feature) - z.B. von v1.0.1 zu v1.1.0
+git tag v1.1.0
+git push --tags
+
+# Major-Version (große Änderung) - z.B. von v1.1.0 zu v2.0.0
+git tag v2.0.0
+git push --tags
+```
+
+**Wann welche Version?**
+- **Patch** (v1.0.X): Tippfehler korrigiert, kleine Textänderungen
+- **Minor** (v1.X.0): Neuer Artikel, neue Seite, neue Funktion
+- **Major** (vX.0.0): Komplettes Redesign, große strukturelle Änderungen
+
+---
+
+## Teil 6: Zusammenarbeit im Team
+
+### 👥 Aktuelle Änderungen holen
+
+Bevor Sie arbeiten, immer die neuesten Änderungen holen:
+
+**VS Code:**
+- Unten links auf Sync-Pfeile klicken
+- Oder: Drei Punkte (...) → Pull
+
+**Terminal:**
+```bash
+git pull
+```
+
+### Bei Konflikten
+
+Falls zwei Personen dieselbe Datei geändert haben:
+1. VS Code zeigt Konflikte an
+2. Wählen Sie "Accept Current Change" oder "Accept Incoming Change"
+3. Speichern und neu committen
+
+### Häufige Git-Befehle
+
+```bash
+# Status anzeigen
+git status
+
+# Letzte Commits anzeigen
+git log --oneline -5
+
+# Änderungen rückgängig machen (vor Commit)
+git checkout -- dateiname.md
+
+# Zum letzten Commit zurück
+git reset --hard HEAD
+
+# Branch anzeigen
+git branch
+
+# Alle Remote-Änderungen holen
+git fetch
+```
+
+---
+
+## 📄 Vollständiges Beispiel
+
+Hier ein kompletter Beispiel-Artikel:
+
+```markdown
+---
+layout: kb-article.njk
+title: "Die Vorteile der Digitalisierung"
+description: "Wie digitale Prozesse Ihre Arbeit erleichtern"
+tags: knowledgeBase
+date: 2024-01-30
+---
+
+# Die Vorteile der Digitalisierung
+
+Die Digitalisierung revolutioniert die Arbeitsweise in der Finanzbranche.
+
+![Digitalisierung Übersicht](/assets/images/digitalisierung-hero.png)
+
+## Zeitersparnis durch Automatisierung
+
+Durch automatisierte Prozesse sparen Sie täglich wertvolle Zeit:
+
+- **Datenerfassung**: Automatischer Import statt manueller Eingabe
+- **Berechnungen**: Fehlerfreie automatische Kalkulationen
+- **Reporting**: Berichte auf Knopfdruck
+
+<figure>
+  <img src="/assets/images/zeitersparnis-grafik.png" alt="Zeitersparnis Grafik">
+  <figcaption>Durchschnittliche Zeitersparnis: 70%</figcaption>
+</figure>
+
+## Mobile Verfügbarkeit
+
+<picture>
+  <source media="(max-width: 768px)" srcset="/assets/images/app-mobil.png">
+  <source media="(max-width: 1024px)" srcset="/assets/images/app-tablet.png">
+  <img src="/assets/images/app-desktop.png" alt="App auf verschiedenen Geräten">
+</picture>
+
+Greifen Sie von überall auf Ihre Daten zu - ob im Büro, unterwegs oder im Home Office.
+
+---
+
+*Haben Sie Fragen? [Kontaktieren Sie uns](/pages/kontakt/) für weitere Informationen.*
+```
+
+---
+
+## 💡 Wichtige Tipps
+
+### Dos ✅
+- **Aussagekräftige Dateinamen** verwenden
+- **Alt-Texte** für alle Bilder angeben (Barrierefreiheit)
+- **Bilder komprimieren** vor dem Upload (max. 500KB pro Bild)
+- **Regelmäßig speichern** in VS Code (Strg+S / Cmd+S)
+- **Live-Server** nutzen zum Testen
+- **Commit-Nachrichten** klar und beschreibend formulieren
+
+### Don'ts ❌
+- Keine Leerzeichen in Dateinamen
+- Keine Umlaute in Dateinamen (ä, ö, ü)
+- Keine zu großen Bilder (max. 500KB pro Bild empfohlen)
+- Nicht vergessen, Tags für Deployment zu erstellen
+- Keine sensiblen Daten in Screenshots zeigen
+
+### Kategorien richtig wählen:
+- **Grundlagen**: Erklärungen von Konzepten ("Was ist...?")
+- **Anleitungen**: Schritt-für-Schritt Tutorials ("Wie mache ich...?")
+- **FAQ**: Kurze Fragen und Antworten
+- **Use Cases**: Praktische Beispiele aus dem Alltag
+
+---
+
+## 🆘 Hilfe und Support
+
+Bei Fragen oder Problemen:
+1. Prüfen Sie, ob alle Dateipfade korrekt sind
+2. Stellen Sie sicher, dass der Server läuft (`npm run serve`)
+3. Schauen Sie in die Browser-Konsole für Fehlermeldungen (F12)
+4. Bei Git-Problemen: `git status` zeigt den aktuellen Zustand
+
+Bei Fragen zur Artikel-Erstellung:
+- Schauen Sie sich existierende Artikel als Beispiel an
+- Fragen Sie das Team
+- Nutzen Sie Online Markdown-Editoren zum Üben: [dillinger.io](https://dillinger.io)
 
 ## 📝 Nächste Schritte
 
