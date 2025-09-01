@@ -235,6 +235,40 @@ section.knowledge-base-hero {
     font-size: 0.9rem;
   }
   
+  // Highlight class for important text
+  .highlight {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+  
+  // Alternative highlight styles
+  .highlight-warning {
+    background-color: #fff3e0;
+    color: #e65100;
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+  
+  .highlight-success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+  
+  .highlight-info {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+  
   // Picture element for responsive images
   picture {
     display: block;
