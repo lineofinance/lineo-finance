@@ -33,11 +33,14 @@
 @use 'components/leistungen-cta';
 @use 'components/leistungen-faq';
 @use 'components/team-partner-cta';
+@use 'components/team-section';
+@use 'components/partners-grid';
 
 // Pages
 @use 'pages/home';
 @use 'pages/services';
 @use 'pages/careers';
+@use 'pages/karriere';
 @use 'pages/knowledge-base';
 
 // Utilities (should be last for specificity)

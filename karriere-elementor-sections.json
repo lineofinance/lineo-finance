@@ -1,0 +1,1770 @@
+{
+  "url": "https://www.lineo.finance/karriere/",
+  "extractedAt": "2025-09-01T13:03:12.964Z",
+  "pageTitle": "Karriere bei lineo finance: Gestalte die Zukunft der Buchhaltung",
+  "totalSections": 10,
+  "sections": [
+    {
+      "index": 0,
+      "id": "",
+      "elementorId": "1fba1f35",
+      "className": "elementor-element elementor-element-1fba1f35 she-header-yes she-header-hide-on-scroll-yes e-flex e-con-boxed e-con e-parent e-lazyloaded elementor-sticky elementor-sticky--active elementor-section--handles-inside elementor-sticky--effects header",
+      "sectionType": "cta",
+      "elementType": "container",
+      "settings": {
+        "background_background": "classic",
+        "sticky": "top",
+        "transparent": "yes",
+        "background_show": "yes",
+        "hide_header": "yes",
+        "position": "fixed",
+        "scroll_distance_hide_header": {
+          "unit": "px",
+          "size": 320,
+          "sizes": []
+        },
+        "background": "#E7E7E7",
+        "sticky_on": [
+          "desktop",
+          "tablet_extra",
+          "tablet",
+          "mobile"
+        ],
+        "sticky_offset": 0,
+        "sticky_effects_offset": 0,
+        "sticky_anchor_link_offset": 0,
+        "transparent_on": [
+          "desktop",
+          "tablet",
+          "mobile"
+        ],
+        "scroll_distance": {
+          "unit": "px",
+          "size": 60,
+          "sizes": []
+        },
+        "scroll_distance_tablet_extra": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "scroll_distance_tablet": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "scroll_distance_mobile": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "she_offset_top": {
+          "unit": "px",
+          "size": 0,
+          "sizes": []
+        },
+        "she_offset_top_tablet_extra": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "she_offset_top_tablet": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "she_offset_top_mobile": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "she_width": {
+          "unit": "%",
+          "size": 100,
+          "sizes": []
+        },
+        "she_width_tablet_extra": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "she_width_tablet": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "she_width_mobile": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "she_padding": {
+          "unit": "px",
+          "top": 0,
+          "right": "",
+          "bottom": 0,
+          "left": "",
+          "isLinked": true
+        },
+        "she_padding_tablet_extra": {
+          "unit": "px",
+          "top": "",
+          "right": "",
+          "bottom": "",
+          "left": "",
+          "isLinked": true
+        },
+        "she_padding_tablet": {
+          "unit": "px",
+          "top": "",
+          "right": "",
+          "bottom": "",
+          "left": "",
+          "isLinked": true
+        },
+        "she_padding_mobile": {
+          "unit": "px",
+          "top": "",
+          "right": "",
+          "bottom": "",
+          "left": "",
+          "isLinked": true
+        },
+        "scroll_distance_hide_header_tablet_extra": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "scroll_distance_hide_header_tablet": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "scroll_distance_hide_header_mobile": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        }
+      },
+      "dimensions": {
+        "width": 1905,
+        "height": 121,
+        "x": 0,
+        "y": 0
+      },
+      "styles": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": null,
+        "color": "rgb(51, 51, 51)",
+        "padding": "0px 50px",
+        "margin": "0px",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "textAlign": "start"
+      },
+      "content": {
+        "headings": [],
+        "paragraphs": [],
+        "lists": [
+          {
+            "type": "ul",
+            "items": [
+              "Home",
+              "Leistungen",
+              "Team & Partner",
+              "Karriere",
+              "Kontakt"
+            ]
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Home",
+              "Leistungen",
+              "Team & Partner",
+              "Karriere",
+              "Kontakt"
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "https://www.lineo.finance/wp-content/uploads/2023/02/Logo_Lineo_Finance_rgb.png",
+            "alt": "Firmenlogo von lineo finance: stilisiertes gelbes „l“ mit Punkt und Schriftzug",
+            "width": 1699,
+            "height": 1159,
+            "className": "attachment-full size-full wp-image-111"
+          }
+        ],
+        "buttons": [
+          {
+            "tag": "a",
+            "text": "",
+            "href": "https://www.lineo.finance/",
+            "className": "",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(204, 51, 102)",
+              "borderRadius": "0px",
+              "padding": "0px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Home",
+            "href": "https://www.lineo.finance/home",
+            "className": "elementor-item",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(53, 53, 53)",
+              "borderRadius": "0px",
+              "padding": "5px 0px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Leistungen",
+            "href": "https://www.lineo.finance/leistungen",
+            "className": "elementor-item",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(53, 53, 53)",
+              "borderRadius": "0px",
+              "padding": "5px 0px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Team & Partner",
+            "href": "https://www.lineo.finance/team_und_partner",
+            "className": "elementor-item",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(53, 53, 53)",
+              "borderRadius": "0px",
+              "padding": "5px 0px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Karriere",
+            "href": "https://www.lineo.finance/karriere",
+            "className": "elementor-item elementor-item-active",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(53, 53, 53)",
+              "borderRadius": "0px",
+              "padding": "5px 0px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Kontakt",
+            "href": "https://www.lineo.finance/kontakt",
+            "className": "elementor-item",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(53, 53, 53)",
+              "borderRadius": "0px",
+              "padding": "5px 0px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Home",
+            "href": "https://www.lineo.finance/home",
+            "className": "elementor-item",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(28, 36, 75)",
+              "borderRadius": "0px",
+              "padding": "10px 20px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Leistungen",
+            "href": "https://www.lineo.finance/leistungen",
+            "className": "elementor-item",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(28, 36, 75)",
+              "borderRadius": "0px",
+              "padding": "10px 20px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Team & Partner",
+            "href": "https://www.lineo.finance/team_und_partner",
+            "className": "elementor-item",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(28, 36, 75)",
+              "borderRadius": "0px",
+              "padding": "10px 20px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Karriere",
+            "href": "https://www.lineo.finance/karriere",
+            "className": "elementor-item elementor-item-active",
+            "style": {
+              "backgroundColor": "rgb(249, 250, 253)",
+              "color": "rgb(28, 36, 75)",
+              "borderRadius": "0px",
+              "padding": "10px 20px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Kontakt",
+            "href": "https://www.lineo.finance/kontakt",
+            "className": "elementor-item",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(28, 36, 75)",
+              "borderRadius": "0px",
+              "padding": "10px 20px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Jetzt unverbindlich anfragen",
+            "href": "https://www.lineo.finance/kontakt/#formular",
+            "className": "elementor-button elementor-button-link elementor-size-sm",
+            "style": {
+              "backgroundColor": "rgb(53, 53, 53)",
+              "color": "rgb(255, 255, 255)",
+              "borderRadius": "100px",
+              "padding": "16px 45px"
+            }
+          }
+        ],
+        "forms": []
+      },
+      "widgets": [
+        {
+          "type": "theme-site-logo.default",
+          "id": "cbeff5b",
+          "className": "elementor-element elementor-element-cbeff5b elementor-widget__width-initial elementor-widget elementor-widget-theme-site-logo elementor-widget-image"
+        },
+        {
+          "type": "nav-menu.default",
+          "id": "c774f36",
+          "className": "elementor-element elementor-element-c774f36 elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-widget-tablet_extra__width-initial elementor-nav-menu__align-center elementor-nav-menu--dropdown-tablet_extra elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu"
+        },
+        {
+          "type": "button.default",
+          "id": "31bc5632",
+          "className": "elementor-element elementor-element-31bc5632 elementor-align-right elementor-tablet-align-right elementor-widget-tablet__width-initial elementor-widget-mobile__width-auto elementor-widget-tablet_extra__width-initial elementor-tablet_extra-align-right elementor-widget elementor-widget-button"
+        }
+      ],
+      "innerHTML": "\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t<div class=\"elementor-element elementor-element-774a626b e-con-full e-flex e-con e-child\" data-id=\"774a626b\" data-element_type=\"container\">\n\t\t\t\t<div class=\"elementor-element elementor-element-cbeff5b elementor-widget__width-initial elementor-widget elementor-widget-theme-site-logo elementor-widget-image\" data-id=\"cbeff5b\" data-element_type=\"widget\" data-widget_type=\"theme-site-logo.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"https://www.lineo.finance\">\n\t\t\t<img fetchpriority=\"high\" width=\"1699\" height=\"1159\" src=\"https://www.lineo.finance/wp-content/uploads/2023/02/Logo_Lineo_Finance_rgb.png\" class=\"attachment-full size-full wp-image-111\" alt=\"Firmenlogo von lineo finance: stilisiertes gelbes „l“ mit Punkt und Schriftzug\" srcset=\"https://www.lineo.finance/wp-content/uploads/2023/02/Logo_Lineo_Finance_rgb.png 1699w, https://www.lineo.finance/wp-content/uploads/2023/02/Logo_Lineo_Finance_rgb-300x205.png 300w, https://www.lineo.finance/wp-content/uploads/2023/02/Logo_Lineo_Finance_rgb-1024x699.png 1024w, https://www.lineo.finance/wp-content/uploads/2023/02/Logo_Lineo_Finance_rgb-768x524.png 768w, https://www.lineo.finance/wp-content/uploads/2023/02/Logo_Lineo_Finance_rgb-1536x1048.png 1536w\" sizes=\"(max-width: 1699px) 100vw, 1699px\">\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t<div class=\"elementor-element elementor-element-5b4b5be2 e-con-full e-flex e-con e-child\" data-id=\"5b4b5be2\" data-element_type=\"container\">\n\t\t\t\t<div class=\"elementor-element elementor-element-c774f36 elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-widget-tablet_extra__width-initial elementor-nav-menu__align-center elementor-nav-menu--dropdown-tablet_extra elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu\" data-id=\"c774f36\" data-element_type=\"widget\" data-settings=\"{&quot;full_width&quot;:&quot;stretch&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;svg class=\\&quot;e-font-icon-svg e-fas-caret-down\\&quot; viewBox=\\&quot;0 0 320 512\\&quot; xmlns=\\&quot;http:\\/\\/www.w3.org\\/2000\\/svg\\&quot;&gt;&lt;path d=\\&quot;M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z\\&quot;&gt;&lt;\\/path&gt;&lt;\\/svg&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}\" data-widget_type=\"nav-menu.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t<nav aria-label=\"Menu\" class=\"elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade\">\n\t\t\t\t<ul id=\"menu-1-c774f36\" class=\"elementor-nav-menu\" data-smartmenus-id=\"1756731775264209\"><li class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-138\"><a href=\"https://www.lineo.finance/home\" class=\"elementor-item\">Home</a></li>\n<li class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-139\"><a href=\"https://www.lineo.finance/leistungen\" class=\"elementor-item\">Leistungen</a></li>\n<li class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-140\"><a href=\"https://www.lineo.finance/team_und_partner\" class=\"elementor-item\">Team &amp; Partner</a></li>\n<li class=\"menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-141\"><a href=\"https://www.lineo.finance/karriere\" aria-current=\"page\" class=\"elementor-item elementor-item-active\">Karriere</a></li>\n<li class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-760\"><a href=\"https://www.lineo.finance/kontakt\" class=\"elementor-item\">Kontakt</a></li>\n</ul>\t\t\t</nav>\n\t\t\t\t\t<div class=\"elementor-menu-toggle\" role=\"button\" tabindex=\"0\" aria-label=\"Menü Umschalter\" aria-expanded=\"false\" style=\"\">\n\t\t\t<svg aria-hidden=\"true\" role=\"presentation\" class=\"elementor-menu-toggle__icon--open e-font-icon-svg e-eicon-menu-bar\" viewBox=\"0 0 1000 1000\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z\"></path></svg><svg aria-hidden=\"true\" role=\"presentation\" class=\"elementor-menu-toggle__icon--close e-font-icon-svg e-eicon-close\" viewBox=\"0 0 1000 1000\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 842 750 829 737L588 500 833 258C863 229 863 200 833 171 804 137 775 137 742 167Z\"></path></svg>\t\t</div>\n\t\t\t\t\t<nav class=\"elementor-nav-menu--dropdown elementor-nav-menu__container\" aria-hidden=\"true\" style=\"width: 1905px; left: 0px; top: 44px;\">\n\t\t\t\t<ul id=\"menu-2-c774f36\" class=\"elementor-nav-menu\" data-smartmenus-id=\"17567317752649915\"><li class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-138\"><a href=\"https://www.lineo.finance/home\" class=\"elementor-item\" tabindex=\"-1\">Home</a></li>\n<li class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-139\"><a href=\"https://www.lineo.finance/leistungen\" class=\"elementor-item\" tabindex=\"-1\">Leistungen</a></li>\n<li class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-140\"><a href=\"https://www.lineo.finance/team_und_partner\" class=\"elementor-item\" tabindex=\"-1\">Team &amp; Partner</a></li>\n<li class=\"menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-141\"><a href=\"https://www.lineo.finance/karriere\" aria-current=\"page\" class=\"elementor-item elementor-item-active\" tabindex=\"-1\">Karriere</a></li>\n<li class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-760\"><a href=\"https://www.lineo.finance/kontakt\" class=\"elementor-item\" tabindex=\"-1\">Kontakt</a></li>\n</ul>\t\t\t</nav>\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-31bc5632 elementor-align-right elementor-tablet-align-right elementor-widget-tablet__width-initial elementor-widget-mobile__width-auto elementor-widget-tablet_extra__width-initial elementor-tablet_extra-align-right elementor-widget elementor-widget-button\" data-id=\"31bc5632\" data-element_type=\"widget\" data-widget_type=\"button.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-button-wrapper\">\n\t\t\t\t\t<a class=\"elementor-button elementor-button-link elementor-size-sm\" href=\"https://www.lineo.finance/kontakt/#formular\">\n\t\t\t\t\t\t<span class=\"elementor-button-content-wrapper\">\n\t\t\t\t\t\t\t\t\t<span class=\"elementor-button-text\">Jetzt unverbindlich anfragen</span>\n\t\t\t\t\t</span>\n\t\t\t\t\t</a>\n\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t",
+      "textContent": "Home Leistungen Team & Partner Karriere Kontakt Home Leistungen Team & Partner Karriere Kontakt Jetzt unverbindlich anfragen..."
+    },
+    {
+      "index": 3,
+      "id": "",
+      "elementorId": "1fba1f35",
+      "className": "elementor-element elementor-element-1fba1f35 she-header-yes she-header-hide-on-scroll-yes e-flex e-con-boxed e-con e-parent e-lazyloaded elementor-sticky elementor-sticky__spacer",
+      "sectionType": "cta",
+      "elementType": "container",
+      "settings": {
+        "background_background": "classic",
+        "sticky": "top",
+        "transparent": "yes",
+        "background_show": "yes",
+        "hide_header": "yes",
+        "position": "fixed",
+        "scroll_distance_hide_header": {
+          "unit": "px",
+          "size": 320,
+          "sizes": []
+        },
+        "background": "#E7E7E7",
+        "sticky_on": [
+          "desktop",
+          "tablet_extra",
+          "tablet",
+          "mobile"
+        ],
+        "sticky_offset": 0,
+        "sticky_effects_offset": 0,
+        "sticky_anchor_link_offset": 0,
+        "transparent_on": [
+          "desktop",
+          "tablet",
+          "mobile"
+        ],
+        "scroll_distance": {
+          "unit": "px",
+          "size": 60,
+          "sizes": []
+        },
+        "scroll_distance_tablet_extra": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "scroll_distance_tablet": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "scroll_distance_mobile": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "she_offset_top": {
+          "unit": "px",
+          "size": 0,
+          "sizes": []
+        },
+        "she_offset_top_tablet_extra": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "she_offset_top_tablet": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "she_offset_top_mobile": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "she_width": {
+          "unit": "%",
+          "size": 100,
+          "sizes": []
+        },
+        "she_width_tablet_extra": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "she_width_tablet": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "she_width_mobile": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "she_padding": {
+          "unit": "px",
+          "top": 0,
+          "right": "",
+          "bottom": 0,
+          "left": "",
+          "isLinked": true
+        },
+        "she_padding_tablet_extra": {
+          "unit": "px",
+          "top": "",
+          "right": "",
+          "bottom": "",
+          "left": "",
+          "isLinked": true
+        },
+        "she_padding_tablet": {
+          "unit": "px",
+          "top": "",
+          "right": "",
+          "bottom": "",
+          "left": "",
+          "isLinked": true
+        },
+        "she_padding_mobile": {
+          "unit": "px",
+          "top": "",
+          "right": "",
+          "bottom": "",
+          "left": "",
+          "isLinked": true
+        },
+        "scroll_distance_hide_header_tablet_extra": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "scroll_distance_hide_header_tablet": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        },
+        "scroll_distance_hide_header_mobile": {
+          "unit": "px",
+          "size": "",
+          "sizes": []
+        }
+      },
+      "dimensions": {
+        "width": 1905,
+        "height": 121,
+        "x": 0,
+        "y": 0
+      },
+      "styles": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": null,
+        "color": "rgb(51, 51, 51)",
+        "padding": "0px 50px",
+        "margin": "0px",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "textAlign": "start"
+      },
+      "content": {
+        "headings": [],
+        "paragraphs": [],
+        "lists": [
+          {
+            "type": "ul",
+            "items": [
+              "Home",
+              "Leistungen",
+              "Team & Partner",
+              "Karriere",
+              "Kontakt"
+            ]
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Home",
+              "Leistungen",
+              "Team & Partner",
+              "Karriere",
+              "Kontakt"
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "https://www.lineo.finance/wp-content/uploads/2023/02/Logo_Lineo_Finance_rgb.png",
+            "alt": "Firmenlogo von lineo finance: stilisiertes gelbes „l“ mit Punkt und Schriftzug",
+            "width": 1699,
+            "height": 1159,
+            "className": "attachment-full size-full wp-image-111"
+          }
+        ],
+        "buttons": [
+          {
+            "tag": "a",
+            "text": "",
+            "href": "https://www.lineo.finance/",
+            "className": "",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(204, 51, 102)",
+              "borderRadius": "0px",
+              "padding": "0px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Home",
+            "href": "https://www.lineo.finance/home",
+            "className": "elementor-item",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(53, 53, 53)",
+              "borderRadius": "0px",
+              "padding": "5px 0px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Leistungen",
+            "href": "https://www.lineo.finance/leistungen",
+            "className": "elementor-item",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(53, 53, 53)",
+              "borderRadius": "0px",
+              "padding": "5px 0px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Team & Partner",
+            "href": "https://www.lineo.finance/team_und_partner",
+            "className": "elementor-item",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(53, 53, 53)",
+              "borderRadius": "0px",
+              "padding": "5px 0px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Karriere",
+            "href": "https://www.lineo.finance/karriere",
+            "className": "elementor-item elementor-item-active",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(53, 53, 53)",
+              "borderRadius": "0px",
+              "padding": "5px 0px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Kontakt",
+            "href": "https://www.lineo.finance/kontakt",
+            "className": "elementor-item",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(53, 53, 53)",
+              "borderRadius": "0px",
+              "padding": "5px 0px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Home",
+            "href": "https://www.lineo.finance/home",
+            "className": "elementor-item",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(28, 36, 75)",
+              "borderRadius": "0px",
+              "padding": "10px 20px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Leistungen",
+            "href": "https://www.lineo.finance/leistungen",
+            "className": "elementor-item",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(28, 36, 75)",
+              "borderRadius": "0px",
+              "padding": "10px 20px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Team & Partner",
+            "href": "https://www.lineo.finance/team_und_partner",
+            "className": "elementor-item",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(28, 36, 75)",
+              "borderRadius": "0px",
+              "padding": "10px 20px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Karriere",
+            "href": "https://www.lineo.finance/karriere",
+            "className": "elementor-item elementor-item-active",
+            "style": {
+              "backgroundColor": "rgb(249, 250, 253)",
+              "color": "rgb(28, 36, 75)",
+              "borderRadius": "0px",
+              "padding": "10px 20px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Kontakt",
+            "href": "https://www.lineo.finance/kontakt",
+            "className": "elementor-item",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(28, 36, 75)",
+              "borderRadius": "0px",
+              "padding": "10px 20px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Jetzt unverbindlich anfragen",
+            "href": "https://www.lineo.finance/kontakt/#formular",
+            "className": "elementor-button elementor-button-link elementor-size-sm",
+            "style": {
+              "backgroundColor": "rgb(53, 53, 53)",
+              "color": "rgb(255, 255, 255)",
+              "borderRadius": "100px",
+              "padding": "16px 45px"
+            }
+          }
+        ],
+        "forms": []
+      },
+      "widgets": [
+        {
+          "type": "theme-site-logo.default",
+          "id": "cbeff5b",
+          "className": "elementor-element elementor-element-cbeff5b elementor-widget__width-initial elementor-widget elementor-widget-theme-site-logo elementor-widget-image"
+        },
+        {
+          "type": "nav-menu.default",
+          "id": "c774f36",
+          "className": "elementor-element elementor-element-c774f36 elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-widget-tablet_extra__width-initial elementor-nav-menu__align-center elementor-nav-menu--dropdown-tablet_extra elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu"
+        },
+        {
+          "type": "button.default",
+          "id": "31bc5632",
+          "className": "elementor-element elementor-element-31bc5632 elementor-align-right elementor-tablet-align-right elementor-widget-tablet__width-initial elementor-widget-mobile__width-auto elementor-widget-tablet_extra__width-initial elementor-tablet_extra-align-right elementor-widget elementor-widget-button"
+        }
+      ],
+      "innerHTML": "\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t<div class=\"elementor-element elementor-element-774a626b e-con-full e-flex e-con e-child\" data-id=\"774a626b\" data-element_type=\"container\">\n\t\t\t\t<div class=\"elementor-element elementor-element-cbeff5b elementor-widget__width-initial elementor-widget elementor-widget-theme-site-logo elementor-widget-image\" data-id=\"cbeff5b\" data-element_type=\"widget\" data-widget_type=\"theme-site-logo.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"https://www.lineo.finance\">\n\t\t\t<img fetchpriority=\"high\" width=\"1699\" height=\"1159\" src=\"https://www.lineo.finance/wp-content/uploads/2023/02/Logo_Lineo_Finance_rgb.png\" class=\"attachment-full size-full wp-image-111\" alt=\"Firmenlogo von lineo finance: stilisiertes gelbes „l“ mit Punkt und Schriftzug\" srcset=\"https://www.lineo.finance/wp-content/uploads/2023/02/Logo_Lineo_Finance_rgb.png 1699w, https://www.lineo.finance/wp-content/uploads/2023/02/Logo_Lineo_Finance_rgb-300x205.png 300w, https://www.lineo.finance/wp-content/uploads/2023/02/Logo_Lineo_Finance_rgb-1024x699.png 1024w, https://www.lineo.finance/wp-content/uploads/2023/02/Logo_Lineo_Finance_rgb-768x524.png 768w, https://www.lineo.finance/wp-content/uploads/2023/02/Logo_Lineo_Finance_rgb-1536x1048.png 1536w\" sizes=\"(max-width: 1699px) 100vw, 1699px\">\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t<div class=\"elementor-element elementor-element-5b4b5be2 e-con-full e-flex e-con e-child\" data-id=\"5b4b5be2\" data-element_type=\"container\">\n\t\t\t\t<div class=\"elementor-element elementor-element-c774f36 elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-widget-tablet_extra__width-initial elementor-nav-menu__align-center elementor-nav-menu--dropdown-tablet_extra elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu\" data-id=\"c774f36\" data-element_type=\"widget\" data-settings=\"{&quot;full_width&quot;:&quot;stretch&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;svg class=\\&quot;e-font-icon-svg e-fas-caret-down\\&quot; viewBox=\\&quot;0 0 320 512\\&quot; xmlns=\\&quot;http:\\/\\/www.w3.org\\/2000\\/svg\\&quot;&gt;&lt;path d=\\&quot;M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z\\&quot;&gt;&lt;\\/path&gt;&lt;\\/svg&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}\" data-widget_type=\"nav-menu.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t<nav aria-label=\"Menu\" class=\"elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade\">\n\t\t\t\t<ul id=\"menu-1-c774f36-2\" class=\"elementor-nav-menu\"><li class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-138\"><a href=\"https://www.lineo.finance/home\" class=\"elementor-item\">Home</a></li>\n<li class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-139\"><a href=\"https://www.lineo.finance/leistungen\" class=\"elementor-item\">Leistungen</a></li>\n<li class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-140\"><a href=\"https://www.lineo.finance/team_und_partner\" class=\"elementor-item\">Team &amp; Partner</a></li>\n<li class=\"menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-141\"><a href=\"https://www.lineo.finance/karriere\" aria-current=\"page\" class=\"elementor-item elementor-item-active\">Karriere</a></li>\n<li class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-760\"><a href=\"https://www.lineo.finance/kontakt\" class=\"elementor-item\">Kontakt</a></li>\n</ul>\t\t\t</nav>\n\t\t\t\t\t<div class=\"elementor-menu-toggle\" role=\"button\" tabindex=\"0\" aria-label=\"Menü Umschalter\" aria-expanded=\"false\">\n\t\t\t<svg aria-hidden=\"true\" role=\"presentation\" class=\"elementor-menu-toggle__icon--open e-font-icon-svg e-eicon-menu-bar\" viewBox=\"0 0 1000 1000\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z\"></path></svg><svg aria-hidden=\"true\" role=\"presentation\" class=\"elementor-menu-toggle__icon--close e-font-icon-svg e-eicon-close\" viewBox=\"0 0 1000 1000\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 842 750 829 737L588 500 833 258C863 229 863 200 833 171 804 137 775 137 742 167Z\"></path></svg>\t\t</div>\n\t\t\t\t\t<nav class=\"elementor-nav-menu--dropdown elementor-nav-menu__container\" aria-hidden=\"true\">\n\t\t\t\t<ul id=\"menu-2-c774f36-2\" class=\"elementor-nav-menu\"><li class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-138\"><a href=\"https://www.lineo.finance/home\" class=\"elementor-item\" tabindex=\"-1\">Home</a></li>\n<li class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-139\"><a href=\"https://www.lineo.finance/leistungen\" class=\"elementor-item\" tabindex=\"-1\">Leistungen</a></li>\n<li class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-140\"><a href=\"https://www.lineo.finance/team_und_partner\" class=\"elementor-item\" tabindex=\"-1\">Team &amp; Partner</a></li>\n<li class=\"menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-141\"><a href=\"https://www.lineo.finance/karriere\" aria-current=\"page\" class=\"elementor-item elementor-item-active\" tabindex=\"-1\">Karriere</a></li>\n<li class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-760\"><a href=\"https://www.lineo.finance/kontakt\" class=\"elementor-item\" tabindex=\"-1\">Kontakt</a></li>\n</ul>\t\t\t</nav>\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-31bc5632 elementor-align-right elementor-tablet-align-right elementor-widget-tablet__width-initial elementor-widget-mobile__width-auto elementor-widget-tablet_extra__width-initial elementor-tablet_extra-align-right elementor-widget elementor-widget-button\" data-id=\"31bc5632\" data-element_type=\"widget\" data-widget_type=\"button.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-button-wrapper\">\n\t\t\t\t\t<a class=\"elementor-button elementor-button-link elementor-size-sm\" href=\"https://www.lineo.finance/kontakt/#formular\">\n\t\t\t\t\t\t<span class=\"elementor-button-content-wrapper\">\n\t\t\t\t\t\t\t\t\t<span class=\"elementor-button-text\">Jetzt unverbindlich anfragen</span>\n\t\t\t\t\t</span>\n\t\t\t\t\t</a>\n\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t",
+      "textContent": "Home Leistungen Team & Partner Karriere Kontakt Home Leistungen Team & Partner Karriere Kontakt Jetzt unverbindlich anfragen..."
+    },
+    {
+      "index": 6,
+      "id": "content",
+      "elementorId": "7d61b82",
+      "className": "elementor-element elementor-element-7d61b82 e-flex e-con-boxed e-con e-parent e-lazyloaded",
+      "sectionType": "hero",
+      "elementType": "container",
+      "settings": {
+        "background_background": "classic"
+      },
+      "dimensions": {
+        "width": 1905,
+        "height": 1080,
+        "x": 0,
+        "y": 0
+      },
+      "styles": {
+        "backgroundColor": "rgb(255, 233, 157)",
+        "backgroundImage": "https://www.lineo.finance/wp-content/uploads/2025/07/HG_Verlauf.png",
+        "color": "rgb(51, 51, 51)",
+        "padding": "0px 10px",
+        "margin": "0px",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "textAlign": "start"
+      },
+      "content": {
+        "headings": [
+          {
+            "tag": "h1",
+            "text": "Arbeiten bei lineo finance – mach Komplexes einfach",
+            "style": {
+              "fontSize": "54px",
+              "fontWeight": "400",
+              "color": "rgb(53, 53, 53)"
+            }
+          }
+        ],
+        "paragraphs": [],
+        "lists": [],
+        "images": [],
+        "buttons": [],
+        "forms": []
+      },
+      "widgets": [
+        {
+          "type": "heading.default",
+          "id": "839c648",
+          "className": "elementor-element elementor-element-839c648 elementor-widget__width-initial elementor-widget elementor-widget-heading"
+        }
+      ],
+      "innerHTML": "\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t\t\t<div class=\"elementor-element elementor-element-839c648 elementor-widget__width-initial elementor-widget elementor-widget-heading\" data-id=\"839c648\" data-element_type=\"widget\" data-widget_type=\"heading.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t<h1 class=\"elementor-heading-title elementor-size-default\">Arbeiten bei lineo finance – mach Komplexes einfach</h1>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t",
+      "textContent": "Arbeiten bei lineo finance – mach Komplexes einfach...",
+      "screenshotPath": "karriere-section-3-hero.png"
+    },
+    {
+      "index": 7,
+      "id": "",
+      "elementorId": "c1681bb",
+      "className": "elementor-element elementor-element-c1681bb e-flex e-con-boxed e-con e-parent e-lazyloaded",
+      "sectionType": "hero",
+      "elementType": "container",
+      "settings": {},
+      "dimensions": {
+        "width": 1905,
+        "height": 503,
+        "x": 0,
+        "y": 1080
+      },
+      "styles": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": null,
+        "color": "rgb(51, 51, 51)",
+        "padding": "0px",
+        "margin": "0px",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "textAlign": "start"
+      },
+      "content": {
+        "headings": [
+          {
+            "tag": "h2",
+            "text": "Gestalte die Zukunft der Branche",
+            "style": {
+              "fontSize": "43px",
+              "fontWeight": "400",
+              "color": "rgb(53, 53, 53)"
+            }
+          }
+        ],
+        "paragraphs": [],
+        "lists": [],
+        "images": [],
+        "buttons": [
+          {
+            "tag": "a",
+            "text": "Jetzt bewerben",
+            "href": "https://www.lineo.finance/karriere/#formular",
+            "className": "elementor-button elementor-button-link elementor-size-sm",
+            "style": {
+              "backgroundColor": "rgb(53, 53, 53)",
+              "color": "rgb(255, 255, 255)",
+              "borderRadius": "9px",
+              "padding": "12px 24px"
+            }
+          }
+        ],
+        "forms": []
+      },
+      "widgets": [
+        {
+          "type": "heading.default",
+          "id": "d5ec15d",
+          "className": "elementor-element elementor-element-d5ec15d elementor-widget__width-initial elementor-widget elementor-widget-heading"
+        },
+        {
+          "type": "text-editor.default",
+          "id": "120b3a4",
+          "className": "elementor-element elementor-element-120b3a4 elementor-widget elementor-widget-text-editor"
+        },
+        {
+          "type": "button.default",
+          "id": "f8d39c7",
+          "className": "elementor-element elementor-element-f8d39c7 elementor-align-left elementor-mobile-align-left elementor-invisible elementor-widget elementor-widget-button"
+        }
+      ],
+      "innerHTML": "\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t<div class=\"elementor-element elementor-element-8d0f039 e-con-full e-flex e-con e-child\" data-id=\"8d0f039\" data-element_type=\"container\">\n\t\t\t\t<div class=\"elementor-element elementor-element-d5ec15d elementor-widget__width-initial elementor-widget elementor-widget-heading\" data-id=\"d5ec15d\" data-element_type=\"widget\" data-widget_type=\"heading.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t<h2 class=\"elementor-heading-title elementor-size-default\">Gestalte die Zukunft der Branche</h2>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-120b3a4 elementor-widget elementor-widget-text-editor\" data-id=\"120b3a4\" data-element_type=\"widget\" data-widget_type=\"text-editor.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\tWarum du gerade hier arbeiten solltest? Weil du bei uns nicht nur Teil eines Tools bist, sondern die Zukunft einer Nische mitgestaltest, die enormes Potenzial hat. Bei lineo finance kannst du dein Know-how einbringen, neue Ideen ausprobieren und direkt sehen, welchen Unterschied du machst. Für unsere Kunden und die ganze Branche.\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-f8d39c7 elementor-align-left elementor-mobile-align-left elementor-invisible elementor-widget elementor-widget-button\" data-id=\"f8d39c7\" data-element_type=\"widget\" data-settings=\"{&quot;_animation&quot;:&quot;fadeIn&quot;}\" data-widget_type=\"button.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-button-wrapper\">\n\t\t\t\t\t<a class=\"elementor-button elementor-button-link elementor-size-sm\" href=\"#formular\">\n\t\t\t\t\t\t<span class=\"elementor-button-content-wrapper\">\n\t\t\t\t\t\t\t\t\t<span class=\"elementor-button-text\">Jetzt bewerben</span>\n\t\t\t\t\t</span>\n\t\t\t\t\t</a>\n\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t",
+      "textContent": "Gestalte die Zukunft der Branche Warum du gerade hier arbeiten solltest? Weil du bei uns nicht nur Teil eines Tools bist, sondern die Zukunft einer Nische mitgestaltest, die enormes Potenzial hat. Bei lineo finance kannst du dein Know-how einbringen, neue Ideen ausprobieren und direkt sehen, welchen...",
+      "screenshotPath": "karriere-section-4-hero.png"
+    },
+    {
+      "index": 9,
+      "id": "",
+      "elementorId": "d9d0239",
+      "className": "elementor-element elementor-element-d9d0239 e-flex e-con-boxed e-con e-parent",
+      "sectionType": "hero",
+      "elementType": "container",
+      "settings": {
+        "background_background": "classic"
+      },
+      "dimensions": {
+        "width": 1905,
+        "height": 528.5,
+        "x": 0,
+        "y": 1583
+      },
+      "styles": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "https://www.lineo.finance/wp-content/uploads/2025/07/Hintergrund.png",
+        "color": "rgb(51, 51, 51)",
+        "padding": "0px 200px 0px 100px",
+        "margin": "0px",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "textAlign": "start"
+      },
+      "content": {
+        "headings": [
+          {
+            "tag": "h2",
+            "text": "Das erwartet dich bei uns",
+            "style": {
+              "fontSize": "43px",
+              "fontWeight": "400",
+              "color": "rgb(53, 53, 53)"
+            }
+          },
+          {
+            "tag": "h3",
+            "text": "Remote first Arbeiten von überall",
+            "style": {
+              "fontSize": "28px",
+              "fontWeight": "500",
+              "color": "rgb(51, 51, 51)"
+            }
+          },
+          {
+            "tag": "h3",
+            "text": "Flexible Arbeitszeiten Zeitlich flexibel bleiben",
+            "style": {
+              "fontSize": "28px",
+              "fontWeight": "500",
+              "color": "rgb(51, 51, 51)"
+            }
+          },
+          {
+            "tag": "h3",
+            "text": "Kleines Team   Direkter Austausch, keine langen Wege",
+            "style": {
+              "fontSize": "28px",
+              "fontWeight": "500",
+              "color": "rgb(51, 51, 51)"
+            }
+          }
+        ],
+        "paragraphs": [],
+        "lists": [],
+        "images": [
+          {
+            "src": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E",
+            "alt": "",
+            "width": 150,
+            "height": 150,
+            "className": "attachment-large size-large wp-image-579"
+          },
+          {
+            "src": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E",
+            "alt": "",
+            "width": 150,
+            "height": 150,
+            "className": "attachment-large size-large wp-image-579"
+          },
+          {
+            "src": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E",
+            "alt": "",
+            "width": 150,
+            "height": 150,
+            "className": "attachment-large size-large wp-image-579"
+          }
+        ],
+        "buttons": [
+          {
+            "tag": "a",
+            "text": "Jetzt bewerben",
+            "href": "https://www.lineo.finance/karriere/#formular",
+            "className": "elementor-button elementor-button-link elementor-size-sm",
+            "style": {
+              "backgroundColor": "rgb(53, 53, 53)",
+              "color": "rgb(255, 255, 255)",
+              "borderRadius": "9px",
+              "padding": "12px 24px"
+            }
+          }
+        ],
+        "forms": []
+      },
+      "widgets": [
+        {
+          "type": "heading.default",
+          "id": "ada0747",
+          "className": "elementor-element elementor-element-ada0747 elementor-widget__width-initial elementor-widget elementor-widget-heading"
+        },
+        {
+          "type": "image.default",
+          "id": "fbd8f10",
+          "className": "elementor-element elementor-element-fbd8f10 elementor-widget__width-initial elementor-widget elementor-widget-image"
+        },
+        {
+          "type": "premium-addon-dual-header.default",
+          "id": "e501e63",
+          "className": "elementor-element elementor-element-e501e63 premium-header-block premium-lq__none premium-box-lq__none elementor-widget elementor-widget-premium-addon-dual-header"
+        },
+        {
+          "type": "image.default",
+          "id": "6003415",
+          "className": "elementor-element elementor-element-6003415 elementor-widget__width-initial elementor-widget elementor-widget-image"
+        },
+        {
+          "type": "premium-addon-dual-header.default",
+          "id": "0731c10",
+          "className": "elementor-element elementor-element-0731c10 premium-header-block premium-lq__none premium-box-lq__none elementor-widget elementor-widget-premium-addon-dual-header"
+        },
+        {
+          "type": "image.default",
+          "id": "838e40a",
+          "className": "elementor-element elementor-element-838e40a elementor-widget__width-initial elementor-widget elementor-widget-image"
+        },
+        {
+          "type": "premium-addon-dual-header.default",
+          "id": "515967f",
+          "className": "elementor-element elementor-element-515967f premium-header-block premium-lq__none premium-box-lq__none elementor-widget elementor-widget-premium-addon-dual-header"
+        },
+        {
+          "type": "button.default",
+          "id": "1745f55",
+          "className": "elementor-element elementor-element-1745f55 elementor-align-center elementor-invisible elementor-widget elementor-widget-button"
+        }
+      ],
+      "innerHTML": "\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t<div class=\"elementor-element elementor-element-7388e8f e-flex e-con-boxed e-con e-child\" data-id=\"7388e8f\" data-element_type=\"container\">\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t\t\t<div class=\"elementor-element elementor-element-ada0747 elementor-widget__width-initial elementor-widget elementor-widget-heading\" data-id=\"ada0747\" data-element_type=\"widget\" data-widget_type=\"heading.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t<h2 class=\"elementor-heading-title elementor-size-default\">Das erwartet dich bei uns</h2>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t<div class=\"elementor-element elementor-element-62171b2 e-flex e-con-boxed e-con e-child\" data-id=\"62171b2\" data-element_type=\"container\">\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t<div class=\"elementor-element elementor-element-f077099 e-con-full e-flex elementor-invisible e-con e-child\" data-id=\"f077099\" data-element_type=\"container\" data-settings=\"{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_tablet&quot;:&quot;none&quot;}\">\n\t\t\t\t<div class=\"elementor-element elementor-element-fbd8f10 elementor-widget__width-initial elementor-widget elementor-widget-image\" data-id=\"fbd8f10\" data-element_type=\"widget\" role=\"presentation\" data-widget_type=\"image.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img decoding=\"async\" width=\"800\" height=\"800\" src=\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E\" class=\"attachment-large size-large wp-image-579\" alt=\"\" data-lazy-srcset=\"https://www.lineo.finance/wp-content/uploads/2025/07/Check-1.png 1024w, https://www.lineo.finance/wp-content/uploads/2025/07/Check-1-300x300.png 300w, https://www.lineo.finance/wp-content/uploads/2025/07/Check-1-150x150.png 150w, https://www.lineo.finance/wp-content/uploads/2025/07/Check-1-768x768.png 768w\" data-lazy-sizes=\"(max-width: 800px) 100vw, 800px\" data-lazy-src=\"https://www.lineo.finance/wp-content/uploads/2025/07/Check-1.png\"><noscript><img decoding=\"async\" width=\"800\" height=\"800\" src=\"https://www.lineo.finance/wp-content/uploads/2025/07/Check-1.png\" class=\"attachment-large size-large wp-image-579\" alt=\"\" srcset=\"https://www.lineo.finance/wp-content/uploads/2025/07/Check-1.png 1024w, https://www.lineo.finance/wp-content/uploads/2025/07/Check-1-300x300.png 300w, https://www.lineo.finance/wp-content/uploads/2025/07/Check-1-150x150.png 150w, https://www.lineo.finance/wp-content/uploads/2025/07/Check-1-768x768.png 768w\" sizes=\"(max-width: 800px) 100vw, 800px\" /></noscript>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t<div class=\"elementor-element elementor-element-3a870b3 e-con-full e-flex e-con e-child\" data-id=\"3a870b3\" data-element_type=\"container\">\n\t\t\t\t<div class=\"elementor-element elementor-element-e501e63 premium-header-block premium-lq__none premium-box-lq__none elementor-widget elementor-widget-premium-addon-dual-header\" data-id=\"e501e63\" data-element_type=\"widget\" data-widget_type=\"premium-addon-dual-header.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\n\t\t\t\t\t<h3 class=\"premium-dual-header-first-header \"><span class=\"premium-dual-header-first-span\">Remote first </span><span class=\"premium-dual-header-second-header \">Arbeiten von überall</span></h3> \t\t\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t<div class=\"elementor-element elementor-element-ff50a9b e-con-full e-flex elementor-invisible e-con e-child\" data-id=\"ff50a9b\" data-element_type=\"container\" data-settings=\"{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_tablet&quot;:&quot;none&quot;}\">\n\t\t\t\t<div class=\"elementor-element elementor-element-6003415 elementor-widget__width-initial elementor-widget elementor-widget-image\" data-id=\"6003415\" data-element_type=\"widget\" role=\"presentation\" data-widget_type=\"image.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img decoding=\"async\" width=\"800\" height=\"800\" src=\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E\" class=\"attachment-large size-large wp-image-579\" alt=\"\" data-lazy-srcset=\"https://www.lineo.finance/wp-content/uploads/2025/07/Check-1.png 1024w, https://www.lineo.finance/wp-content/uploads/2025/07/Check-1-300x300.png 300w, https://www.lineo.finance/wp-content/uploads/2025/07/Check-1-150x150.png 150w, https://www.lineo.finance/wp-content/uploads/2025/07/Check-1-768x768.png 768w\" data-lazy-sizes=\"(max-width: 800px) 100vw, 800px\" data-lazy-src=\"https://www.lineo.finance/wp-content/uploads/2025/07/Check-1.png\"><noscript><img decoding=\"async\" width=\"800\" height=\"800\" src=\"https://www.lineo.finance/wp-content/uploads/2025/07/Check-1.png\" class=\"attachment-large size-large wp-image-579\" alt=\"\" srcset=\"https://www.lineo.finance/wp-content/uploads/2025/07/Check-1.png 1024w, https://www.lineo.finance/wp-content/uploads/2025/07/Check-1-300x300.png 300w, https://www.lineo.finance/wp-content/uploads/2025/07/Check-1-150x150.png 150w, https://www.lineo.finance/wp-content/uploads/2025/07/Check-1-768x768.png 768w\" sizes=\"(max-width: 800px) 100vw, 800px\" /></noscript>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t<div class=\"elementor-element elementor-element-e2ca0d2 e-con-full e-flex e-con e-child\" data-id=\"e2ca0d2\" data-element_type=\"container\">\n\t\t\t\t<div class=\"elementor-element elementor-element-0731c10 premium-header-block premium-lq__none premium-box-lq__none elementor-widget elementor-widget-premium-addon-dual-header\" data-id=\"0731c10\" data-element_type=\"widget\" data-widget_type=\"premium-addon-dual-header.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\n\t\t\t\t\t<h3 class=\"premium-dual-header-first-header \"><span class=\"premium-dual-header-first-span\">Flexible Arbeitszeiten </span><span class=\"premium-dual-header-second-header \">Zeitlich flexibel bleiben</span></h3> \t\t\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t<div class=\"elementor-element elementor-element-b272776 e-con-full e-flex elementor-invisible e-con e-child\" data-id=\"b272776\" data-element_type=\"container\" data-settings=\"{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_tablet&quot;:&quot;none&quot;}\">\n\t\t\t\t<div class=\"elementor-element elementor-element-838e40a elementor-widget__width-initial elementor-widget elementor-widget-image\" data-id=\"838e40a\" data-element_type=\"widget\" role=\"presentation\" data-widget_type=\"image.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img decoding=\"async\" width=\"800\" height=\"800\" src=\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E\" class=\"attachment-large size-large wp-image-579\" alt=\"\" data-lazy-srcset=\"https://www.lineo.finance/wp-content/uploads/2025/07/Check-1.png 1024w, https://www.lineo.finance/wp-content/uploads/2025/07/Check-1-300x300.png 300w, https://www.lineo.finance/wp-content/uploads/2025/07/Check-1-150x150.png 150w, https://www.lineo.finance/wp-content/uploads/2025/07/Check-1-768x768.png 768w\" data-lazy-sizes=\"(max-width: 800px) 100vw, 800px\" data-lazy-src=\"https://www.lineo.finance/wp-content/uploads/2025/07/Check-1.png\"><noscript><img decoding=\"async\" width=\"800\" height=\"800\" src=\"https://www.lineo.finance/wp-content/uploads/2025/07/Check-1.png\" class=\"attachment-large size-large wp-image-579\" alt=\"\" srcset=\"https://www.lineo.finance/wp-content/uploads/2025/07/Check-1.png 1024w, https://www.lineo.finance/wp-content/uploads/2025/07/Check-1-300x300.png 300w, https://www.lineo.finance/wp-content/uploads/2025/07/Check-1-150x150.png 150w, https://www.lineo.finance/wp-content/uploads/2025/07/Check-1-768x768.png 768w\" sizes=\"(max-width: 800px) 100vw, 800px\" /></noscript>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t<div class=\"elementor-element elementor-element-f7efe57 e-con-full e-flex e-con e-child\" data-id=\"f7efe57\" data-element_type=\"container\">\n\t\t\t\t<div class=\"elementor-element elementor-element-515967f premium-header-block premium-lq__none premium-box-lq__none elementor-widget elementor-widget-premium-addon-dual-header\" data-id=\"515967f\" data-element_type=\"widget\" data-widget_type=\"premium-addon-dual-header.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\n\t\t\t\t\t<h3 class=\"premium-dual-header-first-header \"><span class=\"premium-dual-header-first-span\">Kleines Team  </span><span class=\"premium-dual-header-second-header \"> Direkter Austausch, keine langen Wege</span></h3> \t\t\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-1745f55 elementor-align-center elementor-invisible elementor-widget elementor-widget-button\" data-id=\"1745f55\" data-element_type=\"widget\" data-settings=\"{&quot;_animation&quot;:&quot;fadeIn&quot;}\" data-widget_type=\"button.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-button-wrapper\">\n\t\t\t\t\t<a class=\"elementor-button elementor-button-link elementor-size-sm\" href=\"#formular\">\n\t\t\t\t\t\t<span class=\"elementor-button-content-wrapper\">\n\t\t\t\t\t\t\t\t\t<span class=\"elementor-button-text\">Jetzt bewerben</span>\n\t\t\t\t\t</span>\n\t\t\t\t\t</a>\n\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t",
+      "textContent": "Das erwartet dich bei uns <img decoding=\"async\" width=\"800\" height=\"800\" src=\"https://www.lineo.finance/wp-content/uploads/2025/07/Check-1.png\" class=\"attachment-large size-large wp-image-579\" alt=\"\" srcset=\"https://www.lineo.finance/wp-content/uploads/2025/07/Check-1.png 1024w, https://www.lineo.fi...",
+      "screenshotPath": "karriere-section-5-hero.png"
+    },
+    {
+      "index": 18,
+      "id": "",
+      "elementorId": "b1da412",
+      "className": "elementor-element elementor-element-b1da412 e-con-full e-flex e-con e-parent",
+      "sectionType": "features",
+      "elementType": "container",
+      "settings": {},
+      "dimensions": {
+        "width": 1905,
+        "height": 1032,
+        "x": 0,
+        "y": 2111.5
+      },
+      "styles": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": null,
+        "color": "rgb(51, 51, 51)",
+        "padding": "100px 0px",
+        "margin": "0px",
+        "display": "flex",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "flex-start",
+        "textAlign": "start"
+      },
+      "content": {
+        "headings": [
+          {
+            "tag": "h2",
+            "text": "Wen wir suchen",
+            "style": {
+              "fontSize": "43px",
+              "fontWeight": "400",
+              "color": "rgb(53, 53, 53)"
+            }
+          },
+          {
+            "tag": "h3",
+            "text": "Senior .NET Entwickler",
+            "style": {
+              "fontSize": "27px",
+              "fontWeight": "400",
+              "color": "rgb(53, 53, 53)"
+            }
+          },
+          {
+            "tag": "h2",
+            "text": "(m/w/d)",
+            "style": {
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "color": "rgb(53, 53, 53)"
+            }
+          }
+        ],
+        "paragraphs": [
+          "Wir suchen technikbegeisterte Menschen, die idealerweise Erfahrung aus der Finanz- oder Wertpapierwelt mitbringen. Du denkst analytisch, liebst sauberen Code und willst Prozesse smarter machen? Dann bist du bei lineo finance richtig.",
+          "Erfahrung mit Buchhaltung, Wertpapieren oder APIs ist ein Plus, wichtiger sind uns Neugier, Eigenverantwortung und der Wille, gemeinsam etwas Neues zu schaffen."
+        ],
+        "lists": [],
+        "images": [
+          {
+            "src": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20350'%3E%3C/svg%3E",
+            "alt": "",
+            "width": 300,
+            "height": 131,
+            "className": "attachment-large size-large wp-image-812"
+          },
+          {
+            "src": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E",
+            "alt": "",
+            "width": 150,
+            "height": 150,
+            "className": "attachment-large size-large wp-image-816"
+          }
+        ],
+        "buttons": [
+          {
+            "tag": "a",
+            "text": "Mehrüber die Stelle erfahren",
+            "href": "https://www.lineo.finance/job/senior-net-entwickler/",
+            "className": "elementor-button elementor-button-link elementor-size-sm",
+            "style": {
+              "backgroundColor": "rgb(255, 255, 255)",
+              "color": "rgb(53, 53, 53)",
+              "borderRadius": "9px",
+              "padding": "12px 24px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Jetzt bewerben",
+            "href": "https://www.lineo.finance/karriere/#formular",
+            "className": "elementor-button elementor-button-link elementor-size-sm",
+            "style": {
+              "backgroundColor": "rgb(53, 53, 53)",
+              "color": "rgb(255, 255, 255)",
+              "borderRadius": "9px",
+              "padding": "12px 24px"
+            }
+          }
+        ],
+        "forms": []
+      },
+      "widgets": [
+        {
+          "type": "image.default",
+          "id": "7d8c344",
+          "className": "elementor-element elementor-element-7d8c344 elementor-widget__width-initial elementor-invisible elementor-widget elementor-widget-image"
+        },
+        {
+          "type": "heading.default",
+          "id": "40e584f",
+          "className": "elementor-element elementor-element-40e584f elementor-widget__width-initial elementor-widget-tablet_extra__width-inherit elementor-widget elementor-widget-heading"
+        },
+        {
+          "type": "text-editor.default",
+          "id": "bc470de",
+          "className": "elementor-element elementor-element-bc470de elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
+        },
+        {
+          "type": "image.default",
+          "id": "170f9e8",
+          "className": "elementor-element elementor-element-170f9e8 elementor-widget__width-initial elementor-widget elementor-widget-image"
+        },
+        {
+          "type": "heading.default",
+          "id": "841bc45",
+          "className": "elementor-element elementor-element-841bc45 elementor-widget__width-initial elementor-widget elementor-widget-heading"
+        },
+        {
+          "type": "heading.default",
+          "id": "6418f8d",
+          "className": "elementor-element elementor-element-6418f8d elementor-widget__width-initial elementor-widget elementor-widget-heading"
+        },
+        {
+          "type": "button.default",
+          "id": "25471ef",
+          "className": "elementor-element elementor-element-25471ef elementor-align-center elementor-invisible elementor-widget elementor-widget-button"
+        },
+        {
+          "type": "button.default",
+          "id": "eaf27d6",
+          "className": "elementor-element elementor-element-eaf27d6 elementor-align-center elementor-invisible elementor-widget elementor-widget-button"
+        }
+      ],
+      "innerHTML": "\n\t\t\t\t<div class=\"elementor-element elementor-element-7d8c344 elementor-widget__width-initial elementor-invisible elementor-widget elementor-widget-image\" data-id=\"7d8c344\" data-element_type=\"widget\" data-settings=\"{&quot;_animation&quot;:&quot;fadeInLeft&quot;,&quot;_animation_tablet&quot;:&quot;none&quot;}\" role=\"presentation\" data-widget_type=\"image.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img decoding=\"async\" width=\"800\" height=\"350\" src=\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20350'%3E%3C/svg%3E\" class=\"attachment-large size-large wp-image-812\" alt=\"\" data-lazy-srcset=\"https://www.lineo.finance/wp-content/uploads/2025/07/Leistungen-1-2-1024x448.png 1024w, https://www.lineo.finance/wp-content/uploads/2025/07/Leistungen-1-2-300x131.png 300w, https://www.lineo.finance/wp-content/uploads/2025/07/Leistungen-1-2-768x336.png 768w, https://www.lineo.finance/wp-content/uploads/2025/07/Leistungen-1-2-1536x672.png 1536w, https://www.lineo.finance/wp-content/uploads/2025/07/Leistungen-1-2.png 1835w\" data-lazy-sizes=\"(max-width: 800px) 100vw, 800px\" data-lazy-src=\"https://www.lineo.finance/wp-content/uploads/2025/07/Leistungen-1-2-1024x448.png\"><noscript><img decoding=\"async\" width=\"800\" height=\"350\" src=\"https://www.lineo.finance/wp-content/uploads/2025/07/Leistungen-1-2-1024x448.png\" class=\"attachment-large size-large wp-image-812\" alt=\"\" srcset=\"https://www.lineo.finance/wp-content/uploads/2025/07/Leistungen-1-2-1024x448.png 1024w, https://www.lineo.finance/wp-content/uploads/2025/07/Leistungen-1-2-300x131.png 300w, https://www.lineo.finance/wp-content/uploads/2025/07/Leistungen-1-2-768x336.png 768w, https://www.lineo.finance/wp-content/uploads/2025/07/Leistungen-1-2-1536x672.png 1536w, https://www.lineo.finance/wp-content/uploads/2025/07/Leistungen-1-2.png 1835w\" sizes=\"(max-width: 800px) 100vw, 800px\" /></noscript>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t<div class=\"elementor-element elementor-element-24e2838 e-con-full e-flex e-con e-child\" data-id=\"24e2838\" data-element_type=\"container\">\n\t\t\t\t<div class=\"elementor-element elementor-element-40e584f elementor-widget__width-initial elementor-widget-tablet_extra__width-inherit elementor-widget elementor-widget-heading\" data-id=\"40e584f\" data-element_type=\"widget\" data-widget_type=\"heading.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t<h2 class=\"elementor-heading-title elementor-size-default\">Wen wir suchen</h2>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-bc470de elementor-widget__width-initial elementor-widget elementor-widget-text-editor\" data-id=\"bc470de\" data-element_type=\"widget\" data-widget_type=\"text-editor.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p>Wir suchen technikbegeisterte Menschen, die idealerweise Erfahrung aus der Finanz- oder Wertpapierwelt mitbringen. Du denkst analytisch, liebst sauberen Code und willst Prozesse smarter machen? Dann bist du bei lineo finance richtig.</p><p>Erfahrung mit Buchhaltung, Wertpapieren oder APIs ist ein Plus, wichtiger sind uns Neugier, Eigenverantwortung und der Wille, gemeinsam etwas Neues zu schaffen.</p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t<div class=\"elementor-element elementor-element-a49ffdf e-flex e-con-boxed e-con e-child\" data-id=\"a49ffdf\" data-element_type=\"container\">\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t<div class=\"elementor-element elementor-element-2468ceb e-con-full e-flex elementor-invisible e-con e-child\" data-id=\"2468ceb\" data-element_type=\"container\" data-settings=\"{&quot;animation&quot;:&quot;fadeInRight&quot;,&quot;animation_tablet&quot;:&quot;none&quot;}\">\n\t\t\t\t<div class=\"elementor-element elementor-element-170f9e8 elementor-widget__width-initial elementor-widget elementor-widget-image\" data-id=\"170f9e8\" data-element_type=\"widget\" role=\"presentation\" data-widget_type=\"image.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img decoding=\"async\" width=\"800\" height=\"800\" src=\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E\" class=\"attachment-large size-large wp-image-816\" alt=\"\" data-lazy-src=\"https://www.lineo.finance/wp-content/uploads/2025/07/Jobangebot_.svg\"><noscript><img loading=\"lazy\" decoding=\"async\" width=\"800\" height=\"800\" src=\"https://www.lineo.finance/wp-content/uploads/2025/07/Jobangebot_.svg\" class=\"attachment-large size-large wp-image-816\" alt=\"\" /></noscript>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-841bc45 elementor-widget__width-initial elementor-widget elementor-widget-heading\" data-id=\"841bc45\" data-element_type=\"widget\" data-widget_type=\"heading.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t<h3 class=\"elementor-heading-title elementor-size-default\">Senior .NET Entwickler</h3>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-6418f8d elementor-widget__width-initial elementor-widget elementor-widget-heading\" data-id=\"6418f8d\" data-element_type=\"widget\" data-widget_type=\"heading.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t<h2 class=\"elementor-heading-title elementor-size-default\">(m/w/d)</h2>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-25471ef elementor-align-center elementor-invisible elementor-widget elementor-widget-button\" data-id=\"25471ef\" data-element_type=\"widget\" data-settings=\"{&quot;_animation&quot;:&quot;fadeIn&quot;}\" data-widget_type=\"button.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-button-wrapper\">\n\t\t\t\t\t<a class=\"elementor-button elementor-button-link elementor-size-sm\" href=\"https://www.lineo.finance/job/senior-net-entwickler/\">\n\t\t\t\t\t\t<span class=\"elementor-button-content-wrapper\">\n\t\t\t\t\t\t\t\t\t<span class=\"elementor-button-text\">Mehr<span class=\"sr-only\">über die Stelle</span> erfahren</span>\n\t\t\t\t\t</span>\n\t\t\t\t\t</a>\n\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-eaf27d6 elementor-align-center elementor-invisible elementor-widget elementor-widget-button\" data-id=\"eaf27d6\" data-element_type=\"widget\" data-settings=\"{&quot;_animation&quot;:&quot;fadeIn&quot;}\" data-widget_type=\"button.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-button-wrapper\">\n\t\t\t\t\t<a class=\"elementor-button elementor-button-link elementor-size-sm\" href=\"#formular\">\n\t\t\t\t\t\t<span class=\"elementor-button-content-wrapper\">\n\t\t\t\t\t\t\t\t\t<span class=\"elementor-button-text\">Jetzt bewerben</span>\n\t\t\t\t\t</span>\n\t\t\t\t\t</a>\n\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t",
+      "textContent": "<img decoding=\"async\" width=\"800\" height=\"350\" src=\"https://www.lineo.finance/wp-content/uploads/2025/07/Leistungen-1-2-1024x448.png\" class=\"attachment-large size-large wp-image-812\" alt=\"\" srcset=\"https://www.lineo.finance/wp-content/uploads/2025/07/Leistungen-1-2-1024x448.png 1024w, https://www.li...",
+      "screenshotPath": "karriere-section-6-features.png"
+    },
+    {
+      "index": 22,
+      "id": "",
+      "elementorId": "6ab0385",
+      "className": "elementor-element elementor-element-6ab0385 e-flex e-con-boxed e-con e-parent",
+      "sectionType": "features",
+      "elementType": "container",
+      "settings": {
+        "background_background": "classic"
+      },
+      "dimensions": {
+        "width": 1905,
+        "height": 804,
+        "x": 0,
+        "y": 3143.5
+      },
+      "styles": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": null,
+        "color": "rgb(51, 51, 51)",
+        "padding": "0px",
+        "margin": "0px",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "textAlign": "start"
+      },
+      "content": {
+        "headings": [
+          {
+            "tag": "h2",
+            "text": "Dein Einstieg bei uns",
+            "style": {
+              "fontSize": "43px",
+              "fontWeight": "400",
+              "color": "rgb(53, 53, 53)"
+            }
+          },
+          {
+            "tag": "h3",
+            "text": "Gemeinsam durchstarten",
+            "style": {
+              "fontSize": "27px",
+              "fontWeight": "400",
+              "color": "rgb(53, 53, 53)"
+            }
+          },
+          {
+            "tag": "h3",
+            "text": "Kontakt aufnehmen",
+            "style": {
+              "fontSize": "27px",
+              "fontWeight": "400",
+              "color": "rgb(53, 53, 53)"
+            }
+          },
+          {
+            "tag": "h3",
+            "text": "lineo finance kennenlernen",
+            "style": {
+              "fontSize": "27px",
+              "fontWeight": "400",
+              "color": "rgb(53, 53, 53)"
+            }
+          },
+          {
+            "tag": "h3",
+            "text": "Gemeinsam durchstarten",
+            "style": {
+              "fontSize": "27px",
+              "fontWeight": "400",
+              "color": "rgb(53, 53, 53)"
+            }
+          },
+          {
+            "tag": "h3",
+            "text": "Kontakt aufnehmen",
+            "style": {
+              "fontSize": "27px",
+              "fontWeight": "400",
+              "color": "rgb(53, 53, 53)"
+            }
+          }
+        ],
+        "paragraphs": [
+          "Bei deinem Start bekommst du ein individuelles Onboarding. Du lernst unsere Prozesse kennen und bist schnell mittendrin, lineo finance weiterzuentwickeln.",
+          "Melde dich einfach bei uns – per Mail oder Formular. Wir wollen wissen, was dich begeistert und warum du zu lineo finance passt.",
+          "Wenn es funkt, laden wir dich zu einem Gespräch ein. Ganz entspannt, auf Augenhöhe und natürlich mit Zeit, um alles über unsere Arbeit zu erfahren.",
+          "Bei deinem Start bekommst du ein individuelles Onboarding. Du lernst unsere Prozesse kennen und bist schnell mittendrin, lineo finance weiterzuentwickeln.",
+          "Melde dich einfach bei uns – per Mail oder Formular. Wir wollen wissen, was dich begeistert und warum du zu lineo finance passt."
+        ],
+        "lists": [],
+        "images": [
+          {
+            "src": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E",
+            "alt": "Icon mit Zahl 3 und Handschlag – steht für Einstieg und individuelles Onboarding bei lineo finance",
+            "width": 150,
+            "height": 150,
+            "className": "attachment-large size-large wp-image-819"
+          },
+          {
+            "src": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E",
+            "alt": "Icon mit Zahl 1, Formular und Stift – steht für den ersten Schritt: Kontaktaufnahme per Mail oder Formular",
+            "width": 150,
+            "height": 150,
+            "className": "attachment-large size-large wp-image-817"
+          },
+          {
+            "src": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E",
+            "alt": "Icon mit Zahl 2 und Sprechblase – steht für persönliches Gespräch zum gegenseitigen Kennenlernen",
+            "width": 150,
+            "height": 150,
+            "className": "attachment-large size-large wp-image-818"
+          },
+          {
+            "src": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E",
+            "alt": "Icon mit Zahl 3 und Handschlag – steht für Einstieg und individuelles Onboarding bei lineo finance",
+            "width": 150,
+            "height": 150,
+            "className": "attachment-large size-large wp-image-819"
+          },
+          {
+            "src": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E",
+            "alt": "Icon mit Zahl 1, Formular und Stift – steht für den ersten Schritt: Kontaktaufnahme per Mail oder Formular",
+            "width": 150,
+            "height": 150,
+            "className": "attachment-large size-large wp-image-817"
+          }
+        ],
+        "buttons": [],
+        "forms": []
+      },
+      "widgets": [
+        {
+          "type": "heading.default",
+          "id": "1365211",
+          "className": "elementor-element elementor-element-1365211 elementor-widget__width-initial elementor-widget elementor-widget-heading"
+        },
+        {
+          "type": "nested-carousel.default",
+          "id": "50b62c7",
+          "className": "elementor-element elementor-element-50b62c7 elementor-pagination-type-bullets elementor-arrows-position-inside elementor-pagination-position-outside elementor-widget elementor-widget-n-carousel e-widget-swiper"
+        },
+        {
+          "type": "image.default",
+          "id": "8992e25",
+          "className": "elementor-element elementor-element-8992e25 elementor-widget__width-initial elementor-widget elementor-widget-image"
+        },
+        {
+          "type": "heading.default",
+          "id": "e564759",
+          "className": "elementor-element elementor-element-e564759 elementor-widget__width-initial elementor-widget elementor-widget-heading"
+        },
+        {
+          "type": "text-editor.default",
+          "id": "287c0df",
+          "className": "elementor-element elementor-element-287c0df elementor-widget elementor-widget-text-editor"
+        },
+        {
+          "type": "image.default",
+          "id": "13f8acc",
+          "className": "elementor-element elementor-element-13f8acc elementor-widget__width-initial elementor-widget elementor-widget-image"
+        },
+        {
+          "type": "heading.default",
+          "id": "02dc5a4",
+          "className": "elementor-element elementor-element-02dc5a4 elementor-widget__width-initial elementor-widget elementor-widget-heading"
+        },
+        {
+          "type": "text-editor.default",
+          "id": "f52ab92",
+          "className": "elementor-element elementor-element-f52ab92 elementor-widget elementor-widget-text-editor"
+        },
+        {
+          "type": "image.default",
+          "id": "13784ee",
+          "className": "elementor-element elementor-element-13784ee elementor-widget__width-initial elementor-widget elementor-widget-image"
+        },
+        {
+          "type": "heading.default",
+          "id": "34511f1",
+          "className": "elementor-element elementor-element-34511f1 elementor-widget__width-initial elementor-widget elementor-widget-heading"
+        },
+        {
+          "type": "text-editor.default",
+          "id": "86654dc",
+          "className": "elementor-element elementor-element-86654dc elementor-widget elementor-widget-text-editor"
+        },
+        {
+          "type": "image.default",
+          "id": "8992e25",
+          "className": "elementor-element elementor-element-8992e25 elementor-widget__width-initial elementor-widget elementor-widget-image"
+        },
+        {
+          "type": "heading.default",
+          "id": "e564759",
+          "className": "elementor-element elementor-element-e564759 elementor-widget__width-initial elementor-widget elementor-widget-heading"
+        },
+        {
+          "type": "text-editor.default",
+          "id": "287c0df",
+          "className": "elementor-element elementor-element-287c0df elementor-widget elementor-widget-text-editor"
+        },
+        {
+          "type": "image.default",
+          "id": "13f8acc",
+          "className": "elementor-element elementor-element-13f8acc elementor-widget__width-initial elementor-widget elementor-widget-image"
+        },
+        {
+          "type": "heading.default",
+          "id": "02dc5a4",
+          "className": "elementor-element elementor-element-02dc5a4 elementor-widget__width-initial elementor-widget elementor-widget-heading"
+        },
+        {
+          "type": "text-editor.default",
+          "id": "f52ab92",
+          "className": "elementor-element elementor-element-f52ab92 elementor-widget elementor-widget-text-editor"
+        }
+      ],
+      "innerHTML": "\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t<div class=\"elementor-element elementor-element-688c9a6 e-con-full e-flex e-con e-child\" data-id=\"688c9a6\" data-element_type=\"container\">\n\t\t\t\t<div class=\"elementor-element elementor-element-1365211 elementor-widget__width-initial elementor-widget elementor-widget-heading\" data-id=\"1365211\" data-element_type=\"widget\" data-widget_type=\"heading.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t<h2 class=\"elementor-heading-title elementor-size-default\">Dein Einstieg bei uns</h2>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t<div class=\"elementor-element elementor-element-60b5f06 e-con-full e-flex elementor-invisible e-con e-child\" data-id=\"60b5f06\" data-element_type=\"container\" data-settings=\"{&quot;animation&quot;:&quot;fadeInRight&quot;,&quot;animation_tablet&quot;:&quot;none&quot;}\">\n\t\t\t\t<div class=\"elementor-element elementor-element-50b62c7 elementor-pagination-type-bullets elementor-arrows-position-inside elementor-pagination-position-outside elementor-widget elementor-widget-n-carousel e-widget-swiper\" data-id=\"50b62c7\" data-element_type=\"widget\" data-settings=\"{&quot;carousel_items&quot;:[{&quot;slide_title&quot;:&quot;Steuerkanzleien&quot;,&quot;_id&quot;:&quot;b9658b6&quot;},{&quot;slide_title&quot;:&quot;Kapitalgesellschaften&quot;,&quot;_id&quot;:&quot;dc38d5e&quot;},{&quot;slide_title&quot;:&quot;Privatpersonen&quot;,&quot;_id&quot;:&quot;3328a6c&quot;}],&quot;slides_to_show&quot;:&quot;1&quot;,&quot;slides_to_show_tablet&quot;:&quot;1&quot;,&quot;slides_to_show_mobile&quot;:&quot;1&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;infinite&quot;:&quot;yes&quot;,&quot;speed&quot;:500,&quot;offset_sides&quot;:&quot;none&quot;,&quot;arrows&quot;:&quot;yes&quot;,&quot;pagination&quot;:&quot;bullets&quot;,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;image_spacing_custom_tablet_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}\" data-widget_type=\"nested-carousel.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t<div class=\"e-n-carousel swiper swiper-initialized swiper-horizontal swiper-pointer-events\" role=\"region\" aria-roledescription=\"carousel\" aria-label=\"Carousel\" dir=\"ltr\">\n\t\t\t<div class=\"swiper-wrapper\" aria-live=\"off\" style=\"transform: translate3d(-1082px, 0px, 0px); transition-duration: 0ms;\" id=\"swiper-wrapper-5b10281e8b71c107bb\"><div class=\"swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next\" data-slide=\"3\" role=\"group\" aria-roledescription=\"slide\" aria-label=\"3 / 3\" data-swiper-slide-index=\"2\" style=\"width: 531px; margin-right: 10px;\" aria-hidden=\"true\" inert=\"\">\n\t\t\t\t\t\t\t<div class=\"elementor-element elementor-element-ff9735f e-flex e-con-boxed e-con e-child\" data-id=\"ff9735f\" data-element_type=\"container\">\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t<div class=\"elementor-element elementor-element-2cf84bd e-con-full e-flex e-con e-child\" data-id=\"2cf84bd\" data-element_type=\"container\" data-settings=\"{&quot;background_background&quot;:&quot;classic&quot;}\">\n\t\t<div class=\"elementor-element elementor-element-5860c55 e-con-full e-flex e-con e-child\" data-id=\"5860c55\" data-element_type=\"container\" data-settings=\"{&quot;background_background&quot;:&quot;classic&quot;}\">\n\t\t\t\t<div class=\"elementor-element elementor-element-8992e25 elementor-widget__width-initial elementor-widget elementor-widget-image\" data-id=\"8992e25\" data-element_type=\"widget\" data-widget_type=\"image.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img decoding=\"async\" width=\"800\" height=\"800\" src=\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E\" class=\"attachment-large size-large wp-image-819\" alt=\"Icon mit Zahl 3 und Handschlag – steht für Einstieg und individuelles Onboarding bei lineo finance\" data-lazy-src=\"https://www.lineo.finance/wp-content/uploads/2025/07/3_.svg\"><noscript><img loading=\"lazy\" decoding=\"async\" width=\"800\" height=\"800\" src=\"https://www.lineo.finance/wp-content/uploads/2025/07/3_.svg\" class=\"attachment-large size-large wp-image-819\" alt=\"Icon mit Zahl 3 und Handschlag – steht für Einstieg und individuelles Onboarding bei lineo finance\" /></noscript>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-e564759 elementor-widget__width-initial elementor-widget elementor-widget-heading\" data-id=\"e564759\" data-element_type=\"widget\" data-widget_type=\"heading.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t<h3 class=\"elementor-heading-title elementor-size-default\">Gemeinsam durchstarten</h3>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-287c0df elementor-widget elementor-widget-text-editor\" data-id=\"287c0df\" data-element_type=\"widget\" data-widget_type=\"text-editor.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p><span style=\"font-weight: 400;\">Bei deinem Start bekommst du ein<strong> individuelles Onboarding</strong>. Du lernst unsere Prozesse kennen und bist schnell mittendrin, lineo finance weiterzuentwickeln.</span></p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"swiper-slide swiper-slide-prev\" data-slide=\"1\" role=\"group\" aria-roledescription=\"slide\" aria-label=\"1 / 3\" data-swiper-slide-index=\"0\" style=\"width: 531px; margin-right: 10px;\" aria-hidden=\"true\" inert=\"\">\n\t\t\t\t\t\t\t<div class=\"elementor-element elementor-element-97f95be e-flex e-con-boxed e-con e-child\" data-id=\"97f95be\" data-element_type=\"container\">\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t<div class=\"elementor-element elementor-element-9a06b1a e-con-full e-flex e-con e-child\" data-id=\"9a06b1a\" data-element_type=\"container\" data-settings=\"{&quot;background_background&quot;:&quot;classic&quot;}\">\n\t\t<div class=\"elementor-element elementor-element-ec2a147 e-con-full e-flex e-con e-child\" data-id=\"ec2a147\" data-element_type=\"container\" data-settings=\"{&quot;background_background&quot;:&quot;classic&quot;}\">\n\t\t\t\t<div class=\"elementor-element elementor-element-13f8acc elementor-widget__width-initial elementor-widget elementor-widget-image\" data-id=\"13f8acc\" data-element_type=\"widget\" data-widget_type=\"image.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img decoding=\"async\" width=\"800\" height=\"800\" src=\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E\" class=\"attachment-large size-large wp-image-817\" alt=\"Icon mit Zahl 1, Formular und Stift – steht für den ersten Schritt: Kontaktaufnahme per Mail oder Formular\" data-lazy-src=\"https://www.lineo.finance/wp-content/uploads/2025/07/1_.svg\"><noscript><img loading=\"lazy\" decoding=\"async\" width=\"800\" height=\"800\" src=\"https://www.lineo.finance/wp-content/uploads/2025/07/1_.svg\" class=\"attachment-large size-large wp-image-817\" alt=\"Icon mit Zahl 1, Formular und Stift – steht für den ersten Schritt: Kontaktaufnahme per Mail oder Formular\" /></noscript>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-02dc5a4 elementor-widget__width-initial elementor-widget elementor-widget-heading\" data-id=\"02dc5a4\" data-element_type=\"widget\" data-widget_type=\"heading.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t<h3 class=\"elementor-heading-title elementor-size-default\">Kontakt aufnehmen</h3>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-f52ab92 elementor-widget elementor-widget-text-editor\" data-id=\"f52ab92\" data-element_type=\"widget\" data-widget_type=\"text-editor.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p><span style=\"font-weight: 400;\">Melde dich einfach bei uns – per <strong>Mail</strong> oder <strong>Formular</strong>. Wir wollen wissen, was dich begeistert und warum du zu lineo finance passt.</span></p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"swiper-slide swiper-slide-active\" data-slide=\"2\" role=\"group\" aria-roledescription=\"slide\" aria-label=\"2 / 3\" data-swiper-slide-index=\"1\" style=\"width: 531px; margin-right: 10px;\">\n\t\t\t\t\t\t\t<div class=\"elementor-element elementor-element-1651ff6 e-flex e-con-boxed e-con e-child\" data-id=\"1651ff6\" data-element_type=\"container\">\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t<div class=\"elementor-element elementor-element-d3b576b e-con-full e-flex e-con e-child\" data-id=\"d3b576b\" data-element_type=\"container\" data-settings=\"{&quot;background_background&quot;:&quot;classic&quot;}\">\n\t\t<div class=\"elementor-element elementor-element-710e443 e-con-full e-flex e-con e-child\" data-id=\"710e443\" data-element_type=\"container\" data-settings=\"{&quot;background_background&quot;:&quot;classic&quot;}\">\n\t\t\t\t<div class=\"elementor-element elementor-element-13784ee elementor-widget__width-initial elementor-widget elementor-widget-image\" data-id=\"13784ee\" data-element_type=\"widget\" data-widget_type=\"image.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img decoding=\"async\" width=\"800\" height=\"800\" src=\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E\" class=\"attachment-large size-large wp-image-818\" alt=\"Icon mit Zahl 2 und Sprechblase – steht für persönliches Gespräch zum gegenseitigen Kennenlernen\" data-lazy-src=\"https://www.lineo.finance/wp-content/uploads/2025/07/2_.svg\"><noscript><img loading=\"lazy\" decoding=\"async\" width=\"800\" height=\"800\" src=\"https://www.lineo.finance/wp-content/uploads/2025/07/2_.svg\" class=\"attachment-large size-large wp-image-818\" alt=\"Icon mit Zahl 2 und Sprechblase – steht für persönliches Gespräch zum gegenseitigen Kennenlernen\" /></noscript>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-34511f1 elementor-widget__width-initial elementor-widget elementor-widget-heading\" data-id=\"34511f1\" data-element_type=\"widget\" data-widget_type=\"heading.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t<h3 class=\"elementor-heading-title elementor-size-default\">lineo finance kennenlernen</h3>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-86654dc elementor-widget elementor-widget-text-editor\" data-id=\"86654dc\" data-element_type=\"widget\" data-widget_type=\"text-editor.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p><span style=\"font-weight: 400;\">Wenn es funkt, laden wir dich zu einem <strong>Gespräch</strong> ein. Ganz entspannt, auf <strong>Augenhöhe</strong> und natürlich mit Zeit, um alles über unsere Arbeit zu erfahren.</span></p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"swiper-slide swiper-slide-next\" data-slide=\"3\" role=\"group\" aria-roledescription=\"slide\" aria-label=\"3 / 3\" data-swiper-slide-index=\"2\" style=\"width: 531px; margin-right: 10px;\" aria-hidden=\"true\" inert=\"\">\n\t\t\t\t\t\t\t<div class=\"elementor-element elementor-element-ff9735f e-flex e-con-boxed e-con e-child\" data-id=\"ff9735f\" data-element_type=\"container\">\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t<div class=\"elementor-element elementor-element-2cf84bd e-con-full e-flex e-con e-child\" data-id=\"2cf84bd\" data-element_type=\"container\" data-settings=\"{&quot;background_background&quot;:&quot;classic&quot;}\">\n\t\t<div class=\"elementor-element elementor-element-5860c55 e-con-full e-flex e-con e-child\" data-id=\"5860c55\" data-element_type=\"container\" data-settings=\"{&quot;background_background&quot;:&quot;classic&quot;}\">\n\t\t\t\t<div class=\"elementor-element elementor-element-8992e25 elementor-widget__width-initial elementor-widget elementor-widget-image\" data-id=\"8992e25\" data-element_type=\"widget\" data-widget_type=\"image.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img decoding=\"async\" width=\"800\" height=\"800\" src=\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E\" class=\"attachment-large size-large wp-image-819\" alt=\"Icon mit Zahl 3 und Handschlag – steht für Einstieg und individuelles Onboarding bei lineo finance\" data-lazy-src=\"https://www.lineo.finance/wp-content/uploads/2025/07/3_.svg\"><noscript><img loading=\"lazy\" decoding=\"async\" width=\"800\" height=\"800\" src=\"https://www.lineo.finance/wp-content/uploads/2025/07/3_.svg\" class=\"attachment-large size-large wp-image-819\" alt=\"Icon mit Zahl 3 und Handschlag – steht für Einstieg und individuelles Onboarding bei lineo finance\" /></noscript>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-e564759 elementor-widget__width-initial elementor-widget elementor-widget-heading\" data-id=\"e564759\" data-element_type=\"widget\" data-widget_type=\"heading.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t<h3 class=\"elementor-heading-title elementor-size-default\">Gemeinsam durchstarten</h3>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-287c0df elementor-widget elementor-widget-text-editor\" data-id=\"287c0df\" data-element_type=\"widget\" data-widget_type=\"text-editor.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p><span style=\"font-weight: 400;\">Bei deinem Start bekommst du ein<strong> individuelles Onboarding</strong>. Du lernst unsere Prozesse kennen und bist schnell mittendrin, lineo finance weiterzuentwickeln.</span></p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev\" data-slide=\"1\" role=\"group\" aria-roledescription=\"slide\" aria-label=\"1 / 3\" data-swiper-slide-index=\"0\" style=\"width: 531px; margin-right: 10px;\" aria-hidden=\"true\" inert=\"\">\n\t\t\t\t\t\t\t<div class=\"elementor-element elementor-element-97f95be e-flex e-con-boxed e-con e-child\" data-id=\"97f95be\" data-element_type=\"container\">\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t<div class=\"elementor-element elementor-element-9a06b1a e-con-full e-flex e-con e-child\" data-id=\"9a06b1a\" data-element_type=\"container\" data-settings=\"{&quot;background_background&quot;:&quot;classic&quot;}\">\n\t\t<div class=\"elementor-element elementor-element-ec2a147 e-con-full e-flex e-con e-child\" data-id=\"ec2a147\" data-element_type=\"container\" data-settings=\"{&quot;background_background&quot;:&quot;classic&quot;}\">\n\t\t\t\t<div class=\"elementor-element elementor-element-13f8acc elementor-widget__width-initial elementor-widget elementor-widget-image\" data-id=\"13f8acc\" data-element_type=\"widget\" data-widget_type=\"image.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img decoding=\"async\" width=\"800\" height=\"800\" src=\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E\" class=\"attachment-large size-large wp-image-817\" alt=\"Icon mit Zahl 1, Formular und Stift – steht für den ersten Schritt: Kontaktaufnahme per Mail oder Formular\" data-lazy-src=\"https://www.lineo.finance/wp-content/uploads/2025/07/1_.svg\"><noscript><img loading=\"lazy\" decoding=\"async\" width=\"800\" height=\"800\" src=\"https://www.lineo.finance/wp-content/uploads/2025/07/1_.svg\" class=\"attachment-large size-large wp-image-817\" alt=\"Icon mit Zahl 1, Formular und Stift – steht für den ersten Schritt: Kontaktaufnahme per Mail oder Formular\" /></noscript>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-02dc5a4 elementor-widget__width-initial elementor-widget elementor-widget-heading\" data-id=\"02dc5a4\" data-element_type=\"widget\" data-widget_type=\"heading.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t<h3 class=\"elementor-heading-title elementor-size-default\">Kontakt aufnehmen</h3>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-f52ab92 elementor-widget elementor-widget-text-editor\" data-id=\"f52ab92\" data-element_type=\"widget\" data-widget_type=\"text-editor.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p><span style=\"font-weight: 400;\">Melde dich einfach bei uns – per <strong>Mail</strong> oder <strong>Formular</strong>. Wir wollen wissen, was dich begeistert und warum du zu lineo finance passt.</span></p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div></div>\n\t\t<span class=\"swiper-notification\" aria-live=\"assertive\" aria-atomic=\"true\"></span></div>\n\t\t\t\t\t<div class=\"elementor-swiper-button elementor-swiper-button-prev\" role=\"button\" tabindex=\"0\" aria-label=\"Vorheriger Slide\" aria-controls=\"swiper-wrapper-5b10281e8b71c107bb\">\n\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"1000\" zoomAndPan=\"magnify\" viewBox=\"0 0 750 749.999995\" height=\"1000\" preserveAspectRatio=\"xMidYMid meet\"><g id=\"ccd67897c0\"><path style=\" stroke:none;fill-rule:nonzero;fill:#353535;fill-opacity:1;\" d=\"M 375 0.105469 C 581.773438 0.105469 750 168.332031 750 375 C 750 581.667969 581.773438 750 375 750 C 168.226562 750 0.105469 581.773438 0.105469 375 C 0.105469 168.226562 168.332031 0 375 0 Z M 375 718.574219 C 564.488281 718.574219 718.574219 564.488281 718.574219 375 C 718.574219 185.511719 564.488281 31.425781 375 31.425781 C 185.511719 31.425781 31.53125 185.511719 31.53125 375 C 31.53125 564.488281 185.613281 718.574219 375 718.574219 Z M 375 718.574219 \"></path><path style=\" stroke:none;fill-rule:nonzero;fill:#353535;fill-opacity:1;\" d=\"M 366.410156 202.058594 C 370.390625 202.058594 374.476562 203.632812 377.515625 206.667969 C 383.695312 212.847656 383.695312 222.800781 377.515625 228.875 L 240.503906 365.886719 L 377.515625 502.898438 C 383.695312 509.078125 383.695312 519.027344 377.515625 525.105469 C 371.332031 531.285156 361.382812 531.285156 355.308594 525.105469 L 213.898438 383.695312 C 209.078125 378.875 206.460938 372.589844 206.460938 365.886719 C 206.460938 359.183594 209.078125 352.792969 213.898438 348.078125 L 355.308594 206.667969 C 358.34375 203.632812 362.429688 202.058594 366.410156 202.058594 Z M 236.101562 361.59375 Z M 236.101562 361.59375 \"></path><path style=\" stroke:none;fill-rule:nonzero;fill:#353535;fill-opacity:1;\" d=\"M 222.382812 350.175781 L 525.3125 350.175781 C 534.007812 350.175781 541.027344 357.191406 541.027344 365.886719 C 541.027344 374.582031 534.007812 381.597656 525.3125 381.597656 L 222.382812 381.597656 C 213.6875 381.597656 206.667969 374.582031 206.667969 365.886719 C 206.667969 357.191406 213.6875 350.175781 222.382812 350.175781 Z M 222.382812 350.175781 \"></path></g></svg>\t\t\t</div>\n\t\t\t<div class=\"elementor-swiper-button elementor-swiper-button-next\" role=\"button\" tabindex=\"0\" aria-label=\"Nächster Slide\" aria-controls=\"swiper-wrapper-5b10281e8b71c107bb\">\n\t\t\t\t<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"1000\" zoomAndPan=\"magnify\" viewBox=\"0 0 750 749.999995\" height=\"1000\" preserveAspectRatio=\"xMidYMid meet\"><g id=\"bcf2599c2a\"><path style=\" stroke:none;fill-rule:nonzero;fill:#353535;fill-opacity:1;\" d=\"M 375 749.894531 C 168.226562 749.894531 0 581.667969 0 375 C 0 168.332031 168.226562 0 375 0 C 581.773438 0 749.894531 168.226562 749.894531 375 C 749.894531 581.773438 581.667969 750 375 750 Z M 375 31.425781 C 185.507812 31.425781 31.425781 185.511719 31.425781 375 C 31.425781 564.488281 185.507812 718.574219 375 718.574219 C 564.488281 718.574219 718.46875 564.488281 718.46875 375 C 718.46875 185.511719 564.386719 31.425781 375 31.425781 Z M 375 31.425781 \"></path><path style=\" stroke:none;fill-rule:nonzero;fill:#353535;fill-opacity:1;\" d=\"M 383.589844 547.941406 C 379.609375 547.941406 375.523438 546.367188 372.484375 543.332031 C 366.304688 537.152344 366.304688 527.199219 372.484375 521.125 L 509.496094 384.113281 L 372.484375 247.101562 C 366.304688 240.921875 366.304688 230.972656 372.484375 224.894531 C 378.667969 218.714844 388.617188 218.714844 394.691406 224.894531 L 536.101562 366.304688 C 540.921875 371.125 543.539062 377.410156 543.539062 384.113281 C 543.539062 390.816406 540.921875 397.207031 536.101562 401.921875 L 394.691406 543.332031 C 391.65625 546.367188 387.570312 547.941406 383.589844 547.941406 Z M 513.898438 388.40625 Z M 513.898438 388.40625 \"></path><path style=\" stroke:none;fill-rule:nonzero;fill:#353535;fill-opacity:1;\" d=\"M 527.617188 399.824219 L 224.6875 399.824219 C 215.992188 399.824219 208.972656 392.808594 208.972656 384.113281 C 208.972656 375.417969 215.992188 368.402344 224.6875 368.402344 L 527.617188 368.402344 C 536.3125 368.402344 543.332031 375.417969 543.332031 384.113281 C 543.332031 392.808594 536.3125 399.824219 527.617188 399.824219 Z M 527.617188 399.824219 \"></path></g></svg>\t\t\t</div>\n\t\t\t\t\t<div class=\"swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal\"><span class=\"swiper-pagination-bullet\" role=\"button\" data-bullet-index=\"0\" aria-label=\"Go to slide 1\"></span><span class=\"swiper-pagination-bullet swiper-pagination-bullet-active\" role=\"button\" data-bullet-index=\"1\" aria-label=\"Go to slide 2\" tabindex=\"0\" aria-current=\"true\"></span><span class=\"swiper-pagination-bullet\" role=\"button\" data-bullet-index=\"2\" aria-label=\"Go to slide 3\"></span></div>\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t",
+      "textContent": "Dein Einstieg bei uns <img loading=\"lazy\" decoding=\"async\" width=\"800\" height=\"800\" src=\"https://www.lineo.finance/wp-content/uploads/2025/07/3_.svg\" class=\"attachment-large size-large wp-image-819\" alt=\"Icon mit Zahl 3 und Handschlag – steht für Einstieg und individuelles Onboarding bei lineo finan...",
+      "screenshotPath": "karriere-section-7-features.png"
+    },
+    {
+      "index": 40,
+      "id": "formular",
+      "elementorId": "1260fc9",
+      "className": "elementor-element elementor-element-1260fc9 e-flex e-con-boxed e-con e-parent",
+      "sectionType": "form",
+      "elementType": "container",
+      "settings": {},
+      "dimensions": {
+        "width": 1905,
+        "height": 0,
+        "x": 0,
+        "y": 3947.5
+      },
+      "styles": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": null,
+        "color": "rgb(51, 51, 51)",
+        "padding": "0px",
+        "margin": "0px",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "textAlign": "start"
+      },
+      "content": {
+        "headings": [
+          {
+            "tag": "h2",
+            "text": "Bereit, Teil von lineo finance zu werden?",
+            "style": {
+              "fontSize": "43px",
+              "fontWeight": "400",
+              "color": "rgb(53, 53, 53)"
+            }
+          }
+        ],
+        "paragraphs": [
+          "Ob Entwickler, Quereinsteiger oder einfach jemand mit klugen Ideen. Wenn du Lust hast, in einem kleinen, wachsenden Team Verantwortung zu übernehmen und etwas aufzubauen, freuen wir uns auf deine Nachricht."
+        ],
+        "lists": [],
+        "images": [],
+        "buttons": [
+          {
+            "tag": "a",
+            "text": "Datenschutzerklärung",
+            "href": "https://www.lineo.finance/datenschutz/",
+            "className": "",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(53, 53, 53)",
+              "borderRadius": "0px",
+              "padding": "0px"
+            }
+          },
+          {
+            "tag": "button",
+            "text": "Bewerbung absenden",
+            "href": null,
+            "className": "elementor-button elementor-size-sm",
+            "style": {
+              "backgroundColor": "rgb(53, 53, 53)",
+              "color": "rgb(255, 255, 255)",
+              "borderRadius": "9px",
+              "padding": "0px 24px"
+            }
+          }
+        ],
+        "forms": [
+          {
+            "action": "https://www.lineo.finance/karriere/",
+            "method": "post",
+            "fields": [
+              {
+                "type": "hidden",
+                "name": "post_id",
+                "placeholder": "",
+                "required": false
+              },
+              {
+                "type": "hidden",
+                "name": "form_id",
+                "placeholder": "",
+                "required": false
+              },
+              {
+                "type": "hidden",
+                "name": "referer_title",
+                "placeholder": "",
+                "required": false
+              },
+              {
+                "type": "hidden",
+                "name": "queried_id",
+                "placeholder": "",
+                "required": false
+              },
+              {
+                "type": "text",
+                "name": "form_fields[name]",
+                "placeholder": "Vorname*",
+                "required": true
+              },
+              {
+                "type": "text",
+                "name": "form_fields[field_e66b5c8]",
+                "placeholder": "Nachname*",
+                "required": true
+              },
+              {
+                "type": "email",
+                "name": "form_fields[email]",
+                "placeholder": "E-Mail*",
+                "required": true
+              },
+              {
+                "type": "tel",
+                "name": "form_fields[field_ebb3c6b]",
+                "placeholder": "Telefon*",
+                "required": true
+              },
+              {
+                "type": "select-one",
+                "name": "form_fields[field_9d25dbc]",
+                "required": true
+              },
+              {
+                "type": "textarea",
+                "name": "form_fields[message]",
+                "placeholder": "Dann bin ich am besten zu erreichen*",
+                "required": true
+              },
+              {
+                "type": "checkbox",
+                "name": "form_fields[field_28009de]",
+                "placeholder": "",
+                "required": true
+              },
+              {
+                "type": "text",
+                "name": "alt_s",
+                "placeholder": "",
+                "required": false
+              },
+              {
+                "type": "text",
+                "name": "mckgno3124",
+                "placeholder": "",
+                "required": false
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": [
+        {
+          "type": "heading.default",
+          "id": "b52a8c0",
+          "className": "elementor-element elementor-element-b52a8c0 elementor-widget__width-initial elementor-widget elementor-widget-heading"
+        },
+        {
+          "type": "text-editor.default",
+          "id": "ce5b333",
+          "className": "elementor-element elementor-element-ce5b333 elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
+        },
+        {
+          "type": "form.default",
+          "id": "3eb08be",
+          "className": "elementor-element elementor-element-3eb08be elementor-button-align-center elementor-mobile-button-align-start elementor-widget elementor-widget-form"
+        }
+      ],
+      "innerHTML": "\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t\t\t<div class=\"elementor-element elementor-element-b52a8c0 elementor-widget__width-initial elementor-widget elementor-widget-heading\" data-id=\"b52a8c0\" data-element_type=\"widget\" data-widget_type=\"heading.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t<h2 class=\"elementor-heading-title elementor-size-default\">Bereit, Teil von lineo finance zu werden?</h2>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-ce5b333 elementor-widget__width-initial elementor-widget elementor-widget-text-editor\" data-id=\"ce5b333\" data-element_type=\"widget\" data-widget_type=\"text-editor.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p><span style=\"font-weight: 400;\">Ob Entwickler, Quereinsteiger oder einfach jemand mit klugen Ideen. Wenn du Lust hast, in einem kleinen, wachsenden Team Verantwortung zu übernehmen und etwas aufzubauen, freuen wir uns auf deine Nachricht.</span></p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-3eb08be elementor-button-align-center elementor-mobile-button-align-start elementor-widget elementor-widget-form\" data-id=\"3eb08be\" data-element_type=\"widget\" data-settings=\"{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}\" data-widget_type=\"form.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t<form class=\"elementor-form\" method=\"post\" name=\"New Form\" aria-label=\"New Form\">\n\t\t\t<input type=\"hidden\" name=\"post_id\" value=\"758\">\n\t\t\t<input type=\"hidden\" name=\"form_id\" value=\"3eb08be\">\n\t\t\t<input type=\"hidden\" name=\"referer_title\" value=\"Karriere bei lineo finance: Gestalte die Zukunft der Buchhaltung\">\n\n\t\t\t\t\t\t\t<input type=\"hidden\" name=\"queried_id\" value=\"758\">\n\t\t\t\n\t\t\t<div class=\"elementor-form-fields-wrapper elementor-labels-\">\n\t\t\t\t\t\t\t\t<div class=\"elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-50 elementor-field-required\">\n\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"form-field-name\" class=\"elementor-field-label elementor-screen-only\">\n\t\t\t\t\t\t\t\tVorname\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input size=\"1\" type=\"text\" name=\"form_fields[name]\" id=\"form-field-name\" class=\"elementor-field elementor-size-sm  elementor-field-textual\" placeholder=\"Vorname*\" required=\"required\">\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_e66b5c8 elementor-col-50 elementor-field-required\">\n\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"form-field-field_e66b5c8\" class=\"elementor-field-label elementor-screen-only\">\n\t\t\t\t\t\t\t\tNachname\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input size=\"1\" type=\"text\" name=\"form_fields[field_e66b5c8]\" id=\"form-field-field_e66b5c8\" class=\"elementor-field elementor-size-sm  elementor-field-textual\" placeholder=\"Nachname*\" required=\"required\">\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-50 elementor-field-required\">\n\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"form-field-email\" class=\"elementor-field-label elementor-screen-only\">\n\t\t\t\t\t\t\t\tE-Mail\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input size=\"1\" type=\"email\" name=\"form_fields[email]\" id=\"form-field-email\" class=\"elementor-field elementor-size-sm  elementor-field-textual\" placeholder=\"E-Mail*\" required=\"required\">\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"elementor-field-type-tel elementor-field-group elementor-column elementor-field-group-field_ebb3c6b elementor-col-50 elementor-field-required\">\n\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"form-field-field_ebb3c6b\" class=\"elementor-field-label elementor-screen-only\">\n\t\t\t\t\t\t\t\tTelefon\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t\t\t<input size=\"1\" type=\"tel\" name=\"form_fields[field_ebb3c6b]\" id=\"form-field-field_ebb3c6b\" class=\"elementor-field elementor-size-sm  elementor-field-textual\" placeholder=\"Telefon*\" required=\"required\" pattern=\"[0-9()#&amp;+*-=.]+\" title=\"Nur Nummern oder Telefon-Zeichen (#, -, *, etc) werden akzeptiert.\">\n\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"elementor-field-type-select elementor-field-group elementor-column elementor-field-group-field_9d25dbc elementor-col-100 elementor-field-required\">\n\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"form-field-field_9d25dbc\" class=\"elementor-field-label elementor-screen-only\">\n\t\t\t\t\t\t\t\tStelle\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t\t\t<div class=\"elementor-field elementor-select-wrapper remove-before \">\n\t\t\t<div class=\"select-caret-down-wrapper\">\n\t\t\t\t<svg aria-hidden=\"true\" class=\"e-font-icon-svg e-eicon-caret-down\" viewBox=\"0 0 571.4 571.4\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M571 393Q571 407 561 418L311 668Q300 679 286 679T261 668L11 418Q0 407 0 393T11 368 36 357H536Q550 357 561 368T571 393Z\"></path></svg>\t\t\t</div>\n\t\t\t<select name=\"form_fields[field_9d25dbc]\" id=\"form-field-field_9d25dbc\" class=\"elementor-field-textual elementor-size-sm\" required=\"required\">\n\t\t\t\t\t\t\t\t\t<option value=\"Senior .NET Entwickler (m/w/d)\">Senior .NET Entwickler (m/w/d)</option>\n\t\t\t\t\t\t\t</select>\n\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100 elementor-field-required\">\n\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"form-field-message\" class=\"elementor-field-label elementor-screen-only\">\n\t\t\t\t\t\t\t\tDann bin ich am besten zu erreichen\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t<textarea class=\"elementor-field-textual elementor-field  elementor-size-sm\" name=\"form_fields[message]\" id=\"form-field-message\" rows=\"4\" placeholder=\"Dann bin ich am besten zu erreichen*\" required=\"required\"></textarea>\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"elementor-field-type-acceptance elementor-field-group elementor-column elementor-field-group-field_28009de elementor-col-100 elementor-field-required\">\n\t\t\t\t\t\t\t\t\t\t\t\t<label for=\"form-field-field_28009de\" class=\"elementor-field-label elementor-screen-only\">\n\t\t\t\t\t\t\t\tDatenschutz\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t\t\t<div class=\"elementor-field-subgroup\">\n\t\t\t<span class=\"elementor-field-option\">\n\t\t\t\t<input type=\"checkbox\" name=\"form_fields[field_28009de]\" id=\"form-field-field_28009de\" class=\"elementor-field elementor-size-sm  elementor-acceptance-field\" required=\"required\">\n\t\t\t\t<label for=\"form-field-field_28009de\">Weitere Informationen zur Datenverarbeitung kannst du unserer <a href=\"https://www.lineo.finance/datenschutz/\">Datenschutzerklärung </a>entnehmen.\n</label>\t\t\t</span>\n\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons\">\n\t\t\t\t\t<button class=\"elementor-button elementor-size-sm\" type=\"submit\">\n\t\t\t\t\t\t<span class=\"elementor-button-content-wrapper\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"elementor-button-text\">Bewerbung absenden</span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t</button>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t<div id=\"altEmail_container\" class=\"altEmail_container\"><label for=\"alt_s\">Alternative:</label><input type=\"text\" id=\"alt_s\" name=\"alt_s\"></div><span class=\"wpa_hidden_field\" style=\"display:none;height:0;width:0;\"><label>WPA <input type=\"text\" name=\"mckgno3124\" value=\"985370\"></label></span></form>\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t",
+      "textContent": "Bereit, Teil von lineo finance zu werden? Ob Entwickler, Quereinsteiger oder einfach jemand mit klugen Ideen. Wenn du Lust hast, in einem kleinen, wachsenden Team Verantwortung zu übernehmen und etwas aufzubauen, freuen wir uns auf deine Nachricht. Vorname Nachname E-Mail Telefon Stelle Senior .NET ...",
+      "screenshotPath": "karriere-section-8-form.png"
+    },
+    {
+      "index": 41,
+      "id": "",
+      "elementorId": "9cc9564",
+      "className": "elementor-element elementor-element-9cc9564 e-flex e-con-boxed e-con e-parent",
+      "sectionType": "features",
+      "elementType": "container",
+      "settings": {
+        "background_background": "classic"
+      },
+      "dimensions": {
+        "width": 1905,
+        "height": 649.8984375,
+        "x": 0,
+        "y": 3947.5
+      },
+      "styles": {
+        "backgroundColor": "rgb(246, 246, 246)",
+        "backgroundImage": null,
+        "color": "rgb(51, 51, 51)",
+        "padding": "0px",
+        "margin": "0px",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "textAlign": "start"
+      },
+      "content": {
+        "headings": [
+          {
+            "tag": "h2",
+            "text": "Deine Fragen – unsere Antworten",
+            "style": {
+              "fontSize": "43px",
+              "fontWeight": "400",
+              "color": "rgb(53, 53, 53)"
+            }
+          }
+        ],
+        "paragraphs": [
+          "Bei uns gibt es keine festen Bürozeiten. Du arbeitest innerhalb gesetzlicher Grenzen so, wie es für dich am besten passt. Regelmäßige Abstimmungen im Team sorgen dafür, dass wir alle im Flow bleiben. In bestimmten Phasen können, wenn nötig, Kernzeiten vereinbart werden.",
+          "Unbedingt. Uns ist wichtiger, dass du Lust hast, dich einzuarbeiten, mitzudenken und Neues zu lernen. Fachwissen kann man aufbauen – Neugier und Eigeninitiative bringst du mit."
+        ],
+        "lists": [],
+        "images": [],
+        "buttons": [],
+        "forms": []
+      },
+      "widgets": [
+        {
+          "type": "heading.default",
+          "id": "3bcdd7e",
+          "className": "elementor-element elementor-element-3bcdd7e elementor-widget__width-initial elementor-widget elementor-widget-heading"
+        },
+        {
+          "type": "nested-accordion.default",
+          "id": "dce446c",
+          "className": "elementor-element elementor-element-dce446c elementor-widget__width-initial elementor-widget elementor-widget-n-accordion"
+        },
+        {
+          "type": "text-editor.default",
+          "id": "714e8af",
+          "className": "elementor-element elementor-element-714e8af elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
+        },
+        {
+          "type": "text-editor.default",
+          "id": "a8e60a5",
+          "className": "elementor-element elementor-element-a8e60a5 elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
+        },
+        {
+          "type": "text-editor.default",
+          "id": "d35ffa3",
+          "className": "elementor-element elementor-element-d35ffa3 elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
+        }
+      ],
+      "innerHTML": "\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t\t\t<div class=\"elementor-element elementor-element-3bcdd7e elementor-widget__width-initial elementor-widget elementor-widget-heading\" data-id=\"3bcdd7e\" data-element_type=\"widget\" data-widget_type=\"heading.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t<h2 class=\"elementor-heading-title elementor-size-default\">Deine Fragen – unsere Antworten</h2>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-dce446c elementor-widget__width-initial elementor-widget elementor-widget-n-accordion\" data-id=\"dce446c\" data-element_type=\"widget\" data-settings=\"{&quot;default_state&quot;:&quot;expanded&quot;,&quot;max_items_expended&quot;:&quot;one&quot;,&quot;n_accordion_animation_duration&quot;:{&quot;unit&quot;:&quot;ms&quot;,&quot;size&quot;:400,&quot;sizes&quot;:[]}}\" data-widget_type=\"nested-accordion.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t<div class=\"e-n-accordion\" aria-label=\"Accordion. Open links with Enter or Space, close with Escape, and navigate with Arrow Keys\">\n\t\t\t\t\t\t<details id=\"e-n-accordion-item-2310\" class=\"e-n-accordion-item\" open=\"\">\n\t\t\t\t<summary class=\"e-n-accordion-item-title\" data-accordion-index=\"1\" tabindex=\"0\" aria-expanded=\"true\" aria-controls=\"e-n-accordion-item-2310\">\n\t\t\t\t\t<span class=\"e-n-accordion-item-title-header\"><div class=\"e-n-accordion-item-title-text\"> Wie sehen meine Arbeitszeiten aus? </div></span>\n\t\t\t\t\t\t\t<span class=\"e-n-accordion-item-title-icon\">\n\t\t\t<span class=\"e-opened\"><svg aria-hidden=\"true\" class=\"e-font-icon-svg e-fas-minus\" viewBox=\"0 0 448 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z\"></path></svg></span>\n\t\t\t<span class=\"e-closed\"><svg aria-hidden=\"true\" class=\"e-font-icon-svg e-fas-plus\" viewBox=\"0 0 448 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z\"></path></svg></span>\n\t\t</span>\n\n\t\t\t\t\t\t</summary>\n\t\t\t\t<div role=\"region\" aria-labelledby=\"e-n-accordion-item-2310\" class=\"elementor-element elementor-element-8b1fa84 e-con-full e-flex e-con e-child\" data-id=\"8b1fa84\" data-element_type=\"container\">\n\t\t\t\t<div class=\"elementor-element elementor-element-714e8af elementor-widget__width-initial elementor-widget elementor-widget-text-editor\" data-id=\"714e8af\" data-element_type=\"widget\" data-widget_type=\"text-editor.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p><span style=\"font-weight: 400;\">Bei uns gibt es keine festen Bürozeiten. Du arbeitest innerhalb gesetzlicher Grenzen so, wie es für dich am besten passt. Regelmäßige Abstimmungen im Team sorgen dafür, dass wir alle im Flow bleiben. In bestimmten Phasen können, wenn nötig, Kernzeiten vereinbart werden.</span></p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</details>\n\t\t\t\t\t\t<details id=\"e-n-accordion-item-2311\" class=\"e-n-accordion-item\">\n\t\t\t\t<summary class=\"e-n-accordion-item-title\" data-accordion-index=\"2\" tabindex=\"-1\" aria-expanded=\"false\" aria-controls=\"e-n-accordion-item-2311\">\n\t\t\t\t\t<span class=\"e-n-accordion-item-title-header\"><div class=\"e-n-accordion-item-title-text\"> In eurer Spezialisierung bin ich noch nicht so fit. Darf ich mich trotzdem bewerben? </div></span>\n\t\t\t\t\t\t\t<span class=\"e-n-accordion-item-title-icon\">\n\t\t\t<span class=\"e-opened\"><svg aria-hidden=\"true\" class=\"e-font-icon-svg e-fas-minus\" viewBox=\"0 0 448 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z\"></path></svg></span>\n\t\t\t<span class=\"e-closed\"><svg aria-hidden=\"true\" class=\"e-font-icon-svg e-fas-plus\" viewBox=\"0 0 448 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z\"></path></svg></span>\n\t\t</span>\n\n\t\t\t\t\t\t</summary>\n\t\t\t\t<div role=\"region\" aria-labelledby=\"e-n-accordion-item-2311\" class=\"elementor-element elementor-element-595c11d e-con-full e-flex e-con e-child\" data-id=\"595c11d\" data-element_type=\"container\">\n\t\t\t\t<div class=\"elementor-element elementor-element-a8e60a5 elementor-widget__width-initial elementor-widget elementor-widget-text-editor\" data-id=\"a8e60a5\" data-element_type=\"widget\" data-widget_type=\"text-editor.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p><span style=\"font-weight: 400;\">Unbedingt. Uns ist wichtiger, dass du Lust hast, dich einzuarbeiten, mitzudenken und Neues zu lernen. Fachwissen kann man aufbauen – Neugier und Eigeninitiative bringst du mit.</span></p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</details>\n\t\t\t\t\t\t<details id=\"e-n-accordion-item-2312\" class=\"e-n-accordion-item\">\n\t\t\t\t<summary class=\"e-n-accordion-item-title\" data-accordion-index=\"3\" tabindex=\"-1\" aria-expanded=\"false\" aria-controls=\"e-n-accordion-item-2312\">\n\t\t\t\t\t<span class=\"e-n-accordion-item-title-header\"><div class=\"e-n-accordion-item-title-text\"> Was wird von mir erwartet? </div></span>\n\t\t\t\t\t\t\t<span class=\"e-n-accordion-item-title-icon\">\n\t\t\t<span class=\"e-opened\"><svg aria-hidden=\"true\" class=\"e-font-icon-svg e-fas-minus\" viewBox=\"0 0 448 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z\"></path></svg></span>\n\t\t\t<span class=\"e-closed\"><svg aria-hidden=\"true\" class=\"e-font-icon-svg e-fas-plus\" viewBox=\"0 0 448 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z\"></path></svg></span>\n\t\t</span>\n\n\t\t\t\t\t\t</summary>\n\t\t\t\t<div role=\"region\" aria-labelledby=\"e-n-accordion-item-2312\" class=\"elementor-element elementor-element-5737d16 e-con-full e-flex e-con e-child\" data-id=\"5737d16\" data-element_type=\"container\">\n\t\t\t\t<div class=\"elementor-element elementor-element-d35ffa3 elementor-widget__width-initial elementor-widget elementor-widget-text-editor\" data-id=\"d35ffa3\" data-element_type=\"widget\" data-widget_type=\"text-editor.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\tDu solltest gut damit umgehen können, wenn es mal keine direkte Lösung gibt. Wir suchen Menschen, die selbstständig denken, Vorschläge machen und Verantwortung übernehmen, aber auch wissen, wann sie um Hilfe bitten sollten.\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</details>\n\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t",
+      "textContent": "Deine Fragen – unsere Antworten Wie sehen meine Arbeitszeiten aus? Bei uns gibt es keine festen Bürozeiten. Du arbeitest innerhalb gesetzlicher Grenzen so, wie es für dich am besten passt. Regelmäßige Abstimmungen im Team sorgen dafür, dass wir alle im Flow bleiben. In bestimmten Phasen können, wenn...",
+      "screenshotPath": "karriere-section-9-features.png"
+    },
+    {
+      "index": 45,
+      "id": "",
+      "elementorId": "53d25eed",
+      "className": "elementor-element elementor-element-53d25eed e-con-full e-flex e-con e-parent",
+      "sectionType": "content",
+      "elementType": "container",
+      "settings": {},
+      "dimensions": {
+        "width": 1905,
+        "height": 67,
+        "x": 0,
+        "y": 4597.3984375
+      },
+      "styles": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": null,
+        "color": "rgb(51, 51, 51)",
+        "padding": "0px",
+        "margin": "0px",
+        "display": "flex",
+        "flexDirection": "row",
+        "alignItems": "stretch",
+        "justifyContent": "normal",
+        "textAlign": "start"
+      },
+      "content": {
+        "headings": [],
+        "paragraphs": [],
+        "lists": [
+          {
+            "type": "ul",
+            "items": [
+              "© 2025 Lineo Finance GmbH",
+              "Impressum",
+              "Datenschutz",
+              "Cookie-Einstellungen",
+              "Realisiert durch newgen",
+              "Barrierefreiheitserklärung"
+            ]
+          }
+        ],
+        "images": [],
+        "buttons": [
+          {
+            "tag": "a",
+            "text": "Impressum",
+            "href": "https://www.lineo.finance/impressum",
+            "className": "",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(204, 204, 204)",
+              "borderRadius": "0px",
+              "padding": "0px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Datenschutz",
+            "href": "https://www.lineo.finance/datenschutz",
+            "className": "",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(204, 204, 204)",
+              "borderRadius": "0px",
+              "padding": "0px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Cookie-Einstellungen",
+            "href": "https://www.lineo.finance/karriere/#",
+            "className": "",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(204, 204, 204)",
+              "borderRadius": "0px",
+              "padding": "0px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Realisiert durch newgen",
+            "href": "https://www.newgen.ag/",
+            "className": "",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(204, 204, 204)",
+              "borderRadius": "0px",
+              "padding": "0px"
+            }
+          },
+          {
+            "tag": "a",
+            "text": "Barrierefreiheitserklärung",
+            "href": "https://www.lineo.finance/barrierefreiheitserklaerung/",
+            "className": "",
+            "style": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(204, 204, 204)",
+              "borderRadius": "0px",
+              "padding": "0px"
+            }
+          }
+        ],
+        "forms": []
+      },
+      "widgets": [
+        {
+          "type": "icon-list.default",
+          "id": "37dde90",
+          "className": "elementor-element elementor-element-37dde90 elementor-icon-list--layout-inline elementor-align-center elementor-widget__width-inherit elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+        }
+      ],
+      "innerHTML": "\n\t\t<div class=\"elementor-element elementor-element-77e6cfaa e-con-full e-flex e-con e-child\" data-id=\"77e6cfaa\" data-element_type=\"container\" data-settings=\"{&quot;background_background&quot;:&quot;classic&quot;}\">\n\t\t\t\t<div class=\"elementor-element elementor-element-37dde90 elementor-icon-list--layout-inline elementor-align-center elementor-widget__width-inherit elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list\" data-id=\"37dde90\" data-element_type=\"widget\" data-widget_type=\"icon-list.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t<ul class=\"elementor-icon-list-items elementor-inline-items\">\n\t\t\t\t\t\t\t<li class=\"elementor-icon-list-item elementor-inline-item\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"elementor-icon-list-text\">© 2025 Lineo Finance GmbH</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li class=\"elementor-icon-list-item elementor-inline-item\">\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"/impressum\">\n\n\t\t\t\t\t\t\t\t\t\t\t<span class=\"elementor-icon-list-text\">Impressum</span>\n\t\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li class=\"elementor-icon-list-item elementor-inline-item\">\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"/datenschutz\">\n\n\t\t\t\t\t\t\t\t\t\t\t<span class=\"elementor-icon-list-text\">Datenschutz</span>\n\t\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li class=\"elementor-icon-list-item elementor-inline-item\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"elementor-icon-list-text\"><span class=\"borlabs-cookie-open-dialog-preferences \" data-borlabs-cookie-title=\"Cookie-Einstellungen\" data-borlabs-cookie-type=\"link\" data-v-app=\"\"><a href=\"#\" role=\"button\">Cookie-Einstellungen</a></span></span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li class=\"elementor-icon-list-item elementor-inline-item\">\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"https://www.newgen.ag/\">\n\n\t\t\t\t\t\t\t\t\t\t\t<span class=\"elementor-icon-list-text\">Realisiert durch newgen</span>\n\t\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li class=\"elementor-icon-list-item elementor-inline-item\">\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"https://www.lineo.finance/barrierefreiheitserklaerung/\">\n\n\t\t\t\t\t\t\t\t\t\t\t<span class=\"elementor-icon-list-text\">Barrierefreiheitserklärung</span>\n\t\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t",
+      "textContent": "© 2025 Lineo Finance GmbH Impressum Datenschutz Cookie-Einstellungen Realisiert durch newgen Barrierefreiheitserklärung...",
+      "screenshotPath": "karriere-section-10-content.png"
+    }
+  ]
+}

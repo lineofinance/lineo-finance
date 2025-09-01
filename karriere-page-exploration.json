@@ -1,0 +1,688 @@
+{
+  "url": "https://www.lineo.finance/karriere/",
+  "pageTitle": "Karriere bei lineo finance: Gestalte die Zukunft der Buchhaltung",
+  "exploredAt": "2025-09-01T13:01:48.226Z",
+  "totalElements": 392,
+  "mainContentAreas": [
+    {
+      "selector": "body > div",
+      "index": 0,
+      "tagName": "DIV",
+      "id": "",
+      "className": "elementor elementor-758",
+      "innerHTML": "\n\t\t\t\t<div class=\"elementor-element elementor-element-7d61b82 e-flex e-con-boxed e-con e-parent e-lazyloaded\" data-id=\"7d61b82\" data-element_type=\"container\" id=\"content\" data-settings=\"{&quot;background_background&quot;:&quot;classic&quot;}\">\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t\t\t<div class=\"elementor-element elementor-element-839c648 elementor-widget__width-initial elementor-widget elementor-widget-heading\" data-id=\"839c648\" data-element_type=\"widget\" data-widget_type=\"heading.default\">\n\t\t\t\t<div c...",
+      "rect": {
+        "width": 1905,
+        "height": 4597.3984375,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "selector": "body > *",
+      "index": 2,
+      "tagName": "DIV",
+      "id": "",
+      "className": "elementor elementor-758",
+      "innerHTML": "\n\t\t\t\t<div class=\"elementor-element elementor-element-7d61b82 e-flex e-con-boxed e-con e-parent e-lazyloaded\" data-id=\"7d61b82\" data-element_type=\"container\" id=\"content\" data-settings=\"{&quot;background_background&quot;:&quot;classic&quot;}\">\n\t\t\t\t\t<div class=\"e-con-inner\">\n\t\t\t\t<div class=\"elementor-element elementor-element-839c648 elementor-widget__width-initial elementor-widget elementor-widget-heading\" data-id=\"839c648\" data-element_type=\"widget\" data-widget_type=\"heading.default\">\n\t\t\t\t<div c...",
+      "rect": {
+        "width": 1905,
+        "height": 4597.3984375,
+        "x": 0,
+        "y": 0
+      }
+    }
+  ],
+  "allElements": [
+    {
+      "tagName": "HTML",
+      "id": "",
+      "className": "",
+      "textContent": "\n\t\n\t\n\t\n\t\n\timg:is([sizes=\"auto\" i], [sizes^=\"auto,\" i]) { contain-intrinsic-size: 3000px 1500px }\n\t\n\t...",
+      "children": 2,
+      "rect": {
+        "width": 1905,
+        "height": 4664.3984375,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "tagName": "BODY",
+      "id": "",
+      "className": "wp-singular page-template page-template-elementor_header_footer page page-id-758 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-elementor-child hello-elementor-default elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-758 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit",
+      "textContent": "\n\n\nZum Inhalt springen\n\n\t\t\n\t\t\t\n\t\t\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\n\t\t\t\t\n...",
+      "children": 21,
+      "rect": {
+        "width": 1905,
+        "height": 4664.3984375,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "tagName": "A",
+      "id": "",
+      "className": "skip-link screen-reader-text",
+      "textContent": "Zum Inhalt springen...",
+      "children": 0,
+      "rect": {
+        "width": 1,
+        "height": 1,
+        "x": -1,
+        "y": -160001
+      }
+    },
+    {
+      "tagName": "DIV",
+      "id": "",
+      "className": "elementor-element elementor-element-1fba1f35 she-header-yes she-header-hide-on-scroll-yes e-flex e-con-boxed e-con e-parent e-lazyloaded elementor-sticky elementor-sticky--active elementor-section--handles-inside elementor-sticky--effects header",
+      "textContent": "\n\t\t\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\tHome\nLeistun...",
+      "children": 1,
+      "rect": {
+        "width": 1905,
+        "height": 121,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "tagName": "DIV",
+      "id": "",
+      "className": "e-con-inner",
+      "textContent": "\n\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\tHome\nLeistungen\nTe...",
+      "children": 2,
+      "rect": {
+        "width": 1240,
+        "height": 121,
+        "x": 332.5,
+        "y": 0
+      }
+    },
+    {
+      "tagName": "DIV",
+      "id": "",
+      "className": "elementor-element elementor-element-774a626b e-con-full e-flex e-con e-child",
+      "textContent": "\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t...",
+      "children": 1,
+      "rect": {
+        "width": 235.59375,
+        "height": 81,
+        "x": 338.703125,
+        "y": 20
+      }
+    },
+    {
+      "tagName": "DIV",
+      "id": "",
+      "className": "elementor-element elementor-element-cbeff5b elementor-widget__width-initial elementor-widget elementor-widget-theme-site-logo elementor-widget-image",
+      "textContent": "\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t...",
+      "children": 1,
+      "rect": {
+        "width": 131.9296875,
+        "height": 81,
+        "x": 338.703125,
+        "y": 20
+      }
+    },
+    {
+      "tagName": "DIV",
+      "id": "",
+      "className": "elementor-widget-container",
+      "textContent": "\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t...",
+      "children": 1,
+      "rect": {
+        "width": 131.9296875,
+        "height": 81,
+        "x": 338.703125,
+        "y": 20
+      }
+    },
+    {
+      "tagName": "A",
+      "id": "",
+      "className": "",
+      "textContent": "\n\t\t\t\t\t\t\t...",
+      "children": 1,
+      "rect": {
+        "width": 118.734375,
+        "height": 81,
+        "x": 338.703125,
+        "y": 20
+      }
+    },
+    {
+      "tagName": "IMG",
+      "id": "",
+      "className": "attachment-full size-full wp-image-111",
+      "textContent": "",
+      "children": 0,
+      "rect": {
+        "width": 118.734375,
+        "height": 81,
+        "x": 338.703125,
+        "y": 20
+      }
+    },
+    {
+      "tagName": "DIV",
+      "id": "",
+      "className": "elementor-element elementor-element-5b4b5be2 e-con-full e-flex e-con e-child",
+      "textContent": "\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\tHome\nLeistungen\nTeam & Partner\nKarriere\nKontakt\n\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\tHo...",
+      "children": 2,
+      "rect": {
+        "width": 992,
+        "height": 50,
+        "x": 574.296875,
+        "y": 35.5
+      }
+    },
+    {
+      "tagName": "DIV",
+      "id": "",
+      "className": "elementor-element elementor-element-c774f36 elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-widget-tablet_extra__width-initial elementor-nav-menu__align-center elementor-nav-menu--dropdown-tablet_extra elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu",
+      "textContent": "\n\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\tHome\nLeistungen\nTeam & Partner\nKarriere\nKontakt\n\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\tHome\nLe...",
+      "children": 1,
+      "rect": {
+        "width": 553.515625,
+        "height": 28,
+        "x": 574.296875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "DIV",
+      "id": "",
+      "className": "elementor-widget-container",
+      "textContent": "\n\t\t\t\t\t\t\t\t\n\t\t\t\tHome\nLeistungen\nTeam & Partner\nKarriere\nKontakt\n\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\tHome\nLeistun...",
+      "children": 3,
+      "rect": {
+        "width": 553.515625,
+        "height": 28,
+        "x": 574.296875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "NAV",
+      "id": "",
+      "className": "elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade",
+      "textContent": "\n\t\t\t\tHome\nLeistungen\nTeam & Partner\nKarriere\nKontakt\n\t\t\t...",
+      "children": 1,
+      "rect": {
+        "width": 553.515625,
+        "height": 28,
+        "x": 574.296875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "UL",
+      "id": "menu-1-c774f36",
+      "className": "elementor-nav-menu",
+      "textContent": "Home\nLeistungen\nTeam & Partner\nKarriere\nKontakt\n...",
+      "children": 5,
+      "rect": {
+        "width": 553.515625,
+        "height": 28,
+        "x": 574.296875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "LI",
+      "id": "",
+      "className": "menu-item menu-item-type-custom menu-item-object-custom menu-item-138",
+      "textContent": "Home...",
+      "children": 1,
+      "rect": {
+        "width": 67.421875,
+        "height": 28,
+        "x": 574.296875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "A",
+      "id": "",
+      "className": "elementor-item",
+      "textContent": "Home...",
+      "children": 0,
+      "rect": {
+        "width": 52.421875,
+        "height": 28,
+        "x": 574.296875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "LI",
+      "id": "",
+      "className": "menu-item menu-item-type-custom menu-item-object-custom menu-item-139",
+      "textContent": "Leistungen...",
+      "children": 1,
+      "rect": {
+        "width": 129.078125,
+        "height": 28,
+        "x": 641.71875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "A",
+      "id": "",
+      "className": "elementor-item",
+      "textContent": "Leistungen...",
+      "children": 0,
+      "rect": {
+        "width": 99.078125,
+        "height": 28,
+        "x": 656.71875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "LI",
+      "id": "",
+      "className": "menu-item menu-item-type-custom menu-item-object-custom menu-item-140",
+      "textContent": "Team & Partner...",
+      "children": 1,
+      "rect": {
+        "width": 170.453125,
+        "height": 28,
+        "x": 770.796875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "A",
+      "id": "",
+      "className": "elementor-item",
+      "textContent": "Team & Partner...",
+      "children": 0,
+      "rect": {
+        "width": 140.453125,
+        "height": 28,
+        "x": 785.796875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "LI",
+      "id": "",
+      "className": "menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-141",
+      "textContent": "Karriere...",
+      "children": 1,
+      "rect": {
+        "width": 102.8203125,
+        "height": 28,
+        "x": 941.25,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "A",
+      "id": "",
+      "className": "elementor-item elementor-item-active",
+      "textContent": "Karriere...",
+      "children": 0,
+      "rect": {
+        "width": 72.8203125,
+        "height": 28,
+        "x": 956.25,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "LI",
+      "id": "",
+      "className": "menu-item menu-item-type-custom menu-item-object-custom menu-item-760",
+      "textContent": "Kontakt...",
+      "children": 1,
+      "rect": {
+        "width": 83.7421875,
+        "height": 28,
+        "x": 1044.0703125,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "A",
+      "id": "",
+      "className": "elementor-item",
+      "textContent": "Kontakt...",
+      "children": 0,
+      "rect": {
+        "width": 68.7421875,
+        "height": 28,
+        "x": 1059.0703125,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "DIV",
+      "id": "",
+      "className": "elementor-element elementor-element-31bc5632 elementor-align-right elementor-tablet-align-right elementor-widget-tablet__width-initial elementor-widget-mobile__width-auto elementor-widget-tablet_extra__width-initial elementor-tablet_extra-align-right elementor-widget elementor-widget-button",
+      "textContent": "\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tJetzt unverbindlich anfragen\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t...",
+      "children": 1,
+      "rect": {
+        "width": 418.484375,
+        "height": 50,
+        "x": 1147.8125,
+        "y": 35.5
+      }
+    },
+    {
+      "tagName": "DIV",
+      "id": "",
+      "className": "elementor-widget-container",
+      "textContent": "\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tJetzt unverbindlich anfragen\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t...",
+      "children": 1,
+      "rect": {
+        "width": 418.484375,
+        "height": 50,
+        "x": 1147.8125,
+        "y": 35.5
+      }
+    },
+    {
+      "tagName": "DIV",
+      "id": "",
+      "className": "elementor-button-wrapper",
+      "textContent": "\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tJetzt unverbindlich anfragen\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t...",
+      "children": 1,
+      "rect": {
+        "width": 418.484375,
+        "height": 50,
+        "x": 1147.8125,
+        "y": 35.5
+      }
+    },
+    {
+      "tagName": "A",
+      "id": "",
+      "className": "elementor-button elementor-button-link elementor-size-sm",
+      "textContent": "\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tJetzt unverbindlich anfragen\n\t\t\t\t\t\n\t\t\t\t\t...",
+      "children": 1,
+      "rect": {
+        "width": 315.140625,
+        "height": 50,
+        "x": 1251.15625,
+        "y": 35.5
+      }
+    },
+    {
+      "tagName": "SPAN",
+      "id": "",
+      "className": "elementor-button-content-wrapper",
+      "textContent": "\n\t\t\t\t\t\t\t\t\tJetzt unverbindlich anfragen\n\t\t\t\t\t...",
+      "children": 1,
+      "rect": {
+        "width": 225.140625,
+        "height": 18,
+        "x": 1296.15625,
+        "y": 51.5
+      }
+    },
+    {
+      "tagName": "SPAN",
+      "id": "",
+      "className": "elementor-button-text",
+      "textContent": "Jetzt unverbindlich anfragen...",
+      "children": 0,
+      "rect": {
+        "width": 225.140625,
+        "height": 18,
+        "x": 1296.15625,
+        "y": 51.5
+      }
+    },
+    {
+      "tagName": "DIV",
+      "id": "",
+      "className": "elementor-element elementor-element-1fba1f35 she-header-yes she-header-hide-on-scroll-yes e-flex e-con-boxed e-con e-parent e-lazyloaded elementor-sticky elementor-sticky__spacer",
+      "textContent": "\n\t\t\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\tHome\nLeistun...",
+      "children": 1,
+      "rect": {
+        "width": 1905,
+        "height": 121,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "tagName": "DIV",
+      "id": "",
+      "className": "e-con-inner",
+      "textContent": "\n\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\tHome\nLeistungen\nTe...",
+      "children": 2,
+      "rect": {
+        "width": 1240,
+        "height": 121,
+        "x": 332.5,
+        "y": 0
+      }
+    },
+    {
+      "tagName": "DIV",
+      "id": "",
+      "className": "elementor-element elementor-element-774a626b e-con-full e-flex e-con e-child",
+      "textContent": "\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t...",
+      "children": 1,
+      "rect": {
+        "width": 235.59375,
+        "height": 81,
+        "x": 338.703125,
+        "y": 20
+      }
+    },
+    {
+      "tagName": "DIV",
+      "id": "",
+      "className": "elementor-element elementor-element-cbeff5b elementor-widget__width-initial elementor-widget elementor-widget-theme-site-logo elementor-widget-image",
+      "textContent": "\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t...",
+      "children": 1,
+      "rect": {
+        "width": 131.9296875,
+        "height": 81,
+        "x": 338.703125,
+        "y": 20
+      }
+    },
+    {
+      "tagName": "DIV",
+      "id": "",
+      "className": "elementor-widget-container",
+      "textContent": "\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t...",
+      "children": 1,
+      "rect": {
+        "width": 131.9296875,
+        "height": 81,
+        "x": 338.703125,
+        "y": 20
+      }
+    },
+    {
+      "tagName": "A",
+      "id": "",
+      "className": "",
+      "textContent": "\n\t\t\t\t\t\t\t...",
+      "children": 1,
+      "rect": {
+        "width": 118.734375,
+        "height": 81,
+        "x": 338.703125,
+        "y": 20
+      }
+    },
+    {
+      "tagName": "IMG",
+      "id": "",
+      "className": "attachment-full size-full wp-image-111",
+      "textContent": "",
+      "children": 0,
+      "rect": {
+        "width": 118.734375,
+        "height": 81,
+        "x": 338.703125,
+        "y": 20
+      }
+    },
+    {
+      "tagName": "DIV",
+      "id": "",
+      "className": "elementor-element elementor-element-5b4b5be2 e-con-full e-flex e-con e-child",
+      "textContent": "\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\tHome\nLeistungen\nTeam & Partner\nKarriere\nKontakt\n\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\tHo...",
+      "children": 2,
+      "rect": {
+        "width": 992,
+        "height": 50,
+        "x": 574.296875,
+        "y": 35.5
+      }
+    },
+    {
+      "tagName": "DIV",
+      "id": "",
+      "className": "elementor-element elementor-element-c774f36 elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-widget-tablet_extra__width-initial elementor-nav-menu__align-center elementor-nav-menu--dropdown-tablet_extra elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu",
+      "textContent": "\n\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\tHome\nLeistungen\nTeam & Partner\nKarriere\nKontakt\n\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\tHome\nLe...",
+      "children": 1,
+      "rect": {
+        "width": 553.515625,
+        "height": 28,
+        "x": 574.296875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "DIV",
+      "id": "",
+      "className": "elementor-widget-container",
+      "textContent": "\n\t\t\t\t\t\t\t\t\n\t\t\t\tHome\nLeistungen\nTeam & Partner\nKarriere\nKontakt\n\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\tHome\nLeistun...",
+      "children": 3,
+      "rect": {
+        "width": 553.515625,
+        "height": 28,
+        "x": 574.296875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "NAV",
+      "id": "",
+      "className": "elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade",
+      "textContent": "\n\t\t\t\tHome\nLeistungen\nTeam & Partner\nKarriere\nKontakt\n\t\t\t...",
+      "children": 1,
+      "rect": {
+        "width": 553.515625,
+        "height": 28,
+        "x": 574.296875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "UL",
+      "id": "menu-1-c774f36-2",
+      "className": "elementor-nav-menu",
+      "textContent": "Home\nLeistungen\nTeam & Partner\nKarriere\nKontakt\n...",
+      "children": 5,
+      "rect": {
+        "width": 553.515625,
+        "height": 28,
+        "x": 574.296875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "LI",
+      "id": "",
+      "className": "menu-item menu-item-type-custom menu-item-object-custom menu-item-138",
+      "textContent": "Home...",
+      "children": 1,
+      "rect": {
+        "width": 67.421875,
+        "height": 28,
+        "x": 574.296875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "A",
+      "id": "",
+      "className": "elementor-item",
+      "textContent": "Home...",
+      "children": 0,
+      "rect": {
+        "width": 52.421875,
+        "height": 28,
+        "x": 574.296875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "LI",
+      "id": "",
+      "className": "menu-item menu-item-type-custom menu-item-object-custom menu-item-139",
+      "textContent": "Leistungen...",
+      "children": 1,
+      "rect": {
+        "width": 129.078125,
+        "height": 28,
+        "x": 641.71875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "A",
+      "id": "",
+      "className": "elementor-item",
+      "textContent": "Leistungen...",
+      "children": 0,
+      "rect": {
+        "width": 99.078125,
+        "height": 28,
+        "x": 656.71875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "LI",
+      "id": "",
+      "className": "menu-item menu-item-type-custom menu-item-object-custom menu-item-140",
+      "textContent": "Team & Partner...",
+      "children": 1,
+      "rect": {
+        "width": 170.453125,
+        "height": 28,
+        "x": 770.796875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "A",
+      "id": "",
+      "className": "elementor-item",
+      "textContent": "Team & Partner...",
+      "children": 0,
+      "rect": {
+        "width": 140.453125,
+        "height": 28,
+        "x": 785.796875,
+        "y": 46.5
+      }
+    },
+    {
+      "tagName": "LI",
+      "id": "",
+      "className": "menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-141",
+      "textContent": "Karriere...",
+      "children": 1,
+      "rect": {
+        "width": 102.8203125,
+        "height": 28,
+        "x": 941.25,
+        "y": 46.5
+      }
+    }
+  ]
+}
