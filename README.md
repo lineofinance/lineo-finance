@@ -139,12 +139,35 @@ date: 2024-01-30
 ---
 ```
 
-**Erklärung der Felder:**
+**Pflichtfelder:**
 - `layout`: Immer `kb-article.njk` verwenden (nicht ändern)
 - `title`: Der Titel, der auf der Seite angezeigt wird
 - `description`: Eine kurze Zusammenfassung (1-2 Sätze)
 - `tags`: Immer `knowledgeBase` (nicht ändern)
 - `date`: Datum im Format YYYY-MM-DD
+
+**Optionale Felder für Menü-Kontrolle:**
+- `menuTitle`: Kurzer Titel für Footer und Navigation (nutzt sonst `title`)
+- `showInFooter`: `true` oder `false` - Artikel im Footer anzeigen? (Standard: true)
+- `footerPriority`: Zahl 1-10 - Position im Footer (niedrigere Zahlen = weiter oben)
+- `featured`: `true` oder `false` - Artikel hervorheben
+- `internal`: `true` oder `false` - Internes Dokument markieren
+
+**Vollständiges Beispiel mit allen Optionen:**
+```yaml
+---
+layout: kb-article.njk
+title: "Vollständiger Titel für die Artikelseite"
+menuTitle: "Kurzer Titel"
+description: "Beschreibung für SEO und Übersichten"
+tags: knowledgeBase
+date: 2024-01-30
+showInFooter: true
+footerPriority: 1
+featured: true
+internal: false
+---
+```
 
 ### ✍️ Schritt 3: Artikel-Inhalt schreiben
 
@@ -490,6 +513,37 @@ Greifen Sie von überall auf Ihre Daten zu - ob im Büro, unterwegs oder im Home
 ```
 
 ---
+
+## 🔧 Footer-Anzeige steuern
+
+### Wie Artikel im Footer erscheinen
+
+Der Footer zeigt automatisch bis zu 3 Knowledge Base Artikel an. Die Reihenfolge wird bestimmt durch:
+
+1. **footerPriority** (niedrigste Zahl erscheint zuerst)
+2. **featured** (hervorgehobene Artikel haben Vorrang)
+3. **date** (neueste Artikel zuerst)
+
+### Beispiele für Footer-Steuerung
+
+**Artikel immer oben anzeigen:**
+```yaml
+showInFooter: true
+footerPriority: 1
+featured: true
+```
+
+**Artikel aus Footer ausblenden (z.B. interne Dokumente):**
+```yaml
+showInFooter: false
+internal: true
+```
+
+**Kurzen Menütitel verwenden:**
+```yaml
+title: "Sehr langer und ausführlicher Titel für die Artikelseite"
+menuTitle: "Kurzer Titel"
+```
 
 ## 💡 Wichtige Tipps
 

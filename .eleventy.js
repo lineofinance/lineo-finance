@@ -69,6 +69,23 @@ module.exports = function(eleventyConfig) {
       .sort((a, b) => (b.date || b.data.date) - (a.date || a.data.date));
   });
   
+  // Add collection for footer knowledge base articles
+  eleventyConfig.addCollection("footerKnowledgeBase", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/content/knowledge-base/**/*.md")
+      .filter(item => item.data.showInFooter !== false) // Default to true if not specified
+      .sort((a, b) => {
+        // Sort by footer priority, then featured status, then date
+        if (a.data.footerPriority && b.data.footerPriority) {
+          return a.data.footerPriority - b.data.footerPriority;
+        }
+        if (a.data.footerPriority && !b.data.footerPriority) return -1;
+        if (!a.data.footerPriority && b.data.footerPriority) return 1;
+        if (a.data.featured && !b.data.featured) return -1;
+        if (!a.data.featured && b.data.featured) return 1;
+        return (b.date || b.data.date) - (a.date || a.data.date);
+      });
+  });
+  
   // Add collection for FAQs
   eleventyConfig.addCollection("faqs", function(collectionApi) {
     return collectionApi.getFilteredByGlob("src/content/faqs/**/*.md");

@@ -1,23 +1,18 @@
 // Knowledge Base Styles
 
-.knowledge-base-hero {
-  padding: 100px 0 40px; // Add top padding to avoid header
+section.knowledge-base-hero {
+  padding: 200px 0 40px !important; // Increased top padding for more space, !important to override base section styles
   background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
   
   @media (max-width: 768px) {
-    padding: 80px 0 30px;
+    padding: 150px 0 30px !important;
   }
   
   h1 {
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--color-text);
-    margin-bottom: 1rem;
-  }
-  
-  p {
-    font-size: 1.25rem;
-    color: var(--color-text-light);
+    margin-bottom: 0; // No margin since subtitle is removed
   }
 }
 
@@ -96,19 +91,19 @@
 .knowledge-base-article {
   max-width: 980px; // Increased max-width to compensate for less padding
   margin: 0 auto;
-  padding: 120px 0 80px; // No left/right padding on article itself
+  padding: 140px 0 80px; // Added 20px more top padding (was 120px, now 140px)
   background: transparent; // Transparent to show page background
   
   @media (max-width: 1024px) {
-    padding: 120px 20px 80px; // Add some padding on smaller screens
+    padding: 140px 20px 80px; // Added 20px more (was 120px)
   }
   
   @media (max-width: 768px) {
-    padding: 100px 20px 60px; // Less padding on mobile
+    padding: 120px 20px 60px; // Added 20px more (was 100px)
   }
   
   @media (max-width: 576px) {
-    padding: 90px 15px 40px; // Even less on small screens
+    padding: 110px 15px 40px; // Added 20px more (was 90px)
   }
   
   h1 {

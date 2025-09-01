@@ -1,9 +1,13 @@
 ---
 layout: kb-article.njk
 title: Was ist automatisierte Wertpapierbuchhaltung?
+menuTitle: Automatisierung
 description: Erfahren Sie, wie die automatisierte Wertpapierbuchhaltung Ihre Finanzprozesse revolutioniert
 tags: knowledgeBase
 date: 2024-01-15
+showInFooter: true
+footerPriority: 1
+featured: true
 ---
 
 # Was ist automatisierte Wertpapierbuchhaltung?

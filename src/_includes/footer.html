@@ -21,11 +21,10 @@
       <nav class="footer-knowledge">
         <h4>Wissensdatenbank</h4>
         <ul>
-          <li><a href="/content/knowledge-base/">Alle Artikel</a></li>
-          {%- set kbArticles = collections.knowledgeBase | reverse -%}
-          {%- for article in kbArticles.slice(0, 3) -%}
-          {%- if article.data.title -%}
-          <li><a href="{{ article.url }}">{{ article.data.title | truncate(30) }}</a></li>
+          <li><a href="/knowledge-base/">Alle Artikel</a></li>
+          {%- for article in collections.footerKnowledgeBase.slice(0, 3) -%}
+          {%- if article.data.menuTitle or article.data.title -%}
+          <li><a href="{{ article.url }}">{{ article.data.menuTitle | default(article.data.title) | truncate(30) }}</a></li>
           {%- endif -%}
           {%- endfor -%}
         </ul>
