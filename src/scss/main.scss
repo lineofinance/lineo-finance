@@ -24,6 +24,7 @@
 @use 'components/leistungen';
 @use 'components/testimonials';
 @use 'components/faq';
+@use 'components/card-box'; // Reusable card box component
 @use 'components/leistungen-hero';
 @use 'components/leistungen-benefits';
 @use 'components/leistungen-process';
