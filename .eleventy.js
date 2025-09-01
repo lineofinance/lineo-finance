@@ -98,6 +98,31 @@ module.exports = function(eleventyConfig) {
     breaks: true,
     linkify: true
   });
+  
+  // Override link renderer to open all links in new tabs
+  const defaultRender = markdownLib.renderer.rules.link_open || function(tokens, idx, options, env, self) {
+    return self.renderToken(tokens, idx, options);
+  };
+  
+  markdownLib.renderer.rules.link_open = function (tokens, idx, options, env, self) {
+    // Add target="_blank" and rel="noopener noreferrer" to all links
+    const aIndex = tokens[idx].attrIndex('target');
+    if (aIndex < 0) {
+      tokens[idx].attrPush(['target', '_blank']);
+    } else {
+      tokens[idx].attrs[aIndex][1] = '_blank';
+    }
+    
+    const relIndex = tokens[idx].attrIndex('rel');
+    if (relIndex < 0) {
+      tokens[idx].attrPush(['rel', 'noopener noreferrer']);
+    } else {
+      tokens[idx].attrs[relIndex][1] = 'noopener noreferrer';
+    }
+    
+    return defaultRender(tokens, idx, options, env, self);
+  };
+  
   eleventyConfig.setLibrary("md", markdownLib);
   
   // Set up browser sync for better live reload experience

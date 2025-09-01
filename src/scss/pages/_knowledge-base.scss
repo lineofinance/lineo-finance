@@ -174,13 +174,15 @@ section.knowledge-base-hero {
   }
   
   a {
-    color: var(--color-primary);
-    text-decoration: none;
-    transition: opacity 0.3s ease;
+    color: var(--color-text);
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.3);
+    text-underline-offset: 2px;
+    transition: text-decoration-color 0.3s ease, font-weight 0.3s ease;
     
     &:hover {
-      opacity: 0.8;
-      text-decoration: underline;
+      text-decoration-color: rgba(0, 0, 0, 1);
+      font-weight: 600;
     }
   }
   
@@ -189,7 +191,8 @@ section.knowledge-base-hero {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    margin: 1.5rem 0;
+    margin: 1.5rem auto;
+    display: block;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
