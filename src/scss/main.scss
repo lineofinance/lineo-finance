@@ -17,14 +17,26 @@
 @use 'components/forms';
 @use 'components/carousel-shared';  // Shared carousel styles (must be before specific carousels)
 @use 'components/broker-carousel';
+@use 'components/smart-system';
 @use 'components/app-showcase';
 @use 'components/workflow';
+@use 'components/simple-workflow';
 @use 'components/leistungen';
+@use 'components/testimonials';
+@use 'components/faq';
+@use 'components/leistungen-hero';
+@use 'components/leistungen-benefits';
+@use 'components/leistungen-process';
+@use 'components/leistungen-brokers';
+@use 'components/leistungen-target';
+@use 'components/leistungen-cta';
+@use 'components/leistungen-faq';
 
 // Pages
 @use 'pages/home';
 @use 'pages/services';
 @use 'pages/careers';
+@use 'pages/knowledge-base';
 
 // Utilities (should be last for specificity)
 @use 'utilities/utilities';
