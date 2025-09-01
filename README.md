@@ -105,78 +105,378 @@ Einfach den Inhalt des `dist/` Ordners nach dem Build hochladen.
 
 ## 📚 Wissensdatenbank erstellen
 
-### Anleitung zum Erstellen von Knowledge Base Artikeln
+### Vollständige Anleitung zum Erstellen von Knowledge Base Artikeln
 
-Die Wissensdatenbank nutzt Markdown-Dateien im `src/knowledge-base/` Verzeichnis. Jeder Artikel wird automatisch in die Knowledge Base Collection aufgenommen und auf der Website dargestellt.
+Die Wissensdatenbank ist ein zentraler Bestandteil der Lineo Finance Website und bietet strukturierte Informationen zur automatisierten Wertpapierverbuchung. Das System nutzt Markdown-Dateien mit 11ty Collections für automatische Generierung und Organisation.
 
-#### Artikelstruktur
+#### 1. Artikelstruktur und Dateiorganisation
 
-Erstellen Sie eine neue Markdown-Datei in `src/knowledge-base/`:
+Erstellen Sie neue Artikel im `src/knowledge-base/` Verzeichnis. Die Dateinamen sollten dem Schema `kategorie-titel-des-artikels.md` folgen:
+
+```
+src/knowledge-base/
+├── grundlagen-automatisierte-verbuchung.md
+├── anleitung-api-integration.md
+├── faq-haeufige-fragen.md
+└── compliance-mifid-anforderungen.md
+```
+
+#### 2. Vollständiges Artikel-Template
 
 ```markdown
 ---
-title: "Titel des Artikels"
-description: "Kurze Beschreibung für SEO und Übersichten"
-category: "Kategorie"
-tags: ["Tag1", "Tag2", "Tag3"]
+title: "Automatisierte Wertpapierverbuchung: Ein Leitfaden"
+description: "Umfassender Leitfaden zur automatisierten Wertpapierverbuchung mit Lineo Finance. Erfahren Sie, wie Sie Ihre Prozesse optimieren."
+category: "Grundlagen"
+tags: ["Automatisierung", "Wertpapiere", "Buchhaltung", "Effizienz"]
 date: 2024-01-15
-author: "Autor Name"
-featured: false
+author: "Dr. Michael Schmidt"
+featured: true
+readingTime: "8 Min"
+difficulty: "Einsteiger"
+relatedArticles: ["api-integration", "broker-anbindung", "steuerreporting"]
 ---
 
 ## Einleitung
 
-Ihr Artikelinhalt beginnt hier...
+Die automatisierte Wertpapierverbuchung revolutioniert die Art und Weise, wie Steuerberater und Unternehmen mit Wertpapiertransaktionen umgehen. In diesem Artikel erfahren Sie...
 
-### Unterüberschrift
+## Inhaltsverzeichnis
+- [Grundlagen verstehen](#grundlagen)
+- [Vorteile der Automatisierung](#vorteile)
+- [Implementierung](#implementierung)
+- [Best Practices](#best-practices)
 
-Weitere Inhalte...
+## Grundlagen verstehen {#grundlagen}
+
+Die Wertpapierverbuchung umfasst...
+
+### Kernkonzepte
+
+**Transaktionstypen:**
+- Käufe und Verkäufe
+- Dividenden und Zinsen
+- Corporate Actions
+- Währungsumrechnungen
+
+### Technische Grundlagen
+
+```javascript
+// Beispiel einer Transaktionsverarbeitung
+const transaction = {
+  type: 'BUY',
+  isin: 'DE0008404005',
+  quantity: 100,
+  price: 89.50,
+  currency: 'EUR'
+};
 ```
 
-#### Frontmatter-Felder
+## Vorteile der Automatisierung {#vorteile}
 
-- **title** (erforderlich): Der Titel des Artikels
-- **description** (erforderlich): Meta-Beschreibung für SEO
-- **category** (erforderlich): Hauptkategorie (z.B. "Grundlagen", "Anleitungen", "FAQ")
-- **tags** (optional): Array von Schlagwörtern für bessere Auffindbarkeit
-- **date** (erforderlich): Veröffentlichungsdatum im Format YYYY-MM-DD
-- **author** (optional): Name des Autors
-- **featured** (optional): true/false - Hervorgehobene Artikel erscheinen oben
+1. **Zeitersparnis**: Bis zu 90% Reduktion des manuellen Aufwands
+2. **Fehlerminimierung**: Automatische Validierung und Plausibilitätsprüfungen
+3. **Compliance**: Automatische Einhaltung regulatorischer Anforderungen
 
-#### Kategorien
+> **Hinweis**: Die Automatisierung ersetzt nicht die fachliche Prüfung, sondern unterstützt sie.
 
-Standardkategorien für die Wissensdatenbank:
-- **Grundlagen**: Einführende Artikel über Wertpapierverbuchung
-- **Anleitungen**: Schritt-für-Schritt-Tutorials
+## Implementierung {#implementierung}
+
+### Schritt 1: Vorbereitung
+
+Bevor Sie mit der Implementierung beginnen...
+
+### Schritt 2: API-Anbindung
+
+Die Integration erfolgt über unsere REST-API:
+
+```bash
+curl -X POST https://api.lineo.finance/transactions \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"transaction": {...}}'
+```
+
+### Schritt 3: Datenvalidierung
+
+| Feld | Typ | Pflichtfeld | Beschreibung |
+|------|-----|-------------|--------------|
+| ISIN | String | Ja | Internationale Wertpapierkennnummer |
+| Datum | Date | Ja | Transaktionsdatum |
+| Menge | Number | Ja | Anzahl der Wertpapiere |
+| Kurs | Decimal | Ja | Kurs pro Einheit |
+
+## Best Practices {#best-practices}
+
+### Datenqualität sicherstellen
+
+- Regelmäßige Überprüfung der Importdaten
+- Implementierung von Validierungsregeln
+- Monitoring von Fehlerquoten
+
+### Performance-Optimierung
+
+- Batch-Verarbeitung für große Datenmengen
+- Asynchrone Verarbeitung nutzen
+- Caching von Stammdaten
+
+## Zusammenfassung
+
+Die automatisierte Wertpapierverbuchung bietet erhebliche Vorteile...
+
+## Weiterführende Ressourcen
+
+- [API-Dokumentation](/knowledge-base/api-documentation)
+- [Broker-Integration Guide](/knowledge-base/broker-integration)
+- [Video-Tutorial: Erste Schritte](https://youtube.com/...)
+
+## FAQ zum Artikel
+
+**Frage: Wie lange dauert die Implementierung?**
+Antwort: Die Basis-Implementierung dauert typischerweise 2-3 Tage...
+
+**Frage: Welche Broker werden unterstützt?**
+Antwort: Wir unterstützen über 30 Broker, darunter...
+
+---
+
+*Letzte Aktualisierung: 15. Januar 2024*
+*Haben Sie Fragen? [Kontaktieren Sie unser Support-Team](/kontakt)*
+```
+
+#### 3. Erweiterte Frontmatter-Felder
+
+**Pflichtfelder:**
+- `title`: Artikel-Titel (max. 60 Zeichen für SEO)
+- `description`: Meta-Beschreibung (150-160 Zeichen)
+- `category`: Hauptkategorie des Artikels
+- `date`: Veröffentlichungsdatum (YYYY-MM-DD)
+
+**Optionale Felder:**
+- `tags`: Array von Schlagwörtern für Suche und Filterung
+- `author`: Autor des Artikels
+- `featured`: Boolean - erscheint in "Beliebte Artikel"
+- `readingTime`: Geschätzte Lesezeit
+- `difficulty`: "Einsteiger", "Fortgeschritten", "Experte"
+- `relatedArticles`: Array von Dateinamen verwandter Artikel
+- `lastUpdated`: Datum der letzten Aktualisierung
+- `version`: Versionsnummer für technische Dokumentation
+- `language`: Sprache (Standard: "de")
+
+#### 4. Kategoriesystem
+
+**Hauptkategorien:**
+
+- **Grundlagen**: Einführende Konzepte und Übersichten
+  - Dateinamen-Präfix: `grundlagen-`
+  - Zielgruppe: Neue Nutzer und Interessenten
+  
+- **Anleitungen**: Schritt-für-Schritt Tutorials
+  - Dateinamen-Präfix: `anleitung-`
+  - Zielgruppe: Nutzer in der Implementierung
+  
 - **FAQ**: Häufig gestellte Fragen
-- **Integration**: Technische Integrationsanleitungen
+  - Dateinamen-Präfix: `faq-`
+  - Zielgruppe: Alle Nutzer
+  
+- **Integration**: Technische Dokumentation
+  - Dateinamen-Präfix: `integration-`
+  - Zielgruppe: Entwickler und IT-Administratoren
+  
 - **Compliance**: Rechtliche und regulatorische Themen
+  - Dateinamen-Präfix: `compliance-`
+  - Zielgruppe: Compliance-Beauftragte und Steuerberater
 
-#### Markdown-Funktionen
+- **Use Cases**: Praktische Anwendungsfälle
+  - Dateinamen-Präfix: `usecase-`
+  - Zielgruppe: Entscheidungsträger
 
-Unterstützte Markdown-Elemente:
-- Überschriften (##, ###, ####)
-- Listen (geordnet und ungeordnet)
-- Links und Bilder
-- Code-Blöcke mit Syntax-Highlighting
-- Tabellen
-- Blockzitate
-- Fettdruck und Kursivschrift
+#### 5. Markdown-Funktionen und Styling
 
-#### Bilder einbinden
+**Überschriften-Hierarchie:**
+```markdown
+# Wird nicht verwendet (Titel kommt aus Frontmatter)
+## Hauptüberschrift
+### Unterüberschrift
+#### Detail-Überschrift
+```
 
-Bilder für Knowledge Base Artikel in `src/assets/images/knowledge-base/` ablegen:
+**Spezielle Blöcke:**
 
 ```markdown
-![Alt-Text](/assets/images/knowledge-base/bild-name.jpg)
+> **Hinweis**: Wichtige Information in Info-Box
+
+> **Warnung**: Kritischer Hinweis in Warnungs-Box
+
+> **Tipp**: Hilfreicher Tipp in Tipp-Box
 ```
 
-#### Build-Prozess
+**Code-Blöcke mit Syntax-Highlighting:**
+```markdown
+```javascript
+// JavaScript Code
+const example = "code";
+```
 
-Nach dem Hinzufügen neuer Artikel:
-1. `npm run build` ausführen
-2. Artikel erscheinen automatisch in der Knowledge Base Übersicht
-3. Einzelne Artikelseiten werden generiert
+```python
+# Python Code
+example = "code"
+```
+
+```sql
+-- SQL Query
+SELECT * FROM transactions;
+```
+```
+
+**Tabellen:**
+```markdown
+| Spalte 1 | Spalte 2 | Spalte 3 |
+|----------|----------|----------|
+| Daten 1  | Daten 2  | Daten 3  |
+```
+
+**Interne Verlinkungen:**
+```markdown
+[Link zu anderem Artikel](/knowledge-base/artikel-name)
+[Link zu Seite](/leistungen)
+```
+
+**Anker-Links:**
+```markdown
+[Zum Abschnitt](#abschnitt-id)
+
+## Abschnitt Titel {#abschnitt-id}
+```
+
+#### 6. Bilder und Medien
+
+**Bilder organisieren:**
+```
+src/assets/images/knowledge-base/
+├── grundlagen/
+│   ├── prozess-diagramm.png
+│   └── dashboard-screenshot.jpg
+├── anleitungen/
+│   ├── schritt-1.png
+│   └── schritt-2.png
+└── shared/
+    └── logo-partner.svg
+```
+
+**Bilder einbinden:**
+```markdown
+![Alt-Text für Barrierefreiheit](/assets/images/knowledge-base/grundlagen/prozess-diagramm.png)
+
+<!-- Mit Bildunterschrift -->
+![Dashboard Ansicht](/assets/images/knowledge-base/dashboard.jpg)
+*Abbildung 1: Das Lineo Finance Dashboard*
+
+<!-- Responsive Bilder -->
+<picture>
+  <source media="(max-width: 768px)" srcset="/assets/images/kb/mobile.jpg">
+  <img src="/assets/images/kb/desktop.jpg" alt="Beschreibung">
+</picture>
+```
+
+**Videos einbetten:**
+```markdown
+<!-- YouTube Video -->
+<iframe width="560" height="315" 
+  src="https://www.youtube.com/embed/VIDEO_ID" 
+  frameborder="0" allowfullscreen>
+</iframe>
+
+<!-- Lokales Video -->
+<video controls width="100%">
+  <source src="/assets/videos/tutorial.mp4" type="video/mp4">
+  Ihr Browser unterstützt keine Videos.
+</video>
+```
+
+#### 7. SEO-Optimierung
+
+**Best Practices:**
+- Titel: 50-60 Zeichen, Hauptkeyword am Anfang
+- Description: 150-160 Zeichen, Call-to-Action einbauen
+- URL-Slug: Kurz und beschreibend (automatisch aus Dateiname)
+- Überschriften: Keywords natürlich einbauen
+- Interne Verlinkung: 2-3 Links zu verwandten Artikeln
+- Alt-Texte: Beschreibende Texte für alle Bilder
+
+**Strukturierte Daten (automatisch generiert):**
+- Article Schema
+- Breadcrumb Schema
+- FAQ Schema (bei FAQ-Artikeln)
+
+#### 8. Build-Prozess und Veröffentlichung
+
+**Artikel hinzufügen:**
+1. Markdown-Datei in `src/knowledge-base/` erstellen
+2. Frontmatter vollständig ausfüllen
+3. Inhalt strukturiert verfassen
+4. Bilder in korrektes Verzeichnis ablegen
+
+**Build und Test:**
+```bash
+# Entwicklungsserver starten
+npm run serve
+
+# Preview unter http://localhost:8080/knowledge-base/
+
+# Für Produktion bauen
+npm run build
+
+# Output prüfen in dist/knowledge-base/
+```
+
+**Automatische Features:**
+- Inhaltsverzeichnis-Generierung
+- Lesezeit-Berechnung
+- Verwandte Artikel
+- Kategorie-Seiten
+- Tag-Cloud
+- RSS-Feed
+- Sitemap-Integration
+
+#### 9. Qualitätssicherung
+
+**Checkliste vor Veröffentlichung:**
+- [ ] Rechtschreibung und Grammatik geprüft
+- [ ] Alle Links funktionieren
+- [ ] Bilder optimiert (< 200KB pro Bild)
+- [ ] Mobile Ansicht getestet
+- [ ] SEO-Felder ausgefüllt
+- [ ] Fachliche Richtigkeit validiert
+- [ ] Compliance-Anforderungen geprüft
+
+**Review-Prozess:**
+1. Autor erstellt Entwurf
+2. Fachliche Prüfung durch Experten
+3. Redaktionelle Überarbeitung
+4. Compliance-Check
+5. Finale Freigabe
+6. Veröffentlichung
+
+#### 10. Wartung und Aktualisierung
+
+**Regelmäßige Überprüfung:**
+- Quartalweise Review aller Artikel
+- Aktualisierung bei Gesetzesänderungen
+- Broken Link Check monatlich
+- Performance-Monitoring
+
+**Versionierung:**
+```yaml
+---
+version: "2.1"
+lastUpdated: 2024-02-15
+changeLog:
+  - "2.1: API-Endpunkte aktualisiert"
+  - "2.0: Komplette Überarbeitung"
+  - "1.0: Erstveröffentlichung"
+---
+```
 
 ## 📝 Nächste Schritte
 
