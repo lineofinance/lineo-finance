@@ -1,7 +1,7 @@
 ---
 layout: kb-article.njk
 title: Anbindung Interactive Brokers und alle darauf basierenden Broker
-menuTitle: Anbindung Interactive Brokers
+menuTitle: Anleitung Anbindung Interactive Brokers
 description: Beschreibung für SEO und Übersichten
 tags: knowledgeBase
 date: 2025-09-01
@@ -14,7 +14,7 @@ Gehen Sie auf die [Anmeldung IB-Kontoverwaltung](https://www.interactivebrokers.
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/01-anmeldung-ib.png)
 
-Zum Erstellen des Flex-Queries, im linken Menü über das “Berichtswesen” auf “Flex-Queries” klicken:
+Zum Erstellen einer Flex-Query im linken Menü unter “Berichtswesen” auf “Flex-Queries” klicken:
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/02-menue-berichtswesen.png)
 
@@ -26,7 +26,7 @@ und einen Query-Namen Ihrer Wahl vergeben, beispielsweise "Buchhaltung Lineo Fin
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/04-query-name.png)
 
-Anschließend müssen <span class="highlight">ALLE</span> Felder (ca. 50 Felder) in der Kategorie “Abschnitte” einzeln angeklickt werden, und darin wieder alle Felder aktiviert werden (hier sind beispielhaft nur die ersten beiden markiert):
+Anschließend müssen <span class="highlight">ALLE</span> Felder (ca. 50 Felder) in der Kategorie “Abschnitte” <span class="highlight">einzeln</span> angeklickt werden, und darin wieder <span class="highlight">ALLE</span> Felder aktiviert werden (hier sind beispielhaft nur die ersten beiden markiert):
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/05-felder-abschnitte.png)
 
@@ -72,7 +72,7 @@ Anschließend unten rechts auf weiter:
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/15-weiter.png)
 
-Nun können Sie Ihre Daten nochmal kontrollieren und klicken abschließend unten rechts auf erstellen:
+Überprüfen Sie Ihre Daten bitte noch einmal und klicken abschließend unten rechts auf erstellen:
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/16-erstellen.png)
 
@@ -110,7 +110,7 @@ Ein neuer Aktiver Token wird angegeben, welchen wir später im Benutzerkonto der
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/24-aktiver-token.png)
 
-Achtung: Auch trotz Anklicken von "Speichern" wird dieses Fenster nicht verlassen.
+Achtung: Auch trotz Anklicken von "Save" wird dieses Fenster nicht automatisch verlassen.
 
 Nun müssen die Query-ID und der Token im [Lineo Finance Kundenkonto](https://app.lineo.finance) hinterlegt werden. Dazu melden Sie sich bitte in Ihrem Kundenkonto an:
 
@@ -124,7 +124,7 @@ und gehen auf “Neuen Zugang erstellen”.
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/27-neuen-zugang-erstellen.png)
 
-Bitte wählen Sie Interactive Brokers aus und tragen den oben erstellten Token sowie die Query-Id ein. Anschließend klicken Sie auf “Erstellen”. 
+Bitte wählen Sie "Interactive Brokers" aus und tragen den oben erstellten Token sowie die Query-Id hier ein. Anschließend klicken Sie auf “Erstellen”. 
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/28-daten-neuer-zugang.png)
 
