@@ -1,0 +1,285 @@
+// Job Posting Page Styles
+@use '../abstracts/mixins' as *;
+
+.job-posting {
+  padding: 60px 0;
+  background: white;
+  
+  @media (min-width: 768px) {
+    padding: 80px 0;
+  }
+  
+  @media (min-width: 1024px) {
+    padding: 100px 0;
+  }
+  
+  &__header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid rgb(246, 246, 246);
+  }
+  
+  &__title {
+    font-size: 32px;
+    font-weight: 600;
+    color: rgb(53, 53, 53);
+    line-height: 1.2;
+    margin-bottom: 10px;
+    
+    @media (min-width: 768px) {
+      font-size: 42px;
+    }
+    
+    @media (min-width: 1024px) {
+      font-size: 48px;
+    }
+  }
+  
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(102, 102, 102);
+    display: block;
+    margin-top: 10px;
+    
+    @media (min-width: 768px) {
+      font-size: 22px;
+    }
+  }
+  
+  &__meta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    
+    @media (min-width: 768px) {
+      gap: 30px;
+    }
+    
+    span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: rgb(246, 246, 246);
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgb(53, 53, 53);
+      
+      @media (min-width: 768px) {
+        font-size: 15px;
+        padding: 10px 20px;
+      }
+      
+      &::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: #FFD700;
+        border-radius: 50%;
+      }
+    }
+  }
+  
+  &__content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  &__section {
+    margin-bottom: 50px;
+    
+    @media (min-width: 768px) {
+      margin-bottom: 60px;
+    }
+    
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      color: rgb(53, 53, 53);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #FFD700;
+      display: inline-block;
+      
+      @media (min-width: 768px) {
+        font-size: 28px;
+        margin-bottom: 25px;
+      }
+    }
+    
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: rgb(51, 51, 51);
+      margin-bottom: 15px;
+      
+      @media (min-width: 768px) {
+        font-size: 17px;
+        line-height: 1.8;
+      }
+    }
+  }
+  
+  &__list {
+    list-style: none;
+    padding-left: 0;
+    
+    li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 12px;
+      font-size: 16px;
+      line-height: 1.7;
+      color: rgb(51, 51, 51);
+      
+      @media (min-width: 768px) {
+        font-size: 17px;
+        padding-left: 35px;
+        margin-bottom: 15px;
+      }
+      
+      &::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #FFD700;
+        font-weight: bold;
+        font-size: 18px;
+        
+        @media (min-width: 768px) {
+          font-size: 20px;
+        }
+      }
+    }
+    
+    &--ordered {
+      counter-reset: item;
+      
+      li {
+        counter-increment: item;
+        
+        &::before {
+          content: counter(item) '.';
+          color: rgb(53, 53, 53);
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  
+  &__cta {
+    text-align: center;
+    padding: 50px 30px;
+    background: rgb(246, 246, 246);
+    border-radius: 10px;
+    margin-top: 60px;
+    
+    @media (min-width: 768px) {
+      padding: 60px 40px;
+      margin-top: 80px;
+    }
+    
+    h2 {
+      font-size: 26px;
+      font-weight: 600;
+      color: rgb(53, 53, 53);
+      margin-bottom: 15px;
+      
+      @media (min-width: 768px) {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+    }
+    
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgb(51, 51, 51);
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      
+      @media (min-width: 768px) {
+        font-size: 18px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+  
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+    .btn {
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: inline-block;
+      
+      @media (min-width: 768px) {
+        padding: 16px 40px;
+        font-size: 17px;
+      }
+      
+      &-primary {
+        background: rgb(53, 53, 53);
+        color: white;
+        
+        &:hover {
+          background: rgb(33, 33, 33);
+          transform: translateY(-2px);
+        }
+      }
+      
+      &-secondary {
+        background: white;
+        color: rgb(53, 53, 53);
+        border: 2px solid rgb(53, 53, 53);
+        
+        &:hover {
+          background: rgb(53, 53, 53);
+          color: white;
+        }
+      }
+    }
+  }
+  
+  &__footer {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 2px solid rgb(246, 246, 246);
+    
+    @media (min-width: 768px) {
+      margin-top: 80px;
+      padding-top: 50px;
+    }
+    
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: rgb(102, 102, 102);
+      margin-bottom: 10px;
+      
+      @media (min-width: 768px) {
+        font-size: 16px;
+      }
+      
+      strong {
+        color: rgb(53, 53, 53);
+        font-weight: 600;
+      }
+    }
+  }
+}

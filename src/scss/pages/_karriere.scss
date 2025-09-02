@@ -1,61 +1,244 @@
 // Karriere Page Styles
 @use '../abstracts/mixins' as *;
 
-// Hero Section
+// Fixed Logo Background - exactly like leistungen
+.karriere-logo-fixed {
+  position: fixed;
+  top: 10%;
+  right: -5%; // Partially off-screen to the right
+  transform: translateX(0);
+  width: 42vw;
+  height: 42vw;
+  max-width: 800px;
+  max-height: 800px;
+  background-image: url('/assets/images/leistungen/logo-icon-background.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3;
+  z-index: 2;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+
+  @media (max-width: 1024px) {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+// Karriere Hero Section (First Section) - exactly like leistungen-hero
 .karriere-hero {
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 20px;
   overflow: hidden;
+  z-index: 1;
+  background-color: #d39a27;
   
-  &__background {
-    background: rgb(255, 233, 157);
-    background-image: url('/assets/images/karriere-bg-gradient.png');
+  // Background gradient overlay - exactly like leistungen hero
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/images/HG_Verlauf.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 80px 20px;
-    
-    @media (min-width: 768px) {
-      min-height: 500px;
-      padding: 120px 40px;
-    }
-    
-    @media (min-width: 1024px) {
-      min-height: 600px;
-      padding: 160px 60px;
-    }
+    mix-blend-mode: screen;
+    opacity: 0.85;
+    z-index: 1;
+    pointer-events: none;
   }
-  
-  &__content {
+
+  @media (min-width: 768px) {
+    padding: 100px 40px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 120px 60px;
+  }
+
+  @media (max-width: 767px) {
+    min-height: auto;
+    padding: 60px 20px;
+  }
+
+  &__container {
     max-width: 1200px;
+    margin: 0 auto;
     width: 100%;
-    text-align: center;
+    position: relative;
+    z-index: 3;
   }
-  
+
+  &__content {
+    max-width: 600px;
+
+    @media (min-width: 768px) {
+      max-width: 700px;
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 800px;
+    }
+  }
+
   &__title {
+    font-family: 'Barlow', sans-serif;
     font-size: 32px;
     font-weight: 400;
-    color: rgb(53, 53, 53);
     line-height: 1.2;
-    margin: 0;
-    
+    color: #1a1a1a;
+    margin-bottom: 24px;
+    hyphens: none;
+    word-break: normal;
+    overflow-wrap: normal;
+
     @media (min-width: 768px) {
       font-size: 42px;
+      margin-bottom: 32px;
     }
-    
+
     @media (min-width: 1024px) {
-      font-size: 54px;
+      font-size: 52px;
+      line-height: 1.15;
+    }
+  }
+
+  &__subtitle {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 32px;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 22px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-start;
+
+    .btn-hero-cta {
+      background: #2c2c2c !important;
+      color: #ffffff !important;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+      &:hover {
+        background: #1a1a1a !important;
+        color: #ffffff !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+      }
+
+      @media (min-width: 768px) {
+        font-size: 17px;
+        padding: 14px 32px;
+      }
     }
   }
 }
 
-// Value Proposition Section
+// Karriere Solution Section (Second Section) - exactly like leistungen-solution
+.karriere-solution {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 80px 20px;
+  z-index: 1;
+
+  @media (min-width: 768px) {
+    padding: 100px 40px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 120px 60px;
+  }
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &__content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: 'Barlow', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #1a1a1a;
+    margin-bottom: 24px;
+    hyphens: none;
+    word-break: normal;
+    overflow-wrap: normal;
+
+    @media (min-width: 768px) {
+      font-size: 36px;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 42px;
+      line-height: 1.2;
+    }
+  }
+
+  &__text {
+    font-family: 'Barlow', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      font-size: 19px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 20px;
+      line-height: 1.7;
+    }
+  }
+}
+
+// Value Proposition Section (Third Section - should hide logo)
 .karriere-value {
+  position: relative;
   padding: 60px 0;
   background: white;
+  z-index: 3; // Ensure it's above any background logos
   
   @media (min-width: 768px) {
     padding: 80px 0;
@@ -187,28 +370,84 @@
   // Grid and card styles are handled by the shared card-box component
 }
 
-// Job Openings Section
+// Job Openings Section - Full-width with left-edge image
 .karriere-jobs {
-  padding: 60px 0;
+  position: relative;
+  padding: 0;
   background: white;
+  overflow: hidden;
+  z-index: 3; // Ensure it's above any background logos
   
-  @media (min-width: 768px) {
-    padding: 80px 0;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+    
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      align-items: stretch;
+      min-height: 700px;
+    }
+    
+    @media (min-width: 1200px) {
+      min-height: 800px;
+    }
   }
   
-  @media (min-width: 1024px) {
-    padding: 100px 0;
+  &__image-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    
+    @media (min-width: 1024px) {
+      width: 50%;
+      height: auto;
+      animation: fadeInLeft 0.8s ease-out;
+    }
+  }
+  
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    
+    @media (min-width: 1024px) {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 800px;
+      height: 350px;
+      object-fit: cover;
+    }
   }
   
   &__content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
+    flex: 1;
+    display: flex;
     align-items: center;
+    padding: 60px 20px;
+    
+    @media (min-width: 768px) {
+      padding: 80px 40px;
+    }
     
     @media (min-width: 1024px) {
-      grid-template-columns: 2fr 1fr;
-      gap: 60px;
+      padding: 80px 60px;
+    }
+    
+    @media (min-width: 1200px) {
+      padding: 100px 80px;
+    }
+  }
+  
+  &__inner {
+    max-width: 700px;
+    
+    @media (min-width: 1024px) {
+      padding-left: 40px;
     }
   }
   
@@ -216,14 +455,192 @@
     font-size: 28px;
     font-weight: 400;
     color: rgb(53, 53, 53);
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     
     @media (min-width: 768px) {
       font-size: 36px;
+      margin-bottom: 40px;
     }
     
     @media (min-width: 1024px) {
       font-size: 43px;
+    }
+  }
+  
+  &__intro {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgb(51, 51, 51);
+    margin-bottom: 20px;
+    
+    @media (min-width: 768px) {
+      font-size: 17px;
+    }
+    
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
+  }
+  
+  &__listings {
+    margin-top: 40px;
+  }
+  
+  &__subtitle {
+    font-size: 22px;
+    font-weight: 500;
+    color: rgb(53, 53, 53);
+    margin-bottom: 30px;
+    
+    @media (min-width: 768px) {
+      font-size: 26px;
+    }
+  }
+  
+  &__item {
+    background: rgb(246, 246, 246);
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    @media (min-width: 768px) {
+      padding: 30px;
+    }
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    }
+  }
+  
+  &__item-header {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+  }
+  
+  &__item-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(53, 53, 53);
+    margin: 0;
+    
+    @media (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+  
+  &__item-type {
+    font-size: 16px;
+    color: rgb(102, 102, 102);
+    font-weight: 400;
+    
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+  }
+  
+  &__item-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+  }
+  
+  &__tag {
+    display: inline-block;
+    padding: 5px 12px;
+    background: white;
+    color: rgb(53, 53, 53);
+    font-size: 13px;
+    border-radius: 20px;
+    font-weight: 500;
+    
+    @media (min-width: 768px) {
+      font-size: 14px;
+      padding: 6px 14px;
+    }
+  }
+  
+  &__item-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgb(51, 51, 51);
+    margin-bottom: 20px;
+    
+    @media (min-width: 768px) {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+  }
+  
+  &__item-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid rgb(53, 53, 53);
+    
+    @media (min-width: 768px) {
+      font-size: 15px;
+      padding: 12px 24px;
+    }
+    
+    &--de {
+      background: white;
+      color: rgb(53, 53, 53);
+      
+      &:hover {
+        background: rgb(53, 53, 53);
+        color: white;
+      }
+    }
+    
+    &--en {
+      background: rgb(53, 53, 53);
+      color: white;
+      
+      &:hover {
+        background: rgb(33, 33, 33);
+      }
+    }
+  }
+  
+  &__link-lang {
+    display: inline-block;
+    padding: 2px 6px;
+    background: rgba(255, 215, 0, 0.2);
+    color: rgb(53, 53, 53);
+    font-size: 11px;
+    border-radius: 3px;
+    font-weight: 600;
+    
+    .karriere-jobs__link--en & {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+  }
+  
+  &__cta {
+    margin-top: 40px;
+    text-align: center;
+    
+    @media (min-width: 1024px) {
+      text-align: left;
     }
   }
   
@@ -651,8 +1068,10 @@
 
 // Application Form Section
 .karriere-form {
+  position: relative;
   padding: 60px 0;
   background: white;
+  z-index: 3; // Ensure it's above any background logos
   
   @media (min-width: 768px) {
     padding: 80px 0;
@@ -885,15 +1304,17 @@
 
 // FAQ Section
 .karriere-faq {
-  padding: 60px 0;
-  background: rgb(246, 246, 246);
+  position: relative;
+  padding: 60px 0 0 0;
+  background: #f8f9fa;
+  z-index: 3; // Ensure it's above any background logos
   
   @media (min-width: 768px) {
-    padding: 80px 0;
+    padding: 80px 0 0 0;
   }
   
   @media (min-width: 1024px) {
-    padding: 100px 0;
+    padding: 100px 0 0 0;
   }
   
   &__title {
@@ -991,5 +1412,17 @@
     &[hidden] {
       display: none;
     }
+  }
+}
+
+// Animations
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

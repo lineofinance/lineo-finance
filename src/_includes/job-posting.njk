@@ -1,0 +1,102 @@
+---
+layout: base.njk
+---
+
+<section class="job-posting">
+  <div class="container">
+    <div class="job-posting__header">
+      <h1 class="job-posting__title">
+        {{ jobTitle }}<br>
+        <span class="job-posting__subtitle">{{ jobSubtitle }}</span>
+      </h1>
+      <div class="job-posting__meta">
+        <span class="job-posting__type">{{ employmentType }}</span>
+        <span class="job-posting__location">{{ location }}</span>
+        <span class="job-posting__start">{{ startDate }}</span>
+      </div>
+    </div>
+
+    <div class="job-posting__content">
+      {% if aboutUs %}
+      <section class="job-posting__section">
+        <h2>{{ aboutUsTitle | default("Über Uns") }}</h2>
+        {% for paragraph in aboutUs %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
+      </section>
+      {% endif %}
+
+      {% if whatWeOffer %}
+      <section class="job-posting__section">
+        <h2>{{ whatWeOfferTitle | default("Was wir bieten") }}</h2>
+        <ul class="job-posting__list">
+          {% for item in whatWeOffer %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      {% if yourTasks %}
+      <section class="job-posting__section">
+        <h2>{{ yourTasksTitle | default("Deine Aufgaben") }}</h2>
+        <ul class="job-posting__list">
+          {% for task in yourTasks %}
+          <li>{{ task }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      {% if yourProfile %}
+      <section class="job-posting__section">
+        <h2>{{ yourProfileTitle | default("Dein Profil") }}</h2>
+        <ul class="job-posting__list">
+          {% for requirement in yourProfile %}
+          <li>{{ requirement }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      {% if niceToHave %}
+      <section class="job-posting__section">
+        <h2>{{ niceToHaveTitle | default("Nice to have") }}</h2>
+        <ul class="job-posting__list">
+          {% for item in niceToHave %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      {% if applicationProcess %}
+      <section class="job-posting__section">
+        <h2>{{ applicationProcessTitle | default("Bewerbungsprozess") }}</h2>
+        <ol class="job-posting__list job-posting__list--ordered">
+          {% for step in applicationProcess %}
+          <li>{{ step }}</li>
+          {% endfor %}
+        </ol>
+      </section>
+      {% endif %}
+
+      <div class="job-posting__cta">
+        <h2>{{ ctaTitle | default("Interesse geweckt?") }}</h2>
+        <p>{{ ctaText | default("Melde dich gern für ein erstes Kennenlerngespräch bei uns. Wir freuen uns darauf, dich kennenzulernen!") }}</p>
+        <div class="job-posting__buttons">
+          <a href="{{ applyUrl | default('/pages/karriere/#bewerbungsformular') }}" class="btn btn-primary">{{ applyButtonText | default("Jetzt bewerben") }}</a>
+          <a href="mailto:{{ emailAddress | default('karriere@lineo.finance') }}" class="btn btn-secondary">{{ emailButtonText | default("E-Mail senden") }}</a>
+        </div>
+      </div>
+
+      <div class="job-posting__footer">
+        <p><strong>{{ employerLabel | default("Arbeitgeber") }}:</strong> {{ employer | default("lineo finance GmbH") }}</p>
+        <p><strong>{{ workloadLabel | default("Arbeitspensum") }}:</strong> {{ workload }}</p>
+        <p><strong>{{ startLabel | default("Start") }}:</strong> {{ startDate }}</p>
+        <p><strong>{{ durationLabel | default("Dauer") }}:</strong> {{ duration }}</p>
+        <p><strong>{{ locationLabel | default("Arbeitsort") }}:</strong> {{ workLocation }}</p>
+      </div>
+    </div>
+  </div>
+</section>

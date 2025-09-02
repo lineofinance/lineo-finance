@@ -1,16 +1,16 @@
 // Leistungen FAQ Section
 .leistungen-faq {
   position: relative;
-  padding: 80px 20px;
-  background-color: #f8f8f8;
-  z-index: 1; // Creates new stacking context to hide logo
+  padding: 80px 20px 0 20px;
+  background-color: #f8f9fa;
+  z-index: 10; // Higher z-index to ensure it's above the logo background
 
   @media (min-width: 768px) {
-    padding: 100px 40px;
+    padding: 100px 40px 0 40px;
   }
 
   @media (min-width: 1024px) {
-    padding: 100px 60px;
+    padding: 100px 60px 0 60px;
   }
 
   &__container {
@@ -82,7 +82,7 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #f8f8f8;
+      background-color: #f8f9fa;
     }
 
     span {
