@@ -6,7 +6,6 @@
   background: var(--color-secondary);
   color: var(--color-background);
   padding: var(--spacing-xxl) 0 0;
-  margin-top: var(--spacing-xxxl);
 
   // Dark mode support
   @include dark-mode {

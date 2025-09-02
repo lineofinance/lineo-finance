@@ -10,18 +10,6 @@
   background: #f5f5f5; // Grey background to hide the logo
   position: relative;
   z-index: 3; // Higher z-index to ensure it covers everything below
-  
-  // Extend background to cover any gaps
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -50px; // Extend beyond the section
-    left: 0;
-    right: 0;
-    height: 50px;
-    background: #f5f5f5;
-    z-index: 2;
-  }
 
   .container {
     max-width: 1200px;
