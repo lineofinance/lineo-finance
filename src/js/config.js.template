@@ -1,0 +1,5 @@
+// API Configuration for Lineo Finance
+// This file is generated automatically during deployment
+// DO NOT EDIT MANUALLY - use config.js.template instead
+
+window.LINEO_API_URL = '{{API_GATEWAY_URL}}';

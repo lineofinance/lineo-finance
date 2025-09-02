@@ -1,0 +1,55 @@
+<!-- Contact Form Section with gradient background -->
+<section class="kontakt-form-section">
+  <div class="kontakt-form__container">
+    <div class="kontakt-form__wrapper">
+      <h2 class="kontakt-form__title">Kontaktformular</h2>
+      <p class="kontakt-form__description">
+        Füllen Sie einfach das nachfolgende Formular aus und wir melden uns umgehend bei Ihnen.
+      </p>
+      
+      <form id="contact-form" class="kontakt-form contact-form">
+        <div class="kontakt-form__row">
+          <div class="kontakt-form__group">
+            <label for="firstname">Vorname*</label>
+            <input type="text" id="firstname" name="firstname" required>
+          </div>
+          <div class="kontakt-form__group">
+            <label for="lastname">Nachname*</label>
+            <input type="text" id="lastname" name="lastname" required>
+          </div>
+        </div>
+        
+        <div class="kontakt-form__row">
+          <div class="kontakt-form__group">
+            <label for="email">E-Mail*</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="kontakt-form__group">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+        </div>
+        
+        <div class="kontakt-form__group">
+          <label for="company">Unternehmen</label>
+          <input type="text" id="company" name="company">
+        </div>
+        
+        <div class="kontakt-form__group">
+          <label for="message">Nachricht*</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        
+        <div class="kontakt-form__group kontakt-form__checkbox">
+          <input type="checkbox" id="consent" name="consent" required>
+          <label for="consent">
+            Ich stimme der <a href="/pages/datenschutz/" target="_blank">Datenschutzerklärung</a> zu und erkläre mich damit einverstanden, dass meine Daten zur Bearbeitung meiner Anfrage verwendet werden.*
+          </label>
+        </div>
+        
+        <button type="submit" class="kontakt-form__submit">Anfrage absenden</button>
+        <p class="kontakt-form__note">* Pflichtfelder</p>
+      </form>
+    </div>
+  </div>
+</section>

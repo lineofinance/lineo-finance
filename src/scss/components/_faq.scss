@@ -1,7 +1,9 @@
 // FAQ Section Styles
 .faq-section {
+  position: relative;
   padding: 80px 0;
   background-color: #f8f9fa;
+  z-index: 10; // Higher z-index to ensure it's above any logo backgrounds
 
   .container {
     max-width: 868px;

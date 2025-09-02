@@ -1305,16 +1305,16 @@
 // FAQ Section
 .karriere-faq {
   position: relative;
-  padding: 60px 0 0 0;
+  padding: 60px 0;
   background: #f8f9fa;
-  z-index: 3; // Ensure it's above any background logos
+  z-index: 4; // Higher z-index to ensure it's above the logo background
   
   @media (min-width: 768px) {
-    padding: 80px 0 0 0;
+    padding: 80px 0;
   }
   
   @media (min-width: 1024px) {
-    padding: 100px 0 0 0;
+    padding: 100px 0;
   }
   
   &__title {

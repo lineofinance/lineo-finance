@@ -32,3 +32,6 @@ yarn-error.log*
 *.tmp
 *.temp
 .cache/
+
+# Generated API configuration
+src/js/config.js

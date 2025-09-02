@@ -1,0 +1,22 @@
+# Example Terraform Variables Configuration
+# Copy this file to terraform.tfvars and adjust the values
+
+# Environment Configuration
+# Use "test" for testing subdomain, "www" for production
+website_subdomain = "test"  # Creates test.lineo.finance
+
+# For production deployment, use:
+# website_subdomain = "www"  # Creates www.lineo.finance
+
+# Email Configuration
+# These emails must be verified in SES while in sandbox mode
+contact_email_recipients = ["support@lineo.finance"]
+career_email_recipients  = ["support@lineo.finance"]
+notification_email_from  = "support@lineo.finance"
+
+# Optional: Override project name for different environments
+# project_name = "lineo-website-test"  # For test environment
+# project_name = "lineo-website-prod"  # For production
+
+# Optional: Change environment tag
+# environment = "test"  # or "staging", "prod"
