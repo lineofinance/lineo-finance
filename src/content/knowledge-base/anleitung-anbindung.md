@@ -9,6 +9,9 @@ showInFooter: true
 footerPriority: 1
 featured: true
 ---
+# <center>Anbindung Interactive Brokers und alle darauf basierenden Broker</center>
+
+## 1. Erstellen der Flex-Query
 
 Gehen Sie auf die [Anmeldung IB-Kontoverwaltung](https://www.interactivebrokers.ie/sso/Login?RL=1) und melden Sie sich auf Ihrem Konto an:
 
@@ -92,6 +95,8 @@ Diese wird später im Benutzerkonto bei Lineo Finance eingegeben.
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/20-query-id.png)
 
+## 2. Erstellen des Token
+
 Ebenso benötigen wir für das Benutzerkonto in Lineo Finance einen Token. Dieser wird folgendermaßen erstellt:
 
 Wir befinden uns immer noch im Berichtswesen auf der Seite Flex-Queries. Dort gibt es den Punkt Flex-Web-Service-Konfiguration:
@@ -111,6 +116,8 @@ Ein neuer Aktiver Token wird angegeben, welchen wir später im Benutzerkonto der
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/24-aktiver-token.png)
 
 Achtung: Auch trotz Anklicken von "Save" wird dieses Fenster nicht automatisch verlassen.
+
+## 3. Anbinden des Kontos im Lineo Finance Kundenkonto
 
 Nun müssen die Query-ID und der Token im [Lineo Finance Kundenkonto](https://app.lineo.finance) hinterlegt werden. Dazu melden Sie sich bitte in Ihrem Kundenkonto an:
 

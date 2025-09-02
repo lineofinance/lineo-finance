@@ -9,10 +9,11 @@ showInFooter: true
 footerPriority: 1
 featured: true
 ---
+# <center>Manueller Datenexport Interactive Brokers sowie alle darauf basierenden Broker</center>
 
-# Manueller Datenexport Interactive Brokers sowie alle darauf basierenden Broker
+**Den manuellen Datenexport können Sie nur durchführen, wenn Sie bereits eine Flex-Query konfiguriert haben. Falls nicht, erstellen Sie diese bitte gemäß [dieser Anleitung](https://funky-grape-e16.notion.site/Manueller-Datenexport-Interactive-Brokers-12cfc7202e3a805d9b29c373475874ec).**
 
-Den manuellen Datenexport können Sie nur durchführen, wenn Sie bereits eine Flex-Query konfiguriert haben. Falls nicht, erstellen Sie diese bitte gemäß [dieser Anleitung](/content/knowledge-base/anleitung-anbindung/).
+## 1. Erstellen des manuellen Exports
 
 Gehen Sie auf die [Anmeldung IB-Kontoverwaltung](https://www.interactivebrokers.ie/sso/Login?RL=1) und melden Sie sich auf Ihrem Konto an:
 
@@ -57,8 +58,11 @@ Im nächsten Fenster geben Sie einen benutzerdefinierten Zeitraum ein. In den Fe
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/09-zeitraum-format.png)
 
 Der Bericht sollte nun in Ihrem Download-Bereich abgelegt sein.
+Der Bericht sollte nun in Ihrem Download-Bereich abgelegt sein.
 
-Nun laden Sie bitte die Datei in Ihrem Lineo Kundenkonto hoch. Dazu gehen Sie in “Meine Gesellschaften” und klicken auf Ihre Gesellschaft:
+## 2. Hochladen des manuellen Exports im Lineo Finance Kundenkonto
+
+Nun laden Sie bitte die Datei in Ihrem [Lineo Finance Kundenkonto](https://app.lineo.finance) hoch. Dazu gehen Sie in “Meine Gesellschaften” und klicken auf Ihre Gesellschaft:
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/10-meine-gesellschaften.png)
 
@@ -69,6 +73,8 @@ Anschließend wählen Sie Ihre Datei aus dem Download-Bereich aus…
 … und klicken auf Upload:
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/12-upload.png)
+
+## 3. Prüfung der Datei abwarten
 
 Nun wird geprüft, ob die Datei korrekt ist:
 
