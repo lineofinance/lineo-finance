@@ -1,7 +1,7 @@
 ---
 layout: kb-article.njk
-title: Anbindung Interactive Brokers und alle darauf basierenden Broker
-menuTitle: Anbindung Interactive Brokers
+title: Manueller Datenexport Interactive Brokers sowie alle darauf basierenden Broker
+menuTitle: Anleitung Manueller Datenexport Interactive Brokers
 description: Beschreibung für SEO und Übersichten
 tags: knowledgeBase
 date: 2025-09-01
@@ -9,6 +9,7 @@ showInFooter: true
 footerPriority: 1
 featured: true
 ---
+# Manueller Datenexport Interactive Brokers sowie alle darauf basierenden Broker
 
 Den manuellen Datenexport können Sie nur durchführen, wenn Sie bereits eine Flex-Query konfiguriert haben. Falls nicht, erstellen Sie diese bitte gemäß [dieser Anleitung](https://funky-grape-e16.notion.site/Manueller-Datenexport-Interactive-Brokers-12cfc7202e3a805d9b29c373475874ec).
 
@@ -24,17 +25,17 @@ Hier auf Konto/Konten auswählen gehen. Falls die Option nicht erscheint, haben 
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/03-flex-queries.png)
 
-und sicherstellen, dass <span class="highlight">ALLE</span> Konten ausgewählt wurden:
+Stellen Sie bitte sicher, dass <span class="highlight">ALLE</span> Konten ausgewählt wurden:
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/04-konten-auswaehlen.png)
 
-Nun noch auf den Filter gehen und schauen, dass auch Übertragen und Geschlossen ein Häkchen haben und auf “Übernehmen” klicken. Es ist möglich, dass das Filtersymbol nicht erscheint, wenn nur ein Konto vorhanden ist.
+Öffnen Sie nun noch den Filter und vergewissern Sie sich, dass "Übertragen" und "Geschlossen" ausgewählt sind. Klicken Sie anschließend auf "Übernehmen". Es ist möglich, dass das Filtersymbol nicht erscheint, wenn nur ein Konto vorhanden ist.
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/05-ergebnisse-filtern.png)
 
-Übertragene Konten sind jene Konten, die in 2021 durch den Brexit von IB UK nach IB Irland übertragen wurden, oder solche, die 2024 von IB Ungarn nach IB Irland übertragen wurden.
+Übertragene Konten sind jene, die im Jahr 2021 im Zuge des Brexits von IB UK nach IB Irland oder im Jahr 2024 von IB Ungarn nach IB Irland übertragen wurden.
 
-Geschlossene Konten können im Nachhinein seitens IB noch Transaktionen beinhalten, die für die korrekte Verbuchung ebenfalls berücksichtigt werden müssen.
+Geschlossene Konten können im Nachhinein seitens IB noch Transaktionen beinhalten, welche für die korrekte Verbuchung ebenfalls berücksichtigt werden müssen.
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/06-alle-konten-anklicken.png)
 
@@ -50,7 +51,7 @@ Es erscheinen alle Konten in der Leiste:
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/08-export-starten.png)
 
-In dem nächsten Fenster geben Sie einen benutzerdefinierten Zeitraum ein. In die Felder “Von” und “Bis” wählen Sie den Zeitraum aus, der Ihnen vom Lineo Finance Kundensupport mitgeteilt wurde. Dieser entspricht typischerweise einem ganzen Geschäftsjahr. Sollte das Konto erst in dem betreffenden Jahr eröffnet worden sein, nehmen Sie das frühstmögliche auswählbare Datum. Das “Format” sollte automatisch auf XML eingestellt sein. Sollten Sie ein abweichendes Geschäftsjahr haben, müssen Sie beispielsweise “Von 01.07.2023 Bis 30.06.2024 eingeben.”
+Im nächsten Fenster geben Sie einen benutzerdefinierten Zeitraum ein. In den Feldern “Von” und “Bis” wählen Sie den Zeitraum aus, der Ihnen vom Lineo Finance Kundensupport mitgeteilt wurde. Dieser entspricht typischerweise einem ganzen Geschäftsjahr. Sollte das Konto erst in dem betreffenden Jahr eröffnet worden sein, nehmen Sie das frühstmögliche auswählbare Datum. Das “Format” sollte automatisch auf XML eingestellt sein. Sollten Sie ein abweichendes Geschäftsjahr haben, müssen Sie beispielsweise “Von 01.07.2023 Bis 30.06.2024 eingeben.”
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/09-zeitraum-format.png)
 
@@ -64,7 +65,7 @@ Anschließend wählen Sie Ihre Datei aus dem Download-Bereich aus…
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/11-datei-auswaehlen.png)
 
-… und klicken auf upload:
+… und klicken auf Upload:
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/12-upload.png)
 
@@ -72,7 +73,7 @@ Nun wird geprüft, ob die Datei korrekt ist:
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/13-datei-pruefen.png)
 
-Sobald die Prüfung abgeschlossen ist (normalerweise in max. 1 Minute), erscheint der Zeitraum und die entsprechenden Konten. Bitte prüfen Sie, ob die angezeigten Informationen korrekt sind. Sollte z.B. ein Konto fehlen oder ein falscher Zeitraum hochgeladen worden sein, können Sie die Datei wieder löschen und ggf. korrigieren bzw. die richtige Datei hochladen:
+Sobald die Prüfung abgeschlossen ist (normalerweise in max. 1 Minute), werden der Zeitraum und die entsprechenden Konten angezeigt. Bitte prüfen Sie, ob die angezeigten Informationen korrekt sind. Sollte z.B. ein Konto fehlen oder ein falscher Zeitraum hochgeladen worden sein, können Sie die Datei wieder löschen und ggf. korrigieren bzw. die richtige Datei hochladen:
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/14-datei-loeschen.png)
 
