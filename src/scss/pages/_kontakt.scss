@@ -1,44 +1,23 @@
-// Contact Page Styles - Knowledge Base Design
+// Contact Page Styles - Combined Section
 @use '../abstracts/mixins' as *;
 
-// Fixed Logo Background
-.kontakt-logo-fixed {
-  position: fixed;
-  top: 10%;
-  right: -5%;
-  transform: translateX(0);
-  width: 42vw;
-  height: 42vw;
-  max-width: 800px;
-  max-height: 800px;
-  background-image: url('/assets/images/leistungen/logo-icon-background.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.3;
-  z-index: 2;
-  pointer-events: none;
-  mix-blend-mode: multiply;
-
-  @include desktop-down {
-    width: 0px;
-    height: 0px;
-    opacity: 0;
-  }
+// Required field asterisk styling
+.required {
+  color: #dc3545;
+  font-weight: 600;
+  margin-left: 2px;
 }
 
-// Hero Section with gradient background
-.kontakt-hero {
+// Combined Hero and Form Section with gradient background
+.kontakt-combined {
   position: relative;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  padding: 80px 20px;
+  min-height: 100vh;
+  padding: 160px 20px 80px; // More padding above heading
   overflow: hidden;
   z-index: 1;
   background-color: #d39a27;
   
-  // Background image overlay with blend mode
+  // Background gradient overlay
   &::after {
     content: "";
     position: absolute;
@@ -57,30 +36,28 @@
   }
 
   @include tablet-up {
-    padding: 100px 40px;
+    padding: 180px 40px 100px;
   }
 
   @include desktop-up {
-    padding: 120px 60px;
+    padding: 200px 60px 120px;
   }
 
   @include mobile-down {
-    min-height: auto;
-    padding: 60px 20px;
+    padding: 120px 20px 60px;
   }
 
   &__container {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     width: 100%;
     position: relative;
     z-index: 3;
   }
 
-  &__content {
-    max-width: 800px;
+  &__hero {
     text-align: center;
-    margin: 0 auto;
+    margin-bottom: 60px;
   }
 
   &__title {
@@ -89,6 +66,7 @@
     font-weight: 400;
     line-height: 1.2;
     color: #1a1a1a;
+    margin-top: 90px;
     margin-bottom: 24px;
   }
 
@@ -100,36 +78,6 @@
     color: rgba(26, 26, 26, 0.9);
     max-width: 700px;
     margin: 0 auto;
-  }
-}
-
-// Form Section with gradient background like knowledge base
-.kontakt-form-section {
-  padding: 80px 20px;
-  position: relative;
-  background-color: #d39a27;
-  min-height: 70vh;
-  
-  // Background gradient overlay
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/assets/images/HG_Verlauf.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    mix-blend-mode: screen;
-    opacity: 0.85;
-    z-index: 1;
-    pointer-events: none;
-  }
-
-  @include tablet-down {
-    padding: 60px 20px;
   }
 }
 
@@ -200,8 +148,8 @@
       font-weight: 500;
       color: #1a1a1a;
       margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      text-transform: none;
+      letter-spacing: normal;
     }
 
     input[type="text"],
