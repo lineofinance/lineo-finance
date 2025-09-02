@@ -2,7 +2,7 @@
 title: Deine Fragen – unsere Antworten
 ---
 
-## Wie flexibel sind die Arbeitszeiten wirklich?
+## Wie flexibel sind die Arbeitszeiten?
 
 Bei lineo finance leben wir eine echte Vertrauenskultur. Du kannst deine Arbeitszeiten flexibel gestalten, solange du für wichtige Meetings verfügbar bist und deine Aufgaben erfüllst. Ob du lieber früh morgens oder spät abends arbeitest – das entscheidest du. Wichtig ist uns nur, dass die Zusammenarbeit im Team funktioniert und unsere Kunden zufrieden sind.
 
@@ -16,8 +16,8 @@ Absolut! Wir fördern die kontinuierliche Weiterbildung unserer Mitarbeiter. Du 
 
 ## Wie läuft der Bewerbungsprozess ab?
 
-Unser Bewerbungsprozess ist unkompliziert und transparent. Nach Eingang deiner Bewerbung melden wir uns innerhalb von 48 Stunden bei dir. Wenn dein Profil passt, laden wir dich zu einem ersten Kennenlerngespräch ein – entweder persönlich oder per Video-Call. Je nach Position kann es ein zweites fachliches Gespräch geben. Die gesamte Entscheidung dauert in der Regel nicht länger als zwei Wochen.
+Unser Bewerbungsprozess ist unkompliziert und transparent. Nach Eingang deiner Bewerbung melden wir uns schnellstmöglich bei dir. Wenn dein Profil passt, laden wir dich zu einem ersten Kennenlerngespräch ein – entweder persönlich oder per Video-Call. Je nach Position kann es ein zweites fachliches Gespräch geben. Die gesamte Entscheidung dauert in der Regel nicht länger als zwei Wochen.
 
-## Ist Remote-Arbeit wirklich möglich?
+## Ist Remote-Arbeit möglich?
 
-Ja, definitiv! Wir sind ein Remote-First-Unternehmen. Das bedeutet, du kannst von überall in Deutschland arbeiten. Wir haben die nötige Infrastruktur und Prozesse, um effiziente Remote-Arbeit zu ermöglichen. Natürlich freuen wir uns, wenn du gelegentlich ins Büro kommst für Team-Events oder wichtige Meetings, aber das ist keine Pflicht.
+Ja, definitiv! Wir sind ein Remote-First-Unternehmen. Das bedeutet, du kannst von überall in Deutschland arbeiten. Wir haben die nötige Infrastruktur und Prozesse, um effiziente Remote-Arbeit zu ermöglichen.
