@@ -44,6 +44,9 @@
 @use 'pages/job-posting';
 @use 'pages/knowledge-base';
 @use 'pages/kontakt';
+@use 'pages/datenschutz';
+@use 'pages/impressum';
+@use 'pages/barrierefreiheitserklaerung';
 
 // Utilities (should be last for specificity)
 @use 'utilities/utilities';

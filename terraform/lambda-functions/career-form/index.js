@@ -1,6 +1,10 @@
-const AWS = require('aws-sdk');
-const ses = new AWS.SES({ region: process.env.AWS_REGION });
-const s3 = new AWS.S3();
+// Using AWS SDK v3 for Node.js 18 runtime
+const { SESClient, SendEmailCommand } = require('@aws-sdk/client-ses');
+const { S3Client, PutObjectCommand, GetObjectCommand } = require('@aws-sdk/client-s3');
+const { getSignedUrl } = require('@aws-sdk/s3-request-presigner');
+
+const sesClient = new SESClient({ region: process.env.AWS_REGION || 'eu-central-1' });
+const s3Client = new S3Client({ region: process.env.AWS_REGION || 'eu-central-1' });
 
 // CORS headers for response
 const corsHeaders = {
@@ -119,7 +123,8 @@ exports.handler = async (event) => {
           };
         }
         
-        await s3.putObject({
+        // Upload to S3 using SDK v3
+        const putCommand = new PutObjectCommand({
           Bucket: uploadsBucket,
           Key: cvFileName,
           Body: buffer,
@@ -131,14 +136,15 @@ exports.handler = async (event) => {
             'upload-date': new Date().toISOString()
           },
           ServerSideEncryption: 'AES256'
-        }).promise();
-        
-        // Generate presigned URL (valid for 7 days)
-        cvUrl = await s3.getSignedUrlPromise('getObject', {
-          Bucket: uploadsBucket,
-          Key: cvFileName,
-          Expires: 7 * 24 * 60 * 60 // 7 days
         });
+        await s3Client.send(putCommand);
+        
+        // Generate presigned URL (valid for 7 days) using SDK v3
+        const getCommand = new GetObjectCommand({
+          Bucket: uploadsBucket,
+          Key: cvFileName
+        });
+        cvUrl = await getSignedUrl(s3Client, getCommand, { expiresIn: 7 * 24 * 60 * 60 });
         
         console.log('PDF uploaded successfully:', cvFileName);
         
@@ -180,7 +186,9 @@ exports.handler = async (event) => {
     };
     
     // Send email via SES
-    await ses.sendEmail(emailParams).promise();
+    // Send email via SES using SDK v3
+    const command = new SendEmailCommand(emailParams);
+    await sesClient.send(command);
     
     console.log('Email sent successfully to:', recipients.join(', '));
     

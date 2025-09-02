@@ -28,14 +28,22 @@
         submitBtn.textContent = 'Wird gesendet...';
         
         // Collect form data
-        const firstname = form.querySelector('#firstname')?.value.trim() || '';
-        const lastname = form.querySelector('#lastname')?.value.trim() || '';
+        const firstnameField = form.querySelector('#firstname');
+        const lastnameField = form.querySelector('#lastname');
+        const emailField = form.querySelector('#email');
+        const phoneField = form.querySelector('#phone');
+        const companyField = form.querySelector('#company');
+        const messageField = form.querySelector('#message');
+        
+        const firstname = firstnameField ? firstnameField.value.trim() : '';
+        const lastname = lastnameField ? lastnameField.value.trim() : '';
+        
         const formData = {
           name: `${firstname} ${lastname}`.trim(),
-          email: form.querySelector('#email').value.trim(),
-          phone: form.querySelector('#phone')?.value.trim() || '',
-          company: form.querySelector('#company')?.value.trim() || '',
-          message: form.querySelector('#message').value.trim()
+          email: emailField ? emailField.value.trim() : '',
+          phone: phoneField ? phoneField.value.trim() : '',
+          company: companyField ? companyField.value.trim() : '',
+          message: messageField ? messageField.value.trim() : ''
         };
         
         // Validate required fields
@@ -63,11 +71,8 @@
           throw new Error(result.error || 'Ein Fehler ist aufgetreten.');
         }
         
-        // Show success message
-        showMessage(form, 'success', result.message || 'Vielen Dank für Ihre Nachricht! Wir werden uns zeitnah bei Ihnen melden.');
-        
-        // Reset form
-        form.reset();
+        // Show success message and hide form
+        showSuccessAndHideForm(form, result.message || 'Vielen Dank für Ihre Nachricht! Wir werden uns zeitnah bei Ihnen melden.');
         
       } catch (error) {
         console.error('Form submission error:', error);
@@ -129,14 +134,22 @@
         submitBtn.textContent = 'Wird gesendet...';
         
         // Collect form data
+        const positionField = form.querySelector('#position');
+        const nameField = form.querySelector('#name');
+        const emailField = form.querySelector('#email');
+        const phoneField = form.querySelector('#phone');
+        const availabilityField = form.querySelector('#availability');
+        const salaryField = form.querySelector('#salary');
+        const messageField = form.querySelector('#message');
+        
         const formData = {
-          position: form.querySelector('#position').value.trim(),
-          name: form.querySelector('#name').value.trim(),
-          email: form.querySelector('#email').value.trim(),
-          phone: form.querySelector('#phone')?.value.trim() || '',
-          availability: form.querySelector('#availability')?.value.trim() || '',
-          salary: form.querySelector('#salary')?.value.trim() || '',
-          message: form.querySelector('#message').value.trim()
+          position: positionField ? positionField.value.trim() : '',
+          name: nameField ? nameField.value.trim() : '',
+          email: emailField ? emailField.value.trim() : '',
+          phone: phoneField ? phoneField.value.trim() : '',
+          availability: availabilityField ? availabilityField.value.trim() : '',
+          salary: salaryField ? salaryField.value.trim() : '',
+          message: messageField ? messageField.value.trim() : ''
         };
         
         // Validate required fields
@@ -150,7 +163,7 @@
         }
         
         // Handle file upload if present
-        const file = fileInput?.files[0];
+        const file = fileInput && fileInput.files ? fileInput.files[0] : null;
         if (file) {
           // Convert file to base64
           const base64 = await fileToBase64(file);
@@ -173,15 +186,8 @@
           throw new Error(result.error || 'Ein Fehler ist aufgetreten.');
         }
         
-        // Show success message
-        showMessage(form, 'success', result.message || 'Vielen Dank für Ihre Bewerbung! Wir werden uns zeitnah bei Ihnen melden.');
-        
-        // Reset form
-        form.reset();
-        if (fileLabel) {
-          fileLabel.textContent = 'Lebenslauf hochladen (PDF, max. 10MB)';
-          fileLabel.classList.remove('file-selected');
-        }
+        // Show success message and hide form
+        showSuccessAndHideForm(form, result.message || 'Vielen Dank für Ihre Bewerbung! Wir werden uns zeitnah bei Ihnen melden.');
         
       } catch (error) {
         console.error('Form submission error:', error);
@@ -240,5 +246,38 @@
         msgDiv.remove();
       }, 5000);
     }
+  }
+  
+  function showSuccessAndHideForm(form, message) {
+    // Hide all form fields and submit button
+    const formFields = form.querySelectorAll('.kontakt-form__row, .kontakt-form__group, .kontakt-form__submit, .kontakt-form__note');
+    formFields.forEach(field => {
+      field.style.display = 'none';
+    });
+    
+    // Also hide career form specific elements
+    const careerFields = form.querySelectorAll('.career-form__field, .career-form__submit');
+    careerFields.forEach(field => {
+      field.style.display = 'none';
+    });
+    
+    // Create success message container
+    const successDiv = document.createElement('div');
+    successDiv.className = 'form-success-container';
+    successDiv.innerHTML = `
+      <div class="form-success-icon">✓</div>
+      <h3 class="form-success-title">Vielen Dank!</h3>
+      <p class="form-success-message">${message}</p>
+      <button class="form-success-button" onclick="location.reload()">Neue Anfrage senden</button>
+    `;
+    
+    // Clear form and add success message
+    form.innerHTML = '';
+    form.appendChild(successDiv);
+    
+    // Add success animation class
+    setTimeout(() => {
+      successDiv.classList.add('show');
+    }, 100);
   }
 })();

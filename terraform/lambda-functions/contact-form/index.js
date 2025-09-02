@@ -1,5 +1,6 @@
-const AWS = require('aws-sdk');
-const ses = new AWS.SES({ region: process.env.AWS_REGION });
+// Using AWS SDK v3 for Node.js 18 runtime
+const { SESClient, SendEmailCommand } = require('@aws-sdk/client-ses');
+const sesClient = new SESClient({ region: process.env.AWS_REGION || 'eu-central-1' });
 
 // CORS headers for response
 const corsHeaders = {
@@ -91,8 +92,9 @@ exports.handler = async (event) => {
       ReplyToAddresses: [body.email]
     };
     
-    // Send email via SES
-    await ses.sendEmail(emailParams).promise();
+    // Send email via SES using SDK v3
+    const command = new SendEmailCommand(emailParams);
+    await sesClient.send(command);
     
     console.log('Email sent successfully to:', recipients.join(', '));
     

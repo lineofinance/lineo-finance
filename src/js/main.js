@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all modules
     initCurrentPageIndicator();
     initMobileMenu();
-    initFormValidation();
+    // initFormValidation(); // Disabled - handled by forms.js
     initLazyLoading();
     initSmoothScroll();
     initFAQ();

@@ -56,7 +56,7 @@ resource "aws_cloudfront_origin_access_control" "website" {
 
 # CloudFront Function for handling clean URLs
 resource "aws_cloudfront_function" "url_rewrite" {
-  name    = "${var.project_name}-url-rewrite"
+  name    = "${var.project_name}-url-rewrite-v2"
   runtime = "cloudfront-js-1.0"
   comment = "Rewrite URLs to serve index.html for directories"
   publish = true
