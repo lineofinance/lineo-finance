@@ -11,22 +11,22 @@
           <li><a href="/pages/kontakt/">Kontakt</a></li>
         </ul>
       </nav>
+      <nav class="footer-knowledge">
+        <h4>Wissensdatenbank</h4>
+        <ul>
+          <li><a href="/knowledge-base/">Alle Artikel</a></li>
+          {%- for article in collections.footerKnowledgeBase.slice(0, 5) -%}
+          {%- if article.data.menuTitle or article.data.title -%}
+          <li><a href="{{ article.url }}">{{ article.data.menuTitle | default(article.data.title) }}</a></li>
+          {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </nav>
       <nav class="footer-legal">
         <h4>Rechtliches</h4>
         <ul>
           <li><a href="/pages/impressum/">Impressum</a></li>
           <li><a href="/pages/datenschutz/">Datenschutzerklärung</a></li>
-        </ul>
-      </nav>
-      <nav class="footer-knowledge">
-        <h4>Wissensdatenbank</h4>
-        <ul>
-          <li><a href="/knowledge-base/">Alle Artikel</a></li>
-          {%- for article in collections.footerKnowledgeBase.slice(0, 3) -%}
-          {%- if article.data.menuTitle or article.data.title -%}
-          <li><a href="{{ article.url }}">{{ article.data.menuTitle | default(article.data.title) | truncate(30) }}</a></li>
-          {%- endif -%}
-          {%- endfor -%}
         </ul>
       </nav>
     </div>

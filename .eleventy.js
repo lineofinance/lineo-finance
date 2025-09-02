@@ -99,28 +99,64 @@ module.exports = function(eleventyConfig) {
     linkify: true
   });
   
-  // Override link renderer to open all links in new tabs
+  // Override link renderer to open external links in new tabs and add icon
   const defaultRender = markdownLib.renderer.rules.link_open || function(tokens, idx, options, env, self) {
     return self.renderToken(tokens, idx, options);
   };
   
+  const defaultLinkClose = markdownLib.renderer.rules.link_close || function(tokens, idx, options, env, self) {
+    return self.renderToken(tokens, idx, options);
+  };
+  
+  // Track whether current link is external
+  let isCurrentLinkExternal = false;
+  
   markdownLib.renderer.rules.link_open = function (tokens, idx, options, env, self) {
-    // Add target="_blank" and rel="noopener noreferrer" to all links
-    const aIndex = tokens[idx].attrIndex('target');
-    if (aIndex < 0) {
-      tokens[idx].attrPush(['target', '_blank']);
-    } else {
-      tokens[idx].attrs[aIndex][1] = '_blank';
+    // Get the href attribute
+    const hrefIndex = tokens[idx].attrIndex('href');
+    let href = '';
+    if (hrefIndex >= 0) {
+      href = tokens[idx].attrs[hrefIndex][1];
     }
     
-    const relIndex = tokens[idx].attrIndex('rel');
-    if (relIndex < 0) {
-      tokens[idx].attrPush(['rel', 'noopener noreferrer']);
-    } else {
-      tokens[idx].attrs[relIndex][1] = 'noopener noreferrer';
+    // Check if it's an internal knowledge base link or anchor link
+    const isInternalKBLink = href.startsWith('/content/knowledge-base/') || href.startsWith('../');
+    const isAnchorLink = href.startsWith('#');
+    const isInternalLink = href.startsWith('/') && !href.startsWith('//'); // Local links that aren't protocol-relative
+    
+    // Track if this link is external for the close renderer
+    isCurrentLinkExternal = !isInternalKBLink && !isAnchorLink && !isInternalLink;
+    
+    // Only add target="_blank" to external links
+    if (isCurrentLinkExternal) {
+      // Add target="_blank" and rel="noopener noreferrer" to external links
+      const aIndex = tokens[idx].attrIndex('target');
+      if (aIndex < 0) {
+        tokens[idx].attrPush(['target', '_blank']);
+      } else {
+        tokens[idx].attrs[aIndex][1] = '_blank';
+      }
+      
+      const relIndex = tokens[idx].attrIndex('rel');
+      if (relIndex < 0) {
+        tokens[idx].attrPush(['rel', 'noopener noreferrer']);
+      } else {
+        tokens[idx].attrs[relIndex][1] = 'noopener noreferrer';
+      }
     }
     
     return defaultRender(tokens, idx, options, env, self);
+  };
+  
+  // Add external link icon before closing the link (inside the link)
+  markdownLib.renderer.rules.link_close = function (tokens, idx, options, env, self) {
+    if (isCurrentLinkExternal) {
+      // Add an SVG icon for external links inside the link
+      // Using a simple box with arrow icon
+      const svgIcon = `<svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; margin-left: 4px; vertical-align: baseline;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>`;
+      return svgIcon + defaultLinkClose(tokens, idx, options, env, self);
+    }
+    return defaultLinkClose(tokens, idx, options, env, self);
   };
   
   eleventyConfig.setLibrary("md", markdownLib);

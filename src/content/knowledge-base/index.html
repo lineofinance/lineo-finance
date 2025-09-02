@@ -5,14 +5,24 @@ description: Hilfreiche Artikel und Anleitungen zur automatisierten Wertpapierbu
 permalink: /knowledge-base/
 ---
 
-<section class="knowledge-base-hero">
-  <div class="container">
-    <h1>Wissensdatenbank</h1>
+<!-- Fixed Logo Background (same as leistungen) -->
+<div class="kb-logo-fixed"></div>
+
+<!-- Hero Section with gradient background -->
+<section class="kb-hero">
+  <div class="kb-hero__container">
+    <div class="kb-hero__content">
+      <h1 class="kb-hero__title">Wissensdatenbank</h1>
+      <p class="kb-hero__subtitle">
+        Hilfreiche Artikel und Anleitungen zur automatisierten Wertpapierbuchhaltung
+      </p>
+    </div>
   </div>
 </section>
 
-<section class="knowledge-base-articles">
-  <div class="container">
+<!-- Articles Section with extra margin -->
+<section class="kb-articles">
+  <div class="kb-articles__container">
     <div class="articles-grid">
       {% for article in collections.knowledgeBase %}
       <article class="kb-article-card">

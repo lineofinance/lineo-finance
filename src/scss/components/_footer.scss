@@ -16,7 +16,7 @@
 
 .footer-content {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   gap: var(--spacing-xxl);
   padding-bottom: var(--spacing-xl);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -30,6 +30,10 @@
   @media (min-width: 769px) and (max-width: 1024px) {
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xl);
+    
+    .footer-knowledge {
+      grid-column: 1 / -1;
+    }
   }
 
   @include dark-mode {

@@ -1,29 +1,158 @@
 // Knowledge Base Styles
 
-section.knowledge-base-hero {
-  padding: 200px 0 40px !important; // Increased top padding for more space, !important to override base section styles
-  background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
-  
-  @media (max-width: 768px) {
-    padding: 150px 0 30px !important;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--color-text);
-    margin-bottom: 0; // No margin since subtitle is removed
+// Fixed Logo Background (similar to leistungen)
+.kb-logo-fixed {
+  position: fixed;
+  top: 10%;
+  right: -5%; // Partially off-screen to the right
+  transform: translateX(0);
+  width: 42vw;
+  height: 42vw;
+  max-width: 800px;
+  max-height: 800px;
+  background-image: url('/assets/images/leistungen/logo-icon-background.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3;
+  z-index: 2;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+
+  @media (max-width: 1024px) {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
   }
 }
 
-.knowledge-base-articles {
-  padding: 60px 0;
+// Hero Section with gradient background
+.kb-hero {
+  position: relative;
+  min-height: 60vh; // Smaller than full viewport
+  display: flex;
+  align-items: center;
+  padding: 80px 20px;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #d39a27; // Same darker base yellow as homepage
+  
+  // Background image overlay with blend mode
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/images/HG_Verlauf.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    mix-blend-mode: screen;
+    opacity: 0.85;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  @media (min-width: 768px) {
+    padding: 100px 40px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 120px 60px;
+  }
+
+  @media (max-width: 767px) {
+    min-height: auto;
+    padding: 60px 20px;
+  }
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    z-index: 3; // Above both background and logo
+  }
+
+  &__content {
+    max-width: 600px; // Content on the left, leaving space for logo on right
+
+    @media (min-width: 768px) {
+      max-width: 700px;
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 800px;
+    }
+  }
+
+  &__title {
+    font-family: 'Barlow', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin-bottom: 24px;
+    hyphens: none;
+    word-break: normal;
+    overflow-wrap: normal;
+
+    @media (min-width: 768px) {
+      font-size: 42px;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 52px;
+      line-height: 1.15;
+    }
+  }
+
+  &__subtitle {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 0;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 22px;
+    }
+  }
+}
+
+// Articles Section with extra margin
+.kb-articles {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.95); // Slightly transparent white
+  padding: 130px 20px 80px; // Added 50px more top padding (was 80px)
+  z-index: 1;
+  
+  @media (min-width: 768px) {
+    padding: 150px 40px 100px; // Added 50px more top padding
+  }
+  
+  @media (min-width: 1024px) {
+    padding: 170px 60px 120px; // Added 50px more top padding
+  }
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
   
   .articles-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
   }
 }
 
@@ -77,33 +206,69 @@ section.knowledge-base-hero {
 
 // Full page background for knowledge base
 .knowledge-base-page {
-  background: #fff9e6; // Slightly darker yellow for full page
+  position: relative;
   min-height: 100vh;
+  background-color: #d39a27; // Same darker base yellow as homepage
+  
+  // Fixed gradient background that doesn't scroll
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/images/HG_Verlauf.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    mix-blend-mode: screen;
+    opacity: 0.85;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  // Override footer styles to have its own background
+  .site-footer {
+    position: relative;
+    background-color: #1a1a1a; // Black background like other pages
+    z-index: 3; // Above the gradient
+    margin-top: 80px; // Add some spacing before footer
+  }
 }
 
 .knowledge-base-main {
-  background: #fff9e6; // Same yellow background
+  position: relative;
   min-height: calc(100vh - 80px); // Full height minus header
   padding: 0;
+  z-index: 1; // Above the fixed background
 }
 
 // Article content styles for markdown
 .knowledge-base-article {
   max-width: 980px; // Increased max-width to compensate for less padding
-  margin: 0 auto;
-  padding: 140px 0 80px; // Added 20px more top padding (was 120px, now 140px)
-  background: transparent; // Transparent to show page background
+  margin: 140px auto 80px; // Top margin to push content down, bottom margin for spacing
+  padding: 40px; // Internal padding for content
+  background: rgba(255, 255, 255, 0.95); // Semi-transparent white background
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2; // Above the fixed background
   
   @media (max-width: 1024px) {
-    padding: 140px 20px 80px; // Added 20px more (was 120px)
+    margin: 140px 20px 80px; // Add horizontal margins on smaller screens
+    padding: 35px;
   }
   
   @media (max-width: 768px) {
-    padding: 120px 20px 60px; // Added 20px more (was 100px)
+    margin: 120px 20px 60px;
+    padding: 30px;
   }
   
   @media (max-width: 576px) {
-    padding: 110px 15px 40px; // Added 20px more (was 90px)
+    margin: 110px 15px 40px;
+    padding: 25px;
   }
   
   h1 {

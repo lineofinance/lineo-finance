@@ -1,7 +1,7 @@
 ---
 layout: kb-article.njk
 title: Manueller Datenexport Interactive Brokers sowie alle darauf basierenden Broker
-menuTitle: Anleitung Manueller Datenexport Interactive Brokers
+menuTitle: Manueller Datenexport Interactive Brokers
 description: Beschreibung für SEO und Übersichten
 tags: knowledgeBase
 date: 2025-09-01
@@ -9,9 +9,10 @@ showInFooter: true
 footerPriority: 1
 featured: true
 ---
+
 # Manueller Datenexport Interactive Brokers sowie alle darauf basierenden Broker
 
-Den manuellen Datenexport können Sie nur durchführen, wenn Sie bereits eine Flex-Query konfiguriert haben. Falls nicht, erstellen Sie diese bitte gemäß [dieser Anleitung](https://funky-grape-e16.notion.site/Manueller-Datenexport-Interactive-Brokers-12cfc7202e3a805d9b29c373475874ec).
+Den manuellen Datenexport können Sie nur durchführen, wenn Sie bereits eine Flex-Query konfiguriert haben. Falls nicht, erstellen Sie diese bitte gemäß [dieser Anleitung](/content/knowledge-base/anleitung-anbindung/).
 
 Gehen Sie auf die [Anmeldung IB-Kontoverwaltung](https://www.interactivebrokers.ie/sso/Login?RL=1) und melden Sie sich auf Ihrem Konto an:
 
@@ -55,7 +56,7 @@ Im nächsten Fenster geben Sie einen benutzerdefinierten Zeitraum ein. In den Fe
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/09-zeitraum-format.png)
 
-Der Bericht sollte nun in Ihrem Download-Bereich abgelegt sein. 
+Der Bericht sollte nun in Ihrem Download-Bereich abgelegt sein.
 
 Nun laden Sie bitte die Datei in Ihrem Lineo Kundenkonto hoch. Dazu gehen Sie in “Meine Gesellschaften” und klicken auf Ihre Gesellschaft:
 
@@ -77,7 +78,7 @@ Sobald die Prüfung abgeschlossen ist (normalerweise in max. 1 Minute), werden d
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/14-datei-loeschen.png)
 
-Sollte die Prüfung nicht erfolgreich abgeschlossen worden sein, wird Ihnen eine Fehlermeldung angezeigt werden. Im folgenden Beispiel wurde in der Zustellungskonfiguration ein falsches Format ausgewählt: 
+Sollte die Prüfung nicht erfolgreich abgeschlossen worden sein, wird Ihnen eine Fehlermeldung angezeigt werden. Im folgenden Beispiel wurde in der Zustellungskonfiguration ein falsches Format ausgewählt:
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/15-pruefung-fehlerhaft.png)
 
