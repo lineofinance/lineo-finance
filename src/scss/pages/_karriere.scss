@@ -312,7 +312,7 @@
   position: relative;
   padding: 100px 20px;
   // Use the same background as leistungen benefits section
-  background-image: url('/assets/images/app-showcase-bg.png');
+  @include webp-background('app-showcase-bg', 'png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -760,7 +760,7 @@
   position: relative;
   padding: 100px 20px;
   // Use the same background as leistungen target section
-  background-image: url('/assets/images/app-showcase-bg.png');
+  @include webp-background('app-showcase-bg', 'png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

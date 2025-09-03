@@ -1,9 +1,11 @@
 // Leistungen Benefits Section
+@use '../abstracts/mixins' as *;
+
 .leistungen-benefits {
   position: relative;
   padding: 100px 20px;
   // Use the same background as app-showcase section
-  background-image: url('/assets/images/app-showcase-bg.png');
+  @include webp-background('app-showcase-bg', 'png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

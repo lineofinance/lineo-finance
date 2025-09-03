@@ -1,11 +1,13 @@
 // App Showcase Section
+@use '../abstracts/mixins' as *;
+
 .app-showcase {
   position: relative;
   padding: 40px 0; // Reduced from 80px
   overflow: hidden;
   
-  // Use the actual background image
-  background-image: url('/assets/images/app-showcase-bg.png');
+  // Use the actual background image with WebP support
+  @include webp-background('app-showcase-bg', 'png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

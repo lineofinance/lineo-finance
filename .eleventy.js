@@ -35,6 +35,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css/fonts.css"); // Keep fonts.css as is for now
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPassthroughCopy("src/sitemap.xml");
+  eleventyConfig.addPassthroughCopy("src/_redirects"); // Netlify-style redirects
   
   // Watch SCSS and JS for changes (triggers rebuild)
   eleventyConfig.addWatchTarget("src/scss/");

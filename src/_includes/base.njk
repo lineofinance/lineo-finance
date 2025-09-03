@@ -15,6 +15,76 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.lineo.finance{{ page.url }}">
     
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FinancialService",
+        "name": "Lineo Finance",
+        "alternateName": "Lineo Finance GmbH",
+        "description": "Automatisierte Wertpapierbuchhaltung für vermögensverwaltende Kapitalgesellschaften, Steuerkanzleien und Privatpersonen mit vermögensverwaltenden GmbHs",
+        "url": "https://www.lineo.finance",
+        "logo": "https://www.lineo.finance/assets/images/logo.webp",
+        "image": "https://www.lineo.finance/assets/images/og-image.jpg",
+        "email": "support@lineo.finance",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "support@lineo.finance",
+            "contactType": "customer support",
+            "availableLanguage": ["German", "de"]
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Neptunstr. 20a",
+            "addressLocality": "Moosburg",
+            "postalCode": "85368",
+            "addressCountry": "DE",
+            "addressRegion": "Bayern"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "Germany"
+        },
+        "serviceType": ["Wertpapierbuchhaltung", "Automatisierte Buchhaltung", "Steuerberatung"],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Lineo Finance Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Automatisierte Wertpapierbuchhaltung",
+                        "description": "Vollständige Automatisierung der Wertpapierbuchhaltung für Broker-Konten"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "DATEV Integration",
+                        "description": "Nahtlose Integration in DATEV Buchhaltungssysteme"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Broker Anbindung",
+                        "description": "Direkte Anbindung an Interactive Brokers, CapTrader und weitere Broker"
+                    }
+                }
+            ]
+        },
+        "knowsAbout": ["Wertpapiere", "Buchhaltung", "DATEV", "Steuerrecht", "Kapitalgesellschaften", "GmbH", "AG", "Familienstiftungen"],
+        "foundingDate": "2021",
+        "foundingLocation": {
+            "@type": "Place",
+            "name": "Moosburg, Germany"
+        }
+    }
+    </script>
+    
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.png">
     

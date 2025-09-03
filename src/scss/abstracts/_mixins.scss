@@ -287,6 +287,27 @@
 }
 
 // ==========================================================================
+// Image Optimization Mixins
+// ==========================================================================
+
+@mixin webp-background($image-name, $extension: 'png') {
+  // Default PNG/JPG fallback
+  background-image: url('/assets/images/#{$image-name}.#{$extension}');
+  
+  // Modern browsers with WebP support via image-set
+  @supports (background-image: -webkit-image-set(url('test.webp') 1x)) {
+    background-image: -webkit-image-set(
+      url('/assets/images/#{$image-name}.webp') 1x,
+      url('/assets/images/#{$image-name}.#{$extension}') 1x
+    );
+    background-image: image-set(
+      url('/assets/images/#{$image-name}.webp') type('image/webp'),
+      url('/assets/images/#{$image-name}.#{$extension}') type('image/#{$extension}')
+    );
+  }
+}
+
+// ==========================================================================
 // Utility Mixins
 // ==========================================================================
 

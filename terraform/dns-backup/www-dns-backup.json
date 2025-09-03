@@ -1,0 +1,10 @@
+{
+  "Name": "www.lineo.finance.",
+  "Type": "A",
+  "TTL": 300,
+  "ResourceRecords": [
+    {
+      "Value": "18.192.70.104"
+    }
+  ]
+}

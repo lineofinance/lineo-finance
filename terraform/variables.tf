@@ -25,7 +25,7 @@ variable "domain_name" {
 variable "website_subdomain" {
   description = "Subdomain for the website (use 'test' for testing, 'www' for production)"
   type        = string
-  default     = "test"
+  default     = "www"
 }
 
 variable "contact_email_recipients" {
