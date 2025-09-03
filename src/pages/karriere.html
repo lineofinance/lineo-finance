@@ -40,24 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    
-    // Form handling
-    const form = document.querySelector('.karriere-form__form');
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(form);
-            
-            // Here you would normally send the form data to your backend
-            // For now, we'll just show an alert
-            alert('Vielen Dank für deine Bewerbung! Wir melden uns in Kürze bei dir.');
-            
-            // Reset form
-            form.reset();
-        });
-    }
+    // Form handling is now done by forms.js
     
     // Smooth scroll to form when clicking CTA buttons
     const ctaButtons = document.querySelectorAll('a[href="#bewerbungsformular"]');

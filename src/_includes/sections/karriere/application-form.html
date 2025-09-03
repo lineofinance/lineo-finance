@@ -5,58 +5,54 @@
       <h2 class="karriere-form__title">Bereit, Teil von lineo finance zu werden?</h2>
       <p class="karriere-form__subtitle">Sende uns deine Bewerbung und werde Teil unseres Teams!</p>
       
-      <form class="karriere-form__form" action="/pages/karriere/" method="POST">
+      <form id="career-form" class="karriere-form__form career-form" action="/pages/karriere/" method="POST">
         <div class="karriere-form__row">
           <div class="karriere-form__field karriere-form__field--half">
-            <label for="vorname" class="karriere-form__label">Vorname <span class="required">*</span></label>
-            <input type="text" id="vorname" name="vorname" class="karriere-form__input" required>
+            <label for="name" class="karriere-form__label">Vollständiger Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" class="karriere-form__input" required>
           </div>
-          <div class="karriere-form__field karriere-form__field--half">
-            <label for="nachname" class="karriere-form__label">Nachname <span class="required">*</span></label>
-            <input type="text" id="nachname" name="nachname" class="karriere-form__input" required>
-          </div>
-        </div>
-        
-        <div class="karriere-form__row">
           <div class="karriere-form__field karriere-form__field--half">
             <label for="email" class="karriere-form__label">E-Mail <span class="required">*</span></label>
             <input type="email" id="email" name="email" class="karriere-form__input" required>
           </div>
+        </div>
+        
+        <div class="karriere-form__row">
           <div class="karriere-form__field karriere-form__field--half">
-            <label for="telefon" class="karriere-form__label">Telefon</label>
-            <input type="tel" id="telefon" name="telefon" class="karriere-form__input">
+            <label for="phone" class="karriere-form__label">Telefon</label>
+            <input type="tel" id="phone" name="phone" class="karriere-form__input">
+          </div>
+          <div class="karriere-form__field karriere-form__field--half">
+            <label for="position" class="karriere-form__label">Position <span class="required">*</span></label>
+            <select id="position" name="position" class="karriere-form__select" required>
+              <option value="">Bitte wählen</option>
+              <option value="Senior .NET Entwickler (m/w/d)">Senior .NET Entwickler (m/w/d)</option>
+              <option value="Initiativbewerbung">Initiativbewerbung</option>
+            </select>
           </div>
         </div>
         
         <div class="karriere-form__field">
-          <label for="position" class="karriere-form__label">Position <span class="required">*</span></label>
-          <select id="position" name="position" class="karriere-form__select" required>
-            <option value="">Bitte wählen</option>
-            <option value="senior-dotnet">Senior .NET Entwickler (m/w/d)</option>
-            <option value="initiativ">Initiativbewerbung</option>
-          </select>
+          <label for="message" class="karriere-form__label">Anschreiben / Nachricht <span class="required">*</span></label>
+          <textarea id="message" name="message" class="karriere-form__textarea" rows="6" required placeholder="Erzähle uns etwas über dich und warum du zu lineo finance möchtest..."></textarea>
         </div>
         
         <div class="karriere-form__field">
-          <label for="nachricht" class="karriere-form__label">Anschreiben / Nachricht <span class="required">*</span></label>
-          <textarea id="nachricht" name="nachricht" class="karriere-form__textarea" rows="6" required placeholder="Erzähle uns etwas über dich und warum du zu lineo finance möchtest..."></textarea>
-        </div>
-        
-        <div class="karriere-form__field">
-          <label for="lebenslauf" class="karriere-form__label">Lebenslauf (PDF, max. 5MB)</label>
-          <input type="file" id="lebenslauf" name="lebenslauf" class="karriere-form__file" accept=".pdf">
+          <label for="cv-upload" class="karriere-form__label">Lebenslauf (PDF, max. 10MB)</label>
+          <input type="file" id="cv-upload" name="cv-upload" class="karriere-form__file" accept=".pdf">
+          <span class="file-upload-label">Datei auswählen</span>
           <p class="karriere-form__hint">Alternativ kannst du uns deinen Lebenslauf auch per E-Mail an karriere@lineo.finance senden.</p>
         </div>
         
         <div class="karriere-form__field karriere-form__field--checkbox">
           <label class="karriere-form__checkbox-label">
-            <input type="checkbox" name="datenschutz" required>
+            <input type="checkbox" id="consent" name="consent" required>
             <span>Ich habe die <a href="/pages/datenschutz/" target="_blank">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Daten einverstanden. <span class="required">*</span></span>
           </label>
         </div>
         
-        <div class="karriere-form__actions">
-          <button type="submit" class="btn btn-primary karriere-form__submit">Bewerbung absenden</button>
+        <div class="karriere-form__actions career-form__field">
+          <button type="submit" class="btn btn-primary karriere-form__submit career-form__submit">Bewerbung absenden</button>
         </div>
         
         <p class="karriere-form__required-note"><span class="required">*</span> Pflichtfelder</p>

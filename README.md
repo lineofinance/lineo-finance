@@ -615,4 +615,4 @@ Zur weiteren Verbesserung der Website:
 
 ## 📄 Lizenz
 
-© 2024 lineo finance GmbH. Alle Rechte vorbehalten.
+© 2025 lineo finance GmbH. Alle Rechte vorbehalten.
