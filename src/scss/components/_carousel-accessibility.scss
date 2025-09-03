@@ -1,22 +1,7 @@
 // Carousel Accessibility Enhancements
 
 // Visual indicator that carousel pauses on hover/focus (optional)
-.swiper:hover,
-.swiper:focus-within {
-  // Subtle visual feedback that carousel is paused
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: 1;
-    // Very subtle overlay to indicate pause state
-    background: rgba(0, 0, 0, 0.02);
-  }
-}
+// Removed to prevent layout issues with scrollbars
 
 // Make navigation buttons keyboard accessible
 .swiper-button-next,

@@ -4,7 +4,6 @@
 .smart-system-section {
   position: relative;
   padding: 80px 0;
-  overflow: hidden;
 
   // Use the same background as app-showcase
   @include webp-background('app-showcase-bg', 'png');
