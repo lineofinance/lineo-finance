@@ -2,17 +2,17 @@
 <footer class="site-footer">
   <div class="container">
     <div class="footer-content">
-      <nav class="footer-nav">
-        <h4>Quick Links</h4>
+      <nav class="footer-nav" aria-labelledby="footer-nav-heading">
+        <h4 id="footer-nav-heading"><span lang="en">Quick Links</span></h4>
         <ul>
           <li><a href="/pages/leistungen/">Leistungen</a></li>
-          <li><a href="/pages/team-partner/">Team & Partner</a></li>
+          <li><a href="/pages/team-partner/"><span lang="en">Team</span> &amp; Partner</a></li>
           <li><a href="/pages/karriere/">Karriere</a></li>
           <li><a href="/pages/kontakt/">Kontakt</a></li>
         </ul>
       </nav>
-      <nav class="footer-knowledge">
-        <h4>Wissensdatenbank</h4>
+      <nav class="footer-knowledge" aria-labelledby="footer-knowledge-heading">
+        <h4 id="footer-knowledge-heading">Wissensdatenbank</h4>
         <ul>
           <li><a href="/knowledge-base/">Alle Artikel</a></li>
           {%- for article in collections.footerKnowledgeBase.slice(0, 5) -%}
@@ -22,8 +22,8 @@
           {%- endfor -%}
         </ul>
       </nav>
-      <nav class="footer-legal">
-        <h4>Rechtliches</h4>
+      <nav class="footer-legal" aria-labelledby="footer-legal-heading">
+        <h4 id="footer-legal-heading">Rechtliches</h4>
         <ul>
           <li><a href="/pages/impressum/">Impressum</a></li>
           <li><a href="/pages/datenschutz/">Datenschutzerklärung</a></li>

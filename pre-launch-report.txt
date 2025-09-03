@@ -1,0 +1,80 @@
+LINEO FINANCE - PRE-LAUNCH VALIDATION REPORT
+============================================================
+Generated: 2025-09-03T08:28:59.364Z
+
+SUMMARY
+------------------------------
+Passed: 18
+Warnings: 35
+Errors: 9
+
+CRITICAL ISSUES
+------------------------------
+1. Missing charset meta tag in content/faqs/homepage/index.html
+2. Missing viewport meta tag in content/faqs/homepage/index.html
+3. Missing title tag in content/faqs/homepage/index.html
+4. Missing charset meta tag in content/faqs/karriere/index.html
+5. Missing viewport meta tag in content/faqs/karriere/index.html
+6. Missing title tag in content/faqs/karriere/index.html
+7. Missing charset meta tag in content/faqs/leistungen/index.html
+8. Missing viewport meta tag in content/faqs/leistungen/index.html
+9. Missing title tag in content/faqs/leistungen/index.html
+
+WARNINGS
+------------------------------
+1. Missing description meta tag in content/faqs/homepage/index.html
+2. Missing lang attribute in content/faqs/homepage/index.html
+3. Missing description meta tag in content/faqs/karriere/index.html
+4. Missing lang attribute in content/faqs/karriere/index.html
+5. Missing description meta tag in content/faqs/leistungen/index.html
+6. Missing lang attribute in content/faqs/leistungen/index.html
+7. CSS file size is 150.58KB (consider optimization if >100KB)
+8. Large image: Family_Offices.png (741.59KB) - consider optimization
+9. Large image: GmbHs-2.png (740.27KB) - consider optimization
+10. Large image: HG_Verlauf.png (1332.20KB) - consider optimization
+11. Large image: Online_Anmelden.png (321.41KB) - consider optimization
+12. Large image: Privatpersonen-2.png (540.44KB) - consider optimization
+13. Large image: Rueckmeldung_Steuerberater.png (260.67KB) - consider optimization
+14. Large image: Unternehmen_Wertpapier.png (613.47KB) - consider optimization
+15. Large image: app-showcase-bg.png (1320.56KB) - consider optimization
+16. Large image: broker-workflow.png (639.28KB) - consider optimization
+17. Large image: check-icon.png (766.22KB) - consider optimization
+18. Large image: karriere-team-new.png (843.01KB) - consider optimization
+19. Large image: karriere-team.png (843.01KB) - consider optimization
+20. Large image: automation-icon.png (974.99KB) - consider optimization
+21. Large image: benefits-background.png (1320.56KB) - consider optimization
+22. Large image: check-icon.png (766.22KB) - consider optimization
+23. Large image: connection-icon.png (1071.06KB) - consider optimization
+24. Large image: hero-background.png (1332.20KB) - consider optimization
+25. Large image: security-icon.png (399.85KB) - consider optimization
+26. Large image: leistungen-automation.png (974.99KB) - consider optimization
+27. Large image: leistungen-compliance.png (399.85KB) - consider optimization
+28. Large image: leistungen-process-banner-new.png (225.87KB) - consider optimization
+29. Large image: leistungen-security.png (1071.06KB) - consider optimization
+30. Large image: partner-check-icon.png (766.22KB) - consider optimization
+31. Large image: process-broker.png (224.54KB) - consider optimization
+32. Large image: process-validation.png (766.22KB) - consider optimization
+33. Large image: unternehmen.png (361.78KB) - consider optimization
+34. Large image: vermoegensverwaltende_Kapitalgesellschaften-2.png (447.89KB) - consider optimization
+35. Missing structured data (JSON-LD)
+
+PASSED CHECKS
+------------------------------
+1. Found: index.html
+2. Found: scss/main.css
+3. Found: js/main.js
+4. Found: js/forms.js
+5. Found: js/swiper-init.js
+6. Checked 18 HTML files
+7. CSS is minified
+8. component-loader.js: 6.15KB
+9. config.js: 0.24KB
+10. forms.js: 15.75KB
+11. main.js: 33.13KB
+12. swiper-init.js: 12.40KB
+13. Basic accessibility checks completed
+14. SEO checks completed
+15. Found legal page: Impressum
+16. Found legal page: Datenschutz
+17. Found legal page: Barrierefreiheitserklärung
+18. Page weight is optimized (<500KB)

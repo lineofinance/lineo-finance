@@ -11,46 +11,57 @@
         <p class="kontakt-form__required-note">
           <span aria-label="erforderlich">*</span> Pflichtfelder
         </p>
-        <div class="kontakt-form__row">
-          <div class="kontakt-form__group">
-            <label for="firstname">Vorname*</label>
-            <input type="text" id="firstname" name="firstname" required>
+        <fieldset class="kontakt-form__fieldset">
+          <legend class="sr-only">Persönliche Informationen</legend>
+          <div class="kontakt-form__row">
+            <div class="kontakt-form__group">
+              <label for="firstname">Vorname*</label>
+              <input type="text" id="firstname" name="firstname" autocomplete="given-name" required aria-required="true">
+            </div>
+            <div class="kontakt-form__group">
+              <label for="lastname">Nachname*</label>
+              <input type="text" id="lastname" name="lastname" autocomplete="family-name" required aria-required="true">
+            </div>
           </div>
-          <div class="kontakt-form__group">
-            <label for="lastname">Nachname*</label>
-            <input type="text" id="lastname" name="lastname" required>
-          </div>
-        </div>
+        </fieldset>
         
-        <div class="kontakt-form__row">
-          <div class="kontakt-form__group">
-            <label for="email">E-Mail*</label>
-            <input type="email" id="email" name="email" required>
+        <fieldset class="kontakt-form__fieldset">
+          <legend class="sr-only">Kontaktdaten</legend>
+          <div class="kontakt-form__row">
+            <div class="kontakt-form__group">
+              <label for="email">E-Mail*</label>
+              <input type="email" id="email" name="email" autocomplete="email" required aria-required="true">
+            </div>
+            <div class="kontakt-form__group">
+              <label for="phone">Telefon</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </div>
           </div>
-          <div class="kontakt-form__group">
-            <label for="phone">Telefon</label>
-            <input type="tel" id="phone" name="phone">
-          </div>
-        </div>
+        </fieldset>
         
         <div class="kontakt-form__group">
           <label for="company">Unternehmen</label>
-          <input type="text" id="company" name="company">
+          <input type="text" id="company" name="company" autocomplete="organization">
         </div>
         
         <div class="kontakt-form__group">
           <label for="message">Nachricht*</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
         </div>
         
         <div class="kontakt-form__group kontakt-form__checkbox">
-          <input type="checkbox" id="consent" name="consent" required>
+          <input type="checkbox" id="consent" name="consent" required aria-required="true">
           <label for="consent">
-            Ich stimme der <a href="/pages/datenschutz/" target="_blank">Datenschutzerklärung</a> zu und erkläre mich damit einverstanden, dass meine Daten zur Bearbeitung meiner Anfrage verwendet werden.*
+            Ich stimme der <a href="/pages/datenschutz/" target="_blank" aria-label="Datenschutzerklärung öffnet in neuem Tab">Datenschutzerklärung</a> zu und erkläre mich damit einverstanden, dass meine Daten zur Bearbeitung meiner Anfrage verwendet werden.*
           </label>
         </div>
         
         <button type="submit" class="kontakt-form__submit">Anfrage absenden</button>
+        
+        <!-- ARIA Live Region for Status Messages -->
+        <div role="status" aria-live="polite" aria-atomic="true" class="sr-only" id="form-status">
+          <!-- Status messages will be injected here -->
+        </div>
       </form>
     </div>
   </div>

@@ -20,7 +20,7 @@ module.exports = function(eleventyConfig) {
         let result = sass.compileString(inputContent, {
           loadPaths: [parsed.dir || ".", "src/scss"],
           sourceMap: false, // Set to true for development if needed
-          style: "expanded" // Use "compressed" for production
+          style: "compressed" // Minified for production
         });
         
         return result.css;
@@ -33,6 +33,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/favicon.png");
   eleventyConfig.addPassthroughCopy("src/css/fonts.css"); // Keep fonts.css as is for now
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
+  eleventyConfig.addPassthroughCopy("src/sitemap.xml");
   
   // Watch SCSS and JS for changes (triggers rebuild)
   eleventyConfig.addWatchTarget("src/scss/");
@@ -90,6 +92,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("faqs", function(collectionApi) {
     return collectionApi.getFilteredByGlob("src/content/faqs/**/*.md");
   });
+  
+  // Ignore FAQ markdown files from generating standalone pages
+  // They're meant to be included as partials, not standalone pages
+  eleventyConfig.ignores.add("src/content/faqs/*.md");
+  eleventyConfig.ignores.add("src/content/faqs/**/*.md");
   
   // Configure markdown library (for future knowledge base)
   let markdownIt = require("markdown-it");

@@ -1,22 +1,24 @@
 // Accessibility Utilities
 
-// Skip Navigation Link
+// Skip Navigation Link - WCAG 2.1 Compliant
 .skip-link {
   position: absolute;
-  top: -100px;
-  left: 0;
+  left: -9999px;
   background: var(--color-primary);
-  color: var(--color-primary-text);
+  color: #000; // Black text on yellow for 12.6:1 contrast ratio
   padding: var(--spacing-sm) var(--spacing-md);
   text-decoration: none;
   z-index: 10000;
-  border-radius: 0 0 var(--radius-md) 0;
-  font-weight: var(--font-weight-medium);
-  transition: top var(--transition-fast);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
   
   &:focus {
-    top: 0;
-    outline: 3px solid var(--color-primary-dark);
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: var(--spacing-md);
+    box-shadow: var(--shadow-lg);
+    outline: 3px solid #000;
     outline-offset: 2px;
   }
 }
@@ -91,4 +93,80 @@ select:focus-visible {
 // Ensure main content can receive focus for skip link
 main:focus {
   outline: none;
+}
+
+// ARIA Live Regions for Dynamic Content
+[role="status"],
+[role="alert"],
+[aria-live="polite"],
+[aria-live="assertive"] {
+  position: relative;
+}
+
+// Status Messages Container for forms
+.status-message {
+  margin: var(--spacing-md) 0;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  
+  &.success {
+    background: #d4edda;
+    border: 2px solid #28a745;
+    color: #155724;
+  }
+  
+  &.error {
+    background: #f8d7da;
+    border: 2px solid #dc3545;
+    color: #721c24;
+  }
+  
+  &.info {
+    background: #d1ecf1;
+    border: 2px solid #17a2b8;
+    color: #0c5460;
+  }
+}
+
+// Improved form field borders for better contrast
+.form-group {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  input[type="number"],
+  select,
+  textarea {
+    border-color: #737373 !important; // 4.54:1 contrast ratio
+    
+    &:hover:not(:focus) {
+      border-color: #595959 !important; // Darker on hover
+    }
+  }
+}
+
+// Fix placeholder contrast
+::placeholder {
+  color: #595959 !important; // 7:1 contrast with white background
+  opacity: 1 !important;
+}
+
+// Touch target size (minimum 44x44px for mobile)
+@media (pointer: coarse) {
+  button,
+  a.btn,
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  // Checkbox and radio buttons
+  input[type="checkbox"],
+  input[type="radio"] {
+    min-width: 24px;
+    min-height: 24px;
+  }
 }

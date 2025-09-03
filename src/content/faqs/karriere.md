@@ -1,5 +1,6 @@
 ---
 title: Deine Fragen – unsere Antworten
+permalink: false
 ---
 
 ## Wie flexibel sind die Arbeitszeiten?

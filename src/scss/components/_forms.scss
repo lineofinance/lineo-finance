@@ -157,6 +157,18 @@
   }
 }
 
+// Fieldset and Legend Styling for Accessibility
+.kontakt-form__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 var(--spacing-lg) 0;
+  
+  legend {
+    padding: 0;
+    margin: 0;
+  }
+}
+
 .form-group {
   @include flex-column;
 

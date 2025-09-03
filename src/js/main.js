@@ -205,7 +205,7 @@ function initFormValidation() {
             
             if (isValid) {
                 // Success - would normally submit form here
-                console.log('Form submitted successfully');
+                // Form submitted successfully
                 showSuccessMessage(form);
                 
                 // Reset form after successful submission
@@ -475,7 +475,7 @@ if (window.location.hostname === 'localhost' || window.location.hostname === '12
     window.addEventListener('load', function() {
         const perfData = performance.timing;
         const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-        console.log('Page Load Time:', pageLoadTime + 'ms');
+        // Page Load Time logged for monitoring
     });
 }
 

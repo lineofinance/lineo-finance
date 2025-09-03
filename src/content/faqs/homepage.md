@@ -1,5 +1,6 @@
 ---
 title: Häufig gestellte Fragen
+permalink: false
 ---
 
 ## Was genau macht lineo finance?

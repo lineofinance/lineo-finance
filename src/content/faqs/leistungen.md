@@ -1,5 +1,6 @@
 ---
 title: Häufig gestellte Fragen zu unseren Leistungen
+permalink: false
 ---
 
 ## Welche Transaktionen kann lineo finance automatisiert verbuchen?
