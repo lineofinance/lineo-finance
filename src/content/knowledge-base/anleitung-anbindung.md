@@ -8,6 +8,7 @@ showInFooter: true
 footerPriority: 1
 featured: true
 ---
+
 # <center>Anbindung Interactive Brokers und alle darauf basierenden Broker</center>
 
 ## 1. Erstellen der Flex-Query
@@ -24,7 +25,7 @@ Auf das Plus gehen
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/03-neues-flex-query.png)
 
-und einen Query-Namen Ihrer Wahl vergeben, beispielsweise "Buchhaltung Lineo Finance"   :
+und einen Query-Namen Ihrer Wahl vergeben, beispielsweise "Buchhaltung Lineo Finance" :
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/04-query-name.png)
 
@@ -53,7 +54,7 @@ Aber <span class="highlight">Achtung</span>: Hier gibt es drei Ausnahmen, bei de
 3. Bei der Veränderung des NAV bekommt das Feld “Realisiert & Unrealisiert” keinen Haken:
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/10-veraenderung-des-nav-abschnitt.png)
-
+<a id="zustellkonfiguration"></a>
 Nun wird die Zustellungskonfiguration folgendermaßen befüllt (Achtung: Es ist möglich, dass bei Ihnen das Multikonto-Format nicht erscheint):
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/11-zustellungskonfiguration.png)
@@ -130,7 +131,7 @@ und gehen auf “Neuen Zugang erstellen”.
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/27-neuen-zugang-erstellen.png)
 
-Bitte wählen Sie "Interactive Brokers" aus und tragen den oben erstellten Token sowie die Query-Id hier ein. Anschließend klicken Sie auf “Erstellen”. 
+Bitte wählen Sie "Interactive Brokers" aus und tragen den oben erstellten Token sowie die Query-Id hier ein. Anschließend klicken Sie auf “Erstellen”.
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/28-daten-neuer-zugang.png)
 
@@ -141,8 +142,3 @@ Schon erscheint Ihr neu angelegter Zugang in der Liste. An dieser Stelle sind Si
 Vielen Dank!
 
 Ihr Lineo-Team
-
-
-
-
-
