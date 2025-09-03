@@ -2,7 +2,6 @@
 layout: kb-article.njk
 title: Anbindung Interactive Brokers und alle darauf basierenden Broker
 menuTitle: Anbindung Interactive Brokers
-description: Beschreibung für SEO und Übersichten
 tags: knowledgeBase
 date: 2025-09-01
 showInFooter: true

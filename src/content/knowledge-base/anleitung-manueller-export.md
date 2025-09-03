@@ -2,7 +2,6 @@
 layout: kb-article.njk
 title: Manueller Datenexport Interactive Brokers sowie alle darauf basierenden Broker
 menuTitle: Manueller Datenexport Interactive Brokers
-description: Beschreibung für SEO und Übersichten
 tags: knowledgeBase
 date: 2025-09-01
 showInFooter: true
