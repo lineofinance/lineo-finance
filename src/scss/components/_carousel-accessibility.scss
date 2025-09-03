@@ -1,0 +1,57 @@
+// Carousel Accessibility Enhancements
+
+// Visual indicator that carousel pauses on hover/focus (optional)
+.swiper:hover,
+.swiper:focus-within {
+  // Subtle visual feedback that carousel is paused
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+    // Very subtle overlay to indicate pause state
+    background: rgba(0, 0, 0, 0.02);
+  }
+}
+
+// Make navigation buttons keyboard accessible
+.swiper-button-next,
+.swiper-button-prev,
+.hero-carousel-next,
+.hero-carousel-prev {
+  &:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-md);
+  }
+}
+
+// Enhance pagination bullets for better keyboard navigation
+.swiper-pagination-bullet {
+  &:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+// ARIA live region (visually hidden but available to screen readers)
+.carousel-live-region {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+// Swiper notification for screen readers
+.swiper-notification {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

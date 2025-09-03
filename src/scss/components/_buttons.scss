@@ -36,13 +36,13 @@
   // Primary Button
   &.btn-primary {
     background-color: var(--color-primary);
-    color: var(--color-secondary);
+    color: var(--color-primary-text); /* Use black for WCAG compliance */
     border-color: var(--color-primary);
     
     &:hover {
       background-color: var(--color-primary-dark);
       border-color: var(--color-primary-dark);
-      color: var(--color-secondary);
+      color: var(--color-primary-text);
     }
   }
   
@@ -101,12 +101,13 @@
   // Navigation CTA Button
   &.btn-nav-cta {
     background-color: var(--color-primary);
-    color: var(--color-secondary);
+    color: var(--color-primary-text); /* Use black for WCAG compliance */
     padding: var(--spacing-sm) var(--spacing-lg);
     font-size: 0.9rem;
     
     &:hover {
       background-color: var(--color-primary-dark);
+      color: var(--color-primary-text);
       transform: none;
     }
   }

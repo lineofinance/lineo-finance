@@ -26,9 +26,12 @@
     <link rel="stylesheet" href="/scss/main.css">
 </head>
 <body>
+    <!-- Skip Navigation Link for Screen Readers -->
+    <a href="#main" class="skip-link">Zum Hauptinhalt springen</a>
+    
     {% include "header.html" %}
 
-    <main>
+    <main id="main" tabindex="-1">
         {{ content | safe }}
     </main>
 

@@ -1,3 +1,64 @@
+// Helper function to add pause on interaction
+function addPauseOnInteraction(carouselElement, swiperInstance) {
+    // Pause when mouse enters carousel area
+    carouselElement.addEventListener('mouseenter', function() {
+        swiperInstance.autoplay.stop();
+        announceToScreenReader('Karussell pausiert');
+    });
+    
+    // Resume when mouse leaves carousel area
+    carouselElement.addEventListener('mouseleave', function() {
+        swiperInstance.autoplay.start();
+        announceToScreenReader('Karussell wird fortgesetzt');
+    });
+    
+    // Pause when any element in carousel receives focus
+    carouselElement.addEventListener('focusin', function() {
+        swiperInstance.autoplay.stop();
+    });
+    
+    // Resume when focus leaves carousel
+    carouselElement.addEventListener('focusout', function(e) {
+        // Check if focus is still within carousel
+        setTimeout(() => {
+            if (!carouselElement.contains(document.activeElement)) {
+                swiperInstance.autoplay.start();
+            }
+        }, 100);
+    });
+    
+    // Also pause on keyboard interaction with navigation buttons
+    const navButtons = carouselElement.querySelectorAll('.swiper-button-next, .swiper-button-prev, .swiper-pagination-bullet');
+    navButtons.forEach(button => {
+        button.addEventListener('focus', () => {
+            swiperInstance.autoplay.stop();
+        });
+    });
+}
+
+// Helper function to add ARIA live region for announcements
+function addAriaLiveRegion(carouselElement) {
+    if (!document.querySelector('.carousel-live-region')) {
+        const liveRegion = document.createElement('div');
+        liveRegion.className = 'carousel-live-region sr-only';
+        liveRegion.setAttribute('aria-live', 'polite');
+        liveRegion.setAttribute('aria-atomic', 'true');
+        document.body.appendChild(liveRegion);
+    }
+}
+
+// Helper function to announce to screen readers
+function announceToScreenReader(message) {
+    const liveRegion = document.querySelector('.carousel-live-region');
+    if (liveRegion) {
+        liveRegion.textContent = message;
+        // Clear after announcement
+        setTimeout(() => {
+            liveRegion.textContent = '';
+        }, 1000);
+    }
+}
+
 // Initialize Swiper for carousels
 document.addEventListener('DOMContentLoaded', function() {
     // Check if Swiper is available
@@ -5,11 +66,14 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Swiper library not loaded');
         return;
     }
+    
+    // Add global ARIA live region for all carousels
+    addAriaLiveRegion();
 
     // Initialize hero carousel
     const heroCarousel = document.querySelector('.hero-carousel.swiper');
     if (heroCarousel) {
-        new Swiper(heroCarousel, {
+        const heroSwiper = new Swiper(heroCarousel, {
             // Core parameters
             slidesPerView: 1,
             loop: true,
@@ -67,19 +131,23 @@ document.addEventListener('DOMContentLoaded', function() {
             // Accessibility
             a11y: {
                 enabled: true,
-                prevSlideMessage: 'Previous slide',
-                nextSlideMessage: 'Next slide',
-                firstSlideMessage: 'This is the first slide',
-                lastSlideMessage: 'This is the last slide',
-                paginationBulletMessage: 'Go to slide {{index}}',
+                prevSlideMessage: 'Vorheriger Slide',
+                nextSlideMessage: 'Nächster Slide',
+                firstSlideMessage: 'Dies ist der erste Slide',
+                lastSlideMessage: 'Dies ist der letzte Slide',
+                paginationBulletMessage: 'Gehe zu Slide {{index}}',
+                notificationClass: 'swiper-notification',
             },
         });
+        
+        // Add pause on hover/focus for hero carousel
+        addPauseOnInteraction(heroCarousel, heroSwiper);
     }
 
     // Initialize broker carousel
     const brokerCarousel = document.querySelector('.broker-carousel.swiper');
     if (brokerCarousel) {
-        new Swiper(brokerCarousel, {
+        const brokerSwiper = new Swiper(brokerCarousel, {
             // Core parameters
             slidesPerView: 1,
             spaceBetween: 30,
@@ -139,19 +207,23 @@ document.addEventListener('DOMContentLoaded', function() {
             // Accessibility
             a11y: {
                 enabled: true,
-                prevSlideMessage: 'Previous slide',
-                nextSlideMessage: 'Next slide',
-                firstSlideMessage: 'This is the first slide',
-                lastSlideMessage: 'This is the last slide',
-                paginationBulletMessage: 'Go to slide {{index}}',
+                prevSlideMessage: 'Vorheriger Broker',
+                nextSlideMessage: 'Nächster Broker',
+                firstSlideMessage: 'Dies ist der erste Broker',
+                lastSlideMessage: 'Dies ist der letzte Broker',
+                paginationBulletMessage: 'Gehe zu Broker {{index}}',
+                notificationClass: 'swiper-notification',
             },
         });
+        
+        // Add pause on hover/focus for broker carousel
+        addPauseOnInteraction(brokerCarousel, brokerSwiper);
     }
 
     // Initialize smart system carousel
     const smartSystemCarousel = document.querySelector('.smart-system-carousel.swiper');
     if (smartSystemCarousel) {
-        new Swiper(smartSystemCarousel, {
+        const smartSystemSwiper = new Swiper(smartSystemCarousel, {
             // Core parameters
             slidesPerView: 1,
             spaceBetween: 30,
@@ -225,6 +297,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 paginationBulletMessage: 'Go to slide {{index}}',
             },
         });
+        
+        // Add pause on hover/focus for smart system carousel
+        addPauseOnInteraction(smartSystemCarousel, smartSystemSwiper);
     }
 
     // Initialize leistungen target audience carousel

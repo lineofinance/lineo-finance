@@ -9,7 +9,35 @@
   document.addEventListener('DOMContentLoaded', function() {
     initContactForm();
     initCareerForm();
+    initFormAccessibility();
   });
+  
+  // Initialize form accessibility features
+  function initFormAccessibility() {
+    // Add ARIA live region for form announcements
+    const liveRegion = document.createElement('div');
+    liveRegion.className = 'form-live-region sr-only';
+    liveRegion.setAttribute('aria-live', 'polite');
+    liveRegion.setAttribute('aria-atomic', 'true');
+    liveRegion.setAttribute('role', 'status');
+    document.body.appendChild(liveRegion);
+    
+    // Add error summary container to all forms
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+      const errorSummary = document.createElement('div');
+      errorSummary.className = 'error-summary';
+      errorSummary.setAttribute('role', 'alert');
+      errorSummary.setAttribute('aria-live', 'assertive');
+      errorSummary.setAttribute('tabindex', '-1');
+      errorSummary.hidden = true;
+      errorSummary.innerHTML = `
+        <h3 class="error-summary-title">Es gibt Fehler im Formular:</h3>
+        <ul class="error-summary-list" id="${form.id}-errors"></ul>
+      `;
+      form.insertBefore(errorSummary, form.firstChild);
+    });
+  }
 
   // Contact Form Handler
   function initContactForm() {
@@ -46,14 +74,36 @@
           message: messageField ? messageField.value.trim() : ''
         };
         
-        // Validate required fields
-        if (!firstname || !lastname || !formData.email || !formData.message) {
-          throw new Error('Bitte füllen Sie alle Pflichtfelder aus.');
+        // Clear previous errors
+        clearFormErrors(form);
+        
+        // Validate required fields with specific error messages
+        const errors = [];
+        
+        if (!firstname) {
+          errors.push({ field: 'firstname', message: 'Vorname ist erforderlich' });
+        }
+        if (!lastname) {
+          errors.push({ field: 'lastname', message: 'Nachname ist erforderlich' });
+        }
+        if (!formData.email) {
+          errors.push({ field: 'email', message: 'E-Mail-Adresse ist erforderlich' });
+        } else if (!isValidEmail(formData.email)) {
+          errors.push({ field: 'email', message: 'Bitte geben Sie eine gültige E-Mail-Adresse ein' });
+        }
+        if (!formData.message) {
+          errors.push({ field: 'message', message: 'Nachricht ist erforderlich' });
         }
         
-        // Validate email format
-        if (!isValidEmail(formData.email)) {
-          throw new Error('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
+        // Check consent checkbox
+        const consentField = form.querySelector('#consent');
+        if (consentField && !consentField.checked) {
+          errors.push({ field: 'consent', message: 'Bitte stimmen Sie der Datenschutzerklärung zu' });
+        }
+        
+        if (errors.length > 0) {
+          showFormErrors(form, errors);
+          throw new Error('Bitte korrigieren Sie die markierten Fehler.');
         }
         
         // Send to API
@@ -152,14 +202,30 @@
           message: messageField ? messageField.value.trim() : ''
         };
         
-        // Validate required fields
-        if (!formData.position || !formData.name || !formData.email || !formData.message) {
-          throw new Error('Bitte füllen Sie alle Pflichtfelder aus.');
+        // Clear previous errors
+        clearFormErrors(form);
+        
+        // Validate required fields with specific error messages
+        const errors = [];
+        
+        if (!formData.position) {
+          errors.push({ field: 'position', message: 'Position ist erforderlich' });
+        }
+        if (!formData.name) {
+          errors.push({ field: 'name', message: 'Name ist erforderlich' });
+        }
+        if (!formData.email) {
+          errors.push({ field: 'email', message: 'E-Mail-Adresse ist erforderlich' });
+        } else if (!isValidEmail(formData.email)) {
+          errors.push({ field: 'email', message: 'Bitte geben Sie eine gültige E-Mail-Adresse ein' });
+        }
+        if (!formData.message) {
+          errors.push({ field: 'message', message: 'Nachricht ist erforderlich' });
         }
         
-        // Validate email format
-        if (!isValidEmail(formData.email)) {
-          throw new Error('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
+        if (errors.length > 0) {
+          showFormErrors(form, errors);
+          throw new Error('Bitte korrigieren Sie die markierten Fehler.');
         }
         
         // Handle file upload if present
@@ -203,6 +269,98 @@
   // Helper Functions
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+  
+  // Clear all form errors
+  function clearFormErrors(form) {
+    // Remove error classes and aria-invalid attributes
+    const errorFields = form.querySelectorAll('.error');
+    errorFields.forEach(field => {
+      field.classList.remove('error');
+      field.removeAttribute('aria-invalid');
+      field.removeAttribute('aria-describedby');
+    });
+    
+    // Clear error messages
+    const errorMessages = form.querySelectorAll('.field-error');
+    errorMessages.forEach(msg => msg.remove());
+    
+    // Hide error summary
+    const errorSummary = form.querySelector('.error-summary');
+    if (errorSummary) {
+      errorSummary.hidden = true;
+      const errorList = errorSummary.querySelector('.error-summary-list');
+      if (errorList) {
+        errorList.innerHTML = '';
+      }
+    }
+  }
+  
+  // Show form errors with ARIA announcements
+  function showFormErrors(form, errors) {
+    const errorSummary = form.querySelector('.error-summary');
+    const errorList = errorSummary ? errorSummary.querySelector('.error-summary-list') : null;
+    
+    // Build error summary
+    if (errorSummary && errorList) {
+      errorList.innerHTML = '';
+      errors.forEach((error, index) => {
+        const field = form.querySelector(`#${error.field}`);
+        if (field) {
+          // Mark field as invalid
+          field.classList.add('error');
+          field.setAttribute('aria-invalid', 'true');
+          
+          // Create unique error ID
+          const errorId = `${error.field}-error-${index}`;
+          
+          // Add error message below field
+          const errorMsg = document.createElement('span');
+          errorMsg.className = 'field-error';
+          errorMsg.id = errorId;
+          errorMsg.textContent = error.message;
+          errorMsg.setAttribute('role', 'alert');
+          
+          // Insert error message after field or its label
+          const fieldContainer = field.closest('.kontakt-form__group, .career-form__field') || field.parentElement;
+          const existingError = fieldContainer.querySelector('.field-error');
+          if (existingError) {
+            existingError.remove();
+          }
+          fieldContainer.appendChild(errorMsg);
+          
+          // Associate error with field
+          field.setAttribute('aria-describedby', errorId);
+          
+          // Add to error summary
+          const li = document.createElement('li');
+          const link = document.createElement('a');
+          link.href = `#${error.field}`;
+          link.textContent = error.message;
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            field.focus();
+            field.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          });
+          li.appendChild(link);
+          errorList.appendChild(li);
+        }
+      });
+      
+      // Show error summary and focus it
+      errorSummary.hidden = false;
+      errorSummary.focus();
+      errorSummary.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    
+    // Announce to screen readers
+    const liveRegion = document.querySelector('.form-live-region');
+    if (liveRegion) {
+      liveRegion.textContent = `Es gibt ${errors.length} Fehler im Formular. Bitte korrigieren Sie die markierten Felder.`;
+      setTimeout(() => {
+        liveRegion.textContent = '';
+      }, 100);
+    }
   }
 
   function fileToBase64(file) {

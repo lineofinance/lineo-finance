@@ -16,6 +16,7 @@
 @use 'components/footer';
 @use 'components/forms';
 @use 'components/carousel-shared';  // Shared carousel styles (must be before specific carousels)
+@use 'components/carousel-accessibility';  // Carousel accessibility enhancements
 @use 'components/broker-carousel';
 @use 'components/smart-system';
 @use 'components/app-showcase';
@@ -50,3 +51,4 @@
 
 // Utilities (should be last for specificity)
 @use 'utilities/utilities';
+@use 'utilities/accessibility';

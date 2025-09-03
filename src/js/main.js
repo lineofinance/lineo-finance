@@ -53,7 +53,13 @@ function initMobileMenu() {
     const menu = document.querySelector('.nav-menu');
     
     if (toggle && menu) {
-        toggle.addEventListener('click', function() {
+        // Set initial ARIA attributes
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-controls', 'nav-menu');
+        menu.setAttribute('id', 'nav-menu');
+        
+        // Function to toggle menu
+        function toggleMenu() {
             menu.classList.toggle('active');
             toggle.classList.toggle('active');
             document.body.classList.toggle('menu-open');
@@ -61,6 +67,29 @@ function initMobileMenu() {
             // Update aria-expanded attribute
             const isExpanded = toggle.classList.contains('active');
             toggle.setAttribute('aria-expanded', isExpanded);
+            
+            // Focus management for keyboard users
+            if (isExpanded) {
+                // Focus first menu item when opened
+                const firstMenuItem = menu.querySelector('a');
+                if (firstMenuItem) {
+                    firstMenuItem.focus();
+                }
+            } else {
+                // Return focus to toggle button when closed
+                toggle.focus();
+            }
+        }
+        
+        // Handle click events
+        toggle.addEventListener('click', toggleMenu);
+        
+        // Handle keyboard events (Enter and Space)
+        toggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
         });
         
         // Close menu when clicking outside
@@ -80,6 +109,32 @@ function initMobileMenu() {
                 toggle.classList.remove('active');
                 document.body.classList.remove('menu-open');
                 toggle.setAttribute('aria-expanded', 'false');
+                toggle.focus(); // Return focus to toggle button
+            }
+        });
+        
+        // Trap focus within menu when open (for keyboard navigation)
+        menu.addEventListener('keydown', function(e) {
+            if (!menu.classList.contains('active')) return;
+            
+            const focusableElements = menu.querySelectorAll('a, button');
+            const firstFocusable = focusableElements[0];
+            const lastFocusable = focusableElements[focusableElements.length - 1];
+            
+            if (e.key === 'Tab') {
+                if (e.shiftKey) {
+                    // Shift + Tab
+                    if (document.activeElement === firstFocusable) {
+                        e.preventDefault();
+                        lastFocusable.focus();
+                    }
+                } else {
+                    // Tab
+                    if (document.activeElement === lastFocusable) {
+                        e.preventDefault();
+                        firstFocusable.focus();
+                    }
+                }
             }
         });
     }

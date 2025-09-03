@@ -123,6 +123,19 @@
   text-align: center;
 }
 
+.kontakt-form__required-note {
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  color: rgba(26, 26, 26, 0.7);
+  margin-bottom: 16px;
+  text-align: left;
+  
+  span {
+    color: #dc3545;
+    font-weight: 600;
+  }
+}
+
 .kontakt-form {
   display: flex;
   flex-direction: column;
