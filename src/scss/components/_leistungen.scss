@@ -176,35 +176,12 @@
     
     .service-link {
       display: inline-block;
-      color: #333;
-      font-size: 16px;
-      font-weight: 600;
-      text-decoration: underline;
-      text-underline-offset: 4px; // Adds space between text and underline
-      font-family: 'Barlow', sans-serif;
-      transition: all 0.3s ease;
+
       margin-top: auto; // Pushes to bottom
       align-self: center; // Centers the link
-      
-      &:hover {
-        color: #000;
-        transform: translateX(5px);
-        text-underline-offset: 6px; // Slightly more on hover
-      }
+    
     }
 
-    // Animation delays for staggered effect
-    &:nth-child(1) {
-      animation-delay: 0.1s;
-    }
-
-    &:nth-child(2) {
-      animation-delay: 0.2s;
-    }
-
-    &:nth-child(3) {
-      animation-delay: 0.3s;
-    }
   }
 }
 

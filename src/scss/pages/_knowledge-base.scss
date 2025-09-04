@@ -355,18 +355,9 @@
     color: var(--color-text-light);
     font-style: italic;
   }
-  
-  a {
-    color: var(--color-text);
-    text-decoration: underline;
-    text-decoration-color: rgba(0, 0, 0, 0.3);
-    text-underline-offset: 2px;
-    transition: text-decoration-color 0.3s ease, font-weight 0.3s ease;
-    
-    &:hover {
-      text-decoration-color: rgba(0, 0, 0, 1);
-      font-weight: 600;
-    }
+
+  a:hover::after{
+    bottom: 2px;
   }
   
   // Image styles
