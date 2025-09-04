@@ -28,7 +28,7 @@ const path = require('path');
     // Find all the partner cards that come after this heading
     // They appear to be h3 elements with company names
     const partnerHeadings = [
-      'Dipl.-Kfm. (FH) Macus Kemper',
+      'Dipl.-Kfm. (FH) Marcus Kemper',
       'Zellmann & Schaz PartG mbB',
       'WSSK Stuhlmann Feldmann Breiden Westermilies',
       '4S Stenzel, Schmidt und Kollegen',
