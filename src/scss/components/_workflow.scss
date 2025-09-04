@@ -1,18 +1,24 @@
 // Workflow Section Styles
 .workflow {
-  padding: 60px 0; // Reduced from 120px
+  padding: 0 0 60px 0; // Remove top padding, keep bottom
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  overflow: hidden; // Prevent horizontal overflow
+  overflow: visible; // Allow overflow for the SVG to show above
   position: relative;
-  z-index: 10; // Higher z-index to be above previous section
+  z-index: 100; // Much higher z-index to ensure it's above previous sections
+
+  @media (max-width: 768px) {
+    padding: 0 0 40px 0; // Remove top padding on mobile too
+  }
 
   // Flex wrapper for SVG and content
   .workflow-flex-wrapper {
     display: flex;
     align-items: flex-start;
+    width: 100%;
     max-width: 100%;
     position: relative;
     overflow: visible; // Allow SVG to extend beyond
+    box-sizing: border-box;
   }
 
   // Process decoration SVG - flex item
@@ -25,8 +31,9 @@
     margin-top: -150px; // Push partially outside viewport
     margin-right: 30px; // Space between SVG and content
     opacity: 0.7;
-    z-index: 100;
+    z-index: 1000; // Higher z-index to appear above previous section
     pointer-events: none;
+    position: relative; // Ensure z-index works
 
     @media (max-width: 1300px) {
       display: none; // Hide below 1300px to give more space for content
@@ -35,10 +42,13 @@
 
   .container {
     flex-grow: 1; // Take remaining space
-    flex-shrink: 0; // Don't shrink content
+    flex-shrink: 1; // Allow shrinking to prevent overflow
+    width: 100%;
     max-width: 1200px;
     padding: 0 20px;
     margin: 0 auto; // Center the container
+    box-sizing: border-box;
+    min-width: 0; // Allow flex item to shrink below content size
 
     @media (max-width: 1300px) {
       max-width: 100%; // Use full width when SVG is hidden
@@ -46,6 +56,10 @@
 
     @media (max-width: 768px) {
       padding: 0 20px; // Normal padding on mobile
+    }
+    
+    @media (max-width: 480px) {
+      padding: 0 15px;
     }
   }
 
@@ -56,21 +70,31 @@
     margin: 0 auto 80px;
     padding: 0 20px; // Add horizontal padding
     box-sizing: border-box;
+    word-wrap: break-word; // Allow text to break
+    overflow-wrap: break-word; // Modern property for text breaking
+
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
 
     h2 {
-      font-size: clamp(28px, 4vw, 42px);
+      font-size: clamp(24px, 4vw, 42px); // Smaller minimum size
       text-align: left;
-
       color: #2c3e50;
       margin-bottom: 24px;
       line-height: 1.2;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto; // Allow hyphenation for long words
     }
 
     p {
-      font-size: 18px;
+      font-size: clamp(14px, 2.5vw, 18px); // Responsive font size
       color: #666;
       line-height: 1.6;
       margin-bottom: 0;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
   }
 
@@ -91,7 +115,14 @@
     }
     
     @media (max-width: 768px) {
-      gap: 10px;
+      flex-direction: column; // Stack vertically on mobile
+      align-items: center;
+      gap: 30px; // More space between items in column layout
+    }
+    
+    @media (max-width: 480px) {
+      padding: 0 10px;
+      gap: 25px;
     }
   }
 
@@ -111,14 +142,14 @@
     }
     
     @media (max-width: 768px) {
-      width: calc(50% - 10px); // Two items per row on mobile
-      flex: 0 1 calc(50% - 10px);
-      min-width: 150px;
+      width: auto; // Let it size naturally in column layout
+      flex: none;
+      max-width: 300px; // Limit maximum width
     }
     
     @media (max-width: 480px) {
       width: 100%; // Full width on very small screens
-      flex: 0 1 100%;
+      max-width: none;
     }
 
     // Animation on scroll
