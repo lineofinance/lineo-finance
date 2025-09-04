@@ -223,6 +223,11 @@
       display: none;
     }
   }
+
+  // Hide CTA button on mobile/tablet when menu becomes mobile menu
+  @include tablet-down {
+    display: none;
+  }
 }
 
 // Mobile Menu Toggle
