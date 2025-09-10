@@ -1,7 +1,131 @@
 const sass = require("sass");
 const path = require("path");
+const fs = require("fs");
+const { execSync } = require("child_process");
 
 module.exports = function(eleventyConfig) {
+  // Function to generate WebP versions of PNG/JPG images
+  function generateWebPImages() {
+    console.log("🖼️  Generating WebP images...");
+    
+    try {
+      // Check if cwebp is available
+      execSync('which cwebp', { stdio: 'ignore' });
+    } catch (error) {
+      console.warn("⚠️  Warning: cwebp not found. WebP generation skipped. Install webp with: brew install webp");
+      return;
+    }
+    
+    const srcAssetDir = './src/assets/images';
+    const distAssetDir = './dist/assets/images';
+    
+    if (!fs.existsSync(srcAssetDir)) {
+      console.log("📁 Source assets directory not found, skipping WebP generation");
+      return;
+    }
+    
+    // Ensure dist assets directory exists
+    if (!fs.existsSync(distAssetDir)) {
+      fs.mkdirSync(distAssetDir, { recursive: true });
+    }
+    
+    // Find all PNG and JPG files recursively in source
+    const findImages = (dir) => {
+      let images = [];
+      const items = fs.readdirSync(dir, { withFileTypes: true });
+      
+      for (const item of items) {
+        const fullPath = path.join(dir, item.name);
+        if (item.isDirectory()) {
+          images = images.concat(findImages(fullPath));
+        } else if (/\.(png|jpg|jpeg)$/i.test(item.name)) {
+          images.push(fullPath);
+        }
+      }
+      return images;
+    };
+    
+    const imageFiles = findImages(srcAssetDir);
+    let generatedCount = 0;
+    
+    for (const imagePath of imageFiles) {
+      // Generate WebP path in dist directory, maintaining folder structure
+      const relativePath = path.relative(srcAssetDir, imagePath);
+      const distWebpPath = path.join(distAssetDir, relativePath).replace(/\.(png|jpg|jpeg)$/i, '.webp');
+      
+      // Ensure the directory exists in dist
+      const distWebpDir = path.dirname(distWebpPath);
+      if (!fs.existsSync(distWebpDir)) {
+        fs.mkdirSync(distWebpDir, { recursive: true });
+      }
+      
+      // Only generate if WebP doesn't exist or PNG/JPG is newer
+      let shouldGenerate = !fs.existsSync(distWebpPath);
+      if (!shouldGenerate) {
+        const imageStats = fs.statSync(imagePath);
+        const webpStats = fs.statSync(distWebpPath);
+        shouldGenerate = imageStats.mtime > webpStats.mtime;
+      }
+      
+      if (shouldGenerate) {
+        try {
+          execSync(`cwebp -q 85 "${imagePath}" -o "${distWebpPath}"`, { stdio: 'pipe' });
+          generatedCount++;
+          console.log(`✅ Generated: ${path.relative('./dist', distWebpPath)}`);
+        } catch (error) {
+          console.error(`❌ Failed to generate WebP for ${imagePath}:`, error.message);
+        }
+      }
+    }
+    
+    if (generatedCount > 0) {
+      console.log(`🎉 Generated ${generatedCount} WebP images`);
+    } else {
+      console.log("✅ All WebP images are up to date");
+    }
+  }
+  
+  // Generate WebP images during build
+  eleventyConfig.on('beforeBuild', generateWebPImages);
+  
+  // Transform to replace PNG/JPG references with WebP in HTML output
+  eleventyConfig.addTransform("webpTransform", function(content, outputPath) {
+    if (outputPath && outputPath.endsWith(".html")) {
+      // Replace image sources with WebP versions using picture elements for better browser support
+      // Only transform img tags that are NOT already inside picture elements
+      return content.replace(
+        /<img([^>]*)\ssrc="([^"]*\.(png|jpg|jpeg))"([^>]*)>/gi,
+        (match, beforeSrc, imgSrc, extension, afterSrc, offset, string) => {
+          // Check if this img tag is already inside a picture element
+          const beforeImg = string.substring(0, offset);
+          const openPictureMatch = beforeImg.lastIndexOf('<picture');
+          const closePictureMatch = beforeImg.lastIndexOf('</picture>');
+          
+          // If there's an open picture tag after the last closed picture tag, skip transformation
+          if (openPictureMatch > closePictureMatch) {
+            return match; // Return unchanged
+          }
+          
+          const webpSrc = imgSrc.replace(/\.(png|jpg|jpeg)$/i, '.webp');
+          
+          // Extract alt attribute for accessibility
+          const altMatch = match.match(/alt="([^"]*)"/i);
+          const altText = altMatch ? altMatch[1] : '';
+          
+          // Extract other attributes (class, width, height, etc.)
+          const attributes = (beforeSrc + afterSrc).trim();
+          
+          return `<picture>
+      <source srcset="${webpSrc}" type="image/webp">
+      <source srcset="${imgSrc}" type="image/${extension.toLowerCase() === 'jpg' ? 'jpeg' : extension.toLowerCase()}">
+      <img src="${imgSrc}"${attributes ? ' ' + attributes : ''}${altText && !attributes.includes('alt=') ? ' alt="' + altText + '"' : ''}>
+    </picture>`;
+        }
+      );
+    }
+    return content;
+  });
+
   // Compile SCSS to CSS
   eleventyConfig.addTemplateFormats("scss");
   
