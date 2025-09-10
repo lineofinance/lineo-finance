@@ -10,7 +10,7 @@ featured: true
 ---
 # <center>Manueller Datenexport Interactive Brokers sowie alle darauf basierenden Broker</center>
 
-**Den manuellen Datenexport können Sie nur durchführen, wenn Sie bereits eine Flex-Query konfiguriert haben. Falls nicht, erstellen Sie diese bitte gemäß [dieser Anleitung](https://funky-grape-e16.notion.site/Manueller-Datenexport-Interactive-Brokers-12cfc7202e3a805d9b29c373475874ec).**
+**Den manuellen Datenexport können Sie nur durchführen, wenn Sie bereits eine Flex-Query konfiguriert haben. Falls nicht, erstellen Sie diese bitte gemäß [dieser Anleitung](https://www.lineo.finance/content/knowledge-base/anleitung-anbindung/).**
 
 ## 1. Erstellen des manuellen Exports
 
@@ -56,7 +56,6 @@ Im nächsten Fenster geben Sie einen benutzerdefinierten Zeitraum ein. In den Fe
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/09-zeitraum-format.png)
 
-Der Bericht sollte nun in Ihrem Download-Bereich abgelegt sein.
 Der Bericht sollte nun in Ihrem Download-Bereich abgelegt sein.
 
 ## 2. Hochladen des manuellen Exports im Lineo Finance Kundenkonto
