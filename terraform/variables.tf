@@ -58,6 +58,12 @@ variable "max_pdf_size_mb" {
   default     = 10
 }
 
+variable "github_repository" {
+  description = "GitHub repository in format 'owner/repo' for OIDC authentication"
+  type        = string
+  # Example: "your-username/lineo-finance"
+}
+
 locals {
   common_tags = {
     Project     = var.project_name

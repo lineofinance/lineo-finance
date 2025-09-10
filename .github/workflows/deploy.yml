@@ -1,0 +1,61 @@
+name: Deploy to AWS
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Triggers on semantic version tags like v1.0.0, v1.2.3, etc.
+
+permissions:
+  contents: read
+  id-token: write  # Required for AWS OIDC authentication
+
+jobs:
+  deploy:
+    name: Deploy to AWS
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build site
+        run: npm run build
+        
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          role-session-name: GitHubActions-Deploy
+          aws-region: ${{ secrets.AWS_REGION }}
+          
+      - name: Deploy to S3
+        run: |
+          aws s3 sync ./dist/ s3://${{ secrets.S3_BUCKET_NAME }}/ \
+            --delete \
+            --exclude ".git/*" \
+            --exclude ".DS_Store" \
+            --exclude "node_modules/*"
+            
+      - name: Invalidate CloudFront cache
+        run: |
+          INVALIDATION_ID=$(aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*" \
+            --query 'Invalidation.Id' \
+            --output text)
+          echo "CloudFront invalidation ID: $INVALIDATION_ID"
+          
+      - name: Deployment complete
+        run: |
+          echo "✅ Deployment complete!"
+          echo "🌐 Site deployed at: ${{ secrets.WEBSITE_URL }}"
+          echo "📝 Tag: ${{ github.ref_name }}"

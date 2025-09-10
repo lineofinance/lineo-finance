@@ -1,238 +1,131 @@
 # Deployment Guide
 
-This guide explains how to deploy the Lineo Finance website to AWS using Terraform.
+This project uses automated deployment via GitHub Actions triggered by semantic version tags.
 
-## Prerequisites
+## Overview
 
-- AWS CLI installed and configured
-- Terraform >= 1.0 installed
-- Node.js and npm installed
-- AWS credentials with appropriate permissions
+- **Trigger**: Git tags matching `v*.*.*` pattern (e.g., `v1.0.0`, `v1.2.3`)
+- **Infrastructure**: AWS S3 + CloudFront managed by Terraform
+- **Authentication**: AWS OIDC (no long-lived credentials)
+- **Build**: Node.js with WebP optimization
 
-## Infrastructure Setup (First Time Only)
+## Initial Setup
 
-### 1. Initialize Terraform
-
-```bash
-cd terraform
-terraform init
-```
-
-### 2. Configure Environment
-
-For **test environment** (test.lineo.finance):
-```bash
-# Default configuration uses test subdomain
-terraform plan
-```
-
-For **production environment** (www.lineo.finance):
-```bash
-# Create terraform.tfvars with:
-echo 'website_subdomain = "www"' > terraform.tfvars
-echo 'environment = "prod"' >> terraform.tfvars
-terraform plan
-```
-
-### 3. Create Infrastructure
+### 1. Deploy Infrastructure
 
 ```bash
-terraform apply
+# Plan the infrastructure changes
+./scripts/terraform-deploy.sh plan
+
+# Apply the infrastructure (creates S3 bucket, CloudFront, etc.)
+./scripts/terraform-deploy.sh apply
 ```
 
-This creates:
-- S3 bucket for website files (private)
-- CloudFront distribution with SSL
-- Route53 DNS record
-- API Gateway and Lambda functions (placeholders)
-- SES email configuration
-
-### 4. Verify Email Addresses
-
-After infrastructure creation:
-1. Check `support@lineo.finance` inbox for AWS verification email
-2. Click the verification link
-3. Verify status: `aws ses list-verified-email-addresses --region eu-central-1`
-
-## Website Deployment
-
-### Method 1: Using Deployment Script (Recommended)
+### 2. Configure GitHub Secrets
 
 ```bash
-# Build and deploy
-./deploy-terraform.sh
+# Extract terraform outputs and set GitHub secrets
+./scripts/setup-github-secrets.sh
 
-# Skip build if already built
-./deploy-terraform.sh --skip-build
-
-# Skip CloudFront invalidation
-./deploy-terraform.sh --no-invalidate
+# Or specify repo explicitly if auto-detection fails
+./scripts/setup-github-secrets.sh your-username/repo-name
 ```
 
-The script automatically:
-1. Gets deployment targets from Terraform outputs
-2. Builds the website (11ty)
-3. Syncs files to S3 with proper cache headers
-4. Invalidates CloudFront cache
+This script sets the following GitHub secrets:
+- `S3_BUCKET_NAME` - S3 bucket for website hosting
+- `CLOUDFRONT_DISTRIBUTION_ID` - CloudFront distribution ID
+- `WEBSITE_URL` - Final website URL
+- `AWS_REGION` - AWS region (eu-central-1)
+- `API_GATEWAY_URL` - API Gateway for forms (if configured)
 
-### Method 2: Manual Deployment
+### 3. Setup AWS OIDC Authentication
 
+Create an IAM role for GitHub Actions with the following trust policy:
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Federated": "arn:aws:iam::YOUR-ACCOUNT-ID:oidc-provider/token.actions.githubusercontent.com"
+      },
+      "Action": "sts:AssumeRoleWithWebIdentity",
+      "Condition": {
+        "StringEquals": {
+          "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
+        },
+        "StringLike": {
+          "token.actions.githubusercontent.com:sub": "repo:YOUR-USERNAME/YOUR-REPO:*"
+        }
+      }
+    }
+  ]
+}
+```
+
+Attach the following policies:
+- S3 access to your bucket
+- CloudFront invalidation permissions
+
+Set the role ARN as a GitHub secret:
 ```bash
-# Build the website
-npm run build
-
-# Get deployment targets
-cd terraform
-BUCKET=$(terraform output -raw s3_bucket_name)
-DISTRIBUTION=$(terraform output -raw cloudfront_distribution_id)
-cd ..
-
-# Sync to S3
-aws s3 sync dist/ s3://$BUCKET/ --delete
-
-# Invalidate CloudFront
-aws cloudfront create-invalidation \
-  --distribution-id $DISTRIBUTION \
-  --paths "/*"
+gh secret set AWS_ROLE_ARN --body 'arn:aws:iam::YOUR-ACCOUNT-ID:role/YOUR-ROLE-NAME'
 ```
 
-### Method 3: GitHub Actions (CI/CD)
+## Deployment Process
 
-1. **Setup GitHub Secrets:**
-   - `AWS_ACCESS_KEY_ID`
-   - `AWS_SECRET_ACCESS_KEY`
+### Automatic Deployment (Recommended)
 
-2. **Push to main branch** or trigger manually:
-   - Automatic deployment on push to main/master
-   - Manual trigger via GitHub Actions UI
+1. **Make changes** to your code
+2. **Commit and push** to main branch
+3. **Create a semantic version tag**:
+   ```bash
+   git tag v1.0.0
+   git push origin v1.0.0
+   ```
+4. **GitHub Actions automatically**:
+   - Installs dependencies
+   - Builds the site (including WebP generation)
+   - Deploys to S3
+   - Invalidates CloudFront cache
 
-## Deployment Information
+### Manual Deployment (Legacy)
 
-### Getting Infrastructure Details
-
+For local deployment, you can still use:
 ```bash
-cd terraform
-
-# Get all outputs
-terraform output
-
-# Get specific values
-terraform output -raw website_url
-terraform output -raw s3_bucket_name
-terraform output -raw cloudfront_distribution_id
+./deploy.sh
 ```
 
-### Important Files
+Note: This requires AWS CLI configured with appropriate credentials.
 
-| File | Purpose |
-|------|---------|
-| `deploy-terraform.sh` | Main deployment script |
-| `terraform/` | Infrastructure as Code |
-| `.github/workflows/deploy.yml` | CI/CD pipeline |
-| `dist/` | Built website files |
+## Semantic Versioning
 
-## Switching Between Environments
+Follow semantic versioning for tags:
+- `v1.0.0` - Major release (breaking changes)
+- `v1.1.0` - Minor release (new features)
+- `v1.0.1` - Patch release (bug fixes)
 
-### Test → Production
+## Build Process
 
-1. Update `terraform/terraform.tfvars`:
-```hcl
-website_subdomain = "www"
-environment = "prod"
-```
+The deployment includes automatic optimizations:
 
-2. Apply changes:
-```bash
-cd terraform
-terraform apply
-```
+1. **WebP Generation**: All PNG/JPG images are converted to WebP
+2. **SCSS Compilation**: Sass files compiled to compressed CSS
+3. **HTML Transform**: Images wrapped in `<picture>` elements for browser compatibility
+4. **Asset Copying**: All assets copied to `dist/` directory
 
-3. Deploy website:
-```bash
-cd ..
-./deploy-terraform.sh
-```
+## Security
 
-### Production → Test
+- No AWS credentials stored in repository
+- OIDC authentication with least privilege
+- Terraform state should use remote backend for production
+- GitHub secrets are encrypted at rest
 
-1. Update `terraform/terraform.tfvars`:
-```hcl
-website_subdomain = "test"
-environment = "test"
-```
+## Support
 
-2. Apply and deploy (same as above)
-
-## Cache Management
-
-### CloudFront Cache Strategy
-
-| File Type | Cache Duration | Headers |
-|-----------|---------------|---------|
-| HTML | No cache | `no-cache, no-store, must-revalidate` |
-| CSS/JS | 1 day | `public, max-age=86400` |
-| Images | 30 days | `public, max-age=2592000` |
-| Fonts | 30 days | `public, max-age=2592000` |
-| Other | 1 hour | `public, max-age=3600` |
-
-### Force Cache Refresh
-
-```bash
-# Invalidate all files
-aws cloudfront create-invalidation \
-  --distribution-id $(cd terraform && terraform output -raw cloudfront_distribution_id) \
-  --paths "/*"
-
-# Invalidate specific paths
-aws cloudfront create-invalidation \
-  --distribution-id $(cd terraform && terraform output -raw cloudfront_distribution_id) \
-  --paths "/index.html" "/css/*"
-```
-
-## Monitoring
-
-### View CloudFront Metrics
-```bash
-# Get distribution status
-aws cloudfront get-distribution \
-  --id $(cd terraform && terraform output -raw cloudfront_distribution_id) \
-  --query 'Distribution.Status'
-```
-
-### Check S3 Sync Status
-```bash
-# List recent uploads
-aws s3api list-objects-v2 \
-  --bucket $(cd terraform && terraform output -raw s3_bucket_name) \
-  --query 'sort_by(Contents, &LastModified)[-5:].Key'
-```
-
-## Troubleshooting
-
-### Issue: 403 Forbidden
-- Check CloudFront distribution status
-- Verify S3 bucket policy allows CloudFront OAC
-- Wait for distribution to fully deploy (15-20 minutes)
-
-### Issue: Old content showing
-- CloudFront cache not invalidated
-- Run: `./deploy-terraform.sh` (includes invalidation)
-- Check browser cache (try incognito mode)
-
-### Issue: Terraform state issues
-- Ensure S3 backend is accessible
-- Check AWS credentials
-- Run `terraform init -reconfigure` if needed
-
-### Issue: Email not working
-- Verify email addresses in SES
-- Check SES sandbox status
-- Review Lambda function logs in CloudWatch
-
-## Security Notes
-
-- S3 bucket is private (not publicly accessible)
-- CloudFront uses Origin Access Control (OAC)
-- All traffic forced to HTTPS
-- API Gateway has CORS configured
-- Lambda functions have minimal IAM permissions
+For deployment issues:
+1. Check this documentation
+2. Review GitHub Actions logs
+3. Verify AWS permissions and infrastructure state

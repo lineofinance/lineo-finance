@@ -20,3 +20,7 @@ notification_email_from  = "support@lineo.finance"
 
 # Optional: Change environment tag
 # environment = "test"  # or "staging", "prod"
+
+# GitHub Repository for OIDC Authentication
+# REQUIRED: Set this to your GitHub repository
+github_repository = "your-username/lineo-finance"
