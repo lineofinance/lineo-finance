@@ -999,3 +999,269 @@ function initHeaderScroll() {
     // Initial check
     updateHeader();
 }
+
+// Google Analytics 4 Custom Event Tracking
+// Only tracks events if GA4 is loaded (user consented to cookies)
+
+/**
+ * Track contact form submissions - KEY CONVERSION
+ * @param {string} formType - Type of form (contact, callback, demo)
+ * @param {string} source - Form location (footer, contact-page, modal)
+ */
+function trackFormSubmission(formType, source = 'unknown') {
+    if (typeof gtag === 'function') {
+        gtag('event', 'form_submit', {
+            'form_type': formType,
+            'form_source': source,
+            'page_location': window.location.href,
+            'page_title': document.title
+        });
+        
+        // Mark as conversion for business-critical forms
+        if (formType === 'contact' || formType === 'demo' || formType === 'callback') {
+            gtag('event', 'generate_lead', {
+                'form_type': formType,
+                'value': 1,
+                'currency': 'EUR'
+            });
+        }
+    }
+}
+
+/**
+ * Track job application engagement - CONVERSION
+ * @param {string} jobTitle - Job position title
+ * @param {string} action - Action taken (view, apply_click, download_pdf)
+ */
+function trackJobEngagement(jobTitle, action = 'view') {
+    if (typeof gtag === 'function') {
+        gtag('event', 'job_engagement', {
+            'job_title': jobTitle,
+            'engagement_type': action,
+            'page_location': window.location.href
+        });
+        
+        // Mark actual applications as conversions
+        if (action === 'apply_click' || action === 'application_submit') {
+            gtag('event', 'job_application', {
+                'job_title': jobTitle,
+                'value': 1,
+                'currency': 'EUR'
+            });
+        }
+    }
+}
+
+/**
+ * Track knowledge base usage - SUPPORT METRIC (not conversion)
+ * For existing customers accessing help content
+ * @param {string} articleTitle - Knowledge base article title
+ * @param {string} category - Article category (setup, troubleshooting, etc.)
+ */
+function trackKnowledgeBaseUsage(articleTitle, category = 'general') {
+    if (typeof gtag === 'function') {
+        // Set user property for audience creation
+        gtag('set', {
+            'custom_map': {
+                'dimension1': 'customer_type'
+            }
+        });
+        
+        gtag('config', 'G-QYZZ8CW3N0', {
+            'custom_map': {
+                'dimension1': 'customer_type'
+            }
+        });
+        
+        // Track knowledge base usage with customer segmentation
+        gtag('event', 'knowledge_base_read', {
+            'article_title': articleTitle,
+            'article_category': category,
+            'page_location': window.location.href,
+            'customer_type': 'existing_customer',
+            'user_segment': 'customer_support',
+            'session_source': getSessionSource()
+        });
+        
+        // Set user property to identify customer
+        gtag('event', 'set_user_properties', {
+            'customer_type': 'existing_customer',
+            'last_kb_access': new Date().toISOString().split('T')[0]
+        });
+        
+        // Track engagement depth
+        setTimeout(() => {
+            gtag('event', 'knowledge_base_engaged', {
+                'article_title': articleTitle,
+                'time_on_page': '30_seconds',
+                'customer_type': 'existing_customer'
+            });
+        }, 30000);
+        
+        // Track scroll depth for support quality
+        trackScrollDepth(articleTitle);
+    }
+}
+
+/**
+ * Track service page engagement - LEAD QUALITY
+ * @param {string} service - Service name (automation, datev-integration, etc.)
+ * @param {string} action - Action taken (view, cta_click, download)
+ */
+function trackServiceEngagement(service, action = 'view') {
+    if (typeof gtag === 'function') {
+        gtag('event', 'service_engagement', {
+            'service_name': service,
+            'engagement_type': action,
+            'page_location': window.location.href
+        });
+        
+        // High-intent actions
+        if (action === 'cta_click' || action === 'contact_request') {
+            gtag('event', 'high_intent_action', {
+                'service_name': service,
+                'action_type': action,
+                'value': 1
+            });
+        }
+    }
+}
+
+/**
+ * Track file downloads - ENGAGEMENT
+ * @param {string} fileName - Name of downloaded file
+ * @param {string} fileType - Type of file (pdf, xlsx, etc.)
+ */
+function trackFileDownload(fileName, fileType = 'unknown') {
+    if (typeof gtag === 'function') {
+        gtag('event', 'file_download', {
+            'file_name': fileName,
+            'file_type': fileType,
+            'page_location': window.location.href
+        });
+    }
+}
+
+// Auto-initialize event tracking for existing elements
+document.addEventListener('DOMContentLoaded', function() {
+    initEventTracking();
+});
+
+function initEventTracking() {
+    // Track job page visits automatically
+    if (window.location.pathname.includes('/jobs/')) {
+        const jobTitle = document.querySelector('h1')?.textContent || 'Unknown Position';
+        trackJobEngagement(jobTitle, 'view');
+    }
+    
+    // Track knowledge base article views
+    if (window.location.pathname.includes('/knowledge-base/') || window.location.pathname.includes('/content/knowledge-base/')) {
+        const articleTitle = document.querySelector('h1')?.textContent || 'Unknown Article';
+        const category = document.querySelector('[data-category]')?.dataset.category || 'general';
+        trackKnowledgeBaseUsage(articleTitle, category);
+    }
+    
+    // Track service page visits
+    if (window.location.pathname.includes('/leistungen')) {
+        trackServiceEngagement('automation-services', 'view');
+    }
+    
+    // Auto-track file downloads
+    document.querySelectorAll('a[href$=".pdf"], a[href$=".xlsx"], a[href$=".docx"]').forEach(link => {
+        link.addEventListener('click', function() {
+            const fileName = this.getAttribute('href').split('/').pop();
+            const fileType = fileName.split('.').pop();
+            trackFileDownload(fileName, fileType);
+        });
+    });
+    
+    // Auto-track external links
+    document.querySelectorAll('a[href^="http"]:not([href*="lineo.finance"])').forEach(link => {
+        link.addEventListener('click', function() {
+            if (typeof gtag === 'function') {
+                gtag('event', 'click', {
+                    'event_category': 'outbound',
+                    'event_label': this.href,
+                    'transport_type': 'beacon'
+                });
+            }
+        });
+    });
+}
+
+// Helper functions for enhanced tracking
+
+/**
+ * Detect if user came directly to knowledge base (existing customer indicator)
+ * @returns {string} Session source classification
+ */
+function getSessionSource() {
+    const referrer = document.referrer;
+    const currentPath = window.location.pathname;
+    
+    // Direct knowledge base access (strong customer indicator)
+    if (!referrer && currentPath.includes('/knowledge-base/')) {
+        return 'direct_kb_access';
+    }
+    
+    // Internal referral from main site
+    if (referrer && referrer.includes('lineo.finance')) {
+        return 'internal_navigation';
+    }
+    
+    // External referral
+    if (referrer) {
+        return 'external_referral';
+    }
+    
+    return 'direct_access';
+}
+
+/**
+ * Track scroll depth for content engagement quality
+ * @param {string} contentTitle - Title of content being tracked
+ */
+function trackScrollDepth(contentTitle) {
+    let scrollDepthTracked = {
+        '25': false,
+        '50': false,
+        '75': false,
+        '100': false
+    };
+    
+    function checkScrollDepth() {
+        const scrollTop = window.pageYOffset;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+        
+        // Track milestone reached
+        Object.keys(scrollDepthTracked).forEach(milestone => {
+            if (!scrollDepthTracked[milestone] && scrollPercent >= parseInt(milestone)) {
+                scrollDepthTracked[milestone] = true;
+                
+                if (typeof gtag === 'function') {
+                    gtag('event', 'scroll_depth', {
+                        'content_title': contentTitle,
+                        'scroll_depth': milestone + '%',
+                        'customer_type': 'existing_customer',
+                        'content_type': 'knowledge_base'
+                    });
+                }
+            }
+        });
+    }
+    
+    // Throttled scroll tracking
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        if (scrollTimeout) clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(checkScrollDepth, 100);
+    });
+}
+
+// Make functions globally available for manual tracking
+window.trackFormSubmission = trackFormSubmission;
+window.trackJobEngagement = trackJobEngagement;
+window.trackKnowledgeBaseUsage = trackKnowledgeBaseUsage;
+window.trackServiceEngagement = trackServiceEngagement;
+window.trackFileDownload = trackFileDownload;

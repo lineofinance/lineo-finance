@@ -121,20 +121,9 @@
           throw new Error(result.error || 'Ein Fehler ist aufgetreten.');
         }
         
-        // Track successful form submission in Google Analytics
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'form_submit', {
-            event_category: 'Contact',
-            event_label: 'Contact Form',
-            value: 1
-          });
-          
-          // Track as conversion
-          gtag('event', 'conversion', {
-            send_to: 'GA_MEASUREMENT_ID/contact_form',
-            event_category: 'Lead Generation',
-            event_label: 'Contact Form Submission'
-          });
+        // Track successful form submission with custom GA4 events
+        if (typeof trackFormSubmission === 'function') {
+          trackFormSubmission('contact', 'contact-page');
         }
         
         // Show success message and hide form
@@ -268,20 +257,10 @@
           throw new Error(result.error || 'Ein Fehler ist aufgetreten.');
         }
         
-        // Track successful career form submission in Google Analytics
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'form_submit', {
-            event_category: 'Career',
-            event_label: 'Career Application',
-            value: 1
-          });
-          
-          // Track as conversion
-          gtag('event', 'conversion', {
-            send_to: 'GA_MEASUREMENT_ID/career_application',
-            event_category: 'Lead Generation',
-            event_label: 'Career Application Submission'
-          });
+        // Track successful career form submission with custom GA4 events
+        if (typeof trackJobEngagement === 'function') {
+          const jobTitle = document.querySelector('h1')?.textContent || 'Unknown Position';
+          trackJobEngagement(jobTitle, 'application_submit');
         }
         
         // Show success message and hide form

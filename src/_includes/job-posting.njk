@@ -86,7 +86,7 @@ bodyClass: job-posting-page
         <h2>{{ ctaTitle | default("Interesse geweckt?") }}</h2>
         <p>{{ ctaText | default("Melde dich gern für ein erstes Kennenlerngespräch bei uns. Wir freuen uns darauf, dich kennenzulernen!") }}</p>
         <div class="job-posting__buttons">
-          <a href="{{ applyUrl | default('/pages/karriere/#bewerbungsformular') }}" class="btn btn-primary">{{ applyButtonText | default("Jetzt bewerben") }}</a>
+          <a href="{{ applyUrl | default('/pages/karriere/#bewerbungsformular') }}" class="btn btn-primary" onclick="if (typeof trackJobEngagement === 'function') trackJobEngagement('{{ jobTitle }}', 'apply_click');">{{ applyButtonText | default("Jetzt bewerben") }}</a>
           <a href="mailto:{{ emailAddress | default('karriere@lineo.finance') }}" class="btn btn-secondary">{{ emailButtonText | default("E-Mail senden") }}</a>
         </div>
       </div>
