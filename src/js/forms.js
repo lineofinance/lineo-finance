@@ -121,6 +121,22 @@
           throw new Error(result.error || 'Ein Fehler ist aufgetreten.');
         }
         
+        // Track successful form submission in Google Analytics
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'form_submit', {
+            event_category: 'Contact',
+            event_label: 'Contact Form',
+            value: 1
+          });
+          
+          // Track as conversion
+          gtag('event', 'conversion', {
+            send_to: 'GA_MEASUREMENT_ID/contact_form',
+            event_category: 'Lead Generation',
+            event_label: 'Contact Form Submission'
+          });
+        }
+        
         // Show success message and hide form
         showSuccessAndHideForm(form, result.message || 'Vielen Dank für Ihre Nachricht! Wir werden uns zeitnah bei Ihnen melden.');
         
@@ -250,6 +266,22 @@
         
         if (!response.ok) {
           throw new Error(result.error || 'Ein Fehler ist aufgetreten.');
+        }
+        
+        // Track successful career form submission in Google Analytics
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'form_submit', {
+            event_category: 'Career',
+            event_label: 'Career Application',
+            value: 1
+          });
+          
+          // Track as conversion
+          gtag('event', 'conversion', {
+            send_to: 'GA_MEASUREMENT_ID/career_application',
+            event_category: 'Lead Generation',
+            event_label: 'Career Application Submission'
+          });
         }
         
         // Show success message and hide form

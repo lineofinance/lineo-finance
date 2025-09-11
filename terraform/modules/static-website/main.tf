@@ -154,7 +154,81 @@ resource "aws_cloudfront_distribution" "website" {
   tags = var.common_tags
 }
 
-# Route53 A record for website
+# CloudFront Function for apex domain redirect
+resource "aws_cloudfront_function" "apex_redirect" {
+  name    = "${var.project_name}-apex-redirect"
+  runtime = "cloudfront-js-1.0"
+  comment = "Redirect apex domain to www subdomain"
+  publish = true
+  code    = <<EOF
+function handler(event) {
+    return {
+        statusCode: 301,
+        statusDescription: 'Moved Permanently',
+        headers: {
+            'location': { value: 'https://www.${var.domain_name}' + event.request.uri }
+        }
+    };
+}
+EOF
+}
+
+# CloudFront distribution for apex domain redirect
+resource "aws_cloudfront_distribution" "apex_redirect" {
+  enabled         = true
+  is_ipv6_enabled = true
+  comment         = "${var.project_name} Apex Domain Redirect"
+  aliases         = [var.domain_name]
+  price_class     = "PriceClass_100"
+  
+  # Dummy origin - we'll redirect before hitting it
+  origin {
+    domain_name = aws_s3_bucket.website.bucket_regional_domain_name
+    origin_id   = "S3-redirect-${aws_s3_bucket.website.id}"
+    origin_access_control_id = aws_cloudfront_origin_access_control.website.id
+  }
+  
+  default_cache_behavior {
+    allowed_methods        = ["GET", "HEAD"]
+    cached_methods         = ["GET", "HEAD"]
+    target_origin_id       = "S3-redirect-${aws_s3_bucket.website.id}"
+    viewer_protocol_policy = "redirect-to-https"
+    
+    forwarded_values {
+      query_string = false
+      cookies {
+        forward = "none"
+      }
+    }
+    
+    min_ttl     = 0
+    default_ttl = 300
+    max_ttl     = 300
+    compress    = false
+    
+    # Attach the apex redirect function
+    function_association {
+      event_type   = "viewer-request"
+      function_arn = aws_cloudfront_function.apex_redirect.arn
+    }
+  }
+  
+  restrictions {
+    geo_restriction {
+      restriction_type = "none"
+    }
+  }
+  
+  viewer_certificate {
+    acm_certificate_arn      = var.certificate_arn
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2021"
+  }
+  
+  tags = var.common_tags
+}
+
+# Route53 A record for website (www subdomain)
 resource "aws_route53_record" "website" {
   zone_id = var.zone_id
   name    = var.full_domain
@@ -163,6 +237,19 @@ resource "aws_route53_record" "website" {
   alias {
     name                   = aws_cloudfront_distribution.website.domain_name
     zone_id                = aws_cloudfront_distribution.website.hosted_zone_id
+    evaluate_target_health = false
+  }
+}
+
+# Route53 A record for apex domain redirect
+resource "aws_route53_record" "apex_redirect" {
+  zone_id = var.zone_id
+  name    = var.domain_name
+  type    = "A"
+  
+  alias {
+    name                   = aws_cloudfront_distribution.apex_redirect.domain_name
+    zone_id                = aws_cloudfront_distribution.apex_redirect.hosted_zone_id
     evaluate_target_health = false
   }
 }

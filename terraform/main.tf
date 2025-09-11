@@ -7,7 +7,7 @@ module "static_website" {
   domain_name       = var.domain_name
   full_domain       = local.full_domain
   zone_id           = data.aws_route53_zone.lineo_finance.zone_id
-  certificate_arn   = data.aws_acm_certificate.cloudfront_cert.arn
+  certificate_arn   = aws_acm_certificate_validation.cloudfront_cert.certificate_arn
   common_tags       = local.common_tags
 }
 
