@@ -2,8 +2,8 @@
 (function() {
   'use strict';
 
-  // API Configuration - will be replaced with actual API Gateway URL after Terraform deployment
-  const API_BASE_URL = window.LINEO_API_URL || 'https://YOUR-API-ID.execute-api.eu-central-1.amazonaws.com/test';
+  // API Configuration - using deployed AWS API Gateway
+  const API_BASE_URL = window.LINEO_API_URL || 'https://0o3tyttm87.execute-api.eu-central-1.amazonaws.com/production';
   
   // Initialize forms when DOM is ready
   document.addEventListener('DOMContentLoaded', function() {
