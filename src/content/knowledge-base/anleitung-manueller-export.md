@@ -18,7 +18,7 @@ Gehen Sie auf die [Anmeldung IB-Kontoverwaltung](https://www.interactivebrokers.
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/01-anmeldung-ib.png)
 
-Zum Erstellen des Flex-Queries, im linken Menü über das “Berichtswesen” auf “Flex-Queries” klicken:
+Zum Erstellen des Flex-Queries, im linken Menü unter “Berichte” auf “Flex-Queries” klicken:
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/02-menue-berichtswesen.png)
 
@@ -38,11 +38,9 @@ Stellen Sie bitte sicher, dass <span class="highlight">ALLE</span> Konten ausgew
 
 Geschlossene Konten können im Nachhinein seitens IB noch Transaktionen beinhalten, welche für die korrekte Verbuchung ebenfalls berücksichtigt werden müssen.
 
+Bitte wählen Sie alle Konten aus und klicken anschließend auf "Weiter":
+
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/06-alle-konten-anklicken.png)
-
-Anschließend in diesem Feld unten rechts auf “Weiter” klicken:
-
-![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/06-weiter.png)
 
 Es erscheinen alle Konten in der Leiste:
 

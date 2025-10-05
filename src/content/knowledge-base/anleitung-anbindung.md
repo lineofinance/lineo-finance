@@ -17,7 +17,7 @@ Gehen Sie auf die [Anmeldung IB-Kontoverwaltung](https://www.interactivebrokers.
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/01-anmeldung-ib.png)
 
-Zum Erstellen einer Flex-Query im linken Menü unter “Berichtswesen” auf “Flex-Queries” klicken:
+Zum Erstellen einer Flex-Query im linken Menü unter “Berichte” auf “Flex-Queries” klicken:
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/02-menue-berichtswesen.png)
 
@@ -67,6 +67,10 @@ Es öffnet sich folgendes Fenster - dort bitte alle Konten auswählen:
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/13-konten-auswaehlen.png)
 
+Anschließend bitte auf "Weiter" klicken:
+
+![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/13a-weiter.png)
+
 Jetzt bearbeiten Sie die allgemeine Konfiguration entsprechend (Achtung: Das Zeitformat mit Doppelpunkten auswählen):
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/14-allgemeine-konfiguration.png)
@@ -97,9 +101,9 @@ Diese wird später im Benutzerkonto bei Lineo Finance eingegeben.
 
 ## 2. Erstellen des Token
 
-Ebenso benötigen wir für das Benutzerkonto in Lineo Finance einen Token. Dieser wird folgendermaßen erstellt:
+Ebenso benötigen wir für das Benutzerkonto in Lineo Finance einen Token (Prüfcode). Dieser wird folgendermaßen erstellt:
 
-Wir befinden uns immer noch im Berichtswesen auf der Seite Flex-Queries. Dort gibt es den Punkt Flex-Web-Service-Konfiguration:
+Wir befinden uns noch immer im Bereich Berichte auf der Seite Flex-Queries. Dort gibt es den Punkt Flex-Web-Service-Konfiguration:
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/21-flex-web-service-konfiguration.png)
 
@@ -107,7 +111,7 @@ Bitte klicken Sie auf das Zahnrädchen. Es öffnet sich folgendes Fester:
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/22-flex-web-service-status.png)
 
-Bitte stellen Sie sicher, dass ein Häkchen beim Flex-Web-Service-Status ist. Danach klicken Sie auf “Neuen Token generieren”. Dann öffnet sich ein weiteres Fenster. Hier stellen Sie bitte das Ablaufdatum auf 1 Year ein, klicken auf “Neuen Token generieren”:
+Bitte stellen Sie sicher, dass ein Häkchen beim Flex-Web-Service-Status ist. Danach klicken Sie auf “Neuen Prüfcode generieren”. Dann öffnet sich ein weiteres Fenster. Hier stellen Sie bitte das Ablaufdatum auf 1 Year ein, klicken auf “Neuen Prüfcode generieren”:
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/23-token-generieren.png)
 

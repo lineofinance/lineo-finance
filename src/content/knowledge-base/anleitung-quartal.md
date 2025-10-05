@@ -15,7 +15,7 @@ featured: false
 1. Gehen Sie auf die [Anmeldung IB-Kontoverwaltung](https://www.interactivebrokers.ie/sso/Login?RL=1) und melden Sie sich auf Ihrem Konto an:
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/01-anmeldung-ib.png)
 
-2. Zum Ändern der Flex-Query im linken Menü unter “Berichtswesen” auf “Flex-Queries” klicken:
+2. Zum Ändern der Flex-Query im linken Menü unter “Berichte” auf “Flex-Queries” klicken:
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/02-menue-berichtswesen.png)
 
 3. Auf auf den Stift (bearbeiten) klicken:
