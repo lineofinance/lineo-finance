@@ -49,22 +49,17 @@ Anschließend wählen Sie Ihre Gesellschaft aus
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/26-gesellschaft-auswaehlen.png)
 
+und gehen bei dem entprechenden Zugang auf "Token aktualisieren":
 
+![Anmeldung Interactive Brokers](/assets/images/anleitungen/verlaengerung-token/01-token-aktualisieren.png)
 
+Hier geben Sie den zuvor erstellten Token ein und bestätigen mit "Erstellen":
 
+![Anmeldung Interactive Brokers](/assets/images/anleitungen/verlaengerung-token/02-token-eingeben.png)
 
+Schon erscheint Ihr verlängerter Zugang in der Liste als neuer Eintrag und der alte Eintrag wird automatisch gelöscht:
 
-und gehen auf “Neuen Zugang erstellen”.
-
-![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/27-neuen-zugang-erstellen.png)
-
-Bitte wählen Sie "Interactive Brokers" aus und tragen den oben erstellten Token sowie die Query-Id hier ein. Anschließend klicken Sie auf “Erstellen”.
-
-![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/28-daten-neuer-zugang.png)
-
-Schon erscheint Ihr neu angelegter Zugang in der Liste. An dieser Stelle sind Sie fertig. Sollte es Probleme geben, werden wir uns bei Ihnen melden.
-
-![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/29-neuer-zugang-erstellt.png)
+![Anmeldung Interactive Brokers](/assets/images/anleitungen/verlaengerung-token/03-verlaengert.png)
 
 Vielen Dank!
 
