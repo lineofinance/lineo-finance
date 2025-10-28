@@ -22,7 +22,7 @@ Zum Erstellen des Flex-Queries, im linken Menü unter “Berichte” auf “Flex
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/02-menue-berichtswesen.png)
 
-Hier auf Konto/Konten auswählen gehen. Falls die Option nicht erscheint, haben Sie nur ein Konto. In diesem Fall können Sie einige Schritte überspringen und direkt den [den Export starten](#exportstart).
+Hier auf Konto/Konten auswählen gehen. Falls die Option nicht erscheint, haben Sie nur ein Konto. In diesem Fall können Sie einige Schritte überspringen und direkt [den Export starten](#exportstart).
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/manueller-export/03-flex-queries.png)
 
