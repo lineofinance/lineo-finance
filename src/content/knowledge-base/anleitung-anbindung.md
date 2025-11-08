@@ -139,9 +139,16 @@ Bitte wählen Sie "Interactive Brokers" aus und tragen den oben erstellten Token
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/28-daten-neuer-zugang.png)
 
-Schon erscheint Ihr neu angelegter Zugang in der Liste. An dieser Stelle sind Sie fertig. Sollte es Probleme geben, werden wir uns bei Ihnen melden.
+Schon erscheint Ihr neu angelegter Zugang in der Liste. Dieser wird daraufhin überprüft. Nach einigen Minuten erhalten Sie eine entsprechende E-Mail-Benachrichtigung.
 
 ![Anmeldung Interactive Brokers](/assets/images/anleitungen/anbindung/29-neuer-zugang-erstellt.png)
+
+
+Über den Zugang erhalten wir nun automatisch regelmäßig die Transaktionsdaten, frühestens ab dem 1. Tag des letzten Quartals. Sollte die Verbuchung für einen Zeitraum gewünscht sein, der dem letzten Quartal vorausgeht, müssen diese Transaktionsdaten einmalig manuell exportiert und im Portal hochgeladen werden.
+
+Die genaue Vorgehensweise hierzu finden Sie in [dieser Anleitung](https://www.lineo.finance/content/knowledge-base/anleitung-manueller-export/).
+
+Bitte führen Sie diese manuellen Exporte erst durch, sobald der Zugang erfolgreich überprüft wurde.
 
 Vielen Dank!
 
